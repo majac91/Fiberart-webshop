@@ -1,0 +1,139 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400;600&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap");
+
+@font-face {
+  font-family: Voga;
+  src: url("../src/fonts/Voga-Medium.otf");
+}
+@font-face {
+  font-family: VogaRegular;
+  src: url("../src/fonts/Voga-Regular.ttf");
+}
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Raleway";
+  /* font-family: "EB Garamond"; */
+}
+
+.d-flex {
+  display: flex;
+}
+
+.text-column {
+  display: flex;
+  flex-direction: column;
+}
+
+li {
+  list-style: none;
+}
+
+.container {
+  width: 90vw;
+  margin: auto;
+}
+
+.header__container {
+  width: 90vw;
+  margin: auto;
+}
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 3em;
+  padding-top: 1em;
+}
+
+.nav__links {
+  display: flex;
+  padding: 0;
+}
+
+.nav__link {
+  margin-right: 2em;
+  text-transform: lowercase;
+  letter-spacing: 0.2em;
+  font-weight: 600;
+  /* color: #50555e; */
+  color: black;
+  font-size: 0.8em;
+  font-family: "Raleway";
+}
+
+.nav__logo-img {
+  height: 30%;
+  width: 30%;
+  float: right;
+}
+.header {
+  height: 120vh;
+}
+
+.header__images {
+  display: flex;
+  overflow: hidden;
+}
+.header__img {
+  width: 300px;
+  height: 450px;
+  flex-shrink: 1;
+}
+
+.header__text {
+  width: 90vw;
+  text-align: center;
+  padding: 5rem 0;
+  border-right: 1px solid black;
+  /* position: relative; */
+
+  position: absolute;
+  right: 5vw;
+  left: 5vw;
+}
+
+.header__text-brand {
+  position: absolute;
+  right: -4.6em;
+  top: 4em;
+  background: white;
+  width: 150px;
+  transform: rotate(90deg);
+  /* transform: scale(1, 1) translate(39px, 0px) rotate(90deg); */
+}
+
+.header__text-brand p {
+  text-align: center;
+  position: relative;
+  right: 0;
+  top: 0;
+  text-transform: uppercase;
+  font-size: 0.9em;
+  font-family: Oswald;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+}
+.header__text-caption span {
+  font-family: VogaRegular;
+  color: #dbdbdb;
+  font-size: 4em;
+  letter-spacing: 0.05em;
+}
+
+.header__text-subcaption {
+  font-family: Raleway;
+  letter-spacing: 0.2em;
+  font-size: 1.4em;
+  padding-top: 0.5em;
+}
+
+.no-shrink {
+  flex-shrink: 0;
+}
+
+.flex-grow {
+  flex-grow: 1;
+}
