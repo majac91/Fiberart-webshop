@@ -70,7 +70,7 @@ li {
   float: right;
 }
 .header {
-  height: 120vh;
+  height: 90vh;
 }
 
 .header__images {
@@ -78,34 +78,32 @@ li {
   overflow: hidden;
 }
 .header__img {
-  width: 300px;
-  height: 450px;
+  width: 100%;
+  height: 45vh;
   flex-shrink: 1;
 }
 
-.header__text {
+/* .header__text {
   width: 90vw;
   text-align: center;
   padding: 5rem 0;
   border-right: 1px solid black;
-  /* position: relative; */
 
   position: absolute;
   right: 5vw;
   left: 5vw;
-}
+} */
 
-.header__text-brand {
+/* .header__text-brand {
   position: absolute;
   right: -4.6em;
   top: 4em;
   background: white;
   width: 150px;
   transform: rotate(90deg);
-  /* transform: scale(1, 1) translate(39px, 0px) rotate(90deg); */
-}
+} */
 
-.header__text-brand p {
+/* .header__text-brand p {
   text-align: center;
   position: relative;
   right: 0;
@@ -121,6 +119,8 @@ li {
   color: #dbdbdb;
   font-size: 4em;
   letter-spacing: 0.05em;
+  width: 40vw;
+  margin: auto;
 }
 
 .header__text-subcaption {
@@ -128,7 +128,9 @@ li {
   letter-spacing: 0.2em;
   font-size: 1.4em;
   padding-top: 0.5em;
-}
+  width: 40vw;
+  margin: auto;
+} */
 
 .no-shrink {
   flex-shrink: 0;
@@ -136,4 +138,36 @@ li {
 
 .flex-grow {
   flex-grow: 1;
+}
+
+/* .mission {
+  justify-content: space-between;
+} */
+
+.mission__images {
+  justify-content: space-between;
+}
+
+.mission_img-wrapper {
+  /* width: 500px;
+  height: 600px; */
+}
+
+.mission_img {
+  width: 42vw;
+  height: 70vh;
+}
+
+.mission__img1 {
+  background-image: url("./img/mission1.jpg");
+  background-size: cover;
+  background-position: center;
+  object-fit: cover;
+}
+
+.mission__img2 {
+  background-image: url("./img/mission3.jpg");
+  object-fit: contain;
+  background-size: cover;
+  /* object-fit: contain; */
 }

@@ -1,0 +1,50 @@
+.text {
+  width: 90vw;
+  text-align: center;
+  padding: 5rem 0;
+  border-right: 1px solid black;
+  /* position: relative; */
+
+  position: absolute;
+  right: 5vw;
+  left: 5vw;
+}
+
+.text__brand {
+  position: absolute;
+  right: -4.6em;
+  top: 4em;
+  background: white;
+  width: 150px;
+  transform: rotate(90deg);
+  /* transform: scale(1, 1) translate(39px, 0px) rotate(90deg); */
+}
+
+.text__brand p {
+  text-align: center;
+  position: relative;
+  right: 0;
+  top: 0;
+  text-transform: uppercase;
+  font-size: 0.9em;
+  font-family: Oswald;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+}
+.text__caption span {
+  font-family: VogaRegular;
+  color: #dbdbdb;
+  font-size: 4em;
+  letter-spacing: 0.05em;
+  width: 40vw;
+  margin: auto;
+}
+
+.text__subcaption {
+  font-family: Raleway;
+  letter-spacing: 0.2em;
+  font-size: 1.4em;
+  padding-top: 0.5em;
+  width: 40vw;
+  margin: auto;
+}

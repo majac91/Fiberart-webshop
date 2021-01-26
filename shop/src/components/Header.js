@@ -1,4 +1,6 @@
 import React from "react";
+// import Flickity from "react-flickity-component";
+import TextSection from "./TextSection";
 
 //header imgs
 import header1 from "../img/header1.jpg";
@@ -18,20 +20,20 @@ export default function Header() {
           <img className="header__img flex-grow" src={header4}></img>
           <img className="header__img no-shrink" src={header5}></img>
         </div>
-        <div className="header__text container">
-          <div className="header__text-brand">
-            <p>Brand message</p>
-          </div>
-          <p className="header__text-caption text-column">
-            <span>Write a short pitch about</span>
-            <span>what you do and why</span>
-          </p>
-          <p className="header__text-subcaption text-column">
-            <span> I help you create a home you</span>
-            <span> love, so you can relax and refresh</span>
-            <span> in a pure and simple space.</span>
-          </p>
-        </div>
+
+        {/* <Flickity> */}
+        {/* <img className="header__img no-shrink" src={header1}></img>
+        <img className="header__img flex-grow" src={header2}></img>
+        <img className="header__img no-shrink" src={header3}></img> */}
+        {/* </Flickity> */}
+
+        <TextSection
+          message={"Brand message"}
+          caption={"Write a short pitch about what you do and why"}
+          subcaption={
+            "I help you create a home you love, so you can relax and refresh in a pure and simple space."
+          }
+        ></TextSection>
       </header>
     </>
   );
