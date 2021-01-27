@@ -3,24 +3,20 @@ import photoStyles from "../css-modules/two-photos.module.css";
 const classNames = require("classnames");
 
 export default function TwoPhotosSection(props) {
-  const link = (txt) => (props.el === "a" ? txt : "");
   const linkTxt = (txt) => (props.el === "a" ? txt : "");
+  const El = props.el;
+  const attr1 = props.el === "a" ? { href: props.link1 } : "";
+  const attr2 = props.el === "a" ? { href: props.link2 } : "";
 
   return (
     <section>
       <div className={`${photoStyles.images} d-flex container`}>
-        <props.el
-          href={link("https://www.npmjs.com/package/classnames")}
-          className={`${photoStyles.img} ${photoStyles.img1}`}
-        >
+        <El {...attr1} className={`${photoStyles.img} ${photoStyles.img1}`}>
           {linkTxt("Shop paintings")}{" "}
-        </props.el>
-        <props.el
-          href={link("https://github.com/")}
-          className={`${photoStyles.img} ${photoStyles.img2}`}
-        >
+        </El>
+        <El {...attr2} className={`${photoStyles.img} ${photoStyles.img2}`}>
           {linkTxt("Shop wall hangings")}{" "}
-        </props.el>
+        </El>
       </div>
     </section>
   );

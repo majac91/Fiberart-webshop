@@ -4,7 +4,11 @@ import TwoPhotosSection from "../components/TwoPhotosSection.js";
 export default function ProductCategories() {
   return (
     <section className="product-categories">
-      <TwoPhotosSection el={"a"} />
+      <TwoPhotosSection
+        el={"a"}
+        link1={"https://www.npmjs.com/package/classnames"}
+        link2={"https://github.com/"}
+      />
     </section>
   );
 }
