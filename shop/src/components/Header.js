@@ -21,6 +21,7 @@ export default function Header() {
         </header>
 
         <TextSection
+          section={"header"}
           message={"Brand message"}
           caption={"Write a short pitch about what you do and why"}
           subcaption={

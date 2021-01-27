@@ -4,20 +4,24 @@ const classNames = require("classnames");
 
 export default function TextSection(props) {
   let textClass = classNames({
-    mission: props.mission,
-    header: !props.mission,
+    header: props.section === "header",
+    mission: props.section === "mission",
   });
   console.log(textClass);
   return (
     <>
-      <div className={`${textClass}-text ${textStyles.text} container`}>
-        <div className={textStyles.text__brand}>
+      <div
+        className={`${textStyles[textClass]} ${textStyles.container} container`}
+      >
+        <div className={`${textStyles[textClass]} ${textStyles.brand}`}>
           <p>{props.message}</p>
         </div>
-        <p className={textStyles.text__caption}>
+        <p className={`${textStyles[textClass]} ${textStyles.caption}`}>
           <span>{props.caption}</span>
         </p>
-        <p className={"text-column"}>
+        <p
+          className={`${textStyles[textClass]} ${textStyles.subcaption} text-column`}
+        >
           <span>{props.subcaption} </span>
         </p>
       </div>

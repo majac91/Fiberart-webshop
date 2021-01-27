@@ -1,7 +1,7 @@
 import React from "react";
 import TextSection from "./TextSection";
 
-export default function MissionSection() {
+export default function MissionStatement() {
   return (
     // <>
     <section className="mission">
@@ -10,7 +10,7 @@ export default function MissionSection() {
         <div className="mission_img mission__img2"></div>
       </div>
       <TextSection
-        mission="mission"
+        section={"mission"}
         message={"Explore the site"}
         caption={"my mission"}
         subcaption={

@@ -84,67 +84,10 @@ li {
   flex-shrink: 1;
 }
 
-/* .header__text {
-  width: 90vw;
-  text-align: center;
-  padding: 5rem 0;
-  border-right: 1px solid black;
-
-  position: absolute;
-  right: 5vw;
-  left: 5vw;
-} */
-
-/* .header__text-brand {
-  position: absolute;
-  right: -4.6em;
-  top: 4em;
-  background: white;
-  width: 150px;
-  transform: rotate(90deg);
-} */
-
-/* .header__text-brand p {
-  text-align: center;
-  position: relative;
-  right: 0;
-  top: 0;
-  text-transform: uppercase;
-  font-size: 0.9em;
-  font-family: Oswald;
-  font-weight: 500;
-  letter-spacing: 0.05em;
+.mission {
+  display: block;
+  height: 100%;
 }
-.header__text-caption span {
-  font-family: VogaRegular;
-  color: #dbdbdb;
-  font-size: 4em;
-  letter-spacing: 0.05em;
-  width: 40vw;
-  margin: auto;
-}
-
-.header__text-subcaption {
-  font-family: Raleway;
-  letter-spacing: 0.2em;
-  font-size: 1.4em;
-  padding-top: 0.5em;
-  width: 40vw;
-  margin: auto;
-} */
-
-.no-shrink {
-  flex-shrink: 0;
-}
-
-.flex-grow {
-  flex-grow: 1;
-}
-
-/* .mission {
-  justify-content: space-between;
-} */
-
 .mission__images {
   justify-content: space-between;
 }
