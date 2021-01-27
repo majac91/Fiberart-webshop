@@ -4,7 +4,7 @@ const classNames = require("classnames");
 
 export default function TextSection(props) {
   let textClass = classNames({
-    header: props.section === "header",
+    header: props.section === "brand",
     mission: props.section === "mission",
   });
   console.log(textClass);

@@ -1,0 +1,24 @@
+.images {
+  justify-content: space-between;
+}
+
+.img-wrapper {
+}
+
+.img {
+  width: 42vw;
+  height: 70vh;
+}
+
+.img1 {
+  background-image: url("../img/mission1.jpg");
+  background-size: cover;
+  background-position: center;
+  object-fit: cover;
+}
+
+.img2 {
+  background-image: url("../img/mission3.jpg");
+  object-fit: contain;
+  background-size: cover;
+}

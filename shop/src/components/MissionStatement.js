@@ -5,10 +5,6 @@ export default function MissionStatement() {
   return (
     // <>
     <section className="mission">
-      <div className="mission__images d-flex container">
-        <div className="mission_img mission__img1"></div>
-        <div className="mission_img mission__img2"></div>
-      </div>
       <TextSection
         section={"mission"}
         message={"Explore the site"}

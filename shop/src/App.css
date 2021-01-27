@@ -15,7 +15,11 @@
   padding: 0;
   margin: 0;
   font-family: "Raleway";
-  /* font-family: "EB Garamond"; */
+  color: rgba(57, 57, 57, 1); /* TODO */
+}
+
+:root {
+  --text: rgba(57, 57, 57, 1);
 }
 
 .d-flex {
@@ -58,9 +62,8 @@ li {
   text-transform: lowercase;
   letter-spacing: 0.2em;
   font-weight: 600;
-  /* color: #50555e; */
   color: black;
-  font-size: 0.8em;
+  font-size: 1em;
   font-family: "Raleway";
 }
 
@@ -70,7 +73,7 @@ li {
   float: right;
 }
 .header {
-  height: 90vh;
+  height: 60vh;
 }
 
 .header__images {
@@ -80,38 +83,11 @@ li {
 .header__img {
   /* width: 100%; */
   width: 23vw;
-  height: 55vh;
-  flex-shrink: 1;
+  height: 60vh;
+  /* flex-shrink: 1; */
 }
 
 .mission {
   display: block;
   height: 100%;
-}
-.mission__images {
-  justify-content: space-between;
-}
-
-.mission_img-wrapper {
-  /* width: 500px;
-  height: 600px; */
-}
-
-.mission_img {
-  width: 42vw;
-  height: 70vh;
-}
-
-.mission__img1 {
-  background-image: url("./img/mission1.jpg");
-  background-size: cover;
-  background-position: center;
-  object-fit: cover;
-}
-
-.mission__img2 {
-  background-image: url("./img/mission3.jpg");
-  object-fit: contain;
-  background-size: cover;
-  /* object-fit: contain; */
 }
