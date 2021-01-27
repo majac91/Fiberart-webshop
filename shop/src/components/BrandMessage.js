@@ -12,7 +12,7 @@ export default function BrandMessage() {
           "I help you create a home you love, so you can relax and refresh in a pure and simple space."
         }
       ></TextSection>
-      <TwoPhotosSection />
+      <TwoPhotosSection el={"div"} />
     </>
   );
 }

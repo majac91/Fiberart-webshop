@@ -13,8 +13,16 @@ export default function Newsletter() {
             <span>Download my checklist with loads of tips</span>
             <span>to create a table setting that everyone will love!</span>
           </p>
-          <input type="text"></input>
-          <button type="button">Send</button>
+          <div className={styles.form}>
+            <input
+              className={styles.input}
+              type="text"
+              placeholder={"email address"}
+            ></input>
+            <button className={styles.btn} type="button">
+              send
+            </button>
+          </div>
         </div>
       </sectiion>
     </>

@@ -36,3 +36,33 @@
   font-size: 1em;
   max-width: 35em;
 }
+
+.form {
+  display: flex;
+  padding-top: 1em;
+  justify-content: center;
+  height: 4em;
+}
+
+.input {
+  width: 25em;
+  border: none;
+  margin-right: 0.5em;
+  text-indent: 2em;
+}
+
+.input::placeholder {
+  font-size: 1.3em;
+}
+
+.input::-moz-placeholder {
+  font-size: 18px;
+}
+
+.btn {
+  width: 10em;
+  font-size: 1.3em;
+  background: black;
+  color: white;
+  border: none;
+}

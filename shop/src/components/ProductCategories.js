@@ -4,7 +4,7 @@ import TwoPhotosSection from "../components/TwoPhotosSection.js";
 export default function ProductCategories() {
   return (
     <section className="product-categories">
-      <TwoPhotosSection />
+      <TwoPhotosSection el={"a"} />
     </section>
   );
 }
