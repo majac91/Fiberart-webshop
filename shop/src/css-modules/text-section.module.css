@@ -33,10 +33,13 @@
 }
 
 .caption span {
+  width: 30vw;
+  margin: 0 20%;
+  display: inline-block;
   font-family: VogaRegular;
   color: #dbdbdb;
   font-size: 4em;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.02em;
 }
 
 .subcaption {
@@ -44,26 +47,41 @@
   letter-spacing: 0.2em;
   font-size: 1.4em;
   padding-top: 0.5em;
+  margin: 1em auto;
   width: 40vw;
-  margin: auto;
-}
-
-.mission.subcaption span {
-  font-size: 0.8em;
-}
-
-.mission.caption span {
-  font-size: 2em;
-  color: black;
-  font-weight: 500;
-}
-
-.mission.brand {
-  left: -4.6em;
-  float: none;
 }
 
 .mission.container {
   border-left: 1px solid black;
   border-right: none;
+}
+
+.mission .subcaption span {
+  font-size: 0.8em;
+}
+
+.mission .caption span {
+  font-size: 2em;
+  color: black;
+  font-weight: 500;
+}
+
+.mission .brand {
+  left: -4.6em;
+  float: none;
+}
+
+.about.container {
+  border-left: 1px solid black;
+  border-right: none;
+}
+
+.about .brand {
+  float: left;
+  left: -4.6em;
+}
+
+.about .caption span {
+  font-size: 3em;
+  padding-bottom: 1em;
 }

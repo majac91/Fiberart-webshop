@@ -20,6 +20,7 @@
 
 :root {
   --text: rgba(57, 57, 57, 1);
+  --section: 5em;
 }
 
 .d-flex {

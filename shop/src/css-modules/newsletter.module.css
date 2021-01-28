@@ -3,7 +3,6 @@
   justify-content: center;
   align-items: center;
   margin-top: 5rem;
-  margin-bottom: 5rem;
   height: 30em;
   background: #dbdbdb;
 }
@@ -35,13 +34,13 @@
   font-family: "Ralewawy";
   font-size: 1em;
   max-width: 35em;
+  margin: 0 auto 1em auto;
 }
 
 .form {
   display: flex;
   padding-top: 1em;
   justify-content: center;
-  height: 4em;
 }
 
 .input {
@@ -61,8 +60,13 @@
 
 .btn {
   width: 10em;
+  height: 2em;
   font-size: 1.3em;
   background: black;
   color: white;
   border: none;
+}
+
+.about.subcaption {
+  margin: 0 20%;
 }

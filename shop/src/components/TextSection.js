@@ -4,10 +4,9 @@ const classNames = require("classnames");
 
 export default function TextSection(props) {
   let textClass = classNames({
-    header: props.section === "brand",
+    message: props.section === "brandMsg",
     mission: props.section === "mission",
   });
-  console.log(textClass);
   return (
     <>
       <div

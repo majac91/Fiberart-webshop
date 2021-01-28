@@ -8,6 +8,7 @@ export default function ProductCategories() {
         el={"a"}
         link1={"https://www.npmjs.com/package/classnames"}
         link2={"https://github.com/"}
+        img={["img3", "img4"]}
       />
     </section>
   );

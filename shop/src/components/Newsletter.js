@@ -5,7 +5,7 @@ const classNames = require("classnames");
 export default function Newsletter() {
   return (
     <>
-      <sectiion className={`${styles.container} container`}>
+      <section className={`${styles.container} container`}>
         <div className={styles.text}>
           <p className={styles.caption}>FREE CHECKLIST</p>
           <p className={styles.subcaption}>for a stylish table setting</p>
@@ -24,7 +24,7 @@ export default function Newsletter() {
             </button>
           </div>
         </div>
-      </sectiion>
+      </section>
     </>
   );
 }

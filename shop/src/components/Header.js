@@ -4,7 +4,7 @@ import React from "react";
 // import header1 from "../img/header1.jpg";
 import header1 from "../img/DSC_2900.jpg";
 import header2 from "../img/header2.jpg";
-import header3 from "../img/header3.jpg";
+// import header3 from "../img/header3.jpg";
 import header4 from "../img/header4.jpg";
 import header5 from "../img/header5.jpg";
 
