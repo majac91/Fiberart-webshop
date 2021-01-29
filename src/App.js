@@ -6,6 +6,7 @@ import ProductCategories from "./components/ProductCategories.js";
 import BrandMessage from "./components/BrandMessage.js";
 import Newsletter from "./components/Newsletter.js";
 import Featured from "./components/Featured.js";
+import CustomSlider from "./components/Slider.js";
 import About from "./components/About.js";
 
 // import "./flickity.css";
@@ -30,7 +31,7 @@ function App() {
         btn={"buy now"}
       ></Featured>
 
-      {/* <Slider></Slider> */}
+      <CustomSlider></CustomSlider>
       <About
         section={"about"}
         message={"About me"}

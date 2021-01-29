@@ -9,7 +9,6 @@
 
 .text {
   text-align: center;
-  line-height: 1.5;
 }
 
 .caption {
@@ -23,6 +22,7 @@
 .subcaption,
 .paragraph {
   letter-spacing: 0.2em;
+  line-height: 1.5;
 }
 .subcaption {
   font-family: "Oswald";
