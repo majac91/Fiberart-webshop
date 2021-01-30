@@ -1,0 +1,51 @@
+.container {
+  border: none;
+  width: 90vw;
+  text-align: center;
+}
+
+.imgWrapper {
+  height: 35em;
+  width: 50em;
+  display: grid;
+  grid-template-columns: 15em 15em;
+  grid-template-rows: 15em 15em;
+  column-gap: 1em;
+  row-gap: 1em;
+  justify-content: end;
+}
+
+.img {
+  height: 15em;
+  width: 15em;
+  background-size: cover;
+  background-position: center;
+}
+
+.img1 {
+  background-image: url("../img/social1.jpg");
+}
+.img2 {
+  background-image: url("../img/social2.jpg");
+}
+.img3 {
+  background-image: url("../img/social3.jpg");
+}
+.img4 {
+  background-image: url("../img/social4.jpg");
+}
+.logo {
+  background-image: url("../img/logo.png");
+  height: 10em;
+  width: 15em;
+  background-position: cetner;
+  background-size: cover;
+}
+
+.social {
+}
+
+.link {
+  padding: 1em;
+  cursor: pointer;
+}

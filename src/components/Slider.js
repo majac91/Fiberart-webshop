@@ -35,7 +35,7 @@ export default function CustomSlider() {
       </div>
       <div className={customSliderStyles.wrapper}>
         <div
-          className={`${customSliderStyles.img} ${customSliderStyles.slide2}`}
+          className={`${customSliderStyles.img} ${customSliderStyles.slide4}`}
         ></div>
       </div>
     </Slider>

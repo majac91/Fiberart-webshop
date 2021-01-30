@@ -18,6 +18,12 @@
   color: rgba(57, 57, 57, 1); /* TODO */
 }
 
+img,
+a {
+  border: none;
+  outline: none;
+}
+
 :root {
   --text: rgba(57, 57, 57, 1);
   --section: 5em;

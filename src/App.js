@@ -1,13 +1,14 @@
 import "./App.css";
-import Nav from "./components/Nav.js";
-import Header from "./components/Header.js";
-import MissionStatement from "./components/MissionStatement.js";
-import ProductCategories from "./components/ProductCategories.js";
-import BrandMessage from "./components/BrandMessage.js";
-import Newsletter from "./components/Newsletter.js";
-import Featured from "./components/Featured.js";
-import CustomSlider from "./components/Slider.js";
-import About from "./components/About.js";
+import Nav from "./components/Nav";
+import Header from "./components/Header";
+import MissionStatement from "./components/MissionStatement";
+import ProductCategories from "./components/ProductCategories";
+import BrandMessage from "./components/BrandMessage";
+import Newsletter from "./components/Newsletter";
+import Featured from "./components/Featured";
+import CustomSlider from "./components/Slider";
+import About from "./components/About";
+import Footer from "./components/Footer";
 
 // import "./flickity.css";
 
@@ -41,6 +42,11 @@ function App() {
         subcaption={"hey lovely, I am"}
         btn={"read more"}
       ></About>
+      <Footer
+        paragraph={
+          "I help you create a home you love, so you can relax and refresh in a pure and simple space."
+        }
+      ></Footer>
     </>
   );
 }

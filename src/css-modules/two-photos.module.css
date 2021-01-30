@@ -10,14 +10,14 @@
 }
 /* TODO rename img classes according to sections */
 .img1 {
-  background-image: url("../img/mission1.jpg");
+  background-image: url("../img/DSC_4256.jpg");
   background-size: cover;
   background-position: center;
   object-fit: cover;
 }
 
 .img2 {
-  background-image: url("../img/mission3.jpg");
+  background-image: url("../img/slider3.jpg");
   object-fit: contain;
   background-size: cover;
 }
