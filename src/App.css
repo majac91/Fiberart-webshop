@@ -18,14 +18,10 @@
   color: rgba(57, 57, 57, 1); /* TODO */
 }
 
-img,
-a {
-  border: none;
-  outline: none;
-}
-
 :root {
   --text: rgba(57, 57, 57, 1);
+  --headings: #dbdbdb;
+  --beige: rgb(234, 227, 217);
   --section: 5em;
 }
 
@@ -40,6 +36,16 @@ a {
 
 li {
   list-style: none;
+}
+
+img,
+a {
+  border: none;
+  outline: none;
+}
+
+a {
+  text-decoration: none;
 }
 
 .container {

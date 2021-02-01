@@ -1,3 +1,4 @@
+import React from "react";
 import TextSection from "./TextSection";
 import TwoPhotosSection from "../components/TwoPhotosSection.js";
 

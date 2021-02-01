@@ -1,18 +1,3 @@
-.aws-btn {
-  --slider-height-percentage: 60%;
-  --slider-transition-duration: 516ms;
-  --organic-arrow-thickness: 4px;
-  --organic-arrow-border-radius: 0px;
-  --organic-arrow-height: 40px;
-  --organic-arrow-color: #538bd5;
-  --control-button-width: 0px;
-  --control-button-height: 0px;
-  --control-button-background: transparent;
-  --control-bullet-color: #62a4fa;
-  --control-bullet-active-color: #538bd5;
-  --loader-bar-color: #851515;
-  --loader-bar-height: 6px;
-}
 .container {
   /* height: 60vh; */
   margin-top: var(--section);

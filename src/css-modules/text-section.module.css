@@ -37,7 +37,7 @@
   margin: 0 20%;
   display: inline-block;
   font-family: VogaRegular;
-  color: #dbdbdb;
+  color: var(--headings);
   font-size: 4em;
   letter-spacing: 0.02em;
 }

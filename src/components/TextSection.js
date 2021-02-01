@@ -1,12 +1,17 @@
 import React from "react";
 import textStyles from "../css-modules/text-section.module.css";
+import shopStyles from "../css-modules/shop.module.css";
+
 const classNames = require("classnames");
 
 export default function TextSection(props) {
   let textClass = classNames({
     message: props.section === "brandMsg",
     mission: props.section === "mission",
+    shop: props.section === "shop",
   });
+  console.log(props.message);
+  //TODO - fix undefined classes
   return (
     <>
       <div
@@ -19,10 +24,23 @@ export default function TextSection(props) {
           <span>{props.caption}</span>
         </p>
         <p
-          className={`${textStyles[textClass]} ${textStyles.subcaption} text-column`}
+          className={`${textStyles[textClass]} ${textStyles.subcaption} ${shopStyles.subcaption} text-column`}
         >
           <span>{props.subcaption} </span>
         </p>
+        {props.links && (
+          <div className={shopStyles.links}>
+            <a className={shopStyles.link} href="">
+              Wall hangings
+            </a>
+            <a className={shopStyles.link} href="">
+              Wall art
+            </a>
+            <a className={shopStyles.link} href="">
+              Home decor
+            </a>
+          </div>
+        )}
       </div>
     </>
   );
