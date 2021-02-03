@@ -7,27 +7,24 @@ import ProductCategories from "./components/ProductCategories";
 import BrandMessage from "./components/BrandMessage";
 import Newsletter from "./components/Newsletter";
 import Featured from "./components/Featured";
-import CustomSlider from "./components/Slider";
+import Slider from "./components/Slider";
 import About from "./components/About";
 import Footer from "./components/Footer";
 import TextSection from "./components/TextSection";
 import Faq from "./components/Faq";
 
-// import "./flickity.css";
-
 function App() {
   return (
     <Router>
-      <Nav></Nav>
-
+      <Nav />
       <Switch>
         <Route exact path="/home">
-          <Header></Header>
+          <Header />
           <main>
-            <BrandMessage></BrandMessage>
-            <MissionStatement></MissionStatement>
-            <ProductCategories></ProductCategories>
-            <Newsletter></Newsletter>
+            <BrandMessage />
+            <MissionStatement />
+            <ProductCategories />
+            <Newsletter />
             <Featured
               section={"featured"}
               message={"Featured promo"}
@@ -38,8 +35,7 @@ function App() {
               }
               btn={"buy now"}
             ></Featured>
-
-            <CustomSlider></CustomSlider>
+            <Slider />
             <About
               section={"about"}
               message={"About me"}
@@ -53,7 +49,7 @@ function App() {
         </Route>
 
         <Route exact path="/shop">
-          <Header></Header>
+          <Header />
           <main>
             <TextSection
               section={"shop"}
@@ -64,7 +60,7 @@ function App() {
               }
               links={true}
             ></TextSection>
-            <Faq></Faq>
+            <Faq />
           </main>
         </Route>
       </Switch>

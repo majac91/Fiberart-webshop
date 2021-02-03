@@ -4,7 +4,7 @@ import imgStyles from "../css-modules/photo-text-section.module.css";
 import newsletterStyles from "../css-modules/newsletter.module.css";
 const classNames = require("classnames");
 
-export default function Featured(props) {
+export default function About(props) {
   let textClass = "about";
   return (
     <div

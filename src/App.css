@@ -38,12 +38,6 @@ li {
   list-style: none;
 }
 
-img,
-a {
-  border: none;
-  outline: none;
-}
-
 a {
   text-decoration: none;
 }
@@ -51,56 +45,4 @@ a {
 .container {
   width: 90vw;
   margin: auto;
-}
-
-.header__container {
-  width: 90vw;
-  margin: auto;
-}
-.nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding-bottom: 3em;
-  padding-top: 1em;
-}
-
-.nav__links {
-  display: flex;
-  padding: 0;
-}
-
-.nav__link {
-  margin-right: 2em;
-  text-transform: lowercase;
-  letter-spacing: 0.2em;
-  font-weight: 600;
-  color: black;
-  font-size: 1em;
-  font-family: "Raleway";
-}
-
-.nav__logo-img {
-  height: 30%;
-  width: 30%;
-  float: right;
-}
-.header {
-  height: 60vh;
-}
-
-.header__images {
-  display: flex;
-  overflow: hidden;
-}
-.header__img {
-  /* width: 100%; */
-  width: 23vw;
-  height: 60vh;
-  /* flex-shrink: 1; */
-}
-
-.mission {
-  display: block;
-  height: 100%;
 }

@@ -1,0 +1,12 @@
+.container {
+  height: 60vh;
+}
+
+.headerImgs {
+  display: flex;
+  overflow: hidden;
+}
+.headerImg {
+  width: 23vw;
+  height: 60vh;
+}
