@@ -12,13 +12,14 @@ import About from "./components/About";
 import Footer from "./components/Footer";
 import TextSection from "./components/TextSection";
 import Faq from "./components/Faq";
+import Products from "./components/Products";
 
 function App() {
   return (
     <Router>
       <Nav />
       <Switch>
-        <Route exact path="/home">
+        <Route exact path="/">
           <Header />
           <main>
             <BrandMessage />
@@ -64,7 +65,7 @@ function App() {
           </main>
         </Route>
       </Switch>
-
+      <Products />
       <Footer
         paragraph={
           "I help you create a home you love, so you can relax and refresh in a pure and simple space."

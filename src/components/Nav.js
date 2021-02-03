@@ -8,7 +8,7 @@ export default function Nav() {
     <>
       <nav className={`${navStyles.container} container`}>
         <ul className={navStyles.navLinks}>
-          <Link to="/home" className={navStyles.navLink}>
+          <Link to="/" className={navStyles.navLink}>
             Home
           </Link>
           <Link to="/shop" className={navStyles.navLink}>
