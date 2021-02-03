@@ -15,8 +15,6 @@ const useFirebase = (collection) => {
     return () => unsub;
   }, []);
 
-  console.log(docs);
-
   return { docs };
 };
 
