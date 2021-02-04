@@ -61,11 +61,12 @@ function App() {
               }
               links={true}
             ></TextSection>
+            <Products />
+
             <Faq />
           </main>
         </Route>
       </Switch>
-      <Products />
       <Footer
         paragraph={
           "I help you create a home you love, so you can relax and refresh in a pure and simple space."
