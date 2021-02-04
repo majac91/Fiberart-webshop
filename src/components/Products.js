@@ -1,19 +1,22 @@
 import React from "react";
 import useFirebase from "../hooks/useFirebase";
+import shopStyles from "../css-modules/shop.module.css";
 import { db } from "../firebase/config.js";
 
 const Products = () => {
   var productsRef = db.ref().child("Product data");
   const products = useFirebase(productsRef);
-  products.docs.forEach((product) => console.log(product.image));
+  console.log(products);
 
   return (
     <>
       {products.docs.map((product) => {
         return (
           <div className={"container"}>
-            <div>{product.title}</div>
-            <img src={product.image}></img>
+            <div>{product.data.title}</div>
+
+            {/*BUG renders data for last product only */}
+            <img className={shopStyles.product} src={product.data.image}></img>
           </div>
         );
       })}
@@ -22,6 +25,3 @@ const Products = () => {
 };
 
 export default Products;
-// products.docs.forEach((product) =>
-// <div>{product.title}</div>
-//  <img src={product.image}></img>

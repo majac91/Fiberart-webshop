@@ -4,13 +4,14 @@ const useFirebase = (collection) => {
   const [docs, setDocs] = useState([]);
 
   useEffect(() => {
-    //TODO resolve img paths
-
     const unsub = collection.once("value", (snapshot) => {
       let documents = [];
-
-      snapshot.forEach((snap) => {
-        documents.push({ title: snap.key, image: snap.val() });
+      snapshot.forEach((doc) => {
+        documents.push({
+          item: doc.key,
+          data: doc.val(),
+          id: doc.id, //TODO set ids
+        });
       });
       setDocs(documents);
     });
