@@ -13,6 +13,7 @@ import Footer from "./components/Footer";
 import TextSection from "./components/TextSection";
 import Faq from "./components/Faq";
 import Products from "./components/Products";
+import Product from "./components/Product";
 
 function App() {
   return (
@@ -66,7 +67,12 @@ function App() {
             <Faq />
           </main>
         </Route>
+
+        <Route exact path="/product/:name">
+          <Product></Product>
+        </Route>
       </Switch>
+
       <Footer
         paragraph={
           "I help you create a home you love, so you can relax and refresh in a pure and simple space."

@@ -10,7 +10,6 @@ export default function TextSection(props) {
     mission: props.section === "mission",
     shop: props.section === "shop",
   });
-  console.log(props.message);
   //TODO - fix undefined classes
   return (
     <>
