@@ -68,7 +68,7 @@ function App() {
           </main>
         </Route>
 
-        <Route exact path="/product/:name">
+        <Route exact path="/product/:id">
           <Product></Product>
         </Route>
       </Switch>

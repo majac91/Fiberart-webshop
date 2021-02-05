@@ -8,9 +8,8 @@ const Product = () => {
   const params = useParams();
   var productsRef = db.ref().child("products");
   const products = useFirebase(productsRef);
-  const product = products.docs.filter(
-    (product) => product.name === params.name
-  );
+  const product = products.docs.filter((product) => product.id === params.id);
+  console.log(products);
 
   if (!product[0]) {
     return null;

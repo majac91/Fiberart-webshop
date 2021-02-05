@@ -10,29 +10,30 @@ const Products = () => {
 
   return (
     <>
-      {/* firebase syntax */}
-      {/* {products.docs.map((product) => {
-        return (
-          <div className={"container"}>
-            <div>{product.data.name}</div>
-            <div>{product.data.price}</div>
-            <img className={shopStyles.product} src={product.data.image}></img>
-          </div>
-        );
-      })} */}
+      {products &&
+        products.docs.map((product) => {
+          return (
+            <div className={"container"}>
+              <img className={shopStyles.product} src={product.image}></img>
+              <div>{product.name}</div>
+              <div>{product.price}</div>
+              <Link to={`product/${product.id}`}>View item</Link>
+            </div>
+          );
+        })}
 
       {/* fetch */}
-      {products &&
+      {/* {products &&
         products.docs.map((product, index) => {
           return (
             <div key={index} className={"container"}>
               <img className={shopStyles.product} src={product.image}></img>
               <div>{product.name}</div>
               <div>{product.price}</div>
-              <Link to={`product/${product.name}`}>View item</Link>
+              <Link to={`product/${product.id}`}>View item</Link>
             </div>
           );
-        })}
+        })} */}
     </>
   );
 };
