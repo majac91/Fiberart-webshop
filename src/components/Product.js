@@ -2,7 +2,7 @@ import React from "react";
 import useFirebase from "../hooks/useFirebase";
 import { Link, useParams } from "react-router-dom";
 import { db } from "../firebase/config.js";
-import shopStyles from "../css-modules/shop.module.css";
+import productStyles from "../css-modules/product.module.css";
 
 const Product = () => {
   const params = useParams();
@@ -16,10 +16,17 @@ const Product = () => {
   }
 
   return (
-    <div>
-      <h1>{product[0].name}</h1>
-      <h2>{product[0].price}</h2>
-      <img className={shopStyles.product} src={product[0].image}></img>
+    <div className={`${productStyles.container} container`}>
+      <div className={productStyles.name}>{product[0].name}</div>
+      <div className={productStyles.price}>{product[0].price}</div>
+      <div className={productStyles.imgWrapper}>
+        <div
+          className={productStyles.product}
+          style={{
+            backgroundImage: `url(${product[0].image})`,
+          }}
+        ></div>
+      </div>
     </div>
   );
 };

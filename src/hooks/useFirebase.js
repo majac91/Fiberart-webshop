@@ -10,7 +10,7 @@ const useFirebase = (collection) => {
         documents.push({
           id: doc.val().id,
           name: doc.val().name,
-          price: doc.val().id.price,
+          price: doc.val().price,
           image: doc.val().image,
         });
       });
