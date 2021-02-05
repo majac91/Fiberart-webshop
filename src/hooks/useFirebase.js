@@ -17,7 +17,7 @@ const useFirebase = (collection) => {
     });
 
     return () => unsub;
-  }, []); //adding missing dependency creates an infinite loop
+  }, []);
 
   return { docs };
 };

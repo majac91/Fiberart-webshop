@@ -4,7 +4,7 @@ import shopStyles from "../css-modules/shop.module.css";
 import { db } from "../firebase/config.js";
 
 const Products = () => {
-  var productsRef = db.ref().child("Product data");
+  var productsRef = db.ref().child("products");
   const products = useFirebase(productsRef);
   console.log(products);
 
@@ -13,9 +13,8 @@ const Products = () => {
       {products.docs.map((product) => {
         return (
           <div className={"container"}>
-            <div>{product.data.title}</div>
-
-            {/*BUG renders data for last product only */}
+            <div>{product.data.name}</div>
+            <div>{product.data.price}</div>
             <img className={shopStyles.product} src={product.data.image}></img>
           </div>
         );
