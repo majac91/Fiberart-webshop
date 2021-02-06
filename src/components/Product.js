@@ -1,14 +1,11 @@
-import React, { useMemo } from "react";
-import useFirebase from "../hooks/useFirebase";
+import React from "react";
+import { useFetchProduct } from "../firebase/api";
 import { Link, useParams } from "react-router-dom";
-import { db } from "../firebase/config.js";
 import productStyles from "../css-modules/product.module.css";
 
 const Product = () => {
   const { id } = useParams();
-  var productsRef = useMemo(() => db.ref().child(`products/${id}`), [id]);
-  const { data: product } = useFirebase(productsRef);
-
+  const product = useFetchProduct(id);
   if (!product) {
     return <p>Item not found</p>;
   }

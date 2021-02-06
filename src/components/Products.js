@@ -1,13 +1,10 @@
-import React, { useMemo } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
-import useFirebase from "../hooks/useFirebase";
+import { useProductList } from "../firebase/api";
 import productStyles from "../css-modules/product.module.css";
 
-import { db } from "../firebase/config.js";
-
 const Products = () => {
-  var productsRef = useMemo(() => db.ref().child(`products`), []);
-  const { data: products } = useFirebase(productsRef);
+  const products = useProductList();
 
   return (
     <div className={`${productStyles.container} container`}>
