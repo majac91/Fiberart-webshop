@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "../css-modules/newsletter.module.css";
+import styles from "./newsletter.module.css";
 const classNames = require("classnames");
 
 export default function Newsletter() {

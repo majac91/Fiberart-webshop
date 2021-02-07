@@ -1,5 +1,5 @@
 // import React from "react";
-import customSliderStyles from "../css-modules/custom-slider.module.css";
+import customSliderStyles from "./custom-slider.module.css";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";

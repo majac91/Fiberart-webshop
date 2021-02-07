@@ -1,7 +1,7 @@
 import React from "react";
-import { useFetchProduct } from "../firebase/api";
+import { useFetchProduct } from "../../firebase/api";
 import { Link, useParams } from "react-router-dom";
-import productStyles from "../css-modules/product.module.css";
+import productStyles from "./product.module.css";
 
 const Product = () => {
   const { id } = useParams();

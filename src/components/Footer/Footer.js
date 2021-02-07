@@ -1,14 +1,14 @@
 import React from "react";
-import textStyles from "../css-modules/text-section.module.css";
-import imgStyles from "../css-modules/photo-text-section.module.css";
-import newsletterStyles from "../css-modules/newsletter.module.css";
-import footerStyles from "../css-modules/footer.module.css";
+import textStyles from "../TextSection/text-section.module.css";
+import imgStyles from "../../css-modules/photo-text-section.module.css";
+import newsletterStyles from "../Newsletter/newsletter.module.css";
+import footerStyles from "./footer.module.css";
 
-import logo from "../img/logo.png";
-import facebookbtn from "../icons/facebook.png";
-import twitterbtn from "../icons/twitter.png";
-import pinterestbtn from "../icons/pinterest.png";
-import tumblrbtn from "../icons/tumblr.png";
+import logo from "../../img/logo.png";
+import facebookbtn from "../../icons/facebook.png";
+import twitterbtn from "../../icons/twitter.png";
+import pinterestbtn from "../../icons/pinterest.png";
+import tumblrbtn from "../../icons/tumblr.png";
 
 const classNames = require("classnames");
 

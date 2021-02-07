@@ -1,5 +1,5 @@
 import React from "react";
-import TwoPhotosSection from "../components/TwoPhotosSection.js";
+import TwoPhotosSection from "./TwoPhotosSection/TwoPhotosSection";
 
 export default function ProductCategories() {
   return (

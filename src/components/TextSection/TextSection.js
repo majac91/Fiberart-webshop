@@ -1,6 +1,6 @@
 import React from "react";
-import textStyles from "../css-modules/text-section.module.css";
-import shopStyles from "../css-modules/shop.module.css";
+import textStyles from "./text-section.module.css";
+import shopStyles from "../../pages/Shop/shop.module.css";
 
 const classNames = require("classnames");
 

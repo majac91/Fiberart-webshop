@@ -1,5 +1,5 @@
 import React from "react";
-import shopStyles from "../css-modules/shop.module.css";
+import shopStyles from "../pages/Shop/shop.module.css";
 
 const Faq = () => {
   return (

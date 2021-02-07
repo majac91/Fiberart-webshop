@@ -1,11 +1,11 @@
 import React from "react";
-import headerStyles from "../css-modules/header.module.css";
+import headerStyles from "./header.module.css";
 
 //header imgs
-import header1 from "../img/header1.jpg";
-import header2 from "../img/header2.jpg";
-import header3 from "../img/header3.jpg";
-import header4 from "../img/asadad.jpg";
+import header1 from "../../img/header1.jpg";
+import header2 from "../../img/header2.jpg";
+import header3 from "../../img/header3.jpg";
+import header4 from "../../img/asadad.jpg";
 
 export default function Header() {
   return (
