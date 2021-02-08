@@ -2,7 +2,6 @@ import React from "react";
 import textStyles from "../components/TextSection/text-section.module.css";
 import imgStyles from "../css-modules/photo-text-section.module.css";
 import newsletterStyles from "../components/Newsletter/newsletter.module.css";
-const classNames = require("classnames");
 
 export default function Featured(props) {
   let textClass = props.section;

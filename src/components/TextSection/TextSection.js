@@ -2,10 +2,10 @@ import React from "react";
 import textStyles from "./text-section.module.css";
 import shopStyles from "../../pages/Shop/shop.module.css";
 
-const classNames = require("classnames");
+const cx = require("classnames");
 
 export default function TextSection(props) {
-  let textClass = classNames({
+  let textClass = cx({
     message: props.section === "brandMsg",
     mission: props.section === "mission",
     shop: props.section === "shop",
@@ -14,16 +14,21 @@ export default function TextSection(props) {
   return (
     <>
       <div
-        className={`${textStyles[textClass]} ${textStyles.container} container`}
+        className={cx(textStyles[textClass], textStyles.container, "container")}
       >
-        <div className={`${textStyles[textClass]} ${textStyles.brand}`}>
+        <div className={cx(textStyles[textClass], textStyles.brand)}>
           <p>{props.message}</p>
         </div>
-        <p className={`${textStyles[textClass]} ${textStyles.caption}`}>
+        <p className={cx(textStyles[textClass], textStyles.caption)}>
           <span>{props.caption}</span>
         </p>
         <p
-          className={`${textStyles[textClass]} ${textStyles.subcaption} ${shopStyles.subcaption} text-column`}
+          className={cx(
+            textStyles[textClass],
+            textStyles.subcaption,
+            shopStyles.subcaption,
+            "text-column"
+          )}
         >
           <span>{props.subcaption} </span>
         </p>

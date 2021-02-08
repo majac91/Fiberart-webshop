@@ -12,7 +12,7 @@ function App() {
       <Nav />
       <Switch>
         <Route exact path="/">
-          <Main></Main>
+          <Main />
         </Route>
 
         <Route exact path="/shop">
@@ -20,7 +20,7 @@ function App() {
         </Route>
 
         <Route exact path="/product/:id">
-          <Product></Product>
+          <Product />
         </Route>
       </Switch>
 

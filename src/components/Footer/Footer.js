@@ -10,8 +10,6 @@ import twitterbtn from "../../icons/twitter.png";
 import pinterestbtn from "../../icons/pinterest.png";
 import tumblrbtn from "../../icons/tumblr.png";
 
-const classNames = require("classnames");
-
 export default function Footer(props) {
   let textClass = props.section;
   return (
