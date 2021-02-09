@@ -25,6 +25,7 @@
   --section: 5em;
   --text-font: "Raleway";
   --captions: "VogaRegular";
+  --caption-size: 4em;
 }
 
 .d-flex {
