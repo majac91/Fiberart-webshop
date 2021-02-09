@@ -1,0 +1,53 @@
+.container {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 50% 50%;
+  grid-gap: 1em;
+  align-items: center;
+  margin: auto;
+}
+
+.imgWrapper {
+  width: 100%;
+  margin: auto;
+  min-height: 60vh;
+}
+
+.product {
+  margin: auto;
+  max-width: 30em;
+  min-height: 50em;
+  background-position: center;
+  background-size: cover;
+}
+
+.name {
+  color: var(--headings);
+  font-size: 3em;
+}
+
+.caption {
+  font-family: (--captions);
+  text-align: center;
+}
+
+.price,
+.button {
+  font-weight: 600;
+}
+
+.caption,
+.button {
+  font-family: var(--text-font); /*replace with var elsewhere*/
+}
+
+.price {
+  padding: 2em 0;
+}
+
+.button {
+  margin-top: 2em;
+  border: 2px solid var(--beige);
+  max-width: 30em;
+  padding: 1em 2em;
+}

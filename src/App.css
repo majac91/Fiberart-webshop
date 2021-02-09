@@ -23,6 +23,8 @@
   --headings: #dbdbdb;
   --beige: rgb(234, 227, 217);
   --section: 5em;
+  --text-font: "Raleway";
+  --captions: "VogaRegular";
 }
 
 .d-flex {

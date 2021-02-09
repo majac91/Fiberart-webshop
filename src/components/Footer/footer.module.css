@@ -23,19 +23,19 @@
 }
 
 .img1 {
-  background-image: url("../img/social1.jpg");
+  background-image: url("../../img/social1.jpg");
 }
 .img2 {
-  background-image: url("../img/social2.jpg");
+  background-image: url("../../img/social2.jpg");
 }
 .img3 {
-  background-image: url("../img/social3.jpg");
+  background-image: url("../../img/social3.jpg");
 }
 .img4 {
-  background-image: url("../img/social4.jpg");
+  background-image: url("../../img/social4.jpg");
 }
 .logo {
-  background-image: url("../img/logo.png");
+  background-image: url("../../img/logo.png");
   height: 10em;
   width: 15em;
   background-position: cetner;

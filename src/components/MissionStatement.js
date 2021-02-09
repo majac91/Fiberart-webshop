@@ -1,5 +1,5 @@
 import React from "react";
-import TextSection from "./TextSection";
+import TextSection from "./TextSection/TextSection";
 
 export default function MissionStatement() {
   return (

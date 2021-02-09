@@ -1,6 +1,5 @@
 import React from "react";
-import photoStyles from "../css-modules/two-photos.module.css";
-const classNames = require("classnames");
+import photoStyles from "./two-photos.module.css";
 
 export default function TwoPhotosSection(props) {
   const imgClass = props.img;
