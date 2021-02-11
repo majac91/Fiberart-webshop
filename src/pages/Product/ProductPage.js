@@ -1,15 +1,20 @@
 import React from "react";
 import { useFetchProduct } from "../../firebase/api";
-import { Link, useParams } from "react-router-dom";
-import productStyles from "./product.module.css";
+import { useParams } from "react-router-dom";
 import productPageStyles from "./product-page.module.css";
 import newsletterStyles from "../../components/Newsletter/newsletter.module.css";
 
-const ProductPage = () => {
+const ProductPage = ({ onAddToCart, setCartItems, cartItems }) => {
   const { id } = useParams();
   const product = useFetchProduct(id);
+
   if (!product) {
     return <p>Item not found</p>;
+  }
+
+  function handleAddCartItem() {
+    onAddToCart();
+    setCartItems([...cartItems, product]);
   }
 
   return (
@@ -38,7 +43,11 @@ const ProductPage = () => {
             commodo ligula eget dolor. Donec quam felis, ultricies nec,
             pellentesque eu,
           </p>
-          <button className={newsletterStyles.btn} type="button">
+          <button
+            onClick={handleAddCartItem}
+            className={newsletterStyles.btn}
+            type="button"
+          >
             Add to cart
           </button>
         </div>

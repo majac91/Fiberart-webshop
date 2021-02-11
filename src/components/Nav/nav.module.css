@@ -29,3 +29,8 @@
   width: 30%;
   float: right;
 }
+
+.cart {
+  border: none;
+  background: white;
+}
