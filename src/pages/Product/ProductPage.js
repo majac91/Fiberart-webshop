@@ -13,8 +13,10 @@ const ProductPage = ({ onAddToCart, setCartItems, cartItems }) => {
   }
 
   function handleAddCartItem() {
-    onAddToCart();
-    setCartItems([...cartItems, product]);
+    if (!cartItems.includes(product)) {
+      setCartItems([...cartItems, product]);
+      onAddToCart();
+    }
   }
 
   return (

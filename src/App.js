@@ -23,12 +23,17 @@ function App() {
 
   return (
     <Router>
-      <Nav cartCount={cartCount} onCartClick={handleCartOpen}></Nav>
+      <Nav
+        cartCount={cartCount}
+        onCartClick={handleCartOpen}
+        setCartIsOpen={setCartIsOpen}
+      ></Nav>
       <Cart
         cartIsOpen={cartIsOpen}
         cartItems={cartItems}
         setCartItems={setCartItems}
         setCartCount={setCartCount}
+        setCartIsOpen={setCartIsOpen}
       ></Cart>
       <Switch>
         <Route exact path="/">

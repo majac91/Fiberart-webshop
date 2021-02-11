@@ -3,7 +3,7 @@ import logo from "../../img/logo.png";
 import { Link } from "react-router-dom";
 import navStyles from "./nav.module.css";
 
-export default function Nav({ cartCount, onCartClick }) {
+export default function Nav({ cartCount, onCartClick, setCartIsOpen }) {
   return (
     <>
       <nav className={`${navStyles.container} container`}>
