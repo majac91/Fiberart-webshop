@@ -1,5 +1,7 @@
 import React from "react";
 import onClickOutside from "react-onclickoutside";
+import cartStyles from "./cart.module.css";
+const cx = require("classnames");
 
 const Cart = ({
   cartIsOpen,
@@ -8,7 +10,10 @@ const Cart = ({
   setCartItems,
   setCartCount,
 }) => {
-  let total = null;
+  let total = cartItems.reduce(
+    (acc, curr) => acc + parseInt(curr.price.slice(1)),
+    0
+  );
 
   function deleteItem(item) {
     const items = cartItems.filter((i) => i !== item);
@@ -16,46 +21,42 @@ const Cart = ({
     setCartCount(items.length);
   }
 
+  cartItems.map((item) =>
+    cartItems.indexOf(item) === cartItems.length - 1
+      ? console.log("last item" + cartItems.indexOf(item))
+      : console.log("not last" + cartItems.indexOf(item))
+  );
+
   Cart.handleClickOutside = () => setCartIsOpen(false);
 
   return (
-    //Only render the total price after the last product
-    cartIsOpen &&
-    cartItems.map((item, index) => {
-      total += parseInt(item.price.slice(1));
-      if (index === cartItems.length - 1) {
-        return (
-          <div>
-            <div>
-              <h2>{item.name}</h2>
-              <img
-                alt={item.name}
-                style={{ width: "200px", height: "200px" }}
-                src={item.image}
-              ></img>
-              <h4>{item.price}</h4>
-              <button onClick={() => deleteItem(item)}>Delete</button>
-            </div>
-            <p>Total {total}</p>
-          </div>
-        );
-      } else {
-        return (
-          <div>
-            <div>
-              <h2>{item.name}</h2>
-              <img
-                alt={item.name}
-                style={{ width: "200px", height: "200px" }}
-                src={item.image}
-              ></img>
-              <h4>{item.price}</h4>
-              <button onClick={() => deleteItem(item)}>Delete</button>
-            </div>
-          </div>
-        );
-      }
-    })
+    <div className={cx(cartIsOpen ? cartStyles["open"] : cartStyles["closed"])}>
+      <p>Your order</p>
+
+      {cartItems.map((item, index) => (
+        <div>
+          <p>{item.name}</p>
+          <img
+            alt={item.name}
+            style={{ width: "200px", height: "200px" }}
+            src={item.image}
+          ></img>
+          <>{item.price}</>
+          <button onClick={() => deleteItem(item)}>Delete</button>
+        </div>
+      ))}
+
+      {cartItems.map((item) =>
+        cartItems.indexOf(item) === cartItems.length - 1 ? (
+          <p>
+            Total
+            {total}
+          </p>
+        ) : (
+          <p>{null}</p>
+        )
+      )}
+    </div>
   );
 };
 
