@@ -31,9 +31,10 @@ const Cart = ({
     <div className={cx(cartIsOpen ? cartStyles["open"] : cartStyles["closed"])}>
       <div className={cartStyles.wrapperOutter}>
         <p className={cartStyles.title}>Your order</p>
-        <p className={cartStyles.emptyCart}>
-          {cartItems.length === 0 ? "The cart is empty." : null}
-        </p>
+        {cartItems.length === 0 ? (
+          <p className={cartStyles.emptyCart}>The cart is empty.</p>
+        ) : null}
+
         {cartItems.map((item, index) => (
           <div key={index} className={cartStyles.wrapperInner}>
             <img

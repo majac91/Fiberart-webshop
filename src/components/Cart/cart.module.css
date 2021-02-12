@@ -47,8 +47,8 @@
 }
 
 .img {
-  width: 30%;
-  height: 40%;
+  max-width: 20%;
+  max-height: 30%;
 }
 
 .productInfo {
