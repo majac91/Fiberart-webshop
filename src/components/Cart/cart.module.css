@@ -1,30 +1,30 @@
 .open {
   width: 30vw;
-  height: 100%;
+  height: 100vh;
   display: flex;
   flex-direction: column;
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   z-index: 1;
   transition: transform 1s ease;
   background: white;
-  height: 100vh;
+  border-left: 1px solid var(--beige);
 }
 
 .closed {
   width: 30vw;
-  height: 100%;
+  height: 100vh;
   display: flex;
   flex-direction: column;
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   z-index: 1;
   transition: transform 1s ease;
   background: white;
   transform: translateX(40vw);
-  height: 100vh;
+  border-left: 1px solid black;
 }
 
 .wrapperOutter {
@@ -33,6 +33,10 @@
 
 .title {
   font-size: 2em;
+}
+
+.emptyCart {
+  padding-top: 2em;
 }
 
 .wrapperInner {
@@ -78,7 +82,7 @@
   font-size: 0.8em;
   background: white;
   color: black;
-  border: 1px solid black;
+  border: 1px solid var(--beige);
 }
 
 .totalWrapper {
@@ -90,12 +94,16 @@
   margin-bottom: 2em;
 }
 
+.total,
+.span {
+  font-weight: 700;
+}
+
 .shipping {
   padding-bottom: 2em;
-  border-bottom: 1px solid black;
+  border-bottom: 2px solid var(--beige);
 }
 
 .span {
   float: right;
-  font-weight: 700;
 }

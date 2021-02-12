@@ -1,5 +1,5 @@
 import "./App.css";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Nav from "./components/Nav/Nav";
 import Footer from "./components/Footer/";
@@ -9,9 +9,13 @@ import ProductPage from "./pages/Product/ProductPage";
 import Cart from "./components/Cart/Cart";
 
 function App() {
-  const [cartCount, setCartCount] = useState(0);
+  const [cartCount, setCartCount] = useState(
+    () => JSON.parse(localStorage.getItem("item")).length || 0
+  );
   const [cartIsOpen, setCartIsOpen] = useState(false);
-  const [cartItems, setCartItems] = useState([]);
+  const [cartItems, setCartItems] = useState(() =>
+    JSON.parse(localStorage.getItem("item") || [])
+  );
 
   function handleAddToCart() {
     setCartCount((prev) => prev + 1);
