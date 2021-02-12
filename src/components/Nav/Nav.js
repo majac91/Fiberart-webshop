@@ -24,7 +24,7 @@ export default function Nav({ cartCount, onCartClick }) {
             onClick={onCartClick}
             className={`${navStyles.navLink} ${navStyles.cart}`}
           >
-            Cart {cartCount}
+            Cart ({cartCount})
           </button>
         </ul>
         <div className={navStyles.navLogo}>

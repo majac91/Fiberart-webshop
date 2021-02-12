@@ -31,31 +31,48 @@ const Cart = ({
 
   return (
     <div className={cx(cartIsOpen ? cartStyles["open"] : cartStyles["closed"])}>
-      <p>Your order</p>
+      <div className={cartStyles.wrapperOutter}>
+        <p className={cartStyles.title}>Your order</p>
+        {cartItems.map((item, index) => (
+          <div key={index} className={cartStyles.wrapperInner}>
+            <img
+              className={cartStyles.img}
+              alt={item.name}
+              src={item.image}
+            ></img>
+            <div className={cartStyles.productInfo}>
+              <p className={cartStyles.name}>{item.name}</p>
+              <div className={cartStyles.priceWrapper}>
+                <p className={cartStyles.price}>{item.price}</p>
+                <button
+                  className={cartStyles.btn}
+                  onClick={() => deleteItem(item)}
+                >
+                  Remove
+                </button>
+              </div>
+            </div>
+          </div>
+        ))}
 
-      {cartItems.map((item, index) => (
-        <div>
-          <p>{item.name}</p>
-          <img
-            alt={item.name}
-            style={{ width: "200px", height: "200px" }}
-            src={item.image}
-          ></img>
-          <>{item.price}</>
-          <button onClick={() => deleteItem(item)}>Delete</button>
-        </div>
-      ))}
-
-      {cartItems.map((item) =>
-        cartItems.indexOf(item) === cartItems.length - 1 ? (
-          <p>
-            Total
-            {total}
-          </p>
-        ) : (
-          <p>{null}</p>
-        )
-      )}
+        {cartItems.map((item, index) =>
+          index === cartItems.length - 1 ? (
+            <div className={cartStyles.totalWrapper}>
+              <p className={cartStyles.subtotal}>
+                Subtotal <span className={cartStyles.span}>${total}</span>
+              </p>
+              <p className={cartStyles.shipping}>
+                Shipping <span className={cartStyles.span}>free</span>
+              </p>
+              <p className={cartStyles.total}>
+                Total <span className={cartStyles.span}>${total}</span>
+              </p>
+            </div>
+          ) : (
+            <p>{null}</p>
+          )
+        )}
+      </div>
     </div>
   );
 };

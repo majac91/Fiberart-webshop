@@ -1,17 +1,101 @@
 .open {
-  border: 1px solid red;
   width: 30vw;
   height: 100%;
   display: flex;
   flex-direction: column;
   position: absolute;
+  top: 0;
   right: 0;
   z-index: 1;
-  transition: 1s ease;
+  transition: transform 1s ease;
+  background: white;
+  height: 100vh;
 }
 
 .closed {
+  width: 30vw;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
   position: absolute;
+  top: 0;
   right: 0;
-  transform: translateX(30vw);
+  z-index: 1;
+  transition: transform 1s ease;
+  background: white;
+  transform: translateX(40vw);
+  height: 100vh;
+}
+
+.wrapperOutter {
+  margin: 2em;
+}
+
+.title {
+  font-size: 2em;
+}
+
+.wrapperInner {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  margin: 2em 0;
+}
+
+.img {
+  width: 30%;
+  height: 40%;
+}
+
+.productInfo {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 70%;
+  margin-left: 2em;
+}
+
+.name {
+  font-size: 1.3em;
+}
+
+.priceWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 100%;
+}
+
+.price {
+  align-self: center;
+  margin-right: 2em;
+}
+
+.btn {
+  width: 6em;
+  height: 2.2em;
+  font-size: 0.8em;
+  background: white;
+  color: black;
+  border: 1px solid black;
+}
+
+.totalWrapper {
+  width: 100%;
+}
+
+.subtotal,
+.shipping {
+  margin-bottom: 2em;
+}
+
+.shipping {
+  padding-bottom: 2em;
+  border-bottom: 1px solid black;
+}
+
+.span {
+  float: right;
+  font-weight: 700;
 }
