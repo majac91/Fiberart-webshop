@@ -1,12 +1,12 @@
 .container {
-  border: none;
-  width: 90vw;
   text-align: center;
+  flex-wrap: wrap;
+  border: none;
 }
 
 .imgWrapper {
   height: 35em;
-  width: 50em;
+  flex: 1;
   display: grid;
   grid-template-columns: 15em 15em;
   grid-template-rows: 15em 15em;
@@ -15,6 +15,9 @@
   justify-content: end;
 }
 
+.textWrapper {
+  flex: 1;
+}
 .img {
   height: 15em;
   width: 15em;
@@ -43,9 +46,16 @@
 }
 
 .social {
+  width: 50%;
 }
 
 .link {
   padding: 1em;
   cursor: pointer;
+}
+
+@media only screen and (max-width: 900px) {
+  .imgWrapper {
+    justify-content: center;
+  }
 }

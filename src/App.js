@@ -21,7 +21,7 @@ function App() {
     setCartCount((prev) => prev + 1);
   }
 
-  function handleCartOpen() {
+  function handleToggleCart() {
     setCartIsOpen((prev) => !prev);
   }
 
@@ -29,10 +29,11 @@ function App() {
     <Router>
       <Nav
         cartCount={cartCount}
-        onCartClick={handleCartOpen}
+        onCartClick={handleToggleCart}
         setCartIsOpen={setCartIsOpen}
       ></Nav>
       <Cart
+        onCartClick={handleToggleCart}
         cartIsOpen={cartIsOpen}
         cartItems={cartItems}
         setCartItems={setCartItems}
@@ -50,6 +51,7 @@ function App() {
 
         <Route exact path="/product/:id">
           <ProductPage
+            onCartClick={handleToggleCart}
             onAddToCart={handleAddToCart}
             cartItems={cartItems}
             setCartItems={setCartItems}

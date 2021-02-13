@@ -31,8 +31,25 @@
   margin: 2em;
 }
 
+.titleWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 .title {
   font-size: 2em;
+  display: inline;
+}
+
+.closeBtn {
+  border: none;
+  outline: none;
+  background: transparent;
+}
+
+.closeIcon {
+  width: 1.3em;
+  height: 1.3em;
 }
 
 .emptyCart {
@@ -41,7 +58,7 @@
 
 .wrapperInner {
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   width: 100%;
   margin: 2em 0;
 }

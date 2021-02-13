@@ -27,9 +27,9 @@ export default function Nav({ cartCount, onCartClick }) {
             Cart ({cartCount})
           </button>
         </ul>
-        <div className={navStyles.navLogo}>
-          <img className={navStyles.navLogoImg} src={logo}></img>
-        </div>
+        <Link to="/" className={navStyles.navLogo}>
+          <img alt="logo" className={navStyles.navLogoImg} src={logo}></img>
+        </Link>
       </nav>
     </>
   );

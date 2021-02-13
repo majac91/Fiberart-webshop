@@ -6,7 +6,7 @@ import "slick-carousel/slick/slick-theme.css";
 
 export default function CustomSlider() {
   var settings = {
-    dots: false,
+    dots: true,
     autoplay: true,
     infinite: true,
     autoplaySpeed: 4000,

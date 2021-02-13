@@ -15,17 +15,22 @@
   padding: 0;
   margin: 0;
   font-family: "Raleway";
-  color: rgba(57, 57, 57, 1); /* TODO */
+  color: var(--text);
 }
 
 :root {
   --text: rgba(57, 57, 57, 1);
-  --headings: #dbdbdb;
+  --headings: #dbdbdb; /*todo*/
+  --lightgray: #dbdbdb;
   --beige: rgb(234, 227, 217);
   --section: 5em;
   --text-font: "Raleway";
   --captions: "VogaRegular";
   --caption-size: 4em;
+}
+.container {
+  width: 90vw;
+  margin: auto;
 }
 
 .d-flex {
@@ -43,14 +48,20 @@ li {
 
 a {
   text-decoration: none;
-  cursor: pointer;
 }
 
+a,
 button {
   cursor: pointer;
 }
 
-.container {
-  width: 90vw;
-  margin: auto;
+a:hover,
+button:hover {
+  /* background-color: var(--text); */
+  opacity: 0.7;
+  transition: opacity 0.5s ease;
+}
+
+.slick-dots li button:before {
+  font-size: 9px !important;
 }

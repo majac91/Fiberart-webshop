@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import onClickOutside from "react-onclickoutside";
 import cartStyles from "./cart.module.css";
+import cancel from "../../icons/001-cancel-3.png";
 const cx = require("classnames");
 
 const Cart = ({
@@ -9,6 +10,7 @@ const Cart = ({
   cartItems,
   setCartItems,
   setCartCount,
+  onCartClick,
 }) => {
   let total = cartItems.reduce(
     (acc, curr) => acc + parseInt(curr.price.slice(1)),
@@ -30,7 +32,13 @@ const Cart = ({
   return (
     <div className={cx(cartIsOpen ? cartStyles["open"] : cartStyles["closed"])}>
       <div className={cartStyles.wrapperOutter}>
-        <p className={cartStyles.title}>Your order</p>
+        <div className={cartStyles.titleWrapper}>
+          <p className={cartStyles.title}>Cart</p>
+          <button onClick={onCartClick} className={cartStyles.closeBtn}>
+            <img src={cancel} className={cartStyles.closeIcon}></img>
+          </button>
+        </div>
+
         {cartItems.length === 0 ? (
           <p className={cartStyles.emptyCart}>The cart is empty.</p>
         ) : null}

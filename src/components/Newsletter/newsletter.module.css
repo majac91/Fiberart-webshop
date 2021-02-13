@@ -4,7 +4,7 @@
   align-items: center;
   margin-top: 5rem;
   height: 30em;
-  background: #dbdbdb;
+  background: var(--beige);
 }
 
 .text {

@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 import productPageStyles from "./product-page.module.css";
 import newsletterStyles from "../../components/Newsletter/newsletter.module.css";
 
-const ProductPage = ({ onAddToCart, setCartItems, cartItems }) => {
+const ProductPage = ({ onAddToCart, setCartItems, cartItems, onCartClick }) => {
   const { id } = useParams();
   const product = useFetchProduct(id);
 
@@ -16,6 +16,7 @@ const ProductPage = ({ onAddToCart, setCartItems, cartItems }) => {
     if (!cartItems.includes(product)) {
       setCartItems([...cartItems, product]);
       onAddToCart();
+      onCartClick();
     }
   }
 

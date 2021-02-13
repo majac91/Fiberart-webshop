@@ -10,8 +10,8 @@ export default function Featured(props) {
       <div
         className={`${textStyles[textClass]} ${textStyles.container} d-flex container`}
       >
-        <div className={imgStyles.imgWrapper}>
-          <img className={imgStyles.img}></img>
+        <div title={textClass} className={imgStyles.imgWrapper}>
+          <img alt="" className={imgStyles.img}></img>
         </div>
 
         <div className={`${imgStyles.text} `}>
