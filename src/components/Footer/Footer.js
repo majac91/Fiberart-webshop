@@ -11,27 +11,37 @@ import pinterestbtn from "../../icons/pinterest.png";
 import tumblrbtn from "../../icons/tumblr.png";
 
 export default function Footer(props) {
-  let textClass = props.section;
   return (
     <>
-      <div
-        className={`${textStyles[textClass]} ${footerStyles.container} d-flex container`}
-      >
-        <div className={`${imgStyles.imgWrapper} ${footerStyles.imgWrapper}`}>
-          <img className={`${footerStyles.img1} ${footerStyles.img}`}></img>
-          <img className={`${footerStyles.img2} ${footerStyles.img}`}></img>
-          <img className={`${footerStyles.img3} ${footerStyles.img}`}></img>
-          <img className={`${footerStyles.img4} ${footerStyles.img}`}></img>
+      <div className={`${footerStyles.container} d-flex container`}>
+        <div
+          title="social media posts"
+          className={`${imgStyles.imgWrapper} ${footerStyles.imgWrapper}`}
+        >
+          <img
+            alt=""
+            className={`${footerStyles.img1} ${footerStyles.img}`}
+          ></img>
+          <img
+            alt=""
+            className={`${footerStyles.img2} ${footerStyles.img}`}
+          ></img>
+          <img
+            alt=""
+            className={`${footerStyles.img3} ${footerStyles.img}`}
+          ></img>
+          <img
+            alt=""
+            className={`${footerStyles.img4} ${footerStyles.img}`}
+          ></img>
         </div>
 
-        <div className={`${imgStyles.container} `}>
+        <div className={`${footerStyles.textWrapper} `}>
           <div className={imgStyles.textWrapper}>
-            <p className={`${textStyles[textClass]} ${textStyles.caption}`}>
-              <img src={logo} className={footerStyles.logo}></img>
+            <p className={`${textStyles.textClass} ${textStyles.caption}`}>
+              <img alt="logo" src={logo} className={footerStyles.logo}></img>
             </p>
-            <p
-              className={`${textStyles[textClass]} ${newsletterStyles.paragraph}  text-column`}
-            >
+            <p className={`${newsletterStyles.paragraph}  text-column`}>
               <span>{props.paragraph} </span>
             </p>
             <div>

@@ -3,7 +3,6 @@ import TextSection from "./TextSection/TextSection";
 
 export default function MissionStatement() {
   return (
-    // <>
     <section className="mission">
       <TextSection
         section={"mission"}
@@ -14,6 +13,5 @@ export default function MissionStatement() {
         }
       ></TextSection>
     </section>
-    // </>
   );
 }

@@ -1,4 +1,4 @@
-import { useState, useEffect, useMemo } from "react";
+import { useState, useEffect } from "react";
 import { db } from "./config.js";
 
 export const useFetchProduct = (id) => {
@@ -18,15 +18,17 @@ export const useFetchProduct = (id) => {
 };
 
 export const useProductList = () => {
-  var productsRef = useMemo(() => db.ref().child(`products`), []);
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    const unsub = productsRef.on("value", (snapshot) => {
-      setData(snapshot.val());
-    });
+    const unsub = db
+      .ref()
+      .child(`products`)
+      .on("value", (snapshot) => {
+        setData(snapshot.val());
+      });
 
     return () => unsub;
-  }, [productsRef]);
+  }, []);
   return data;
 };

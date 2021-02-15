@@ -1,13 +1,14 @@
 import React from "react";
 import TwoPhotosSection from "./TwoPhotosSection/TwoPhotosSection";
+import { Link } from "react-router-dom";
 
 export default function ProductCategories() {
   return (
     <section className="product-categories">
       <TwoPhotosSection
-        el={"a"}
-        link1={"https://www.npmjs.com/package/classnames"}
-        link2={"https://github.com/"}
+        el={Link}
+        link1={"/collections"}
+        link2={"/shop"}
         img={["img1", "img2"]}
       />
     </section>

@@ -29,8 +29,8 @@ export default function About(props) {
         </div>
       </div>
 
-      <div className={imgStyles.imgWrapper}>
-        <img className={imgStyles.img}></img>
+      <div title="shop owner" className={imgStyles.imgWrapper}>
+        <img alt="" className={imgStyles.img}></img>
       </div>
     </div>
   );

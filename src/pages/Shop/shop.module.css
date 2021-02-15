@@ -28,8 +28,9 @@
 
 .faqOuter {
   background-color: var(--beige);
-  margin-bottom: var(--section);
+  margin: var(--section) auto;
   height: 50vw;
+  display: block;
 }
 
 .faqHeading {
