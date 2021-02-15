@@ -12,6 +12,10 @@ const Cart = ({
   setCartCount,
   onCartClick,
 }) => {
+  useEffect(() => {
+    localStorage.setItem("item", JSON.stringify(cartItems));
+  }, [cartItems]);
+
   let total = cartItems.reduce(
     (acc, curr) => acc + parseInt(curr.price.slice(1)),
     0
@@ -23,10 +27,6 @@ const Cart = ({
     setCartCount(items.length);
   }
 
-  useEffect(() => {
-    localStorage.setItem("item", JSON.stringify(cartItems));
-  }, [cartItems]);
-
   Cart.handleClickOutside = () => setCartIsOpen(false);
 
   return (
@@ -35,7 +35,11 @@ const Cart = ({
         <div className={cartStyles.titleWrapper}>
           <p className={cartStyles.title}>Cart</p>
           <button onClick={onCartClick} className={cartStyles.closeBtn}>
-            <img src={cancel} className={cartStyles.closeIcon}></img>
+            <img
+              alt="close button"
+              src={cancel}
+              className={cartStyles.closeIcon}
+            ></img>
           </button>
         </div>
 

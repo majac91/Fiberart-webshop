@@ -10,11 +10,11 @@ import Cart from "./components/Cart/Cart";
 
 function App() {
   const [cartCount, setCartCount] = useState(
-    () => JSON.parse(localStorage.getItem("item")).length || 0
+    () => JSON.parse(localStorage.getItem("item"))?.length || 0
   );
   const [cartIsOpen, setCartIsOpen] = useState(false);
-  const [cartItems, setCartItems] = useState(() =>
-    JSON.parse(localStorage.getItem("item") || [])
+  const [cartItems, setCartItems] = useState(
+    () => JSON.parse(localStorage.getItem("item")) || []
   );
 
   function handleAddToCart() {
@@ -51,6 +51,7 @@ function App() {
 
         <Route exact path="/product/:id">
           <ProductPage
+            setCartIsOpen={setCartIsOpen}
             onCartClick={handleToggleCart}
             onAddToCart={handleAddToCart}
             cartItems={cartItems}

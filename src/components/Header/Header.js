@@ -11,11 +11,11 @@ export default function Header() {
   return (
     <header className={headerStyles.container}>
       <div className={`${headerStyles.headerImgs} container`}>
-        <img className={headerStyles.headerImg} src={header1}></img>
-        <img className={headerStyles.headerImg} src={header2}></img>
-        <img className={headerStyles.headerImg} src={header3}></img>
+        <img alt="" className={headerStyles.headerImg} src={header1}></img>
+        <img alt="" className={headerStyles.headerImg} src={header2}></img>
+        <img alt="" className={headerStyles.headerImg} src={header3}></img>
 
-        <img className={headerStyles.headerImg} src={header4}></img>
+        <img alt="" className={headerStyles.headerImg} src={header4}></img>
       </div>
     </header>
   );

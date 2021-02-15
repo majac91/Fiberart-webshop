@@ -1,11 +1,12 @@
 .images {
-  margin-top: var(--section);
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .img {
-  width: 40vw;
+  width: 35em;
   height: 70vh;
+  margin: auto;
 }
 
 /* TODO rename img classes according to sections */

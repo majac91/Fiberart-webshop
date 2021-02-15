@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useEffect } from "react";
 import logo from "../../img/logo.png";
 import { Link } from "react-router-dom";
 import navStyles from "./nav.module.css";
+import outsideClickIgnoreClass from "react-onclickoutside";
 
 export default function Nav({ cartCount, onCartClick }) {
   return (
@@ -28,7 +29,7 @@ export default function Nav({ cartCount, onCartClick }) {
           </button>
         </ul>
         <Link to="/" className={navStyles.navLogo}>
-          <img alt="logo" className={navStyles.navLogoImg} src={logo}></img>
+          <img alt="homepage" className={navStyles.navLogoImg} src={logo}></img>
         </Link>
       </nav>
     </>

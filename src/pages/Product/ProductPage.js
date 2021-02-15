@@ -1,23 +1,59 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useFetchProduct } from "../../firebase/api";
 import { useParams } from "react-router-dom";
 import productPageStyles from "./product-page.module.css";
 import newsletterStyles from "../../components/Newsletter/newsletter.module.css";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
-const ProductPage = ({ onAddToCart, setCartItems, cartItems, onCartClick }) => {
+const ProductPage = ({
+  itemIds,
+  setItemIds,
+  onAddToCart,
+  setCartItems,
+  cartItems,
+  setCartIsOpen,
+}) => {
+  function onCartClick() {
+    setCartIsOpen((prev) => !prev);
+  }
   const { id } = useParams();
   const product = useFetchProduct(id);
 
-  if (!product) {
-    return <p>Item not found</p>;
-  }
+  useEffect(() => {
+    localStorage.setItem("id", JSON.stringify(itemIds));
+  }, [itemIds]);
+
+  const slideImgs = product.sliderImages
+    ? Object.keys(product.sliderImages).map((key) => [
+        product.sliderImages[key],
+      ])
+    : null;
+
+  var settings = {
+    dots: true,
+    autoplay: true,
+    infinite: true,
+    autoplaySpeed: 4000,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+  };
 
   function handleAddCartItem() {
-    if (!cartItems.includes(product)) {
+    if (
+      // !JSON.parse(localStorage.getItem("item").includes(product.id)) ||
+      // null
+      !cartItems.find((item) => item.id === product.id)
+    ) {
       setCartItems([...cartItems, product]);
       onAddToCart();
-      onCartClick();
     }
+    onCartClick();
+  }
+
+  if (!product) {
+    return <p>Item not found</p>;
   }
 
   return (
@@ -25,15 +61,20 @@ const ProductPage = ({ onAddToCart, setCartItems, cartItems, onCartClick }) => {
       <header className={productPageStyles.header}>
         <div className={productPageStyles.caption}>{product.name}</div>
       </header>
-      {/* <div className={productStyles.price}>{product.price}</div> */}
       <div className={productPageStyles.productWrapper}>
         <div className={productPageStyles.imgWrapper}>
-          <div
-            className={productPageStyles.product}
-            style={{
-              backgroundImage: `url(${product.image})`,
-            }}
-          ></div>
+          <Slider {...settings}>
+            {slideImgs?.map((img) => (
+              <div className={productPageStyles.slide}>
+                <div
+                  className={productPageStyles.product}
+                  style={{
+                    backgroundImage: `url(${img})`,
+                  }}
+                ></div>
+              </div>
+            ))}
+          </Slider>
         </div>
         <div className={productPageStyles.description}>
           <h2>Description</h2>

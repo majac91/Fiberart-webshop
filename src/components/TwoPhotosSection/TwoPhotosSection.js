@@ -14,31 +14,29 @@ export default function TwoPhotosSection(props) {
   const attrs = [{ ...attr1 }, { ...attr2 }];
 
   return (
-    <section>
-      <div className={`${photoStyles.images} d-flex container`}>
-        {imgClass.map((img) => {
-          if (props.el !== Link) {
-            return (
+    <section className={`${photoStyles.images} d-flex container`}>
+      {imgClass.map((img) => {
+        if (props.el !== Link) {
+          return (
+            <El
+              {...attrs[imgClass.indexOf(img)]}
+              className={`${photoStyles.img} ${photoStyles[img]}`}
+            ></El>
+          );
+        } else {
+          return (
+            <div className={`${photoStyles.img} ${photoStyles[img]}`}>
+              <div></div>
               <El
                 {...attrs[imgClass.indexOf(img)]}
-                className={`${photoStyles.img} ${photoStyles[img]}`}
-              ></El>
-            );
-          } else {
-            return (
-              <div className={photoStyles.wrapper}>
-                <div className={`${photoStyles.img} ${photoStyles[img]}`}></div>
-                <El
-                  {...attrs[imgClass.indexOf(img)]}
-                  className={photoStyles.link}
-                >
-                  {linkTxt(txt[imgClass.indexOf(img)])}
-                </El>
-              </div>
-            );
-          }
-        })}
-      </div>
+                className={photoStyles.link}
+              >
+                {linkTxt(txt[imgClass.indexOf(img)])}
+              </El>
+            </div>
+          );
+        }
+      })}
     </section>
   );
 }
