@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { Link } from "react-router-dom";
 import onClickOutside from "react-onclickoutside";
 import cartStyles from "./cart.module.css";
 import cancel from "../../icons/001-cancel-3.png";
@@ -80,6 +81,9 @@ const Cart = ({
               <p className={cartStyles.total}>
                 Total <span className={cartStyles.span}>${total}</span>
               </p>
+              <Link to="/checkout" className={cartStyles.btn}>
+                Checkout
+              </Link>
             </div>
           ) : null
         )}

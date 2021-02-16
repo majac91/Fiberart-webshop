@@ -10,8 +10,8 @@ export default function About(props) {
       className={`${textStyles[textClass]} ${imgStyles[textClass]} ${textStyles.container} d-flex container`}
     >
       <div className={`${imgStyles.text}`}>
-        <div className={`${textStyles[textClass]} ${textStyles.brand}`}>
-          <p>{props.message}</p>
+        <div className={`${textStyles[textClass]} ${textStyles.msgWrapper}`}>
+          <p className={textStyles.msg}>{props.message}</p>
         </div>
         <div className={imgStyles.textWrapper}>
           <p

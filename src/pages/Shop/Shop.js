@@ -7,7 +7,7 @@ import Faq from "../../components/Faq";
 const Shop = () => {
   return (
     <>
-      <Header />
+      <Header page="shop" />
       <main>
         <TextSection
           section="shop"

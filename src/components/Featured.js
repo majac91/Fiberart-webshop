@@ -15,8 +15,8 @@ export default function Featured(props) {
         </div>
 
         <div className={`${imgStyles.text} `}>
-          <div className={`${textStyles[textClass]} ${textStyles.brand}`}>
-            <p>{props.message}</p>
+          <div className={`${textStyles[textClass]} ${textStyles.msgWrapper}`}>
+            <p className={textStyles.msg}>{props.message}</p>
           </div>
           <div className={imgStyles.textWrapper}>
             <p className={`${textStyles[textClass]} ${textStyles.caption}`}>

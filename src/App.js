@@ -6,6 +6,7 @@ import Footer from "./components/Footer/";
 import Shop from "./pages/Shop/Shop";
 import Main from "./pages/Main/Main";
 import ProductPage from "./pages/Product/ProductPage";
+import CheckoutPage from "./pages/Checkout/Checkout";
 import Cart from "./components/Cart/Cart";
 
 function App() {
@@ -57,6 +58,9 @@ function App() {
             cartItems={cartItems}
             setCartItems={setCartItems}
           ></ProductPage>
+        </Route>
+        <Route exact path="/checkout">
+          <CheckoutPage />
         </Route>
       </Switch>
 

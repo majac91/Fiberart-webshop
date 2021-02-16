@@ -1,12 +1,12 @@
 .images {
   justify-content: space-between;
   flex-wrap: wrap;
+  margin-top: 2em;
 }
 
 .img {
-  width: 35em;
-  height: 70vh;
-  margin: auto;
+  width: 47em;
+  height: 80vh;
 }
 
 /* TODO rename img classes according to sections */

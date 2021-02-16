@@ -11,7 +11,7 @@ import Featured from "../../components/Featured";
 const Main = () => {
   return (
     <>
-      <Header />
+      <Header page="main" />
       <main>
         <BrandMessage />
         <MissionStatement />

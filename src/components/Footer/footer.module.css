@@ -2,6 +2,7 @@
   text-align: center;
   flex-wrap: wrap;
   border: none;
+  margin-top: var(--section);
 }
 
 .imgWrapper {
