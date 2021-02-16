@@ -9,24 +9,14 @@ const Cart = ({
   cartIsOpen,
   setCartIsOpen,
   cartItems,
-  setCartItems,
-  setCartCount,
+
   onCartClick,
+  onDelete,
+  total,
 }) => {
   useEffect(() => {
     localStorage.setItem("item", JSON.stringify(cartItems));
   }, [cartItems]);
-
-  let total = cartItems.reduce(
-    (acc, curr) => acc + parseInt(curr.price.slice(1)),
-    0
-  );
-
-  function deleteItem(item) {
-    const items = cartItems.filter((i) => i !== item);
-    setCartItems(items);
-    setCartCount(items.length);
-  }
 
   Cart.handleClickOutside = () => setCartIsOpen(false);
 
@@ -61,7 +51,7 @@ const Cart = ({
                 <p className={cartStyles.price}>{item.price}</p>
                 <button
                   className={cartStyles.btn}
-                  onClick={() => deleteItem(item)}
+                  onClick={() => onDelete(item)}
                 >
                   Remove
                 </button>

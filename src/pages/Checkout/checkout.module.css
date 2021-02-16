@@ -1,2 +1,10 @@
-.headerImg {
+.container {
+  justify-content: space-between;
+}
+.form {
+  flex: 1;
+}
+
+.cart {
+  flex: 1;
 }

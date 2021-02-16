@@ -26,6 +26,17 @@ function App() {
     setCartIsOpen((prev) => !prev);
   }
 
+  function deleteItem(item) {
+    const items = cartItems.filter((i) => i !== item);
+    setCartItems(items);
+    setCartCount(items.length);
+  }
+
+  let total = cartItems.reduce(
+    (acc, curr) => acc + parseInt(curr.price.slice(1)),
+    0
+  );
+
   return (
     <Router>
       <Nav
@@ -34,11 +45,11 @@ function App() {
         setCartIsOpen={setCartIsOpen}
       ></Nav>
       <Cart
+        total={total}
+        onDelete={deleteItem}
         onCartClick={handleToggleCart}
         cartIsOpen={cartIsOpen}
         cartItems={cartItems}
-        setCartItems={setCartItems}
-        setCartCount={setCartCount}
         setCartIsOpen={setCartIsOpen}
       ></Cart>
       <Switch>
@@ -60,7 +71,11 @@ function App() {
           ></ProductPage>
         </Route>
         <Route exact path="/checkout">
-          <CheckoutPage />
+          <CheckoutPage
+            total={total}
+            onDelete={deleteItem}
+            cartItems={cartItems}
+          />
         </Route>
       </Switch>
 
