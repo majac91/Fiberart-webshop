@@ -8,6 +8,7 @@ import Main from "./pages/Main/Main";
 import ProductPage from "./pages/Product/ProductPage";
 import CheckoutPage from "./pages/Checkout/Checkout";
 import Cart from "./components/Cart/Cart";
+import useOnclickOutside from "react-cool-onclickoutside";
 
 function App() {
   const [cartCount, setCartCount] = useState(
@@ -16,6 +17,13 @@ function App() {
   const [cartIsOpen, setCartIsOpen] = useState(false);
   const [cartItems, setCartItems] = useState(
     () => JSON.parse(localStorage.getItem("item")) || []
+  );
+
+  const clickOutsideRef = useOnclickOutside(
+    () => {
+      setCartIsOpen(false);
+    },
+    { ignoreClass: "ignoreClickOutside" }
   );
 
   function handleAddToCart() {
@@ -45,6 +53,7 @@ function App() {
         setCartIsOpen={setCartIsOpen}
       ></Nav>
       <Cart
+        clickOutside={clickOutsideRef}
         total={total}
         onDelete={deleteItem}
         onCartClick={handleToggleCart}
