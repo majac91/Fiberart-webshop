@@ -12,6 +12,7 @@
   font-family: VogaRegular;
   src: url("../src/fonts/Voga-Regular.ttf");
 }
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -83,4 +84,11 @@ button:hover {
   font-family: var(--body);
   font-weight: 600;
   font-size: 1.2rem;
+}
+
+@media only screen and (max-width: 500px) {
+  .slick-slide {
+    height: 70vh;
+    object-fit: cover;
+  }
 }

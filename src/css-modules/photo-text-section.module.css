@@ -21,3 +21,15 @@
   background-image: url("../img/about.jpg");
   float: left;
 }
+
+@media only screen and (max-width: 900px) {
+  .imgWrapper {
+    display: none;
+  }
+  .img {
+    display: none;
+  }
+  .text {
+    width: 90vw;
+  }
+}

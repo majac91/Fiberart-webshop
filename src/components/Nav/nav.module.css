@@ -21,9 +21,6 @@
   font-family: var(--body);
 }
 
-.navLogo {
-}
-
 .navLogoImg {
   height: 30%;
   width: 30%;
@@ -33,4 +30,16 @@
 .cart {
   border: none;
   background: white;
+}
+
+@media only screen and (max-width: 900px) {
+  .navLink {
+    margin-right: 0.5em;
+    font-size: 0.8em;
+  }
+  .navLogoImg {
+    height: 3em;
+    width: 5em;
+    float: right;
+  }
 }

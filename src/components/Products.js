@@ -12,7 +12,7 @@ const Products = () => {
         Object.keys(products).map((key) => {
           let product = products[key];
           return (
-            <div className={productStyles.imgWrapper}>
+            <div key={key} className={productStyles.imgWrapper}>
               <div
                 className={productStyles.product}
                 style={{

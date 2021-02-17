@@ -16,7 +16,7 @@ export default function CustomSlider() {
   return (
     <Slider
       {...settings}
-      className={`${customSliderStyles.container} container`}
+      className={`${customSliderStyles.slideContainer} container`}
     >
       <div className={customSliderStyles.wrapper}>
         <div

@@ -52,13 +52,16 @@ const ProductPage = ({
   }
 
   return (
-    <div className="container">
+    <div className={`${productPageStyles.container} container`}>
       <header className={productPageStyles.header}>
         <div className={productPageStyles.caption}>{product.name} </div>
       </header>
       <div className={productPageStyles.productWrapper}>
         <div className={productPageStyles.imgWrapper}>
-          <Slider className={"productSlider"} {...settings}>
+          <Slider
+            className={`${productPageStyles.productSlider} productSlider`}
+            {...settings}
+          >
             {slideImgs?.map((img) => (
               <div className={productPageStyles.slide}>
                 <div
