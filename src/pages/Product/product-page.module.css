@@ -40,9 +40,7 @@
   display: inline-block;
   position: relative;
   top: 0.3em;
-  /* left: 100px; */
   left: 3rem;
-  /* right: 0; */
 }
 
 .description {
@@ -59,4 +57,52 @@
   min-height: 50em;
   background-position: center;
   background-size: cover;
+}
+
+.productSlider {
+  height: 100%;
+}
+@media only screen and (max-width: 900px) {
+  .imgWrapper {
+    margin-right: 0;
+  }
+  .description {
+    margin-top: 5em;
+    text-align: left;
+  }
+  .container {
+    height: 100%;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .header {
+    height: 50vh;
+  }
+  .caption {
+    text-align: center;
+    font-size: 4em;
+  }
+  .navLink {
+    margin-right: 0.5em;
+    font-size: 0.8em;
+  }
+  .navLogoImg {
+    height: 3em;
+    width: 5em;
+    float: right;
+  }
+  .product {
+    width: 100%;
+    margin: auto;
+  }
+  .productWrapper {
+    width: 90vw;
+  }
+  .imgWrapper {
+    width: 80vw;
+  }
+  .imgWrapper::after {
+    width: 85%;
+  }
 }

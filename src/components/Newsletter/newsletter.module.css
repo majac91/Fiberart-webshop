@@ -60,7 +60,7 @@
 }
 
 .btn {
-  width: 10em;
+  width: 7em;
   height: 2em;
   font-size: 1.3em;
   background: black;
@@ -70,4 +70,13 @@
 
 .about.subcaption {
   margin: 0 20%;
+}
+
+@media only screen and (max-width: 900px) {
+  .input {
+    width: 15em;
+  }
+  .btn {
+    width: 5em;
+  }
 }

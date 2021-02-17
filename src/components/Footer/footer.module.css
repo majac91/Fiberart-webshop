@@ -57,6 +57,19 @@
 
 @media only screen and (max-width: 900px) {
   .imgWrapper {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 10em 10em;
+    grid-template-rows: 10em 10em;
+    column-gap: 0.5em;
+    row-gap: 0.5em;
     justify-content: center;
+  }
+  .img {
+    height: 10em;
+    width: 10em;
+  }
+  .textWrapper {
+    margin-bottom: var(--section);
   }
 }

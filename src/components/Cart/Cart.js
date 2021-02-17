@@ -16,7 +16,6 @@ const Cart = ({
     localStorage.setItem("item", JSON.stringify(cartItems));
   }, [cartItems]);
 
-  console.log(cartItems);
   return (
     <>
       <div
@@ -46,18 +45,16 @@ const Cart = ({
           {/* CART ITEMS */}
 
           {cartItems.map((item, index) => (
-            <Link
-              to={`product/${item.path}`}
-              key={index}
-              className={cartStyles.wrapperInner}
-            >
+            <div key={index} className={cartStyles.wrapperInner}>
               <img
                 className={cartStyles.img}
                 alt={item.name}
                 src={item.image}
               ></img>
               <div className={cartStyles.productInfo}>
-                <p className={cartStyles.name}>{item.name}</p>
+                <Link to={`/product/${item.path}`}>
+                  <p className={cartStyles.name}>{item.name}</p>
+                </Link>
                 <div className={cartStyles.priceWrapper}>
                   <p className={cartStyles.price}>{item.price}</p>
                   <button
@@ -68,14 +65,14 @@ const Cart = ({
                   </button>
                 </div>
               </div>
-            </Link>
+            </div>
           ))}
 
           {/*CART FOOTER */}
 
           {cartItems.map((item, index) =>
             index === cartItems.length - 1 ? (
-              <div className={cartStyles.totalWrapper}>
+              <div className={cartStyles.totalWrapper} key={index}>
                 <p className={cartStyles.subtotal}>
                   Subtotal <span className={cartStyles.span}>${total}</span>
                 </p>
@@ -85,7 +82,10 @@ const Cart = ({
                 <p className={cartStyles.total}>
                   Total <span className={cartStyles.span}>${total}</span>
                 </p>
-                <Link to="/checkout" className={cartStyles.btn}>
+                <Link
+                  to="/checkout"
+                  className={`${cartStyles.btn} ${cartStyles.checkout}`}
+                >
                   Checkout
                 </Link>
               </div>

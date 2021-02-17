@@ -10,6 +10,7 @@
   transition: transform 1s ease;
   background: white;
   border-left: 1px solid var(--beige);
+  z-index: 100;
 }
 
 .closed {
@@ -64,8 +65,8 @@
 }
 
 .img {
-  max-width: 20%;
-  max-height: 30%;
+  width: 5em;
+  height: 6em;
 }
 
 .productInfo {
@@ -102,6 +103,10 @@
   border: 1px solid var(--beige);
 }
 
+.checkout {
+  padding: 1em;
+}
+
 .totalWrapper {
   width: 100%;
 }
@@ -126,4 +131,10 @@
 
 .span {
   float: right;
+}
+
+@media only screen and (max-width: 900px) {
+  .open {
+    width: 60vw;
+  }
 }
