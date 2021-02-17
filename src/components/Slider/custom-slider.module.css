@@ -1,7 +1,6 @@
 .container {
-  /* height: 60vh; */
-  margin-top: var(--section);
-  margin-bottom: var(--section);
+  margin-top: 2em;
+  margin-bottom: 2em;
 }
 
 .wrapper {

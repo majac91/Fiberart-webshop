@@ -15,7 +15,7 @@
 
 .product {
   margin: auto;
-  max-width: 30em;
+  width: 100%;
   min-height: 50em;
   background-position: center;
   background-size: cover;
@@ -39,7 +39,7 @@
 
 .caption,
 .button {
-  font-family: var(--text-font); /*replace with var elsewhere*/
+  font-family: var(--body);
 }
 
 .price {

@@ -10,3 +10,12 @@
   width: 23vw;
   height: 60vh;
 }
+
+.heroHeader {
+  height: 60vh;
+  width: 100%;
+  object-fit: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+}

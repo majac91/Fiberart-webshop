@@ -5,7 +5,7 @@
   border-right: 1px solid black;
 }
 
-.brand {
+.msgWrapper {
   position: relative;
   right: -4.6em;
   top: -0.96em;
@@ -15,11 +15,8 @@
   float: right;
 }
 
-.brand p {
+.msg {
   text-align: center;
-  position: relative;
-  right: 0;
-  top: 0;
   text-transform: uppercase;
   font-size: 0.9em;
   font-family: Oswald;
@@ -32,18 +29,19 @@
   margin: auto;
 }
 
-.caption span {
-  width: 30vw;
-  margin: 0 20%;
+.captionTxt {
+  width: 100%;
+  margin: 0 auto;
   display: inline-block;
-  font-family: VogaRegular;
+  font-family: var(--captions);
   color: var(--headings);
-  font-size: 4em;
+  font-size: 3em;
+  font-weight: 600;
   letter-spacing: 0.02em;
 }
 
 .subcaption {
-  font-family: Raleway;
+  font-family: var(--body);
   letter-spacing: 0.2em;
   font-size: 1.4em;
   padding-top: 0.5em;
@@ -51,22 +49,27 @@
   width: 40vw;
 }
 
+.brandMsg {
+  width: 30vw;
+}
+
 .mission.container {
   border-left: 1px solid black;
   border-right: none;
 }
 
-.mission .subcaption span {
+.mission .subcaptionTxt {
   font-size: 0.8em;
 }
 
-.mission .caption span {
-  font-size: 2em;
+.mission .captionTxt {
+  font-size: 1.5em;
   color: black;
-  font-weight: 500;
+  font-weight: 600;
+  font-family: var(--body);
 }
 
-.mission .brand {
+.mission .msgWrapper {
   left: -4.6em;
   float: none;
 }
@@ -74,14 +77,24 @@
 .about.container {
   border-left: 1px solid black;
   border-right: none;
+  padding-bottom: 0;
 }
 
-.about .brand {
+.about .msgWrapper {
   float: left;
   left: -4.6em;
+  width: auto;
 }
 
-.about .caption span {
-  font-size: 3em;
+.about .msg {
+  position: relative;
+  top: -1.2em;
+  width: 8em;
+  left: -1.2em;
+  background-color: white;
+}
+.about .captionTxt {
+  width: 20vw;
+  font-size: 2em;
   padding-bottom: 1em;
 }

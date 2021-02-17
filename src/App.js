@@ -6,7 +6,9 @@ import Footer from "./components/Footer/";
 import Shop from "./pages/Shop/Shop";
 import Main from "./pages/Main/Main";
 import ProductPage from "./pages/Product/ProductPage";
+import CheckoutPage from "./pages/Checkout/Checkout";
 import Cart from "./components/Cart/Cart";
+import useOnclickOutside from "react-cool-onclickoutside";
 
 function App() {
   const [cartCount, setCartCount] = useState(
@@ -17,6 +19,13 @@ function App() {
     () => JSON.parse(localStorage.getItem("item")) || []
   );
 
+  const clickOutsideRef = useOnclickOutside(
+    () => {
+      setCartIsOpen(false);
+    },
+    { ignoreClass: "ignoreClickOutside" }
+  );
+
   function handleAddToCart() {
     setCartCount((prev) => prev + 1);
   }
@@ -24,6 +33,17 @@ function App() {
   function handleToggleCart() {
     setCartIsOpen((prev) => !prev);
   }
+
+  function deleteItem(item) {
+    const items = cartItems.filter((i) => i !== item);
+    setCartItems(items);
+    setCartCount(items.length);
+  }
+
+  let total = cartItems.reduce(
+    (acc, curr) => acc + parseInt(curr.price.slice(1)),
+    0
+  );
 
   return (
     <Router>
@@ -33,13 +53,14 @@ function App() {
         setCartIsOpen={setCartIsOpen}
       ></Nav>
       <Cart
+        clickOutside={clickOutsideRef}
+        total={total}
+        onDelete={deleteItem}
         onCartClick={handleToggleCart}
         cartIsOpen={cartIsOpen}
         cartItems={cartItems}
-        setCartItems={setCartItems}
-        setCartCount={setCartCount}
-        setCartIsOpen={setCartIsOpen}
       ></Cart>
+
       <Switch>
         <Route exact path="/">
           <Main />
@@ -57,6 +78,14 @@ function App() {
             cartItems={cartItems}
             setCartItems={setCartItems}
           ></ProductPage>
+        </Route>
+
+        <Route exact path="/checkout">
+          <CheckoutPage
+            total={total}
+            onDelete={deleteItem}
+            cartItems={cartItems}
+          />
         </Route>
       </Switch>
 

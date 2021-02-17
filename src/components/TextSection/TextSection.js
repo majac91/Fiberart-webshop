@@ -16,11 +16,11 @@ export default function TextSection(props) {
       <div
         className={cx(textStyles[textClass], textStyles.container, "container")}
       >
-        <div className={cx(textStyles[textClass], textStyles.brand)}>
-          <p>{props.message}</p>
+        <div className={cx(textStyles[textClass], textStyles.msgWrapper)}>
+          <p className={textStyles.msg}>{props.message}</p>
         </div>
         <p className={cx(textStyles[textClass], textStyles.caption)}>
-          <span>{props.caption}</span>
+          <span className={textStyles.captionTxt}>{props.caption}</span>
         </p>
         <p
           className={cx(
@@ -30,7 +30,7 @@ export default function TextSection(props) {
             "text-column"
           )}
         >
-          <span>{props.subcaption} </span>
+          <span className={textStyles.subcaptionTxt}>{props.subcaption} </span>
         </p>
         {props.links && (
           <div className={shopStyles.links}>

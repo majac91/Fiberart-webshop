@@ -1,8 +1,7 @@
-import React, { useEffect } from "react";
+import React from "react";
 import logo from "../../img/logo.png";
 import { Link } from "react-router-dom";
 import navStyles from "./nav.module.css";
-import outsideClickIgnoreClass from "react-onclickoutside";
 
 export default function Nav({ cartCount, onCartClick }) {
   return (
@@ -23,7 +22,7 @@ export default function Nav({ cartCount, onCartClick }) {
           </Link>
           <button
             onClick={onCartClick}
-            className={`${navStyles.navLink} ${navStyles.cart}`}
+            className={`${navStyles.navLink} ${navStyles.cart} ignoreClickOutside`}
           >
             Cart ({cartCount})
           </button>

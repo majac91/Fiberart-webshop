@@ -6,7 +6,7 @@ import newsletterStyles from "../components/Newsletter/newsletter.module.css";
 export default function Featured(props) {
   let textClass = props.section;
   return (
-    <>
+    <section className={textClass}>
       <div
         className={`${textStyles[textClass]} ${textStyles.container} d-flex container`}
       >
@@ -15,12 +15,12 @@ export default function Featured(props) {
         </div>
 
         <div className={`${imgStyles.text} `}>
-          <div className={`${textStyles[textClass]} ${textStyles.brand}`}>
-            <p>{props.message}</p>
+          <div className={`${textStyles[textClass]} ${textStyles.msgWrapper}`}>
+            <p className={textStyles.msg}>{props.message}</p>
           </div>
           <div className={imgStyles.textWrapper}>
             <p className={`${textStyles[textClass]} ${textStyles.caption}`}>
-              <span>{props.caption}</span>
+              <span className={textStyles.captionTxt}>{props.caption}</span>
             </p>
             <p className={newsletterStyles.subcaption}>{props.subcaption}</p>
             <p
@@ -34,6 +34,6 @@ export default function Featured(props) {
           </div>
         </div>
       </div>
-    </>
+    </section>
   );
 }

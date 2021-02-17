@@ -9,7 +9,6 @@ import "slick-carousel/slick/slick-theme.css";
 
 const ProductPage = ({
   itemIds,
-  setItemIds,
   onAddToCart,
   setCartItems,
   cartItems,
@@ -32,7 +31,7 @@ const ProductPage = ({
     : null;
 
   var settings = {
-    dots: true,
+    dots: false,
     autoplay: true,
     infinite: true,
     autoplaySpeed: 4000,
@@ -41,11 +40,7 @@ const ProductPage = ({
   };
 
   function handleAddCartItem() {
-    if (
-      // !JSON.parse(localStorage.getItem("item").includes(product.id)) ||
-      // null
-      !cartItems.find((item) => item.id === product.id)
-    ) {
+    if (!cartItems.find((item) => item.id === product.id)) {
       setCartItems([...cartItems, product]);
       onAddToCart();
     }
@@ -59,11 +54,11 @@ const ProductPage = ({
   return (
     <div className="container">
       <header className={productPageStyles.header}>
-        <div className={productPageStyles.caption}>{product.name}</div>
+        <div className={productPageStyles.caption}>{product.name} </div>
       </header>
       <div className={productPageStyles.productWrapper}>
         <div className={productPageStyles.imgWrapper}>
-          <Slider {...settings}>
+          <Slider className={"productSlider"} {...settings}>
             {slideImgs?.map((img) => (
               <div className={productPageStyles.slide}>
                 <div
@@ -89,7 +84,7 @@ const ProductPage = ({
           </p>
           <button
             onClick={handleAddCartItem}
-            className={newsletterStyles.btn}
+            className={`${newsletterStyles.btn} ignoreClickOutside`}
             type="button"
           >
             Add to cart

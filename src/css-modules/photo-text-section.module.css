@@ -13,18 +13,6 @@
   float: right;
 }
 
-.brand p {
-  text-align: center;
-  position: relative;
-  right: 0;
-  top: 0;
-  text-transform: uppercase;
-  font-size: 0.9em;
-  font-family: Oswald;
-  font-weight: 500;
-  letter-spacing: 0.05em;
-}
-
 .text {
   width: 50vw;
 }

@@ -10,8 +10,8 @@ export default function About(props) {
       className={`${textStyles[textClass]} ${imgStyles[textClass]} ${textStyles.container} d-flex container`}
     >
       <div className={`${imgStyles.text}`}>
-        <div className={`${textStyles[textClass]} ${textStyles.brand}`}>
-          <p>{props.message}</p>
+        <div className={`${textStyles[textClass]} ${textStyles.msgWrapper}`}>
+          <p className={textStyles.msg}>{props.message}</p>
         </div>
         <div className={imgStyles.textWrapper}>
           <p
@@ -20,7 +20,9 @@ export default function About(props) {
             {props.subcaption}
           </p>
           <p className={`${textStyles[textClass]} ${textStyles.caption}`}>
-            <span>{props.caption}</span>
+            <span span className={textStyles.captionTxt}>
+              {props.caption}
+            </span>
           </p>
 
           <button className={newsletterStyles.btn} type="button">
