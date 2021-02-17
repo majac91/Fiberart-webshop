@@ -20,7 +20,9 @@ export default function About(props) {
             {props.subcaption}
           </p>
           <p className={`${textStyles[textClass]} ${textStyles.caption}`}>
-            <span>{props.caption}</span>
+            <span span className={textStyles.captionTxt}>
+              {props.caption}
+            </span>
           </p>
 
           <button className={newsletterStyles.btn} type="button">

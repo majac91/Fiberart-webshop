@@ -24,22 +24,19 @@
   letter-spacing: 0.05em;
 }
 
-/* .msg:last-child {
-  width: auto;
-} */
-
 .caption {
   width: 50vw;
   margin: auto;
 }
 
-.caption span {
-  width: 30vw;
-  margin: 0 20%;
+.captionTxt {
+  width: 100%;
+  margin: 0 auto;
   display: inline-block;
-  font-family: VogaRegular;
+  font-family: var(--captions);
   color: var(--headings);
-  font-size: 4em;
+  font-size: 3em;
+  font-weight: 600;
   letter-spacing: 0.02em;
 }
 
@@ -52,19 +49,24 @@
   width: 40vw;
 }
 
+.brandMsg {
+  width: 30vw;
+}
+
 .mission.container {
   border-left: 1px solid black;
   border-right: none;
 }
 
-.mission .subcaption span {
+.mission .subcaptionTxt {
   font-size: 0.8em;
 }
 
-.mission .caption span {
-  font-size: 2em;
+.mission .captionTxt {
+  font-size: 1.5em;
   color: black;
-  font-weight: 500;
+  font-weight: 600;
+  font-family: Raleway;
 }
 
 .mission .msgWrapper {
@@ -91,7 +93,8 @@
   left: -1.2em;
   background-color: white;
 }
-.about .caption span {
-  font-size: 3em;
+.about .captionTxt {
+  width: 20vw;
+  font-size: 2em;
   padding-bottom: 1em;
 }

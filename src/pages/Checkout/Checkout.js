@@ -4,6 +4,7 @@ import TextSection from "../../components/TextSection";
 import Form from "../../components/Form/Form";
 import cartStyles from "../../components/Cart/cart.module.css";
 import checkoutStyles from "./checkout.module.css";
+import textStyles from "../../components/TextSection/text-section.module.css";
 
 const Checkout = ({ total, onDelete, cartItems }) => {
   const [submitted, setSubmitted] = useState(false);
@@ -18,6 +19,7 @@ const Checkout = ({ total, onDelete, cartItems }) => {
         subcaption="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. "
       ></TextSection>
       <div className={`${checkoutStyles.container} d-flex container`}>
+        {/* F O R M */}
         <div className={checkoutStyles.form}>
           <Form
             submitted={submitted}
@@ -25,6 +27,7 @@ const Checkout = ({ total, onDelete, cartItems }) => {
             cartItems={cartItems}
           ></Form>
         </div>
+        {/* C A R T */}
         <div className={`${cartStyles.wrapperOutter} ${checkoutStyles.cart}`}>
           {!submitted ? (
             <>
@@ -75,7 +78,12 @@ const Checkout = ({ total, onDelete, cartItems }) => {
               )}
             </>
           ) : (
-            <h1>Thank you</h1>
+            <div className={checkoutStyles.msg}>
+              <p className={textStyles.captionTxt}>Thank you!</p>
+              <p className={textStyles.subcaption}>
+                A customer service representative will contact you soon.
+              </p>
+            </div>
           )}
         </div>
       </div>

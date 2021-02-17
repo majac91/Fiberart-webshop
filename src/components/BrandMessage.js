@@ -4,7 +4,7 @@ import TwoPhotosSection from "./TwoPhotosSection/TwoPhotosSection";
 
 export default function BrandMessage() {
   return (
-    <>
+    <section className="brandMsg">
       <TextSection
         section="brandMsg"
         message="Brand message"
@@ -12,6 +12,6 @@ export default function BrandMessage() {
         subcaption="I help you create a home you love, so you can relax and refresh in a pure and simple space."
       ></TextSection>
       <TwoPhotosSection el={"div"} img={["img3", "img4"]} />
-    </>
+    </section>
   );
 }

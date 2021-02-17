@@ -4,49 +4,49 @@ import cartStyles from "../Cart/cart.module.css";
 import { db } from "../../firebase/config";
 
 const Form = ({ setSubmitted, cartItems }) => {
-  const [firstName, setFirstName] = useState("");
-  const [lastName, setLastName] = useState("");
-  const [adress, setAdress] = useState("");
-  const [city, setCity] = useState("");
-  const [country, setCountry] = useState("");
-  const [zip, setZip] = useState("");
-  const [email, setEmail] = useState("");
-  const [phone, setPhone] = useState("");
+  const [formValues, setFormValues] = useState({
+    firstName: "",
+    lastName: "",
+    adress: "",
+    city: "",
+    country: "",
+    zip: "",
+    email: "",
+    phone: "",
+  });
+
+  function handleFormValues(name, e) {
+    setFormValues((current) => {
+      return { ...current, [name]: e.target.value };
+    });
+  }
 
   const order = cartItems.map((item) => `${item.name}`).toString();
 
   function handleSubmit(e) {
     e.preventDefault();
-    setSubmitted(true);
     db.ref("orders/" + Date.now()).set(
-      {
-        firstName: firstName,
-        lastName: lastName,
-        adress: adress,
-        city: city,
-        country: country,
-        zip: zip,
-        phone: phone,
-        email: email,
-        order: order,
-      },
+      { ...formValues, order: order },
       (error) => {
         if (error) {
           console.log(error);
         } else {
+          setSubmitted(true);
           console.log("Data saved successfully!");
         }
       }
     );
 
-    setFirstName(" ");
-    setLastName(" ");
-    setAdress(" ");
-    setCity(" ");
-    setCountry(" ");
-    setZip(" ");
-    setEmail(" ");
-    setPhone(" ");
+    setFormValues({
+      firstName: " ",
+      lastName: " ",
+      adress: " ",
+      city: " ",
+      country: " ",
+      zip: " ",
+      email: " ",
+      phone: " ",
+    });
   }
 
   return (
@@ -62,8 +62,8 @@ const Form = ({ setSubmitted, cartItems }) => {
             <input
               className={formStyles.input}
               id="firstName"
-              value={firstName}
-              onChange={(e) => setFirstName(e.target.value)}
+              value={formValues.firstName}
+              onChange={(e) => handleFormValues("firstName", e)}
               required
             />
           </div>
@@ -72,8 +72,8 @@ const Form = ({ setSubmitted, cartItems }) => {
             <input
               className={formStyles.input}
               id="lastName"
-              value={lastName}
-              onChange={(e) => setLastName(e.target.value)}
+              value={formValues.lastName}
+              onChange={(e) => handleFormValues("lastName", e)}
               required
             />
           </div>
@@ -85,8 +85,8 @@ const Form = ({ setSubmitted, cartItems }) => {
             <input
               className={formStyles.input}
               id="adress"
-              value={adress}
-              onChange={(e) => setAdress(e.target.value)}
+              value={formValues.adress}
+              onChange={(e) => handleFormValues("adress", e)}
               required
             />
           </div>
@@ -95,8 +95,8 @@ const Form = ({ setSubmitted, cartItems }) => {
             <input
               className={formStyles.input}
               id="city"
-              value={city}
-              onChange={(e) => setCity(e.target.value)}
+              value={formValues.city}
+              onChange={(e) => handleFormValues("city", e)}
               required
             />
           </div>
@@ -108,8 +108,8 @@ const Form = ({ setSubmitted, cartItems }) => {
             <input
               className={formStyles.input}
               id="country"
-              value={country}
-              onChange={(e) => setCountry(e.target.value)}
+              value={formValues.country}
+              onChange={(e) => handleFormValues("country", e)}
               required
             />
           </div>
@@ -119,8 +119,8 @@ const Form = ({ setSubmitted, cartItems }) => {
               className={formStyles.input}
               id="zip"
               type="number"
-              value={zip}
-              onChange={(e) => setZip(e.target.value)}
+              value={formValues.zip}
+              onChange={(e) => handleFormValues("zip", e)}
               required
             />
           </div>
@@ -133,8 +133,8 @@ const Form = ({ setSubmitted, cartItems }) => {
               className={formStyles.input}
               id="email"
               type="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
+              value={formValues.email}
+              onChange={(e) => handleFormValues("email", e)}
               required
             />
           </div>
@@ -145,8 +145,8 @@ const Form = ({ setSubmitted, cartItems }) => {
               className={formStyles.input}
               id="phone"
               type="tel"
-              value={phone}
-              onChange={(e) => setPhone(e.target.value)}
+              value={formValues.phone}
+              onChange={(e) => handleFormValues("phone", e)}
               required
             />
           </div>
