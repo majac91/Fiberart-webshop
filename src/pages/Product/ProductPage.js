@@ -31,7 +31,7 @@ const ProductPage = ({
     : null;
 
   var settings = {
-    dots: true,
+    dots: false,
     autoplay: true,
     infinite: true,
     autoplaySpeed: 4000,
@@ -58,7 +58,7 @@ const ProductPage = ({
       </header>
       <div className={productPageStyles.productWrapper}>
         <div className={productPageStyles.imgWrapper}>
-          <Slider {...settings}>
+          <Slider className={"productSlider"} {...settings}>
             {slideImgs?.map((img) => (
               <div className={productPageStyles.slide}>
                 <div

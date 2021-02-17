@@ -59,8 +59,8 @@ function App() {
         onCartClick={handleToggleCart}
         cartIsOpen={cartIsOpen}
         cartItems={cartItems}
-        setCartIsOpen={setCartIsOpen}
       ></Cart>
+
       <Switch>
         <Route exact path="/">
           <Main />
@@ -79,6 +79,7 @@ function App() {
             setCartItems={setCartItems}
           ></ProductPage>
         </Route>
+
         <Route exact path="/checkout">
           <CheckoutPage
             total={total}

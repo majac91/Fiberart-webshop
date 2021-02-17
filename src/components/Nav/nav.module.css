@@ -18,7 +18,7 @@
   font-weight: 600;
   color: black;
   font-size: 1em;
-  font-family: "Raleway";
+  font-family: var(--body);
 }
 
 .navLogo {

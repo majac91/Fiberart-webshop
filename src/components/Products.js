@@ -22,6 +22,7 @@ const Products = () => {
               <div className={productStyles.caption}>
                 <div className={productStyles.name}>{product.name}</div>
                 <div className={productStyles.price}>{product.price}</div>
+
                 <Link className={productStyles.button} to={`product/${key}`}>
                   View item
                 </Link>

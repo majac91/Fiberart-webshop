@@ -7,7 +7,6 @@ const cx = require("classnames");
 const Cart = ({
   cartIsOpen,
   clickOutside,
-  setCartIsOpen,
   cartItems,
   onCartClick,
   onDelete,
@@ -17,14 +16,15 @@ const Cart = ({
     localStorage.setItem("item", JSON.stringify(cartItems));
   }, [cartItems]);
 
-  // Cart.handleClickOutside = () => setCartIsOpen(false);
-
+  console.log(cartItems);
   return (
     <>
       <div
         ref={clickOutside}
         className={cx(cartIsOpen ? cartStyles["open"] : cartStyles["closed"])}
       >
+        {/* CART HEADER */}
+
         <div className={cartStyles.wrapperOutter}>
           <div className={cartStyles.titleWrapper}>
             <p className={cartStyles.title}>Cart</p>
@@ -37,12 +37,20 @@ const Cart = ({
             </button>
           </div>
 
+          {/* EMPTY CART */}
+
           {cartItems.length === 0 ? (
             <p className={cartStyles.emptyCart}>The cart is empty.</p>
           ) : null}
 
+          {/* CART ITEMS */}
+
           {cartItems.map((item, index) => (
-            <div key={index} className={cartStyles.wrapperInner}>
+            <Link
+              to={`product/${item.path}`}
+              key={index}
+              className={cartStyles.wrapperInner}
+            >
               <img
                 className={cartStyles.img}
                 alt={item.name}
@@ -60,8 +68,11 @@ const Cart = ({
                   </button>
                 </div>
               </div>
-            </div>
+            </Link>
           ))}
+
+          {/*CART FOOTER */}
+
           {cartItems.map((item, index) =>
             index === cartItems.length - 1 ? (
               <div className={cartStyles.totalWrapper}>
