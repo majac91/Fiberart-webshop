@@ -1,6 +1,6 @@
 # Fiberart-webshop
 
-> The project is a webshop for &thread wall hangings. 
+> The project is a webshop for <ahref="https://www.etsy.com/shop/andthread?ref=nla_listing_details">&thread wall hangings</a>. 
 
 I've created it as the final project for a workshop, with the goal to besides technologies learned in the workshop, learn and use additional tools to create a fully functioning webstite. 
 
