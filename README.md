@@ -14,12 +14,16 @@ I've created it as the final project for a workshop, with the goal to besides te
 - reusability
 - accessibility
 
-# Installation
+# Installation and running
+
+Instal npm 
+
+```npm i```
+
+and run 
+
+```npm start```
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-# Available Scripts
 
-In the project directory, you can run:
-
-### `npm start`
