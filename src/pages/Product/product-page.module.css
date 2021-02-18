@@ -54,7 +54,7 @@
 
 .product {
   max-width: 30em;
-  min-height: 50em;
+  height: 50em;
   background-position: center;
   background-size: cover;
 }
@@ -93,6 +93,7 @@
     float: right;
   }
   .product {
+    height: 30em;
     width: 100%;
     margin: auto;
   }

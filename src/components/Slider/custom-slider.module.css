@@ -29,4 +29,5 @@
 
 .slide4 {
   background-image: url("../../img/slide4.jpg");
+  background-position: top;
 }

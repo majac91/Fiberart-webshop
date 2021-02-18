@@ -1,6 +1,5 @@
 import React from "react";
 import headerStyles from "./header.module.css";
-import checkoutStyles from "../../pages/Checkout/checkout.module.css";
 
 //header imgs
 import header1 from "../../img/header1.jpg";
@@ -37,7 +36,6 @@ export default function Header({ page }) {
             <img alt="" className={headerStyles.headerImg} src={header1}></img>
             <img alt="" className={headerStyles.headerImg} src={header2}></img>
             <img alt="" className={headerStyles.headerImg} src={header3}></img>
-
             <img alt="" className={headerStyles.headerImg} src={header4}></img>
           </div>
         </header>

@@ -1,14 +1,20 @@
 .container {
-  height: 60vh;
+  max-height: 60vh;
 }
 
 .headerImgs {
   display: flex;
+  justify-content: center;
   overflow: hidden;
 }
 .headerImg {
-  width: 23vw;
-  height: 60vh;
+  /* width: 23vw; */
+  object-fit: cover;
+  background-size: cover;
+  width: 11em;
+  flex: 1;
+  min-height: 40vh;
+  max-height: 60vh;
 }
 
 .heroHeader {
