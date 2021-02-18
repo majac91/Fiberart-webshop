@@ -1,14 +1,20 @@
 # Fiberart-webshop
 
-# Goals
+> The project is a webshop for &thread wall hangings. 
 
-- [ ] CSS modules
+I've created it as the final project for a workshop, with the goal to besides technologies learned in the workshop, learn and use additional tools to create a fully functioning webstite. 
 
-#Learnings
+<a href='https://and-thread-tapestries.netlify.app/'>Go to page</a>
 
-#To-do
 
-- [ ] accessible headings https://css-tricks.com/html-for-subheadings-and-headings/
+# Personal project goals
+
+- learn and use Firebase as backend
+- use CSS modules
+- reusability
+- accessibility
+
+# Installation
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
