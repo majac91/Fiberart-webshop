@@ -30,6 +30,8 @@
   --body: "Raleway";
   --captions: "EB Garamond", serif;
   --caption-size: 4em;
+  --transition: 1s ease-in-out;
+  --border: 1px solid rgb(234, 227, 217);
 }
 .container {
   width: 90vw;

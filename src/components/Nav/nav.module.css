@@ -19,14 +19,23 @@
   font-family: var(--body);
 }
 
-.navLogoLink {
+.logoDesktopLink {
   margin-left: auto;
 }
 
-.navLogoImg {
+.logoDesktopImg {
   height: 30%;
   width: 30%;
   float: right;
+}
+
+.logoMobileLink {
+  display: none;
+}
+
+.logoMobileImg,
+.logoMobileLink {
+  display: none;
 }
 
 .cart {
@@ -34,6 +43,7 @@
   background: white;
   margin-top: auto;
   margin-bottom: auto;
+  margin-right: 0;
 }
 
 .closeBtn,
@@ -72,31 +82,49 @@
     justify-content: space-between;
   }
 
-  .navLogoLink {
-    z-index: -1;
-    position: absolute;
-    left: 35vw;
-  }
-
-  .navLogoImg {
-    height: 5em;
-    width: 7em;
-    float: none;
-  }
-
-  /* BURGER  */
-  .navLinks {
+  .wrapperMobile {
+    width: 100%;
     display: flex;
-    flex-direction: column;
+    justify-content: space-betweens;
+  }
+
+  .logoDesktopLink {
+    display: none;
+  }
+
+  .logoMobileLink {
+    display: block;
+    margin: auto;
+  }
+
+  .logoMobileImg {
+    display: block;
+    height: 5em;
+    width: 8em;
+  }
+
+  .cart {
+    width: 5em;
+  }
+
+  .burgerBtn {
+    width: 5em;
+  }
+
+  .burgerIcon {
+    float: left;
+  }
+  .navLinks {
     width: 60vw;
     height: 100vh;
+    display: flex;
+    flex-direction: column;
     position: fixed;
     top: 0;
-    right: 0;
     left: -100%;
-    transition: left 1s ease;
+    transition: left var(--transition);
     background: white;
-    border-right: 1px solid var(--beige);
+    border-right: var(--border);
     z-index: 100;
     padding: 2em;
   }
@@ -120,8 +148,11 @@
     width: 30vw;
   }
 
-  .navLogoLink {
+  /* .navLogoLink {
     left: 41vw;
+  } */
+  .logoMobileImg {
+    display: block;
   }
 }
 

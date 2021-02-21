@@ -43,21 +43,54 @@ export default function Nav({
           </Link>
         </div>
       </div>
-      <button className={navStyles.burgerBtn} onClick={onBurgerClick}>
+      <div className={navStyles.wrapperMobile}>
+        <button className={navStyles.burgerBtn} onClick={onBurgerClick}>
+          <img
+            alt="open menu"
+            className={navStyles.burgerIcon}
+            src={burgerIcon}
+          ></img>
+        </button>
+        <Link to="/" className={navStyles.logoMobileLink}>
+          <img
+            alt="homepage"
+            className={navStyles.logoMobileImg}
+            src={logo}
+          ></img>
+        </Link>
+        <button
+          onClick={onCartClick}
+          className={`${navStyles.navLink} ${navStyles.cart} ignoreClickOutside`}
+        >
+          Cart ({cartCount})
+        </button>
+      </div>
+      {/* <button className={navStyles.burgerBtn} onClick={onBurgerClick}>
         <img
           alt="open menu"
           className={navStyles.burgerIcon}
           src={burgerIcon}
         ></img>
       </button>
+      <Link to="/" className={navStyles.logoMobileLink}>
+        <img
+          alt="homepage"
+          className={navStyles.logoMobileImg}
+          src={logo}
+        ></img>
+      </Link>
       <button
         onClick={onCartClick}
         className={`${navStyles.navLink} ${navStyles.cart} ignoreClickOutside`}
       >
         Cart ({cartCount})
-      </button>
-      <Link to="/" className={navStyles.navLogoLink}>
-        <img alt="homepage" className={navStyles.navLogoImg} src={logo}></img>
+      </button> */}
+      <Link to="/" className={navStyles.logoDesktopLink}>
+        <img
+          alt="homepage"
+          className={navStyles.logoDesktopImg}
+          src={logo}
+        ></img>
       </Link>
     </nav>
   );

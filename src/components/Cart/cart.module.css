@@ -5,18 +5,15 @@
   flex-direction: column;
   position: fixed;
   top: 0;
-  right: 0;
-  z-index: 1;
-  transition: transform 1s ease;
-  transform: translateX(40vw);
-
+  right: -100%;
+  transition: right var(--transition);
   background: white;
-  border-left: 1px solid var(--beige);
+  border-left: var(--border);
   z-index: 100;
 }
 
 .open {
-  transform: translateX(0);
+  right: 0;
 }
 
 .wrapperOutter {
@@ -125,7 +122,7 @@
 }
 
 @media only screen and (max-width: 900px) {
-  .open {
+  .cart {
     width: 60vw;
   }
 }
