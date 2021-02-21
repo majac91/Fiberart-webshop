@@ -1,14 +1,12 @@
 .container {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   padding-bottom: 3em;
   padding-top: 1em;
 }
 
 .navLinks {
   display: flex;
-  padding: 0;
 }
 
 .navLink {
@@ -21,6 +19,10 @@
   font-family: var(--body);
 }
 
+.navLogoLink {
+  margin-left: auto;
+}
+
 .navLogoImg {
   height: 30%;
   width: 30%;
@@ -30,16 +32,102 @@
 .cart {
   border: none;
   background: white;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
-@media only screen and (max-width: 900px) {
-  .navLink {
-    margin-right: 0.5em;
-    font-size: 0.8em;
+.closeBtn,
+.burgerBtn {
+  outline: none;
+  border: none;
+  background: white;
+  text-align: right;
+}
+
+.closeBtn {
+  justify-content: flex-start;
+}
+
+.closeIcon {
+  width: 1.3em;
+  height: 1.3em;
+}
+
+.burgerIcon {
+  width: 2em;
+  height: 2em;
+  background: white;
+}
+
+@media only screen and (max-width: 768px) {
+  .container {
+    padding-top: 2em;
+    justify-content: space-between;
   }
+
+  .wrapperInner {
+    display: flex;
+    flex-direction: column;
+    height: 40vh;
+    justify-content: space-between;
+  }
+
+  .navLogoLink {
+    z-index: -1;
+    position: absolute;
+    left: 35vw;
+  }
+
   .navLogoImg {
-    height: 3em;
-    width: 5em;
-    float: right;
+    height: 5em;
+    width: 7em;
+    float: none;
+  }
+
+  /* BURGER  */
+  .navLinks {
+    display: flex;
+    flex-direction: column;
+    width: 60vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: -100%;
+    transition: left 1s ease;
+    background: white;
+    border-right: 1px solid var(--beige);
+    z-index: 100;
+    padding: 2em;
+  }
+
+  .wrapperInner .navLink::after {
+    content: "";
+    border-bottom: 2px solid var(--beige);
+    width: 100%;
+    display: inline-block;
+    position: relative;
+    top: -0.7em;
+  }
+
+  .open {
+    left: 0;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 990px) {
+  .navLinks {
+    width: 30vw;
+  }
+
+  .navLogoLink {
+    left: 41vw;
+  }
+}
+
+@media only screen and (min-width: 990px) {
+  .burgerBtn,
+  .closeBtn {
+    display: none;
   }
 }

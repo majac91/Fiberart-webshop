@@ -32,7 +32,7 @@ const Checkout = ({ total, onDelete, cartItems }) => {
           {!submitted ? (
             <>
               <div className={cartStyles.titleWrapper}>
-                <p className={cartStyles.title}>Cart</p>
+                <p className={cartStyles.title}>Your order</p>
               </div>
 
               {cartItems.length === 0 ? (

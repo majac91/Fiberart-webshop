@@ -13,12 +13,13 @@ const Products = () => {
           let product = products[key];
           return (
             <div key={key} className={productStyles.imgWrapper}>
-              <div
-                className={productStyles.product}
+              <Link
+                to={`product/${key}`}
+                className={productStyles.productImg}
                 style={{
                   backgroundImage: `url(${product.image})`,
                 }}
-              ></div>
+              ></Link>
               <div className={productStyles.caption}>
                 <div className={productStyles.name}>{product.name}</div>
                 <div className={productStyles.price}>{product.price}</div>

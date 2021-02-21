@@ -6,7 +6,7 @@ const cx = require("classnames");
 
 const Cart = ({
   cartIsOpen,
-  clickOutside,
+  clickOutsideRef,
   cartItems,
   onCartClick,
   onDelete,
@@ -17,83 +17,73 @@ const Cart = ({
   }, [cartItems]);
 
   return (
-    <>
-      <div
-        ref={clickOutside}
-        className={cx(cartIsOpen ? cartStyles["open"] : cartStyles["closed"])}
-      >
-        {/* CART HEADER */}
+    <div
+      ref={clickOutsideRef}
+      className={cx(cartStyles.cart, { [cartStyles.open]: cartIsOpen })}
+    >
+      <div className={cartStyles.wrapperOutter}>
+        <div className={cartStyles.titleWrapper}>
+          <p className={cartStyles.title}>Cart</p>
+          <button onClick={onCartClick} className={cartStyles.closeBtn}>
+            <img
+              alt="close button"
+              src={cancel}
+              className={cartStyles.closeIcon}
+            ></img>
+          </button>
+        </div>
 
-        <div className={cartStyles.wrapperOutter}>
-          <div className={cartStyles.titleWrapper}>
-            <p className={cartStyles.title}>Cart</p>
-            <button onClick={onCartClick} className={cartStyles.closeBtn}>
-              <img
-                alt="close button"
-                src={cancel}
-                className={cartStyles.closeIcon}
-              ></img>
-            </button>
-          </div>
+        {cartItems.length === 0 ? (
+          <p className={cartStyles.emptyCart}>The cart is empty.</p>
+        ) : null}
 
-          {/* EMPTY CART */}
-
-          {cartItems.length === 0 ? (
-            <p className={cartStyles.emptyCart}>The cart is empty.</p>
-          ) : null}
-
-          {/* CART ITEMS */}
-
-          {cartItems.map((item, index) => (
-            <div key={index} className={cartStyles.wrapperInner}>
-              <img
-                className={cartStyles.img}
-                alt={item.name}
-                src={item.image}
-              ></img>
-              <div className={cartStyles.productInfo}>
-                <Link to={`/product/${item.path}`}>
-                  <p className={cartStyles.name}>{item.name}</p>
-                </Link>
-                <div className={cartStyles.priceWrapper}>
-                  <p className={cartStyles.price}>{item.price}</p>
-                  <button
-                    className={cartStyles.btn}
-                    onClick={() => onDelete(item)}
-                  >
-                    Remove
-                  </button>
-                </div>
+        {cartItems.map((item, index) => (
+          <div key={index} className={cartStyles.wrapperInner}>
+            <img
+              className={cartStyles.img}
+              alt={item.name}
+              src={item.image}
+            ></img>
+            <div className={cartStyles.productInfo}>
+              <Link to={`/product/${item.path}`}>
+                <p className={cartStyles.name}>{item.name}</p>
+              </Link>
+              <div className={cartStyles.priceWrapper}>
+                <p className={cartStyles.price}>{item.price}</p>
+                <button
+                  className={cartStyles.btn}
+                  onClick={() => onDelete(item)}
+                >
+                  Remove
+                </button>
               </div>
             </div>
-          ))}
+          </div>
+        ))}
 
-          {/*CART FOOTER */}
-
-          {cartItems.map((item, index) =>
-            index === cartItems.length - 1 ? (
-              <div className={cartStyles.totalWrapper} key={index}>
-                <p className={cartStyles.subtotal}>
-                  Subtotal <span className={cartStyles.span}>${total}</span>
-                </p>
-                <p className={cartStyles.shipping}>
-                  Shipping <span className={cartStyles.span}>free</span>
-                </p>
-                <p className={cartStyles.total}>
-                  Total <span className={cartStyles.span}>${total}</span>
-                </p>
-                <Link
-                  to="/checkout"
-                  className={`${cartStyles.btn} ${cartStyles.checkout}`}
-                >
-                  Checkout
-                </Link>
-              </div>
-            ) : null
-          )}
-        </div>
+        {cartItems.map((item, index) =>
+          index === cartItems.length - 1 ? (
+            <div className={cartStyles.totalWrapper} key={index}>
+              <p className={cartStyles.subtotal}>
+                Subtotal <span className={cartStyles.span}>${total}</span>
+              </p>
+              <p className={cartStyles.shipping}>
+                Shipping <span className={cartStyles.span}>free</span>
+              </p>
+              <p className={cartStyles.total}>
+                Total <span className={cartStyles.span}>${total}</span>
+              </p>
+              <Link
+                to="/checkout"
+                className={`${cartStyles.btn} ${cartStyles.checkout}`}
+              >
+                Checkout
+              </Link>
+            </div>
+          ) : null
+        )}
       </div>
-    </>
+    </div>
   );
 };
 

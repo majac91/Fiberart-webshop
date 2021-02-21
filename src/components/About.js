@@ -13,7 +13,7 @@ export default function About(props) {
         <div className={`${textStyles[textClass]} ${textStyles.msgWrapper}`}>
           <p className={textStyles.msg}>{props.message}</p>
         </div>
-        <div className={imgStyles.textWrapper}>
+        <div className={newsletterStyles.captionWrapper}>
           <p
             className={`${newsletterStyles.about} ${newsletterStyles.subcaption}`}
           >

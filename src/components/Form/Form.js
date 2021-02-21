@@ -21,7 +21,8 @@ const Form = ({ setSubmitted, cartItems }) => {
     });
   }
 
-  const order = cartItems.map((item) => `${item.name}`).toString();
+  //ordered items from cart
+  const order = cartItems.map((item) => ` ${item.name}`).toString();
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -51,7 +52,7 @@ const Form = ({ setSubmitted, cartItems }) => {
 
   return (
     <div className={formStyles.wrapperOutter}>
-      <p className={cartStyles.title}>Order details</p>
+      <p className={cartStyles.title}>Your details</p>
       <form
         className={formStyles.wrapperInner}
         onSubmit={(e) => handleSubmit(e)}

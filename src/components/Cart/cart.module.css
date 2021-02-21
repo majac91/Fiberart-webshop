@@ -1,4 +1,4 @@
-.open {
+.cart {
   width: 30vw;
   height: 100vh;
   display: flex;
@@ -8,24 +8,15 @@
   right: 0;
   z-index: 1;
   transition: transform 1s ease;
+  transform: translateX(40vw);
+
   background: white;
   border-left: 1px solid var(--beige);
   z-index: 100;
 }
 
-.closed {
-  width: 30vw;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  position: fixed;
-  top: 0;
-  right: 0;
-  z-index: 1;
-  transition: transform 1s ease;
-  background: white;
-  transform: translateX(40vw);
-  border-left: 1px solid black;
+.open {
+  transform: translateX(0);
 }
 
 .wrapperOutter {

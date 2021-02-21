@@ -15,13 +15,23 @@ function App() {
     () => JSON.parse(localStorage.getItem("item"))?.length || 0
   );
   const [cartIsOpen, setCartIsOpen] = useState(false);
+  const [burgerIsOpen, setBurgerIsOpen] = useState(false);
+
   const [cartItems, setCartItems] = useState(
     () => JSON.parse(localStorage.getItem("item")) || []
   );
 
-  const clickOutsideRef = useOnclickOutside(
+  const clickOutsideCart = useOnclickOutside(
     () => {
       setCartIsOpen(false);
+      setBurgerIsOpen(false);
+    },
+    { ignoreClass: "ignoreClickOutside" }
+  );
+
+  const clickOutsideNav = useOnclickOutside(
+    () => {
+      setBurgerIsOpen(false);
     },
     { ignoreClass: "ignoreClickOutside" }
   );
@@ -34,10 +44,14 @@ function App() {
     setCartIsOpen((prev) => !prev);
   }
 
-  function deleteItem(item) {
+  function deleteCartItem(item) {
     const items = cartItems.filter((i) => i !== item);
     setCartItems(items);
     setCartCount(items.length);
+  }
+
+  function handleToggleNav() {
+    setBurgerIsOpen((prev) => !prev);
   }
 
   let total = cartItems.reduce(
@@ -48,14 +62,17 @@ function App() {
   return (
     <Router>
       <Nav
+        onBurgerClick={handleToggleNav}
+        clickOutsideRef={clickOutsideNav}
+        burgerIsOpen={burgerIsOpen}
         cartCount={cartCount}
         onCartClick={handleToggleCart}
         setCartIsOpen={setCartIsOpen}
       ></Nav>
       <Cart
-        clickOutside={clickOutsideRef}
+        clickOutsideRef={clickOutsideCart}
         total={total}
-        onDelete={deleteItem}
+        onDelete={deleteCartItem}
         onCartClick={handleToggleCart}
         cartIsOpen={cartIsOpen}
         cartItems={cartItems}
@@ -83,7 +100,7 @@ function App() {
         <Route exact path="/checkout">
           <CheckoutPage
             total={total}
-            onDelete={deleteItem}
+            onDelete={deleteCartItem}
             cartItems={cartItems}
           />
         </Route>

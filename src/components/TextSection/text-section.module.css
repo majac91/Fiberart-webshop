@@ -103,8 +103,12 @@
   .caption {
     width: 70vw;
   }
+  .captionTxt {
+    font-size: 2.2em;
+  }
   .subcaption {
     width: 80vw;
+    font-size: 1.2em;
   }
   .about .captionTxt {
     width: 100%;
