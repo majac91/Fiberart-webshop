@@ -21,14 +21,17 @@ export default function Nav({
           [navStyles.open]: burgerIsOpen,
         })}
       >
-        <button className={navStyles.closeBtn} onClick={onBurgerClick}>
+        <button
+          className={`${navStyles.closeBurgerBtn} ignoreClickOutside`}
+          onClick={onBurgerClick}
+        >
           <img
             alt="close menu"
             className={navStyles.closeIcon}
             src={closeIcon}
           ></img>
         </button>
-        <div className={navStyles.wrapperInner}>
+        <div className={navStyles.wrapperDesktop}>
           <Link to="/" className={cx(navStyles.navLink)}>
             Home
           </Link>
@@ -41,6 +44,12 @@ export default function Nav({
           <Link to="/contact" className={navStyles.navLink}>
             Contact
           </Link>
+          <button
+            onClick={onCartClick}
+            className={`${navStyles.navLink} ${navStyles.cart} ignoreClickOutside`}
+          >
+            Cart ({cartCount})
+          </button>
         </div>
       </div>
       <div className={navStyles.wrapperMobile}>

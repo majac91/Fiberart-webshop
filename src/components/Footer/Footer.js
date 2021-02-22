@@ -14,10 +14,7 @@ export default function Footer(props) {
   return (
     <>
       <div className={`${footerStyles.container} d-flex container`}>
-        <div
-          title="social media posts"
-          className={`${imgStyles.imgWrapper} ${footerStyles.imgWrapper}`}
-        >
+        <div className={`${imgStyles.imgWrapper} ${footerStyles.imgWrapper}`}>
           <img
             alt=""
             className={`${footerStyles.img1} ${footerStyles.img}`}
@@ -37,27 +34,41 @@ export default function Footer(props) {
         </div>
 
         <div className={`${footerStyles.textWrapper} `}>
-          <div className={imgStyles.textWrapper}>
-            <p className={`${textStyles.textClass} ${textStyles.caption}`}>
-              <img alt="logo" src={logo} className={footerStyles.logo}></img>
-            </p>
-            <p className={`${newsletterStyles.paragraph}  text-column`}>
-              <span>{props.paragraph} </span>
-            </p>
-            <div>
-              <a className={footerStyles.link} href="">
-                <img alt="go to facebook page" src={facebookbtn} />
-              </a>
-              <a className={footerStyles.link} href="">
-                <img alt="go to twitter profile" src={twitterbtn} />
-              </a>
-              <a className={footerStyles.link} href="">
-                <img alt="go to pinterest page" src={pinterestbtn} />
-              </a>
-              <a className={footerStyles.link} href="">
-                <img alt="go to tumblr page" src={tumblrbtn} />
-              </a>
-            </div>
+          <p className={`${textStyles.textClass} ${textStyles.caption}`}>
+            <img alt="logo" src={logo} className={footerStyles.logo}></img>
+          </p>
+          <p className={`${newsletterStyles.paragraph}  text-column`}>
+            <span>{props.paragraph} </span>
+          </p>
+          <div>
+            <a className={footerStyles.link} href="">
+              <img
+                className={footerStyles.socialIcon}
+                alt="go to facebook page"
+                src={facebookbtn}
+              />
+            </a>
+            <a className={footerStyles.link} href="">
+              <img
+                className={footerStyles.socialIcon}
+                alt="go to twitter profile"
+                src={twitterbtn}
+              />
+            </a>
+            <a className={footerStyles.link} href="">
+              <img
+                className={footerStyles.socialIcon}
+                alt="go to pinterest page"
+                src={pinterestbtn}
+              />
+            </a>
+            <a className={footerStyles.link} href="">
+              <img
+                className={footerStyles.socialIcon}
+                alt="go to tumblr page"
+                src={tumblrbtn}
+              />
+            </a>
           </div>
         </div>
       </div>

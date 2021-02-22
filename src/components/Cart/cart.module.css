@@ -121,8 +121,25 @@
   float: right;
 }
 
-@media only screen and (max-width: 900px) {
+@media all and (max-width: 480px) {
   .cart {
-    width: 60vw;
+    width: 80vw;
+  }
+}
+@media all and (min-width: 480px) and (max-width: 768px) {
+  .cart {
+    width: 70vw;
+  }
+  .productInfo {
+    margin-left: 1em;
+  }
+  .name {
+    font-size: 1.1em;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1024px) {
+  .cart {
+    width: 40vw;
   }
 }

@@ -78,7 +78,7 @@ const Cart = ({
               </p>
               <Link
                 to="/checkout"
-                className={`${cartStyles.btn} ${cartStyles.checkout}`}
+                className={`${cartStyles.btn} ${cartStyles.checkout} ignoreClickOutside`}
               >
                 Checkout
               </Link>

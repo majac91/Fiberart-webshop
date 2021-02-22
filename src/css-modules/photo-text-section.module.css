@@ -22,6 +22,10 @@
   float: left;
 }
 
+.about {
+  margin-bottom: var(--section);
+}
+
 @media only screen and (max-width: 900px) {
   .imgWrapper {
     display: none;
