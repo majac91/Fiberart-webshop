@@ -79,7 +79,7 @@
 }
 
 @media only screen and (max-width: 900px) {
-  .img {
+  .img:first-child {
     margin-bottom: 2em;
   }
 }

@@ -65,26 +65,6 @@ export default function Nav({
           Cart ({cartCount})
         </button>
       </div>
-      {/* <button className={navStyles.burgerBtn} onClick={onBurgerClick}>
-        <img
-          alt="open menu"
-          className={navStyles.burgerIcon}
-          src={burgerIcon}
-        ></img>
-      </button>
-      <Link to="/" className={navStyles.logoMobileLink}>
-        <img
-          alt="homepage"
-          className={navStyles.logoMobileImg}
-          src={logo}
-        ></img>
-      </Link>
-      <button
-        onClick={onCartClick}
-        className={`${navStyles.navLink} ${navStyles.cart} ignoreClickOutside`}
-      >
-        Cart ({cartCount})
-      </button> */}
       <Link to="/" className={navStyles.logoDesktopLink}>
         <img
           alt="homepage"

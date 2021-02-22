@@ -34,7 +34,7 @@ export default function Newsletter() {
               type="text"
               placeholder={"email address"}
             ></input>
-            <button type="submit" className={styles.btn}>
+            <button type="submit" className={"btn-black"}>
               send
             </button>
           </form>

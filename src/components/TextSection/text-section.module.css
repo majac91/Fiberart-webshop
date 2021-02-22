@@ -53,13 +53,15 @@
   width: 30vw;
 }
 
-.mission.container {
+.mission.container,
+.about.container {
   border-left: 1px solid black;
   border-right: none;
 }
 
 .mission .subcaptionTxt {
   font-size: 0.8em;
+  line-height: var(--line-height);
 }
 
 .mission .captionTxt {
@@ -69,30 +71,16 @@
   font-family: var(--body);
 }
 
-.mission .msgWrapper {
+.mission .msgWrapper,
+.about .msgWrapper {
   left: -4.6em;
   float: none;
 }
 
 .about.container {
-  border-left: 1px solid black;
-  border-right: none;
   padding-bottom: 0;
 }
 
-.about .msgWrapper {
-  float: left;
-  left: -4.6em;
-  width: auto;
-}
-
-.about .msg {
-  position: relative;
-  top: -1.2em;
-  width: 8em;
-  left: -1.2em;
-  background-color: white;
-}
 .about .captionTxt {
   width: 20vw;
   font-size: 2em;
@@ -109,6 +97,12 @@
   .subcaption {
     width: 80vw;
     font-size: 1.2em;
+  }
+  .msgWrapper {
+    top: -0.92em;
+  }
+  .msg {
+    font-size: 0.8em;
   }
   .about .captionTxt {
     width: 100%;

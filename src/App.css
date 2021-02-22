@@ -32,6 +32,7 @@
   --caption-size: 4em;
   --transition: 1s ease-in-out;
   --border: 1px solid rgb(234, 227, 217);
+  --line-height: 1.5;
 }
 .container {
   width: 90vw;
@@ -66,6 +67,15 @@ button:hover {
   transition: opacity 0.5s ease;
 }
 
+.btn-black {
+  width: 7em;
+  height: 2em;
+  font-size: 1.3em;
+  background: black;
+  color: white;
+  border: none;
+}
+
 /* Slider styles */
 
 .slick-dots li button:before {
@@ -92,5 +102,8 @@ button:hover {
   .slick-slide {
     height: 70vh;
     object-fit: cover;
+  }
+  .btn-black {
+    font-size: 1em;
   }
 }

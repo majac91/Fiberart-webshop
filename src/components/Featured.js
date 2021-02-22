@@ -28,7 +28,7 @@ export default function Featured(props) {
             >
               <span>{props.paragraph} </span>
             </p>
-            <button className={newsletterStyles.btn} type="button">
+            <button className={"btn-black"} type="button">
               {props.btn}
             </button>
           </div>

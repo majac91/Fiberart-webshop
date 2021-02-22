@@ -45,17 +45,17 @@ export default function Footer(props) {
               <span>{props.paragraph} </span>
             </p>
             <div>
-              <a className={footerStyles.link} type="button">
-                <img alt="share to facebook" src={facebookbtn} />
+              <a className={footerStyles.link} href="">
+                <img alt="go to facebook page" src={facebookbtn} />
               </a>
-              <a className={footerStyles.link} type="button">
-                <img alt="share to facebook" src={twitterbtn} />
+              <a className={footerStyles.link} href="">
+                <img alt="go to twitter profile" src={twitterbtn} />
               </a>
-              <a className={footerStyles.link} type="button">
-                <img alt="share to facebook" src={pinterestbtn} />
+              <a className={footerStyles.link} href="">
+                <img alt="go to pinterest page" src={pinterestbtn} />
               </a>
-              <a className={footerStyles.link} type="button">
-                <img alt="share to facebook" src={tumblrbtn} />
+              <a className={footerStyles.link} href="">
+                <img alt="go to tumblr page" src={tumblrbtn} />
               </a>
             </div>
           </div>

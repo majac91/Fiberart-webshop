@@ -24,7 +24,10 @@ const Cart = ({
       <div className={cartStyles.wrapperOutter}>
         <div className={cartStyles.titleWrapper}>
           <p className={cartStyles.title}>Cart</p>
-          <button onClick={onCartClick} className={cartStyles.closeBtn}>
+          <button
+            onClick={onCartClick}
+            className={`${cartStyles.closeBtn} ignoreClickOutside`}
+          >
             <img
               alt="close button"
               src={cancel}
@@ -34,7 +37,7 @@ const Cart = ({
         </div>
 
         {cartItems.length === 0 ? (
-          <p className={cartStyles.emptyCart}>The cart is empty.</p>
+          <p className={cartStyles.emptyCart}>Your cart is empty.</p>
         ) : null}
 
         {cartItems.map((item, index) => (
@@ -51,7 +54,7 @@ const Cart = ({
               <div className={cartStyles.priceWrapper}>
                 <p className={cartStyles.price}>{item.price}</p>
                 <button
-                  className={cartStyles.btn}
+                  className={`${cartStyles.btn} ignoreClickOutside`}
                   onClick={() => onDelete(item)}
                 >
                   Remove

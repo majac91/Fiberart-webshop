@@ -31,6 +31,7 @@ function App() {
 
   const clickOutsideNav = useOnclickOutside(
     () => {
+      setCartIsOpen(false);
       setBurgerIsOpen(false);
     },
     { ignoreClass: "ignoreClickOutside" }

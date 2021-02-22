@@ -105,6 +105,8 @@
 
   .cart {
     width: 5em;
+    letter-spacing: initial;
+    text-align: right;
   }
 
   .burgerBtn {
@@ -148,9 +150,6 @@
     width: 30vw;
   }
 
-  /* .navLogoLink {
-    left: 41vw;
-  } */
   .logoMobileImg {
     display: block;
   }

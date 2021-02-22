@@ -22,7 +22,7 @@
 .subcaption,
 .paragraph {
   letter-spacing: 0.2em;
-  line-height: 1.5;
+  line-height: var(--line-height);
 }
 .subcaption {
   font-family: "Oswald";
@@ -59,15 +59,6 @@
   font-size: 18px;
 }
 
-.btn {
-  width: 7em;
-  height: 2em;
-  font-size: 1.3em;
-  background: black;
-  color: white;
-  border: none;
-}
-
 .about.subcaption {
   margin: 0 20%;
 }
@@ -76,10 +67,8 @@
   .input {
     width: 15em;
   }
-  .btn {
-    width: 5em;
+
+  .paragraph {
+    width: 20em;
   }
-  /* .about.subcaption {
-    text-align: left;
-  } */
 }

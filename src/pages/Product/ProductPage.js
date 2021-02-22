@@ -87,7 +87,7 @@ const ProductPage = ({
           </p>
           <button
             onClick={handleAddCartItem}
-            className={`${newsletterStyles.btn} ignoreClickOutside`}
+            className={"btn-black ignoreClickOutside"}
             type="button"
           >
             Add to cart
