@@ -20,12 +20,12 @@ const Products = () => {
                   backgroundImage: `url(${product.image})`,
                 }}
               ></Link>
-              <div className={productStyles.caption}>
-                <div className={productStyles.name}>{product.name}</div>
+              <div className={productStyles.captionWrapper}>
+                <div className={productStyles.caption}>{product.name}</div>
                 <div className={productStyles.price}>{product.price}</div>
 
                 <Link className={productStyles.button} to={`product/${key}`}>
-                  View item
+                  view item
                 </Link>
               </div>
             </div>

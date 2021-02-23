@@ -8,53 +8,48 @@ const Faq = () => {
         <h3 className={shopStyles.faqHeading}>Frequently asked</h3>
         <div className={shopStyles.faqInner}>
           <div className={`${shopStyles.faqItem}`}>
-            <div className={shopStyles.text}>
+            <div className={shopStyles.faqText}>
               <h4>Lorem ipsum dolor sit</h4>
 
               <p>
-                'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
-                mi felis, consequat dignissim enim eu, pharetra vestibulum
-                felis. Pellentesque aliquam ac erat quis rhoncus. Vestibulum
-                luctus hendrerit dictum.'
+                Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus,
+                sem quam semper libero, sit amet adipiscing sem neque sed ipsum.
               </p>
             </div>
           </div>
           <div className={`${shopStyles.faqItem}`}>
-            <div className={shopStyles.text}>
+            <div className={shopStyles.faqText}>
               <h4>Lorem ipsum dolor sit</h4>
 
               <p>
-                'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
-                mi felis, consequat dignissim enim eu, pharetra vestibulum
-                felis. Pellentesque aliquam ac erat quis rhoncus. Vestibulum
-                luctus hendrerit dictum.'
+                Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus,
+                sem quam semper libero, sit amet adipiscing sem neque sed ipsum.
               </p>
             </div>
           </div>
           <div className={`${shopStyles.faqItem}`}>
-            <div className={shopStyles.text}>
+            <div className={shopStyles.faqText}>
               <h4>Lorem ipsum dolor sit</h4>
 
               <p>
-                'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
-                mi felis, consequat dignissim enim eu, pharetra vestibulum
-                felis. Pellentesque aliquam ac erat quis rhoncus. Vestibulum
-                luctus hendrerit dictum.'
+                Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus,
+                sem quam semper libero, sit amet adipiscing sem neque sed ipsum.
               </p>
             </div>
           </div>
           <div className={`${shopStyles.faqItem}`}>
-            <div className={shopStyles.text}>
+            <div className={shopStyles.faqText}>
               <h4>Lorem ipsum dolor sit</h4>
 
               <p>
-                'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
-                mi felis, consequat dignissim enim eu, pharetra vestibulum
-                felis. Pellentesque aliquam ac erat quis rhoncus. Vestibulum
-                luctus hendrerit dictum.'
+                Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus,
+                sem quam semper libero, sit amet adipiscing sem neque sed ipsum.
               </p>
             </div>
           </div>
+          <button className={`${shopStyles.faqBtn} btn-black`} type="button">
+            ask a question
+          </button>
         </div>
       </div>
     </>

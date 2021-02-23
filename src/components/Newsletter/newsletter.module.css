@@ -38,6 +38,10 @@
   margin: 0 auto 1em auto;
 }
 
+.line {
+  font-size: 1em;
+}
+
 .form {
   display: flex;
   padding-top: 1em;
@@ -63,12 +67,36 @@
   margin: 0 20%;
 }
 
-@media only screen and (max-width: 900px) {
+@media all and (min-width: 360px) and (max-width: 768px) {
   .input {
     width: 15em;
   }
 
+  .caption {
+    font-size: 1.8em;
+  }
+
+  .subcaption {
+    font-size: 0.9em;
+  }
+
   .paragraph {
     width: 20em;
+  }
+
+  .line {
+    font-size: 0.9em;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1024px) {
+  .paragraph {
+    max-width: 20em;
+  }
+}
+
+@media all and (min-width: 1024px) and (max-width: 1280px) {
+  .paragraph {
+    max-width: 25em;
   }
 }

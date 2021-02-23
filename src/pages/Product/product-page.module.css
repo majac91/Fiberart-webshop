@@ -91,7 +91,7 @@
   }
 
   .product {
-    height: 70vh;
+    height: 60vh;
     width: 100%;
     margin: auto;
   }
@@ -106,25 +106,8 @@
     margin-right: 0;
   }
 
-  /* .imgWrapper::after {
-    width: 85%;
-  } */
-
   .description {
     margin-top: 3em;
     width: 85%;
   }
 }
-
-/* @media all and (max-width: 768px) {
-  .imgWrapper {
-    margin-right: 0;
-  }
-  .description {
-    margin-top: 5em;
-    text-align: left;
-  }
-  .container {
-    height: 100%;
-  }
-} */

@@ -73,7 +73,7 @@
   background: white;
 }
 
-@media all and (min-width: 360px) and (max-width: 768px) {
+@media all and (min-width: 360px) and (max-width: 767px) {
   .container {
     padding-top: 2em;
     justify-content: space-between;

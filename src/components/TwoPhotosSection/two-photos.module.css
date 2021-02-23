@@ -78,8 +78,42 @@
   height: 100%;
 }
 
-@media only screen and (max-width: 900px) {
+@media all and (max-width: 400px) {
+  .img {
+    height: 60vh;
+  }
   .img:first-child {
     margin-bottom: 2em;
+  }
+}
+
+@media all and (min-width: 401px) and (max-width: 768px) {
+  .img {
+    height: 70vh;
+  }
+  .img:first-child {
+    margin-bottom: 2em;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1024px) {
+  .images {
+    flex-wrap: nowrap;
+  }
+  .img {
+    width: 40vw;
+    min-width: 10em;
+    height: 80vh;
+  }
+
+  .img:first-child {
+    margin-bottom: 2em;
+  }
+}
+
+@media all and (min-width: 1024px) {
+  .img {
+    width: 43vw;
+    height: 80vh;
   }
 }

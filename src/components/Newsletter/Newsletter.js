@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import styles from "./newsletter.module.css";
+import newsletterStyles from "./newsletter.module.css";
 import { db } from "../../firebase/config";
 
 export default function Newsletter() {
@@ -19,18 +19,27 @@ export default function Newsletter() {
 
   return (
     <>
-      <section className={`${styles.container} container`}>
-        <div className={styles.text}>
-          <p className={styles.caption}>FREE CHECKLIST</p>
-          <p className={styles.subcaption}>for a stylish table setting</p>
-          <p className={styles.paragraph}>
-            <span>Download my checklist with loads of tips</span>
-            <span>to create a table setting that everyone will love!</span>
+      <section className={`${newsletterStyles.container} container`}>
+        <div className={newsletterStyles.text}>
+          <p className={newsletterStyles.caption}>FREE CHECKLIST</p>
+          <p className={newsletterStyles.subcaption}>
+            for a stylish table setting
           </p>
-          <form className={styles.form} onSubmit={(e) => handleSubmit(e)}>
+          <p className={newsletterStyles.paragraph}>
+            <span className={newsletterStyles.line}>
+              Download my checklist with loads of tips
+            </span>
+            <span className={newsletterStyles.line}>
+              to create a table setting that everyone will love!
+            </span>
+          </p>
+          <form
+            className={newsletterStyles.form}
+            onSubmit={(e) => handleSubmit(e)}
+          >
             <input
               onChange={(e) => setEmail(e.target.value)}
-              className={styles.input}
+              className={newsletterStyles.input}
               type="text"
               placeholder={"email address"}
             ></input>
