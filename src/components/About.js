@@ -11,7 +11,7 @@ export default function About(props) {
     >
       <div className={`${imgStyles.text}`}>
         <div className={`${textStyles[textClass]} ${textStyles.msgWrapper}`}>
-          <p className={textStyles.msg}>{props.message}</p>
+          <p className={textStyles.sideMsg}>{props.message}</p>
         </div>
         <div className={newsletterStyles.captionWrapper}>
           <p

@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { useProductList } from "../firebase/api";
-import productStyles from "../pages/Product/product.module.css";
+import { useProductList } from "../../firebase/api";
+import productStyles from "../../components/ProductsList/product.module.css";
 
 const Products = () => {
   const products = useProductList();

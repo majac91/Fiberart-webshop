@@ -15,7 +15,7 @@
   float: right;
 }
 
-.msg {
+.sideMsg {
   text-align: center;
   text-transform: uppercase;
   font-size: 0.9em;
@@ -43,7 +43,8 @@
 .subcaption {
   font-family: var(--body);
   letter-spacing: 0.2em;
-  font-size: 1.4em;
+  font-size: 1.2em;
+  line-height: 1.4;
   padding-top: 0.5em;
   margin: 1em auto;
   width: 40vw;
@@ -57,11 +58,6 @@
 .about.container {
   border-left: 1px solid black;
   border-right: none;
-}
-
-.mission .subcaptionTxt {
-  font-size: 0.8em;
-  line-height: var(--line-height);
 }
 
 .mission .captionTxt {
@@ -87,6 +83,37 @@
   padding-bottom: 1em;
 }
 
+@media all and (min-width: 320px) and (max-width: 360px) {
+  .caption {
+    width: 80vw;
+  }
+
+  .captionTxt {
+    font-size: 1.7em;
+  }
+
+  .subcaption {
+    font-size: 1.2em;
+  }
+
+  .subcaptionTxt {
+    font-size: 0.7em;
+  }
+
+  .about .captionTxt {
+    width: 100%;
+    font-size: 1.4em;
+  }
+
+  .msgWrapper {
+    top: -0.8em;
+  }
+
+  .sideMsg {
+    font-size: 0.7em;
+  }
+}
+
 @media all and (min-width: 360px) and (max-width: 768px) {
   .caption {
     width: 70vw;
@@ -104,8 +131,15 @@
   .msgWrapper {
     top: -0.92em;
   }
-  .msg {
+
+  .sideMsg {
     font-size: 0.8em;
+  }
+}
+
+@media all and (min-width: 320px) and (max-width: 768px) {
+  .subcaption {
+    width: 80vw;
   }
 }
 

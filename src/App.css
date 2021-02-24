@@ -34,19 +34,6 @@
   --border: 1px solid rgb(234, 227, 217);
   --line-height: 1.5;
 }
-.container {
-  width: 90vw;
-  margin: auto;
-}
-
-.d-flex {
-  display: flex;
-}
-
-.text-column {
-  display: flex;
-  flex-direction: column;
-}
 
 li {
   list-style: none;
@@ -65,6 +52,23 @@ a:hover,
 button:hover {
   opacity: 0.7;
   transition: opacity 0.5s ease;
+}
+
+.container {
+  width: 90vw;
+  margin: auto;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.p-small {
+  font-family: "Ralewawy";
+  font-size: 1em;
+  max-width: 35em;
+  margin: 0 auto 1em auto;
+  letter-spacing: 0.2em;
 }
 
 .btn-black {
@@ -98,11 +102,29 @@ button:hover {
   font-size: 1.2rem;
 }
 
-@media all and (min-width: 360px) and (max-width: 768px) {
+@media all and (min-width: 320px) and (max-width: 768px) {
   .slick-slide {
     object-fit: cover;
   }
+
   .btn-black {
     font-size: 1em;
+  }
+
+  .p-small {
+    width: 80vw;
+    font-size: 0.9em;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1024px) {
+  .p-small {
+    max-width: 20em;
+  }
+}
+
+@media all and (min-width: 1024px) and (max-width: 1280px) {
+  .p-small {
+    max-width: 30em;
   }
 }

@@ -2,26 +2,34 @@
   text-align: center;
   flex-wrap: wrap;
   border: none;
-}
-
-.imgWrapper {
-  height: 35em;
-  flex: 1;
-  display: grid;
-  grid-template-columns: 15em 15em;
-  grid-template-rows: 15em 15em;
-  column-gap: 1em;
-  row-gap: 1em;
-  justify-content: end;
+  padding-bottom: 4em;
 }
 
 .textWrapper {
   flex: 1;
 }
 
+.paragraph {
+  font-family: "Ralewawy";
+  font-size: 1em;
+  max-width: 35em;
+  margin: 0 auto 1em auto;
+}
+
+.imgWrapper {
+  height: 100%;
+  flex: 1;
+  display: grid;
+  grid-template-columns: 20vh 20vh;
+  grid-template-rows: 20vh 20vh;
+  column-gap: 1em;
+  row-gap: 1em;
+  justify-content: end;
+}
+
 .img {
-  height: 15em;
-  width: 15em;
+  height: 20vh;
+  width: 20vh;
   background-size: cover;
   background-position: center;
 }
@@ -43,8 +51,8 @@
 }
 
 .logo {
-  height: 10em;
-  width: 15em;
+  height: 15vh;
+  width: 25vh;
   margin-bottom: 1em;
 }
 
@@ -53,67 +61,21 @@
   cursor: pointer;
 }
 
-@media only screen and (max-width: 768px) {
-  .textWrapper {
-    margin: 2em 0;
-  }
+.socialIcon {
+  width: 1.2em;
+  height: 1.2em;
+}
 
+@media only screen and (min-width: 320px) and (max-width: 1500px) {
   .imgWrapper {
     height: 100%;
-    display: grid;
-    grid-template-columns: 10em 10em;
-    grid-template-rows: 10em 10em;
-    column-gap: 0.5em;
-    row-gap: 0.5em;
     justify-content: center;
-  }
-
-  .img {
-    height: 10em;
-    width: 10em;
-  }
-
-  .logo {
-    height: 7em;
-    width: 12em;
-  }
-
-  .socialIcon {
-    width: 1em;
+    padding-bottom: 2em;
   }
 }
 
-@media all and (min-width: 768px) and (max-width: 1024px) {
-  .imgWrapper {
-    height: 100%;
-    display: grid;
-    grid-template-columns: 10em 10em;
-    grid-template-rows: 10em 10em;
-    column-gap: 0.5em;
-    row-gap: 0.5em;
-    justify-content: center;
-  }
-
-  .img {
-    height: 10em;
-    width: 10em;
-  }
-}
-
-@media all and (min-width: 1024px) and (max-width: 1280px) {
-  .imgWrapper {
-    height: 35em;
-    flex: 1;
-    display: grid;
-    grid-template-columns: 12em 12em;
-    grid-template-rows: 12em 12em;
-    column-gap: 1em;
-    row-gap: 1em;
-    justify-content: end;
-  }
-
-  .img {
-    height: 12em;
-    width: 12em;
+@media all and (min-width: 1500px) {
+  .container {
+    flex-wrap: nowrap;
   }
 }

@@ -1,14 +1,14 @@
 import React from "react";
-import shopStyles from "../pages/Shop/shop.module.css";
+import faqStyles from "./faq.module.css";
 
 const Faq = () => {
   return (
     <>
-      <div className={`${shopStyles.faqOuter} ${shopStyles.container}`}>
-        <h3 className={shopStyles.faqHeading}>Frequently asked</h3>
-        <div className={shopStyles.faqInner}>
-          <div className={`${shopStyles.faqItem}`}>
-            <div className={shopStyles.faqText}>
+      <div className={`${faqStyles.faqOuter} ${faqStyles.container}`}>
+        <h3 className={faqStyles.faqHeading}>Frequently asked</h3>
+        <div className={faqStyles.faqInner}>
+          <div className={`${faqStyles.faqItem}`}>
+            <div className={faqStyles.faqText}>
               <h4>Lorem ipsum dolor sit</h4>
 
               <p>
@@ -17,8 +17,8 @@ const Faq = () => {
               </p>
             </div>
           </div>
-          <div className={`${shopStyles.faqItem}`}>
-            <div className={shopStyles.faqText}>
+          <div className={`${faqStyles.faqItem}`}>
+            <div className={faqStyles.faqText}>
               <h4>Lorem ipsum dolor sit</h4>
 
               <p>
@@ -27,8 +27,8 @@ const Faq = () => {
               </p>
             </div>
           </div>
-          <div className={`${shopStyles.faqItem}`}>
-            <div className={shopStyles.faqText}>
+          <div className={`${faqStyles.faqItem}`}>
+            <div className={faqStyles.faqText}>
               <h4>Lorem ipsum dolor sit</h4>
 
               <p>
@@ -37,8 +37,8 @@ const Faq = () => {
               </p>
             </div>
           </div>
-          <div className={`${shopStyles.faqItem}`}>
-            <div className={shopStyles.faqText}>
+          <div className={`${faqStyles.faqItem}`}>
+            <div className={faqStyles.faqText}>
               <h4>Lorem ipsum dolor sit</h4>
 
               <p>
@@ -47,7 +47,7 @@ const Faq = () => {
               </p>
             </div>
           </div>
-          <button className={`${shopStyles.faqBtn} btn-black`} type="button">
+          <button className={`${faqStyles.faqBtn} btn-black`} type="button">
             ask a question
           </button>
         </div>

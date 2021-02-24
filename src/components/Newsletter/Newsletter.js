@@ -25,7 +25,7 @@ export default function Newsletter() {
           <p className={newsletterStyles.subcaption}>
             for a stylish table setting
           </p>
-          <p className={newsletterStyles.paragraph}>
+          <p className="p-small">
             <span className={newsletterStyles.line}>
               Download my checklist with loads of tips
             </span>
@@ -43,7 +43,10 @@ export default function Newsletter() {
               type="text"
               placeholder={"email address"}
             ></input>
-            <button type="submit" className={"btn-black"}>
+            <button
+              type="submit"
+              className={`${newsletterStyles.btn} btn-black`}
+            >
               send
             </button>
           </form>

@@ -1,7 +1,6 @@
 import React from "react";
 import textStyles from "../TextSection/text-section.module.css";
 import imgStyles from "../../css-modules/photo-text-section.module.css";
-import newsletterStyles from "../Newsletter/newsletter.module.css";
 import footerStyles from "./footer.module.css";
 
 import logo from "../../img/logo.png";
@@ -37,7 +36,7 @@ export default function Footer(props) {
           <p className={`${textStyles.textClass} ${textStyles.caption}`}>
             <img alt="logo" src={logo} className={footerStyles.logo}></img>
           </p>
-          <p className={`${newsletterStyles.paragraph}  text-column`}>
+          <p className="p-small text-column">
             <span>{props.paragraph} </span>
           </p>
           <div>

@@ -17,19 +17,12 @@ export default function TextSection(props) {
         className={cx(textStyles[textClass], textStyles.container, "container")}
       >
         <div className={cx(textStyles[textClass], textStyles.msgWrapper)}>
-          <p className={textStyles.msg}>{props.message}</p>
+          <p className={textStyles.sideMsg}>{props.message}</p>
         </div>
         <p className={cx(textStyles[textClass], textStyles.caption)}>
           <span className={textStyles.captionTxt}>{props.caption}</span>
         </p>
-        <p
-          className={cx(
-            textStyles[textClass],
-            textStyles.subcaption,
-            shopStyles.subcaption,
-            "text-column"
-          )}
-        >
+        <p className={cx(textStyles.subcaption)}>
           <span className={textStyles.subcaptionTxt}>{props.subcaption} </span>
         </p>
         {props.links && (

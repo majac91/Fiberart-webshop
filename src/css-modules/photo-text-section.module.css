@@ -26,7 +26,7 @@
   margin-bottom: var(--section);
 }
 
-@media all and (min-width: 360px) and (max-width: 1024px) {
+@media all and (min-width: 320px) and (max-width: 1024px) {
   .imgWrapper {
     display: none;
   }

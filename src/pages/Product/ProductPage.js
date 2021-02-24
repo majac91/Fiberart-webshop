@@ -2,7 +2,6 @@ import React, { useEffect } from "react";
 import { useFetchProduct } from "../../firebase/api";
 import { useParams } from "react-router-dom";
 import productPageStyles from "./product-page.module.css";
-import newsletterStyles from "../../components/Newsletter/newsletter.module.css";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";

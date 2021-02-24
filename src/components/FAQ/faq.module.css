@@ -1,0 +1,78 @@
+.container {
+  width: 60vw;
+  margin: auto;
+}
+
+.faqOuter {
+  background-color: var(--beige);
+  margin: var(--section) auto;
+  height: 50vw;
+  display: block;
+}
+
+.faqHeading {
+  color: white;
+  text-align: center;
+  font-size: 3em;
+  padding-top: 1.5em;
+  font-family: VogaRegular;
+  font-weight: 700;
+}
+
+.faqInner {
+  margin: auto;
+  width: 50vw;
+  height: 40vw;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.faqItem {
+  text-align: center;
+  display: flex;
+  flex-basis: 50%;
+  flex-wrap: wrap;
+}
+
+.faqText {
+  letter-spacing: 0.02em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  padding: 0 2em;
+  line-height: 2;
+}
+
+.faqBtn {
+  text-align: center;
+  margin: auto;
+}
+
+@media all and (min-width: 320px) and (max-width: 1280px) {
+  .container {
+    height: 100%;
+  }
+
+  .faqOuter {
+    width: 90vw;
+  }
+
+  .faqInner {
+    width: 80vw;
+    height: auto;
+    display: block;
+  }
+
+  .faqText {
+    line-height: initial;
+    padding: 2em 0;
+    /* padding-top: 2em; */
+  }
+
+  .faqBtn {
+    margin-top: 2em;
+    margin-bottom: 2em;
+  }
+}
