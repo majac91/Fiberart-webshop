@@ -9,6 +9,7 @@ import ProductPage from "./pages/Product/ProductPage";
 import CheckoutPage from "./pages/Checkout/Checkout";
 import Cart from "./components/Cart/Cart";
 import useOnclickOutside from "react-cool-onclickoutside";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   const [cartCount, setCartCount] = useState(
@@ -62,6 +63,7 @@ function App() {
 
   return (
     <Router>
+      <ScrollToTop />
       <Nav
         onBurgerClick={handleToggleNav}
         clickOutsideRef={clickOutsideNav}
@@ -78,7 +80,6 @@ function App() {
         cartIsOpen={cartIsOpen}
         cartItems={cartItems}
       ></Cart>
-
       <Switch>
         <Route exact path="/">
           <Main />
@@ -106,7 +107,6 @@ function App() {
           />
         </Route>
       </Switch>
-
       <Footer paragraph="I help you create a home you love, so you can relax and refresh in a pure and simple space."></Footer>
     </Router>
   );
