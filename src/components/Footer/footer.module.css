@@ -1,12 +1,12 @@
 .container {
   text-align: center;
-  flex-wrap: wrap;
   border: none;
-  padding-bottom: 4em;
+  padding-bottom: 3em;
 }
 
 .textWrapper {
   flex: 1;
+  width: 50vw;
 }
 
 .paragraph {
@@ -18,13 +18,20 @@
 
 .imgWrapper {
   height: 100%;
+  width: 50vw;
+}
+
+.imgWrapperInner {
+  height: 100%;
+  width: 100%;
   flex: 1;
   display: grid;
   grid-template-columns: 20vh 20vh;
   grid-template-rows: 20vh 20vh;
   column-gap: 1em;
   row-gap: 1em;
-  justify-content: end;
+  justify-content: center;
+  margin-left: 5em;
 }
 
 .img {
@@ -66,16 +73,57 @@
   height: 1.2em;
 }
 
-@media only screen and (min-width: 320px) and (max-width: 1500px) {
+.copy {
+  justify-content: center;
+  font-weight: 600;
+  padding-bottom: 1em;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.copyItem {
+  text-align: center;
+  font-size: 0.9em;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 1024px) {
+  .container {
+    flex-wrap: wrap;
+  }
+
   .imgWrapper {
-    height: 100%;
+    width: 100%;
+  }
+
+  .imgWrapperInner {
     justify-content: center;
     padding-bottom: 2em;
+    margin-left: 0;
+  }
+
+  .copyItem {
+    font-size: 0.7em;
   }
 }
 
-@media all and (min-width: 1500px) {
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .imgWrapperInner {
+    grid-template-columns: 15vh 15vh;
+    grid-template-rows: 15vh 15vh;
+  }
+
+  .img {
+    height: 15vh;
+    width: 15vh;
+  }
+}
+
+@media all and (min-width: 1025px) {
   .container {
-    flex-wrap: nowrap;
+    justify-content: space-evenly;
+  }
+
+  .innerTextWrapper {
+    width: 30vw;
   }
 }

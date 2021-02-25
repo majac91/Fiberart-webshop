@@ -1,8 +1,8 @@
 .container {
   display: grid;
-  grid-template-columns: 44vw 44vw;
+  grid-template-columns: 46vw 46vw;
   grid-template-rows: 50% 50%;
-  grid-gap: 2vw;
+  grid-gap: 3vw;
   align-items: center;
   margin: auto;
 }

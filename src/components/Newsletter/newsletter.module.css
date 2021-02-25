@@ -54,7 +54,7 @@
 }
 
 .about.subcaption {
-  margin: 0 20%;
+  margin: 0 auto;
 }
 
 @media all and (min-width: 320px) and (max-width: 480px) {

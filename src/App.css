@@ -22,8 +22,9 @@
 }
 
 :root {
+  --container: 95vw;
   --text: rgba(57, 57, 57, 1);
-  --headings: #dbdbdb; /*todo*/
+  --headings: #dbdbdb;
   --lightgray: #dbdbdb;
   --beige: rgb(234, 227, 217);
   --section: 5em;
@@ -55,7 +56,7 @@ button:hover {
 }
 
 .container {
-  width: 90vw;
+  width: 95vw;
   margin: auto;
 }
 

@@ -1,6 +1,16 @@
 .imgWrapper {
-  height: 70vh;
+  height: 80vh;
   width: 50vw;
+  display: flex;
+  justify-content: center;
+}
+
+.featured .imgWrapper {
+  justify-content: flex-end;
+}
+
+.about .imgWrapper {
+  justify-content: flex-start;
 }
 
 .img {
@@ -10,16 +20,35 @@
   object-fit: contain;
   height: 100%;
   width: 30vw;
-  float: right;
+}
+
+.about .img {
+  background-image: url("../img/about.jpg");
 }
 
 .text {
   width: 50vw;
 }
 
-.about .img {
-  background-image: url("../img/about.jpg");
-  float: left;
+.textOutter {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.textInner {
+  width: 70%;
+  text-align: center;
+  margin: 0 1em;
+}
+
+.featured .textOutter {
+  justify-content: flex-start;
+}
+
+.about .textOutter {
+  justify-content: flex-end;
 }
 
 .about {
@@ -34,7 +63,16 @@
     display: none;
   }
   .text {
-    width: 90vw;
+    width: 100%;
+  }
+
+  .textInner {
+    width: 90%;
+  }
+
+  .featured .textOutter,
+  .about .textOutter {
+    justify-content: center;
   }
 }
 

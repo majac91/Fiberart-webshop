@@ -1,5 +1,4 @@
 .container {
-  width: 90vw;
   text-align: center;
   padding: 5rem 0;
   border-right: 1px solid black;
@@ -25,7 +24,7 @@
 }
 
 .caption {
-  width: 50vw;
+  width: 100%;
   margin: auto;
 }
 
@@ -47,7 +46,7 @@
   line-height: 1.4;
   padding-top: 0.5em;
   margin: 1em auto;
-  width: 40vw;
+  width: 30vw;
 }
 
 .brandMsg {
@@ -83,11 +82,12 @@
   padding-bottom: 1em;
 }
 
-@media all and (min-width: 320px) and (max-width: 360px) {
-  .caption {
-    width: 80vw;
-  }
+.featured .subcaption,
+.featured .subcaptionTxt {
+  width: 20vw;
+}
 
+@media all and (min-width: 320px) and (max-width: 360px) {
   .captionTxt {
     font-size: 1.7em;
   }
@@ -101,10 +101,8 @@
   }
 
   .about .captionTxt {
-    width: 100%;
     font-size: 1.4em;
   }
-
   .msgWrapper {
     top: -0.8em;
   }
@@ -115,10 +113,6 @@
 }
 
 @media all and (min-width: 360px) and (max-width: 768px) {
-  .caption {
-    width: 70vw;
-  }
-
   .captionTxt {
     font-size: 2em;
   }
@@ -137,9 +131,20 @@
   }
 }
 
+@media all and (min-width: 320px) and (max-width: 1024px) {
+  .caption {
+    width: 77%;
+  }
+}
+
 @media all and (min-width: 320px) and (max-width: 768px) {
   .subcaption {
     width: 80vw;
+  }
+  .about .captionTxt,
+  .featured .subcaption,
+  .featured .subcaptionTxt {
+    width: 100%;
   }
 }
 

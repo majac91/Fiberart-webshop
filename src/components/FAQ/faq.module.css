@@ -6,7 +6,7 @@
 .faqOuter {
   background-color: var(--beige);
   margin: var(--section) auto;
-  height: 50vw;
+  height: 40vw;
   display: block;
 }
 
@@ -15,14 +15,14 @@
   text-align: center;
   font-size: 3em;
   padding-top: 1.5em;
-  font-family: VogaRegular;
-  font-weight: 700;
+  font-family: var(--captions);
+  font-weight: 500;
 }
 
 .faqInner {
   margin: auto;
   width: 50vw;
-  height: 40vw;
+  height: 35vw;
   display: flex;
   flex-wrap: wrap;
   text-align: center;
@@ -47,7 +47,7 @@
 
 .faqBtn {
   text-align: center;
-  margin: auto;
+  margin: 2em auto;
 }
 
 @media all and (min-width: 320px) and (max-width: 1280px) {
@@ -56,11 +56,15 @@
   }
 
   .faqOuter {
-    width: 90vw;
+    width: var(--container);
+  }
+
+  .faqHeading {
+    font-size: 2em;
   }
 
   .faqInner {
-    width: 80vw;
+    width: 90vw;
     height: auto;
     display: block;
   }
@@ -68,7 +72,6 @@
   .faqText {
     line-height: initial;
     padding: 2em 0;
-    /* padding-top: 2em; */
   }
 
   .faqBtn {
