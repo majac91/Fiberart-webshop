@@ -12,7 +12,7 @@ const Main = () => {
   return (
     <>
       <Header page="main" />
-      <main>
+      <main className="mainPage">
         <BrandMessage />
         <MissionStatement />
         <ProductCategories />
