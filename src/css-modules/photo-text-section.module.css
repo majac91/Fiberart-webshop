@@ -5,25 +5,11 @@
   justify-content: center;
 }
 
-.featured .imgWrapper {
-  justify-content: flex-end;
-}
-
-.about .imgWrapper {
-  justify-content: flex-start;
-}
-
 .img {
-  background-image: url("../img/styling2.jpg");
   background-size: cover;
   background-position: center;
   object-fit: contain;
   height: 100%;
-  width: 30vw;
-}
-
-.about .img {
-  background-image: url("../img/about.jpg");
 }
 
 .text {
@@ -43,8 +29,30 @@
   margin: 0 1em;
 }
 
+/* FEATURED SECTION */
+
 .featured .textOutter {
   justify-content: flex-start;
+}
+
+.featured .img {
+  background-image: url("../img/styling2.jpg");
+  width: 30vw;
+}
+
+.featured .imgWrapper {
+  justify-content: flex-end;
+}
+
+/* ABOUT SECTION MAIN PAGE */
+
+.about .imgWrapper {
+  justify-content: flex-start;
+}
+
+.about .img {
+  background-image: url("../img/about.jpg");
+  width: 30vw;
 }
 
 .about .textOutter {
@@ -55,13 +63,40 @@
   margin-bottom: var(--section);
 }
 
+/* ABOUT PAGE */
+.aboutPageImg1 {
+  background-image: url("../img/header1.jpg");
+  width: 20vw;
+  height: 50vh;
+  position: relative;
+  bottom: -3em;
+  left: 5em;
+  margin-top: auto;
+}
+
+.aboutPageImg2 {
+  background-image: url("../img/header2.jpg");
+  width: 30vw;
+}
+
+.aboutPageImg3 {
+  background-image: url("../img/materials.jpg");
+  width: 30vw;
+}
+
+.aboutProduct .textOutter {
+  margin-left: 2em;
+}
+
+.aboutMaterials .textOutter {
+  justify-content: flex-end;
+}
+
 @media all and (min-width: 320px) and (max-width: 1024px) {
   .imgWrapper {
     display: none;
   }
-  .img {
-    display: none;
-  }
+
   .text {
     width: 100%;
   }
@@ -73,6 +108,29 @@
   .featured .textOutter,
   .about .textOutter {
     justify-content: center;
+  }
+
+  .aboutPageImg1 {
+    display: none;
+  }
+
+  .aboutProduct .textOutter,
+  .aboutMaterials .textOutter {
+    justify-content: center;
+    margin: auto;
+  }
+
+  .aboutProduct .imgWrapper,
+  .aboutMaterials .imgWrapper {
+    display: block;
+    width: 100%;
+    height: 40vh;
+  }
+
+  .aboutProduct .img,
+  .aboutMaterials .img {
+    margin: auto;
+    width: 60vw;
   }
 }
 

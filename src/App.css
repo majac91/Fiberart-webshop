@@ -13,6 +13,11 @@
   src: url("../src/fonts/Voga-Regular.ttf");
 }
 
+@font-face {
+  font-family: Altero;
+  src: url("../src/fonts/ZnikomitNo25.ttf.woff");
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -30,6 +35,7 @@
   --section: 5em;
   --body: "Raleway";
   --captions: "EB Garamond", serif;
+  --outlined: "Altero";
   --caption-size: 4em;
   --transition: 1s ease-in-out;
   --border: 1px solid rgb(234, 227, 217);
@@ -74,7 +80,7 @@ button:hover {
 
 .btn-black {
   width: 8em;
-  height: 2.5em;
+  height: 2.2em;
   font-size: 1.3em;
   background: black;
   color: white;

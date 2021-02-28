@@ -9,8 +9,10 @@ export default function TextSection(props) {
     message: props.section === "brandMsg",
     mission: props.section === "mission",
     shop: props.section === "shop",
+    aboutPage: props.section === "aboutPageSubHeader",
   });
-  //TODO - fix undefined classes
+  console.log(textStyles.textClass);
+
   return (
     <>
       <div
@@ -20,7 +22,16 @@ export default function TextSection(props) {
           <p className={textStyles.sideMsg}>{props.message}</p>
         </div>
         <p className={cx(textStyles[textClass], textStyles.caption)}>
-          <span className={textStyles.captionTxt}>{props.caption}</span>
+          {textClass === "aboutPage" ? (
+            <>
+              <span className={textStyles.since}>since</span>
+              <span className={`${textStyles.captionTxt} ${textStyles.year}`}>
+                {props.caption}
+              </span>
+            </>
+          ) : (
+            <span className={textStyles.captionTxt}>{props.caption}</span>
+          )}
         </p>
         <p className={cx(textStyles.subcaption)}>
           <span className={textStyles.subcaptionTxt}>{props.subcaption} </span>

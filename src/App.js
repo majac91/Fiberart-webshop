@@ -7,6 +7,8 @@ import Shop from "./pages/Shop/Shop";
 import Main from "./pages/Main/Main";
 import ProductPage from "./pages/Product/ProductPage";
 import CheckoutPage from "./pages/Checkout/Checkout";
+import AboutPage from "./pages/About/AboutPage";
+import ContactPage from "./pages/Contact/Contact";
 import Cart from "./components/Cart/Cart";
 import useOnclickOutside from "react-cool-onclickoutside";
 import ScrollToTop from "./components/ScrollToTop";
@@ -71,7 +73,7 @@ function App() {
         cartCount={cartCount}
         onCartClick={handleToggleCart}
         setCartIsOpen={setCartIsOpen}
-      ></Nav>
+      />
       <Cart
         clickOutsideRef={clickOutsideCart}
         total={total}
@@ -79,7 +81,7 @@ function App() {
         onCartClick={handleToggleCart}
         cartIsOpen={cartIsOpen}
         cartItems={cartItems}
-      ></Cart>
+      />
       <Switch>
         <Route exact path="/">
           <Main />
@@ -99,12 +101,20 @@ function App() {
           ></ProductPage>
         </Route>
 
+        <Route exact path="/about">
+          <AboutPage />
+        </Route>
+
         <Route exact path="/checkout">
           <CheckoutPage
             total={total}
             onDelete={deleteCartItem}
             cartItems={cartItems}
           />
+        </Route>
+
+        <Route exact path="/contact">
+          <ContactPage />
         </Route>
       </Switch>
       <Footer paragraph="I help you create a home you love, so you can relax and refresh in a pure and simple space."></Footer>

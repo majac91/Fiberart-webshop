@@ -1,6 +1,5 @@
 import React from "react";
 import textStyles from "../TextSection/text-section.module.css";
-import imgStyles from "../../css-modules/photo-text-section.module.css";
 import footerStyles from "./footer.module.css";
 
 import logo from "../../img/logo.png";
