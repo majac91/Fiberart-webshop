@@ -60,3 +60,44 @@
 .btn {
   margin-left: 2em;
 }
+
+@media only screen and (min-width: 320px) and (max-width: 360px) {
+  .contactForm {
+    width: 90vw;
+    height: 100%;
+    overflow: hidden;
+  }
+}
+
+@media only screen and (min-width: 360px) and (max-width: 1120px) {
+  .contactForm {
+    width: 80vw;
+    height: 100%;
+  }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 1120px) {
+  .info,
+  .form {
+    height: 100%;
+    width: 100%;
+    display: flex;
+  }
+
+  .info {
+    width: 100%;
+  }
+
+  .title {
+    border-bottom: 2px solid var(--beige);
+    padding-bottom: 0;
+  }
+
+  .text {
+    padding-top: 1em;
+  }
+
+  .infoWrapperOutter {
+    border-right: none;
+  }
+}
