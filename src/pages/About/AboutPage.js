@@ -58,8 +58,8 @@ const AboutPage = () => {
         <section
           className={`${textStyles.aboutMaterials} ${imgStyles.aboutMaterials} ${textStyles.container} d-flex container`}
         >
-          <div className={`${imgStyles.text} `}>
-            <div className={` ${imgStyles.textOutter}`}>
+          <div className={imgStyles.text}>
+            <div className={imgStyles.textOutter}>
               <div className={imgStyles.textInner}>
                 <p className={`${textStyles[textClass]} ${textStyles.caption}`}>
                   <span className={textStyles.subcaptionTxt}>
@@ -79,10 +79,11 @@ const AboutPage = () => {
           </div>
 
           <div className={imgStyles.imgWrapper}>
-            <img
-              alt=""
+            <div
+              role="img"
+              aria-label="ball of white yarn"
               className={`${imgStyles.img} ${imgStyles.aboutPageImg3}`}
-            ></img>
+            ></div>
           </div>
         </section>
       </main>
