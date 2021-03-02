@@ -1,14 +1,12 @@
-import React, { useState } from "react";
+import React from "react";
 import Header from "../../components/Header/Header";
 import TextSection from "../../components/TextSection";
-import Form from "../../components/Form/Form";
+import Form from "../../components/Form/CheckoutForm";
 import cartStyles from "../../components/Cart/cart.module.css";
 import checkoutStyles from "./checkout.module.css";
 import textStyles from "../../components/TextSection/text-section.module.css";
 
-const Checkout = ({ total, onDelete, cartItems }) => {
-  const [submitted, setSubmitted] = useState(false);
-
+const Checkout = ({ submitted, setSubmitted, total, onDelete, cartItems }) => {
   return (
     <>
       <Header page="checkout" />

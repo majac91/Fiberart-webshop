@@ -11,7 +11,6 @@ export default function TextSection(props) {
     shop: props.section === "shop",
     aboutPage: props.section === "aboutPageSubHeader",
   });
-  console.log(textStyles.textClass);
 
   return (
     <>

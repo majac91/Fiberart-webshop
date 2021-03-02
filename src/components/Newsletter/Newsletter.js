@@ -1,21 +1,16 @@
-import React, { useState } from "react";
+import React from "react";
 import newsletterStyles from "./newsletter.module.css";
-import { db } from "../../firebase/config";
+import useFormSubmit from "../../hooks/useFormSubmit";
 
 export default function Newsletter() {
-  const [email, setEmail] = useState();
+  const initialValue = { email: "" };
 
-  function handleSubmit(e) {
-    e.preventDefault();
-    console.log(email);
-    db.ref("subscribers/" + Date.now()).set({ email: email }, (error) => {
-      if (error) {
-        console.log(error);
-      } else {
-        console.log("Subscribed successfully");
-      }
-    });
-  }
+  const { formValues, handleSubmit, handleFormValues } = useFormSubmit(
+    initialValue,
+    null,
+    "subscribers",
+    null
+  );
 
   return (
     <>
@@ -38,7 +33,8 @@ export default function Newsletter() {
             onSubmit={(e) => handleSubmit(e)}
           >
             <input
-              onChange={(e) => setEmail(e.target.value)}
+              value={formValues.email}
+              onChange={(e) => handleFormValues("email", e)}
               className={newsletterStyles.input}
               type="text"
               placeholder={"email address"}

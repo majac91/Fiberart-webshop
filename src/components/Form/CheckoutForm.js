@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import formStyles from "./form.module.css";
 import cartStyles from "../Cart/cart.module.css";
-import { db } from "../../firebase/config";
+import useFormSubmit from "../../hooks/useFormSubmit";
 
 const Form = ({ setSubmitted, cartItems }) => {
-  const [formValues, setFormValues] = useState({
+  const initialValues = {
     firstName: "",
     lastName: "",
     adress: "",
@@ -13,42 +13,17 @@ const Form = ({ setSubmitted, cartItems }) => {
     zip: "",
     email: "",
     phone: "",
-  });
+  };
 
-  function handleFormValues(name, e) {
-    setFormValues((current) => {
-      return { ...current, [name]: e.target.value };
-    });
-  }
-
-  //ordered items from cart
+  //items from cart
   const order = cartItems.map((item) => ` ${item.name}`).toString();
 
-  function handleSubmit(e) {
-    e.preventDefault();
-    db.ref("orders/" + Date.now()).set(
-      { ...formValues, order: order },
-      (error) => {
-        if (error) {
-          console.log(error);
-        } else {
-          setSubmitted(true);
-          console.log("Data saved successfully!");
-        }
-      }
-    );
-
-    setFormValues({
-      firstName: " ",
-      lastName: " ",
-      adress: " ",
-      city: " ",
-      country: " ",
-      zip: " ",
-      email: " ",
-      phone: " ",
-    });
-  }
+  const { formValues, handleFormValues, handleSubmit } = useFormSubmit(
+    initialValues,
+    order,
+    "orders",
+    setSubmitted
+  );
 
   return (
     <div className={formStyles.wrapperOutter}>

@@ -23,6 +23,7 @@ function App() {
   const [cartItems, setCartItems] = useState(
     () => JSON.parse(localStorage.getItem("item")) || []
   );
+  const [submitted, setSubmitted] = useState(false);
 
   const clickOutsideCart = useOnclickOutside(
     () => {
@@ -107,6 +108,8 @@ function App() {
 
         <Route exact path="/checkout">
           <CheckoutPage
+            submitted={submitted}
+            setSubmitted={setSubmitted}
             total={total}
             onDelete={deleteCartItem}
             cartItems={cartItems}
@@ -114,7 +117,7 @@ function App() {
         </Route>
 
         <Route exact path="/contact">
-          <ContactPage />
+          <ContactPage setSubmitted={setSubmitted} />
         </Route>
       </Switch>
       <Footer paragraph="I help you create a home you love, so you can relax and refresh in a pure and simple space."></Footer>
