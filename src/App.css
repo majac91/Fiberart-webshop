@@ -91,6 +91,20 @@ button:hover {
   overflow: hidden;
 }
 
+.placeholder {
+  position: absolute;
+  padding-bottom: 67%;
+  margin-bottom: 4rem;
+  width: 43vw;
+  background: #ffdd28;
+  opacity: 1;
+  transition: opacity 2s ease;
+}
+
+.hidePlaceholder {
+  opacity: 0;
+}
+
 /* Slider styles */
 
 .slick-dots li button:before {
