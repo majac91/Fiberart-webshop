@@ -4,8 +4,10 @@ import TextSection from "../../components/TextSection/TextSection";
 import contactStyles from "./contact.module.css";
 import formStyles from "../../components/Form/form.module.css";
 import useFormSubmit from "../../hooks/useFormSubmit";
+import SubmitMsg from "../../components/SubmitMsg/SubmitMsg";
+import submitStyles from "../../components/SubmitMsg/submit-msg.module.css";
 
-const Contact = ({ setSubmitted }) => {
+const Contact = ({ submitted, setSubmitted }) => {
   const initialValues = {
     name: "",
     email: "",
@@ -29,8 +31,10 @@ const Contact = ({ setSubmitted }) => {
         caption="Come say hi!"
         subcaption="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. "
       />
-      <section className={`${contactStyles.contactForm} d-flex`}>
-        <div className={`${contactStyles.info} ${contactStyles.column}`}>
+      <section
+        className={`${contactStyles.contactForm} ${submitStyles.contactForm} d-flex`}
+      >
+        <div className={contactStyles.info}>
           <div className={contactStyles.infoWrapperOutter}>
             <div className={contactStyles.infoWrapperInner}>
               <div>
@@ -57,51 +61,54 @@ const Contact = ({ setSubmitted }) => {
             </div>
           </div>
         </div>
-
-        <form
-          onSubmit={(e) => handleSubmit(e)}
-          className={`${contactStyles.form}`}
-        >
-          <div
-            className={`${contactStyles.column} ${contactStyles.formWrapperInner}`}
+        {!submitted ? (
+          <form
+            onSubmit={(e) => handleSubmit(e)}
+            className={`${contactStyles.form}`}
           >
-            <label htmlFor="name">Name</label>
-            <input
-              className={formStyles.input}
-              id="name"
-              value={formValues.name}
-              onChange={(e) => handleFormValues("name", e)}
-              required
-            />
-            <label htmlFor="email">Email</label>
-            <input
-              className={formStyles.input}
-              id="email"
-              value={formValues.email}
-              onChange={(e) => handleFormValues("email", e)}
-              required
-            />
-            <label htmlFor="subject">Subject</label>
-            <input
-              className={formStyles.input}
-              id="subject"
-              value={formValues.subject}
-              onChange={(e) => handleFormValues("subject", e)}
-              required
-            />
-            <label htmlFor="message">Message</label>
-            <textarea
-              className={formStyles.input}
-              id="message"
-              value={formValues.message}
-              onChange={(e) => handleFormValues("message", e)}
-              required
-            />
-          </div>
-          <button className={`${contactStyles.btn} btn-black`} type="submit">
-            Send
-          </button>
-        </form>
+            <div
+              className={`${contactStyles.column} ${contactStyles.formWrapperInner}`}
+            >
+              <label htmlFor="name">Name</label>
+              <input
+                className={formStyles.input}
+                id="name"
+                value={formValues.name}
+                onChange={(e) => handleFormValues("name", e)}
+                required
+              />
+              <label htmlFor="email">Email</label>
+              <input
+                className={formStyles.input}
+                id="email"
+                value={formValues.email}
+                onChange={(e) => handleFormValues("email", e)}
+                required
+              />
+              <label htmlFor="subject">Subject</label>
+              <input
+                className={formStyles.input}
+                id="subject"
+                value={formValues.subject}
+                onChange={(e) => handleFormValues("subject", e)}
+                required
+              />
+              <label htmlFor="message">Message</label>
+              <textarea
+                className={formStyles.input}
+                id="message"
+                value={formValues.message}
+                onChange={(e) => handleFormValues("message", e)}
+                required
+              />
+            </div>
+            <button className={`${contactStyles.btn} btn-black`} type="submit">
+              Send
+            </button>
+          </form>
+        ) : (
+          <SubmitMsg />
+        )}
       </section>
     </>
   );

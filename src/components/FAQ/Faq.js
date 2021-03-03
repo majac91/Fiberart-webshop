@@ -1,8 +1,14 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import faqStyles from "./faq.module.css";
 
 const Faq = () => {
+  const history = useHistory();
+
+  const handleBtnRedirect = () => {
+    return history.push("/contact");
+  };
+
   return (
     <>
       <div className={`${faqStyles.faqOuter} ${faqStyles.container}`}>
@@ -48,10 +54,12 @@ const Faq = () => {
               </p>
             </div>
           </div>
-          <button className={`${faqStyles.faqBtn} btn-black`} type="button">
-            <Link className={faqStyles.btnLink} to="/contact">
-              ask a question
-            </Link>
+          <button
+            className={`${faqStyles.faqBtn} btn-black`}
+            onClick={handleBtnRedirect}
+            type="button"
+          >
+            ask a question
           </button>
         </div>
       </div>

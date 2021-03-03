@@ -35,6 +35,7 @@ export default function useFormSubmit(
         if (error) {
           console.log(error);
         } else {
+          setSubmitted(true);
           console.log("Data saved successfully!");
         }
       });

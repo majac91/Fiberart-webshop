@@ -1,9 +1,18 @@
 import React from "react";
+import { useHistory } from "react-router-dom";
+
 import textStyles from "./TextSection/text-section.module.css";
 import imgStyles from "../css-modules/photo-text-section.module.css";
 import newsletterStyles from "../components/Newsletter/newsletter.module.css";
 
 export default function About(props) {
+  let history = useHistory();
+  console.log(history);
+
+  function handleBtnRedirect() {
+    history.push("/about");
+  }
+
   let textClass = props.section;
   return (
     <section className="aboutSection">
@@ -27,8 +36,12 @@ export default function About(props) {
                 </span>
               </p>
 
-              <button className={"btn-black"} type="button">
-                {props.btn}
+              <button
+                className={"btn-black"}
+                onClick={handleBtnRedirect}
+                type="button"
+              >
+                {props.btn}{" "}
               </button>
             </div>
           </div>

@@ -4,7 +4,7 @@ import TextSection from "../../components/TextSection";
 import Form from "../../components/Form/CheckoutForm";
 import cartStyles from "../../components/Cart/cart.module.css";
 import checkoutStyles from "./checkout.module.css";
-import textStyles from "../../components/TextSection/text-section.module.css";
+import SubmitMsg from "../../components/SubmitMsg/SubmitMsg";
 
 const Checkout = ({ submitted, setSubmitted, total, onDelete, cartItems }) => {
   return (
@@ -76,12 +76,7 @@ const Checkout = ({ submitted, setSubmitted, total, onDelete, cartItems }) => {
               )}
             </>
           ) : (
-            <div className={checkoutStyles.msg}>
-              <p className={textStyles.captionTxt}>Thank you!</p>
-              <p className={textStyles.subcaption}>
-                A customer service representative will contact you soon.
-              </p>
-            </div>
+            <SubmitMsg />
           )}
         </div>
       </div>

@@ -1,5 +1,5 @@
 import "./App.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Nav from "./components/Nav/Nav";
 import Footer from "./components/Footer/";
@@ -24,6 +24,7 @@ function App() {
     () => JSON.parse(localStorage.getItem("item")) || []
   );
   const [submitted, setSubmitted] = useState(false);
+  // const [subscribed, setSubscribed] = useState(false);
 
   const clickOutsideCart = useOnclickOutside(
     () => {
@@ -85,7 +86,7 @@ function App() {
       />
       <Switch>
         <Route exact path="/">
-          <Main />
+          <Main submitted={submitted} />
         </Route>
 
         <Route exact path="/shop">
@@ -117,7 +118,7 @@ function App() {
         </Route>
 
         <Route exact path="/contact">
-          <ContactPage setSubmitted={setSubmitted} />
+          <ContactPage submitted={submitted} setSubmitted={setSubmitted} />
         </Route>
       </Switch>
       <Footer paragraph="I help you create a home you love, so you can relax and refresh in a pure and simple space."></Footer>
