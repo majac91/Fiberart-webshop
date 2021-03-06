@@ -9,7 +9,7 @@ export default function ProductCategories() {
         el={Link}
         link1={"/collections"}
         link2={"/shop"}
-        img={["img1", "img2"]}
+        img={["linkImg1", "linkImg2"]}
       />
     </section>
   );

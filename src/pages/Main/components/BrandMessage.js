@@ -1,6 +1,8 @@
 import React from "react";
 import TextSection from "../../../components/TextSection/TextSection";
 import TwoPhotosSection from "./TwoPhotosSection/TwoPhotosSection";
+import img1 from "../../../img/products1.jpg";
+import img2 from "../../../img/products2.jpg";
 
 export default function BrandMessage() {
   return (
@@ -11,7 +13,7 @@ export default function BrandMessage() {
         caption="Write a short pitch about what you do and why"
         subcaption="I help you create a home you love, so you can relax and refresh in a pure and simple space."
       ></TextSection>
-      <TwoPhotosSection el={"div"} img={["img3", "img4"]} />
+      <TwoPhotosSection el={"img"} img={[img1, img2]} />
     </section>
   );
 }

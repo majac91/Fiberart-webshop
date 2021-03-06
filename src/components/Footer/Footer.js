@@ -3,6 +3,11 @@ import textStyles from "../TextSection/text-section.module.css";
 import footerStyles from "./footer.module.css";
 
 import logo from "../../img/logo.png";
+import img1 from "../../img/social1.jpg";
+import img2 from "../../img/social2.jpg";
+import img3 from "../../img/social3.jpg";
+import img4 from "../../img/social4.jpg";
+
 import facebookbtn from "../../icons/facebook.png";
 import twitterbtn from "../../icons/twitter.png";
 import pinterestbtn from "../../icons/pinterest.png";
@@ -15,19 +20,23 @@ export default function Footer(props) {
         <div className={` ${footerStyles.imgWrapper}`}>
           <div className={footerStyles.imgWrapperInner}>
             <img
-              alt=""
+              alt="beige macrame wall hanging"
+              src={img1}
               className={`${footerStyles.img1} ${footerStyles.img}`}
             ></img>
             <img
-              alt=""
+              src={img2}
+              alt="person painting using watercolors"
               className={`${footerStyles.img2} ${footerStyles.img}`}
             ></img>
             <img
-              alt=""
+              src={img3}
+              alt="dry bouquet detail"
               className={`${footerStyles.img3} ${footerStyles.img}`}
             ></img>
             <img
-              alt=""
+              src={img4}
+              alt="artist's studio"
               className={`${footerStyles.img4} ${footerStyles.img}`}
             ></img>
           </div>

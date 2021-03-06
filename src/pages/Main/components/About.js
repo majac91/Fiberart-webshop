@@ -1,15 +1,16 @@
 import React, { useRef } from "react";
 import { useHistory } from "react-router-dom";
-import useOnIntersection from "../../../hooks/useOnIntersection";
+import useImgOnScreen from "../../../hooks/useOnIntersection";
 import textStyles from "../../../components/TextSection/text-section.module.css";
 import imgStyles from "../../../css-modules/photo-text-section.module.css";
-import newsletterStyles from "../../../components/Newsletter/newsletter.module.css";
+import newsletterStyles from "../components/Newsletter/newsletter.module.css";
+import aboutImg from "../../../img/about.jpg";
 
 const cx = require("classnames");
 
 export default function About(props) {
   const placeholder = useRef();
-  const IsOnScreen = useOnIntersection(placeholder);
+  const IsOnScreen = useImgOnScreen(placeholder, aboutImg);
   const placeholderStyle = cx("placeholder", { hidePlaceholder: IsOnScreen });
 
   let history = useHistory();
@@ -52,17 +53,17 @@ export default function About(props) {
           </div>
         </div>
 
-        <div className={imgStyles.imgWrapper}>
+        <picture className={imgStyles.imgWrapper}>
           {IsOnScreen ? (
-            <div
-              role="img"
-              aria-label="blonde woman in black and white outfit"
+            <img
+              src={aboutImg}
+              alt="blonde woman in black and white outfit"
               className={imgStyles.img}
-            ></div>
+            ></img>
           ) : (
             <div className={placeholderStyle} ref={placeholder}></div>
           )}
-        </div>
+        </picture>
       </div>
     </section>
   );

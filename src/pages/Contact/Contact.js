@@ -2,7 +2,7 @@ import React from "react";
 import Header from "../../components/Header/Header";
 import TextSection from "../../components/TextSection/TextSection";
 import contactStyles from "./contact.module.css";
-import formStyles from "../../components/Form/form.module.css";
+import formStyles from "../Checkout/components/Form/form.module.css";
 import useFormSubmit from "../../hooks/useFormSubmit";
 import SubmitMsg from "../../components/SubmitMsg/SubmitMsg";
 import submitStyles from "../../components/SubmitMsg/submit-msg.module.css";

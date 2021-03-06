@@ -38,6 +38,7 @@
 .featured .img {
   background-image: url("../img/styling2.jpg");
   width: 30vw;
+  object-fit: cover;
 }
 
 .featured .imgWrapper {
@@ -53,6 +54,7 @@
 .about .img {
   background-image: url("../img/about.jpg");
   width: 30vw;
+  object-fit: cover;
 }
 
 .about .textOutter {

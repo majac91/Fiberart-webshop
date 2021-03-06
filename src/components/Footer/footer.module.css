@@ -41,22 +41,6 @@
   background-position: center;
 }
 
-.img1 {
-  background-image: url("../../img/social1.jpg");
-}
-
-.img2 {
-  background-image: url("../../img/social2.jpg");
-}
-
-.img3 {
-  background-image: url("../../img/social3.jpg");
-}
-
-.img4 {
-  background-image: url("../../img/social4.jpg");
-}
-
 .logo {
   height: 15vh;
   width: 25vh;
