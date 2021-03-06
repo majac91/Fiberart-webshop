@@ -1,5 +1,5 @@
 import React from "react";
-import TextSection from "./TextSection/TextSection";
+import TextSection from "../../../components/TextSection/TextSection";
 import TwoPhotosSection from "./TwoPhotosSection/TwoPhotosSection";
 
 export default function BrandMessage() {

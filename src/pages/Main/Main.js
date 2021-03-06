@@ -1,11 +1,11 @@
 import Header from "../../components/Header/Header";
-import Slider from "../../components/Slider/Slider";
-import About from "../../components/About";
-import BrandMessage from "../../components/BrandMessage";
-import MissionStatement from "../../components/MissionStatement";
-import ProductCategories from "../../components/ProductCategories";
-import Newsletter from "../../components/Newsletter/Newsletter";
-import Featured from "../../components/Featured";
+import Slider from "./components/Slider/Slider";
+import About from "./components/About";
+import BrandMessage from "./components/BrandMessage";
+import MissionStatement from "./components/MissionStatement";
+import ProductCategories from "./components/ProductCategories";
+import Newsletter from "./components/Newsletter/Newsletter";
+import Featured from "./components/Featured";
 
 const Main = ({ submitted }) => {
   return (

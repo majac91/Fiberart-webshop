@@ -1,37 +1,17 @@
-import React, { useRef, useEffect, useState } from "react";
+import React, { useRef } from "react";
 import { Link } from "react-router-dom";
+import useOnIntersection from "../../../../hooks/useOnIntersection";
 import photoStyles from "./two-photos.module.css";
 
 const cx = require("classnames");
 
 export default function TwoPhotosSection(props) {
-  // INTERSECTION OBSERVER
-  const [showImage, setShowImage] = useState(false);
   const placeholder = useRef();
+  const IsOnScreen = useOnIntersection(placeholder);
+
   const placeholderStyle = cx("placeholder", {
-    hidePlaceholder: showImage,
+    hidePlaceholder: IsOnScreen,
   });
-
-  useEffect(() => {
-    const callback = (entries) => {
-      entries.forEach((entry) => {
-        console.log(entry);
-
-        if (entry.isIntersecting) {
-          setShowImage(true);
-        }
-      });
-    };
-    const options = { treshold: 1 };
-
-    const observer = new IntersectionObserver(callback, options);
-    console.log(observer);
-
-    observer.observe(placeholder.current);
-    console.log(placeholder.current);
-  }, []);
-
-  // INTERSECTION OBSERVER
 
   const imgClass = props.img;
   const El = props.el;
@@ -45,10 +25,10 @@ export default function TwoPhotosSection(props) {
 
   return (
     <>
-      {showImage === false ? (
+      {IsOnScreen === false ? (
         <div ref={placeholder} className={placeholderStyle}></div>
       ) : (
-        showImage && (
+        IsOnScreen && (
           <section className={`${photoStyles.images} d-flex container`}>
             {imgClass.map((img) => {
               if (props.el !== Link) {

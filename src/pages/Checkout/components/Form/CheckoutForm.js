@@ -1,7 +1,7 @@
 import React from "react";
 import formStyles from "./form.module.css";
-import cartStyles from "../Cart/cart.module.css";
-import useFormSubmit from "../../hooks/useFormSubmit";
+import cartStyles from "../../../../components/Cart/cart.module.css";
+import useFormSubmit from "../../../../hooks/useFormSubmit";
 
 const Form = ({ setSubmitted, cartItems }) => {
   const initialValues = {

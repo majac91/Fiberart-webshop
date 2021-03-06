@@ -23,27 +23,27 @@
 
 /* TODO rename img classes according to sections */
 .img1 {
-  background-image: url("../../img/collections.jpg");
+  background-image: url("../../../../img/collections.jpg");
   background-size: cover;
   background-position: center;
   object-fit: cover;
 }
 
 .img2 {
-  background-image: url("../../img/slider3.jpg");
+  background-image: url("../../../../img/slider3.jpg");
   object-fit: contain;
   background-size: cover;
 }
 
 .img3 {
-  background-image: url("../../img/products1.jpg");
+  background-image: url("../../../../img/products1.jpg");
   background-size: cover;
   background-position: center;
   object-fit: contain;
 }
 
 .img4 {
-  background-image: url("../../img/products2.jpg");
+  background-image: url("../../../../img/products2.jpg");
   object-fit: contain;
   background-size: cover;
 }

@@ -1,6 +1,6 @@
 import React from "react";
-import textStyles from "../components/TextSection/text-section.module.css";
-import imgStyles from "../css-modules/photo-text-section.module.css";
+import textStyles from "../../../components/TextSection/text-section.module.css";
+import imgStyles from "../../../css-modules/photo-text-section.module.css";
 import newsletterStyles from "../components/Newsletter/newsletter.module.css";
 // import TextPhotoSection from "../components/TextPhotoSection";
 

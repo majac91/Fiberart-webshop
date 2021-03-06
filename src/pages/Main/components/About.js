@@ -1,37 +1,22 @@
-import React, { useRef, useState, useEffect } from "react";
+import React, { useRef } from "react";
 import { useHistory } from "react-router-dom";
-
-import textStyles from "./TextSection/text-section.module.css";
-import imgStyles from "../css-modules/photo-text-section.module.css";
-import newsletterStyles from "../components/Newsletter/newsletter.module.css";
+import useOnIntersection from "../../../hooks/useOnIntersection";
+import textStyles from "../../../components/TextSection/text-section.module.css";
+import imgStyles from "../../../css-modules/photo-text-section.module.css";
+import newsletterStyles from "../../../components/Newsletter/newsletter.module.css";
 
 const cx = require("classnames");
 
 export default function About(props) {
   const placeholder = useRef();
-  const [showImage, setShowImage] = useState(false);
-  const placeholderStyle = cx("placeholder", { hidePlaceholder: showImage });
+  const IsOnScreen = useOnIntersection(placeholder);
+  const placeholderStyle = cx("placeholder", { hidePlaceholder: IsOnScreen });
 
   let history = useHistory();
 
   function handleBtnRedirect() {
     history.push("/about");
   }
-
-  useEffect(() => {
-    const callback = (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          setShowImage(true);
-        }
-      });
-    };
-    const options = { treshold: 0.5 };
-    console.log("about", placeholder.current);
-
-    const observer = new IntersectionObserver(callback, options);
-    observer.observe(placeholder.current);
-  }, []);
 
   let textClass = props.section;
   return (
@@ -68,7 +53,7 @@ export default function About(props) {
         </div>
 
         <div className={imgStyles.imgWrapper}>
-          {showImage ? (
+          {IsOnScreen ? (
             <div
               role="img"
               aria-label="blonde woman in black and white outfit"
