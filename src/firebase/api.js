@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { db } from "./config.js";
+import { db } from "./config";
 
 export const useFetchProduct = (id) => {
   const [data, setData] = useState([]);
@@ -11,9 +11,8 @@ export const useFetchProduct = (id) => {
       .on("value", (snapshot) => {
         setData(snapshot.val());
       });
-
     return () => unsub;
-  }, [id]);
+  }, [data, id]);
   return data;
 };
 
@@ -23,12 +22,13 @@ export const useProductList = () => {
   useEffect(() => {
     const unsub = db
       .ref()
-      .child(`products`)
+      .child("products")
       .on("value", (snapshot) => {
         setData(snapshot.val());
       });
 
     return () => unsub;
   }, []);
+
   return data;
 };

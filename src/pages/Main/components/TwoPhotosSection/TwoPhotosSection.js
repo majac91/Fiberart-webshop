@@ -13,7 +13,6 @@ export default function TwoPhotosSection(props) {
   });
 
   const imgAttr = props.img;
-  console.log();
   const El = props.el;
 
   const linkTxt = (txt) => (props.el === Link ? txt : "");

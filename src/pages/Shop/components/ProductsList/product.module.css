@@ -1,4 +1,6 @@
 .container {
+  overflow: hidden;
+
   display: grid;
   grid-template-columns: 46vw 46vw;
   grid-template-rows: 50% 50%;
@@ -20,6 +22,15 @@
   height: 90vh;
   background-position: center;
   background-size: cover;
+}
+
+.imgLink {
+  position: absolute;
+  width: 46vw;
+  height: 100%;
+  display: inline-block;
+  background: transparent;
+  z-index: 1000;
 }
 
 .captionWrapper {
@@ -66,6 +77,10 @@
 
   .imgWrapper {
     margin-bottom: 2em;
+  }
+
+  .imgLink {
+    width: var(--container);
   }
 
   .productImg {

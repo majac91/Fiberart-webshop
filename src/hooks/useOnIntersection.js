@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-export default function useDivOnScreen(ref, imgSrc) {
+export default function useDivOnScreen(ref) {
   const [isIntersecting, setIsIntersecting] = useState(false);
 
   useEffect(() => {
