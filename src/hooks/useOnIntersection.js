@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-export default function useDivOnScreen(ref) {
+export function useDivOnScreen(ref) {
   const [isIntersecting, setIsIntersecting] = useState(false);
 
   useEffect(() => {
@@ -32,11 +32,11 @@ export function useImgOnScreen(ref, imgSrc) {
         if (entry.isIntersecting) {
           console.log("blalabla");
 
-          let downloadingImage = new Image();
-          downloadingImage.onload = function () {
+          let downloadingImg = new Image();
+          downloadingImg.onload = function () {
             setIsIntersecting(true);
           };
-          downloadingImage.src = imgSrc;
+          downloadingImg.src = imgSrc;
         }
       });
     };

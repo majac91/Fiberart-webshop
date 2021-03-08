@@ -67,7 +67,6 @@
 
 /* ABOUT PAGE */
 .aboutPageImg1 {
-  background-image: url("../img/header1.jpg");
   width: 20vw;
   height: 50vh;
   position: relative;
@@ -77,12 +76,10 @@
 }
 
 .aboutPageImg2 {
-  background-image: url("../img/header2.jpg");
   width: 30vw;
 }
 
 .aboutPageImg3 {
-  background-image: url("../img/materials.jpg");
   width: 30vw;
 }
 

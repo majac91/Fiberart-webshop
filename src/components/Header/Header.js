@@ -17,6 +17,7 @@ export default function Header({ page }) {
         <header className={`${headerStyles.container} container`}>
           <img
             alt="ombre tapestry detail"
+            xs
             className={headerStyles.heroHeader}
             src={checkout}
           />

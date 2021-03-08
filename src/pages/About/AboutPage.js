@@ -1,11 +1,22 @@
-import React from "react";
+import React, { useRef } from "react";
+import { useDivOnScreen, useImgOnScreen } from "../../hooks/useOnIntersection";
 import TextSection from "../../components/TextSection";
 import Header from "../../components/Header/Header";
 import textStyles from "../../components/TextSection/text-section.module.css";
 import imgStyles from "../../css-modules/photo-text-section.module.css";
+import workshopImg from "../../img/header1.jpg";
+import detailImg from "../../img/header2.jpg";
+import materialsImg from "../../img/materials.jpg";
 
 const AboutPage = () => {
   let textClass = "aboutPage";
+
+  const imgGroupRef = useRef();
+  const imgGroupIsOnScreen = useDivOnScreen(imgGroupRef);
+
+  const materialsImgRef = useRef();
+  const materialsImgIsOnScreen = useImgOnScreen(materialsImgRef, materialsImg);
+
   return (
     <>
       <Header page="about"></Header>
@@ -19,19 +30,22 @@ const AboutPage = () => {
         <section
           className={`${textStyles.aboutProduct} ${imgStyles.aboutProduct} ${textStyles.container} d-flex container`}
         >
-          <div className={imgStyles.imgWrapper}>
-            <div
-              role="img"
-              aria-label="tapestry being made"
-              className={`${imgStyles.img} ${imgStyles.aboutPageImg1}`}
-            ></div>
-            <div
-              role="img"
-              aria-label="tapestry with wooden frame"
-              className={`${imgStyles.img} ${imgStyles.aboutPageImg2}`}
-            ></div>
-          </div>
-
+          {imgGroupIsOnScreen ? (
+            <div className={imgStyles.imgWrapper}>
+              <img
+                alt="tapestry being made"
+                src={workshopImg}
+                className={`${imgStyles.img} ${imgStyles.aboutPageImg1}`}
+              />
+              <img
+                alt="tapestry with wooden frame"
+                src={detailImg}
+                className={`${imgStyles.img} ${imgStyles.aboutPageImg2}`}
+              />
+            </div>
+          ) : (
+            <div ref={imgGroupRef} className="placeholder"></div>
+          )}
           <div className={`${imgStyles.text} `}>
             <div className={` ${imgStyles.textOutter}`}>
               <div className={imgStyles.textInner}>
@@ -79,11 +93,15 @@ const AboutPage = () => {
           </div>
 
           <div className={imgStyles.imgWrapper}>
-            <div
-              role="img"
-              aria-label="ball of white yarn"
-              className={`${imgStyles.img} ${imgStyles.aboutPageImg3}`}
-            ></div>
+            {materialsImgIsOnScreen ? (
+              <img
+                alt="ball of white yarn"
+                src={materialsImg}
+                className={`${imgStyles.img} ${imgStyles.aboutPageImg3}`}
+              ></img>
+            ) : (
+              <div ref={materialsImgRef} className="placeholder"></div>
+            )}
           </div>
         </section>
       </main>

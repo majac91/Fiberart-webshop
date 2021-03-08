@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import { Link } from "react-router-dom";
-import useDivOnScreen from "../../../../hooks/useOnIntersection";
+import { useDivOnScreen } from "../../../../hooks/useOnIntersection";
 import photoStyles from "./two-photos.module.css";
 
 const cx = require("classnames");

@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import useDivOnScreen from "../../hooks/useOnIntersection";
+import { useDivOnScreen } from "../../hooks/useOnIntersection";
 import textStyles from "../TextSection/text-section.module.css";
 import footerStyles from "./footer.module.css";
 

@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import useDivOnScreen from "../.././../../hooks/useOnIntersection";
+import { useDivOnScreen } from "../.././../../hooks/useOnIntersection";
 import { Link } from "react-router-dom";
 import { useProductList } from "../../../../firebase/api";
 import productStyles from "../../components/ProductsList/product.module.css";
