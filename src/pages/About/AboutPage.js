@@ -7,6 +7,7 @@ import imgStyles from "../../css-modules/photo-text-section.module.css";
 import workshopImg from "../../img/header1.jpg";
 import detailImg from "../../img/header2.jpg";
 import materialsImg from "../../img/materials.jpg";
+import Loader from "../../components/Loader";
 
 const AboutPage = () => {
   let textClass = "aboutPage";
@@ -100,7 +101,9 @@ const AboutPage = () => {
                 className={`${imgStyles.img} ${imgStyles.aboutPageImg3}`}
               ></img>
             ) : (
-              <div ref={materialsImgRef} className="placeholder"></div>
+              <div ref={materialsImgRef}>
+                <Loader></Loader>
+              </div>
             )}
           </div>
         </section>
