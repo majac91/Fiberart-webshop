@@ -5,14 +5,14 @@ import useFormSubmit from "../../../../hooks/useFormSubmit";
 
 const Form = ({ setIsOrdered, cartItems }) => {
   const initialValues = {
-    firstName: "",
-    lastName: "",
-    adress: "",
-    city: "",
-    country: "",
-    zip: "",
-    email: "",
-    phone: "",
+    firstName: " ",
+    lastName: " ",
+    adress: " ",
+    city: " ",
+    country: " ",
+    zip: " ",
+    email: " ",
+    phone: " ",
   };
 
   //items from cart

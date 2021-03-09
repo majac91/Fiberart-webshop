@@ -5,10 +5,10 @@ import contactStyles from "../contact.module.css";
 
 const ContactForm = ({ setIsSent }) => {
   const initialValues = {
-    name: "",
-    email: "",
-    subject: "",
-    message: "",
+    name: " ",
+    email: " ",
+    subject: " ",
+    message: " ",
   };
 
   const { formValues, handleFormValues, handleSubmit } = useFormSubmit(

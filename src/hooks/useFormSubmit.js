@@ -40,7 +40,7 @@ export default function useFormSubmit(
         }
       });
     }
-
+    console.log(values);
     setFormValues(values);
   }
 
