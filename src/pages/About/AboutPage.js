@@ -8,16 +8,22 @@ import workshopImg from "../../img/header1.jpg";
 import detailImg from "../../img/header2.jpg";
 import materialsImg from "../../img/materials.jpg";
 import Loader from "../../components/Loader";
+const cx = require("classnames");
 
 const AboutPage = () => {
-  let textClass = "aboutPage";
-
   const imgGroupRef = useRef();
   const imgGroupIsOnScreen = useDivOnScreen(imgGroupRef);
 
   const materialsImgRef = useRef();
   const materialsImgIsOnScreen = useImgOnScreen(materialsImgRef, materialsImg);
 
+  let textClass = "aboutPage";
+  const groupPlaceholderStyle = cx("placeholder", {
+    hidePlaceholder: imgGroupIsOnScreen,
+  });
+  const materialsPlaceholderStyle = cx("placeholder", {
+    hidePlaceholder: materialsImgIsOnScreen,
+  });
   return (
     <>
       <Header page="about"></Header>
@@ -31,22 +37,27 @@ const AboutPage = () => {
         <section
           className={`${textStyles.aboutProduct} ${imgStyles.aboutProduct} ${textStyles.container} d-flex container`}
         >
-          {imgGroupIsOnScreen ? (
-            <div className={imgStyles.imgWrapper}>
-              <img
-                alt="tapestry being made"
-                src={workshopImg}
-                className={`${imgStyles.img} ${imgStyles.aboutPageImg1}`}
-              />
-              <img
-                alt="tapestry with wooden frame"
-                src={detailImg}
-                className={`${imgStyles.img} ${imgStyles.aboutPageImg2}`}
-              />
-            </div>
-          ) : (
-            <div ref={imgGroupRef} className="placeholder"></div>
-          )}
+          <div className={imgStyles.imgWrapper}>
+            {imgGroupIsOnScreen ? (
+              <>
+                <img
+                  alt="tapestry being made"
+                  src={workshopImg}
+                  className={`${imgStyles.img} ${imgStyles.aboutPageImg1}`}
+                />
+                <img
+                  alt="tapestry with wooden frame"
+                  src={detailImg}
+                  className={`${imgStyles.img} ${imgStyles.aboutPageImg2}`}
+                />
+              </>
+            ) : (
+              <div className={groupPlaceholderStyle} ref={imgGroupRef}>
+                <Loader></Loader>
+              </div>
+            )}
+          </div>
+
           <div className={`${imgStyles.text} `}>
             <div className={` ${imgStyles.textOutter}`}>
               <div className={imgStyles.textInner}>
@@ -101,7 +112,7 @@ const AboutPage = () => {
                 className={`${imgStyles.img} ${imgStyles.aboutPageImg3}`}
               ></img>
             ) : (
-              <div ref={materialsImgRef}>
+              <div className={materialsPlaceholderStyle} ref={materialsImgRef}>
                 <Loader></Loader>
               </div>
             )}

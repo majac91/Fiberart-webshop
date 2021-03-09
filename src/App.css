@@ -92,11 +92,12 @@ button:hover {
 }
 
 .placeholder {
-  position: absolute;
-  padding-bottom: 67%;
-  margin-bottom: 4rem;
-  width: 43vw;
-  background: #ffdd28;
+  /* position: relative; */
+  width: 100%;
+  min-height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   opacity: 1;
   transition: opacity 2s ease;
 }

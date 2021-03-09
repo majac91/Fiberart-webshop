@@ -1,17 +1,20 @@
 import React, { useRef } from "react";
-import { useDivOnScreen } from "../.././../../hooks/useOnIntersection";
+import { useDivOnScreen } from "../../../../hooks/useOnIntersection";
 import { Link } from "react-router-dom";
 import { useProductList } from "../../../../firebase/api";
+import Loader from "../../../../components/Loader/Loader";
 import productStyles from "../../components/ProductsList/product.module.css";
+const cx = require("classnames");
 
 const Products = () => {
   const products = useProductList();
   const placeholder = useRef();
-  const IsOnScreen = useDivOnScreen(placeholder);
+  const isOnScreen = useDivOnScreen(placeholder);
+  const placeholderStyle = cx("placeholder", { hidePlaceholder: isOnScreen });
 
   return (
     <>
-      {IsOnScreen ? (
+      {isOnScreen ? (
         <div className={`${productStyles.container} container`}>
           {products &&
             Object.keys(products).map((key) => {
@@ -44,7 +47,9 @@ const Products = () => {
             })}
         </div>
       ) : (
-        <div ref={placeholder}></div>
+        <div className={placeholderStyle} ref={placeholder}>
+          <Loader></Loader>
+        </div>
       )}
     </>
   );

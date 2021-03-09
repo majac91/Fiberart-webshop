@@ -1,17 +1,17 @@
 import React, { useRef } from "react";
 import { useHistory } from "react-router-dom";
 import { useImgOnScreen } from "../../../hooks/useOnIntersection";
+import Loader from "../../../components/Loader/Loader";
 import textStyles from "../../../components/TextSection/text-section.module.css";
 import imgStyles from "../../../css-modules/photo-text-section.module.css";
 import newsletterStyles from "../components/Newsletter/newsletter.module.css";
 import aboutImg from "../../../img/about.jpg";
-
 const cx = require("classnames");
 
 export default function About(props) {
-  const placeholder = useRef();
-  const IsOnScreen = useImgOnScreen(placeholder, aboutImg);
-  const placeholderStyle = cx("placeholder", { hidePlaceholder: IsOnScreen });
+  const placeholderRef = useRef();
+  const isOnScreen = useImgOnScreen(placeholderRef, aboutImg);
+  const placeholderStyle = cx("placeholder", { hidePlaceholder: isOnScreen });
 
   let history = useHistory();
 
@@ -54,14 +54,16 @@ export default function About(props) {
         </div>
 
         <picture className={imgStyles.imgWrapper}>
-          {IsOnScreen ? (
+          {isOnScreen ? (
             <img
               src={aboutImg}
               alt="blonde woman in black and white outfit"
               className={imgStyles.img}
             ></img>
           ) : (
-            <div className={placeholderStyle} ref={placeholder}></div>
+            <div className={placeholderStyle} ref={placeholderRef}>
+              <Loader></Loader>
+            </div>
           )}
         </picture>
       </div>

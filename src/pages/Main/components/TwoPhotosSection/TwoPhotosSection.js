@@ -2,14 +2,14 @@ import React, { useRef } from "react";
 import { Link } from "react-router-dom";
 import { useDivOnScreen } from "../../../../hooks/useOnIntersection";
 import photoStyles from "./two-photos.module.css";
-
+import Loader from "../../../../components/Loader/Loader";
 const cx = require("classnames");
 
 export default function TwoPhotosSection(props) {
-  const placeholder = useRef();
-  const IsOnScreen = useDivOnScreen(placeholder);
+  const placeholderRef = useRef();
+  const isOnScreen = useDivOnScreen(placeholderRef);
   const placeholderStyle = cx("placeholder", {
-    hidePlaceholder: IsOnScreen,
+    hidePlaceholder: isOnScreen,
   });
 
   const imgAttr = props.img;
@@ -26,39 +26,39 @@ export default function TwoPhotosSection(props) {
 
   return (
     <>
-      {IsOnScreen === false ? (
-        <div ref={placeholder} className={placeholderStyle}></div>
-      ) : (
-        IsOnScreen && (
-          <section className={`${photoStyles.images} d-flex container`}>
-            {imgAttr.map((img) => {
-              if (props.el !== Link) {
-                return (
-                  <picture className={photoStyles.img}>
-                    {/* ONLY PHOTOS */}
-                    <El
-                      {...attrs[imgAttr.indexOf(img)]}
-                      className={`${photoStyles.img}`}
-                    ></El>
-                  </picture>
-                );
-              } else {
-                return (
-                  <div className={`${photoStyles.img} ${photoStyles[img]}`}>
-                    {/* PHOTOS WITH LINKS*/}
+      {isOnScreen ? (
+        <section className={`${photoStyles.images} d-flex container`}>
+          {imgAttr.map((img) => {
+            if (props.el !== Link) {
+              return (
+                <picture className={photoStyles.img}>
+                  {/*PHOTOS ONLY*/}
+                  <El
+                    {...attrs[imgAttr.indexOf(img)]}
+                    className={`${photoStyles.img}`}
+                  ></El>
+                </picture>
+              );
+            } else {
+              return (
+                <div className={`${photoStyles.img} ${photoStyles[img]}`}>
+                  {/* PHOTOS WITH LINKS*/}
 
-                    <El
-                      {...attrs[imgAttr.indexOf(img)]}
-                      className={photoStyles.link}
-                    >
-                      {linkTxt(txt[imgAttr.indexOf(img)])}
-                    </El>
-                  </div>
-                );
-              }
-            })}
-          </section>
-        )
+                  <El
+                    {...attrs[imgAttr.indexOf(img)]}
+                    className={photoStyles.link}
+                  >
+                    {linkTxt(txt[imgAttr.indexOf(img)])}
+                  </El>
+                </div>
+              );
+            }
+          })}
+        </section>
+      ) : (
+        <div ref={placeholderRef} className={placeholderStyle}>
+          <Loader></Loader>
+        </div>
       )}
     </>
   );

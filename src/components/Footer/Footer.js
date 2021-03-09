@@ -1,5 +1,6 @@
 import React, { useRef } from "react";
 import { useDivOnScreen } from "../../hooks/useOnIntersection";
+import Loader from "../../components/Loader/Loader";
 import textStyles from "../TextSection/text-section.module.css";
 import footerStyles from "./footer.module.css";
 
@@ -14,15 +15,18 @@ import twitterbtn from "../../icons/twitter.png";
 import pinterestbtn from "../../icons/pinterest.png";
 import tumblrbtn from "../../icons/tumblr.png";
 
+const cx = require("classnames");
+
 export default function Footer(props) {
-  const placeholder = useRef();
-  const IsOnScreen = useDivOnScreen(placeholder);
+  const placeholderRef = useRef();
+  const isOnScreen = useDivOnScreen(placeholderRef);
+  const placeholderStyle = cx("placeholder", { hidePlaceholder: isOnScreen });
 
   return (
     <>
       <div className={`${footerStyles.container} d-flex container`}>
-        {IsOnScreen ? (
-          <div className={` ${footerStyles.imgWrapper}`}>
+        <div className={` ${footerStyles.imgWrapper}`}>
+          {isOnScreen ? (
             <div className={footerStyles.imgWrapperInner}>
               <img
                 alt="beige macrame wall hanging"
@@ -45,10 +49,12 @@ export default function Footer(props) {
                 className={`${footerStyles.img4} ${footerStyles.img}`}
               ></img>
             </div>
-          </div>
-        ) : (
-          <div ref={placeholder}></div>
-        )}
+          ) : (
+            <div className={placeholderStyle} ref={placeholderRef}>
+              <Loader></Loader>
+            </div>
+          )}
+        </div>
         <div className={footerStyles.textWrapper}>
           <div className={footerStyles.innerTextWrapper}>
             <p className={`${textStyles.textClass} ${textStyles.caption}`}>
