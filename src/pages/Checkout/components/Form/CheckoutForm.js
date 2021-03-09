@@ -3,7 +3,7 @@ import formStyles from "./form.module.css";
 import cartStyles from "../../../../components/Cart/cart.module.css";
 import useFormSubmit from "../../../../hooks/useFormSubmit";
 
-const Form = ({ setSubmitted, cartItems }) => {
+const Form = ({ setIsOrdered, cartItems }) => {
   const initialValues = {
     firstName: "",
     lastName: "",
@@ -22,7 +22,7 @@ const Form = ({ setSubmitted, cartItems }) => {
     initialValues,
     order,
     "orders",
-    setSubmitted
+    setIsOrdered
   );
 
   return (

@@ -38,8 +38,7 @@
 .img {
   height: 20vh;
   width: 20vh;
-  background-size: cover;
-  background-position: center;
+  object-fit: cover;
 }
 
 .logo {

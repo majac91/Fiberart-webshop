@@ -1,22 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 import newsletterStyles from "./newsletter.module.css";
 import useFormSubmit from "../../../../hooks/useFormSubmit";
 import textStyles from "../../../../components/TextSection/text-section.module.css";
 
-export default function Newsletter({ submitted }) {
+export default function Newsletter() {
+  const [isSubscribed, setIsSubscribed] = useState(false);
+
   const initialValue = { email: "" };
 
   const { formValues, handleSubmit, handleFormValues } = useFormSubmit(
     initialValue,
     null,
     "subscribers",
-    null
+    setIsSubscribed
   );
 
   return (
     <>
       <section className={`${newsletterStyles.container} container`}>
-        {!submitted ? (
+        {!isSubscribed ? (
           <div className={newsletterStyles.text}>
             <p className={newsletterStyles.caption}>FREE CHECKLIST</p>
             <p className={newsletterStyles.subcaption}>
@@ -51,16 +53,11 @@ export default function Newsletter({ submitted }) {
             </form>
           </div>
         ) : (
-          {
-            /* TODO */
-          }(
-            <div
-              style={{ textAlign: "center", color: "white" }}
-              className={textStyles.captionTxt}
-            >
-              Thank you for subscribing!
-            </div>
-          )
+          <div
+            className={`${textStyles.captionTxt} ${newsletterStyles.submitMsg}`}
+          >
+            Thank you for subscribing!
+          </div>
         )}
       </section>
     </>

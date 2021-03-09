@@ -31,22 +31,22 @@ export default function Footer(props) {
               <img
                 alt="beige macrame wall hanging"
                 src={img1}
-                className={`${footerStyles.img1} ${footerStyles.img}`}
+                className={footerStyles.img}
               ></img>
               <img
                 src={img2}
                 alt="person painting using watercolors"
-                className={`${footerStyles.img2} ${footerStyles.img}`}
+                className={footerStyles.img}
               ></img>
               <img
                 src={img3}
                 alt="dry bouquet detail"
-                className={`${footerStyles.img3} ${footerStyles.img}`}
+                className={footerStyles.img}
               ></img>
               <img
                 src={img4}
                 alt="artist's studio"
-                className={`${footerStyles.img4} ${footerStyles.img}`}
+                className={footerStyles.img}
               ></img>
             </div>
           ) : (

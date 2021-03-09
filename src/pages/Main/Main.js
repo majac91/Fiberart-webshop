@@ -7,7 +7,7 @@ import ProductCategories from "./components/ProductCategories";
 import Newsletter from "./components/Newsletter/Newsletter";
 import Featured from "./components/Featured";
 
-const Main = ({ submitted }) => {
+const Main = () => {
   return (
     <>
       <Header page="main" />
@@ -15,7 +15,7 @@ const Main = ({ submitted }) => {
         <BrandMessage />
         <MissionStatement />
         <ProductCategories />
-        <Newsletter submitted={submitted} />
+        <Newsletter />
         <Featured
           section="featured"
           message="Featured promo"

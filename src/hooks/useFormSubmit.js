@@ -5,7 +5,7 @@ export default function useFormSubmit(
   values,
   orderData,
   storagePath,
-  setSubmitted
+  setIsFormSubmitted
 ) {
   const [formValues, setFormValues] = useState(values);
 
@@ -25,7 +25,7 @@ export default function useFormSubmit(
           if (error) {
             console.log(error);
           } else {
-            setSubmitted(true);
+            setIsFormSubmitted(true);
             console.log("Data saved successfully!");
           }
         }
@@ -35,7 +35,7 @@ export default function useFormSubmit(
         if (error) {
           console.log(error);
         } else {
-          setSubmitted(true);
+          setIsFormSubmitted(true);
           console.log("Data saved successfully!");
         }
       });
