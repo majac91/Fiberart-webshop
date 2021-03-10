@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import { useDivOnScreen, useImgOnScreen } from "../../hooks/useOnIntersection";
+import { useElementOnScreen } from "../../hooks/useOnIntersection";
 import TextSection from "../../components/TextSection";
 import Header from "../../components/Header/Header";
 import textStyles from "../../components/TextSection/text-section.module.css";
@@ -12,10 +12,13 @@ const cx = require("classnames");
 
 const AboutPage = () => {
   const imgGroupRef = useRef();
-  const imgGroupIsOnScreen = useDivOnScreen(imgGroupRef);
+  const imgGroupIsOnScreen = useElementOnScreen(imgGroupRef, null);
 
   const materialsImgRef = useRef();
-  const materialsImgIsOnScreen = useImgOnScreen(materialsImgRef, materialsImg);
+  const materialsImgIsOnScreen = useElementOnScreen(
+    materialsImgRef,
+    materialsImg
+  );
 
   let textClass = "aboutPage";
   const groupPlaceholderStyle = cx("placeholder", {
@@ -53,7 +56,7 @@ const AboutPage = () => {
               </>
             ) : (
               <div className={groupPlaceholderStyle} ref={imgGroupRef}>
-                <Loader></Loader>
+                <Loader />
               </div>
             )}
           </div>
@@ -113,7 +116,7 @@ const AboutPage = () => {
               ></img>
             ) : (
               <div className={materialsPlaceholderStyle} ref={materialsImgRef}>
-                <Loader></Loader>
+                <Loader />
               </div>
             )}
           </div>

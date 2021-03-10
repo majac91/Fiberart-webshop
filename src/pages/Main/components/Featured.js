@@ -2,14 +2,14 @@ import React, { useRef } from "react";
 import textStyles from "../../../components/TextSection/text-section.module.css";
 import imgStyles from "../../../css-modules/photo-text-section.module.css";
 import newsletterStyles from "../components/Newsletter/newsletter.module.css";
-import { useImgOnScreen } from "../../../hooks/useOnIntersection";
+import { useElementOnScreen } from "../../../hooks/useOnIntersection";
 import featuredImg from "../../../img/styling2.jpg";
 import Loader from "../../../components/Loader/Loader";
 const cx = require("classnames");
 
 export default function Featured(props) {
   const placeholderRef = useRef();
-  const isOnScreen = useImgOnScreen(placeholderRef, featuredImg);
+  const isOnScreen = useElementOnScreen(placeholderRef, featuredImg);
   const placeholderStyle = cx("placeholder", { hidePlaceholder: isOnScreen });
 
   let textClass = props.section;
@@ -27,7 +27,7 @@ export default function Featured(props) {
             ></img>
           ) : (
             <div className={placeholderStyle} ref={placeholderRef}>
-              <Loader></Loader>
+              <Loader />
             </div>
           )}
         </picture>

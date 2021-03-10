@@ -1,13 +1,13 @@
 import React, { useRef } from "react";
 import { Link } from "react-router-dom";
-import { useDivOnScreen } from "../../../../hooks/useOnIntersection";
+import { useElementOnScreen } from "../../../../hooks/useOnIntersection";
 import photoStyles from "./two-photos.module.css";
 import Loader from "../../../../components/Loader/Loader";
 const cx = require("classnames");
 
 export default function TwoPhotosSection(props) {
   const placeholderRef = useRef();
-  const isOnScreen = useDivOnScreen(placeholderRef);
+  const isOnScreen = useElementOnScreen(placeholderRef, null);
   const placeholderStyle = cx("placeholder", {
     hidePlaceholder: isOnScreen,
   });
@@ -57,7 +57,7 @@ export default function TwoPhotosSection(props) {
         </section>
       ) : (
         <div ref={placeholderRef} className={placeholderStyle}>
-          <Loader></Loader>
+          <Loader />
         </div>
       )}
     </>

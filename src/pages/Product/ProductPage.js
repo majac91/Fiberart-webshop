@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import { useFetchProduct } from "../../firebase/api";
-import { useDivOnScreen } from "../../hooks/useOnIntersection";
+import { useElementOnScreen } from "../../hooks/useOnIntersection";
 import { useParams } from "react-router-dom";
 import productPageStyles from "./product-page.module.css";
 import Slider from "react-slick";
@@ -21,7 +21,7 @@ const ProductPage = ({
   const product = useFetchProduct(id);
 
   const placeholder = useRef();
-  const isOnScreen = useDivOnScreen(placeholder);
+  const isOnScreen = useElementOnScreen(placeholder, null);
 
   useEffect(() => {
     localStorage.setItem("id", JSON.stringify(itemIds));

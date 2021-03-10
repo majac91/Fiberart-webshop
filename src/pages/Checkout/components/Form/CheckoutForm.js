@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import formStyles from "./form.module.css";
 import cartStyles from "../../../../components/Cart/cart.module.css";
 import useFormSubmit from "../../../../hooks/useFormSubmit";
@@ -15,10 +15,12 @@ const Form = ({ setIsOrdered, cartItems }) => {
     phone: " ",
   };
 
+  const formRef = useRef();
   //items from cart
   const order = cartItems.map((item) => ` ${item.name}`).toString();
 
   const { formValues, handleFormValues, handleSubmit } = useFormSubmit(
+    // formRef,
     initialValues,
     order,
     "orders",
@@ -29,6 +31,7 @@ const Form = ({ setIsOrdered, cartItems }) => {
     <div className={formStyles.wrapperOutter}>
       <p className={cartStyles.title}>Your details</p>
       <form
+        ref={formRef}
         className={formStyles.wrapperInner}
         onSubmit={(e) => handleSubmit(e)}
       >

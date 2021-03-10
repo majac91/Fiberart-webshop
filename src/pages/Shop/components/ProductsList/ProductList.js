@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import { useDivOnScreen } from "../../../../hooks/useOnIntersection";
+import { useElementOnScreen } from "../../../../hooks/useOnIntersection";
 import { Link } from "react-router-dom";
 import { useProductList } from "../../../../firebase/api";
 import Loader from "../../../../components/Loader/Loader";
@@ -9,7 +9,7 @@ const cx = require("classnames");
 const Products = () => {
   const products = useProductList();
   const placeholder = useRef();
-  const isOnScreen = useDivOnScreen(placeholder);
+  const isOnScreen = useElementOnScreen(placeholder, null);
   const placeholderStyle = cx("placeholder", { hidePlaceholder: isOnScreen });
 
   return (
@@ -48,7 +48,7 @@ const Products = () => {
         </div>
       ) : (
         <div className={placeholderStyle} ref={placeholder}>
-          <Loader></Loader>
+          <Loader />
         </div>
       )}
     </>

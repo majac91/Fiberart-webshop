@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import { useDivOnScreen } from "../../hooks/useOnIntersection";
+import { useElementOnScreen } from "../../hooks/useOnIntersection";
 import Loader from "../../components/Loader/Loader";
 import textStyles from "../TextSection/text-section.module.css";
 import footerStyles from "./footer.module.css";
@@ -19,7 +19,7 @@ const cx = require("classnames");
 
 export default function Footer(props) {
   const placeholderRef = useRef();
-  const isOnScreen = useDivOnScreen(placeholderRef);
+  const isOnScreen = useElementOnScreen(placeholderRef, null);
   const placeholderStyle = cx("placeholder", { hidePlaceholder: isOnScreen });
 
   return (
@@ -51,7 +51,7 @@ export default function Footer(props) {
             </div>
           ) : (
             <div className={placeholderStyle} ref={placeholderRef}>
-              <Loader></Loader>
+              <Loader />
             </div>
           )}
         </div>

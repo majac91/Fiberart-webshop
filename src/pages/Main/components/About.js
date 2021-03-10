@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import { useHistory } from "react-router-dom";
-import { useImgOnScreen } from "../../../hooks/useOnIntersection";
+import { useElementOnScreen } from "../../../hooks/useOnIntersection";
 import Loader from "../../../components/Loader/Loader";
 import textStyles from "../../../components/TextSection/text-section.module.css";
 import imgStyles from "../../../css-modules/photo-text-section.module.css";
@@ -10,7 +10,7 @@ const cx = require("classnames");
 
 export default function About(props) {
   const placeholderRef = useRef();
-  const isOnScreen = useImgOnScreen(placeholderRef, aboutImg);
+  const isOnScreen = useElementOnScreen(placeholderRef, aboutImg);
   const placeholderStyle = cx("placeholder", { hidePlaceholder: isOnScreen });
 
   let history = useHistory();
@@ -62,7 +62,7 @@ export default function About(props) {
             ></img>
           ) : (
             <div className={placeholderStyle} ref={placeholderRef}>
-              <Loader></Loader>
+              <Loader />
             </div>
           )}
         </picture>

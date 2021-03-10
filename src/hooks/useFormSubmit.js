@@ -2,13 +2,13 @@ import { useState } from "react";
 import { db } from "../firebase/config";
 
 export default function useFormSubmit(
-  values,
+  // formRef,
+  initialValues,
   orderData,
   storagePath,
   setIsFormSubmitted
 ) {
-  const [formValues, setFormValues] = useState(values);
-
+  const [formValues, setFormValues] = useState(initialValues);
   function handleFormValues(name, e) {
     setFormValues((current) => {
       return { ...current, [name]: e.target.value };
@@ -40,8 +40,10 @@ export default function useFormSubmit(
         }
       });
     }
-    console.log(values);
-    setFormValues(values);
+    setFormValues(initialValues);
+    // console.log(formRef);
+
+    // formRef.current.reset();
   }
 
   return {
