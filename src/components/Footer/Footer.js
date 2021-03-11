@@ -1,38 +1,60 @@
-import React from "react";
+import React, { useRef } from "react";
+import { useElementOnScreen } from "../../hooks/useOnIntersection";
+import Loader from "../../components/Loader/Loader";
 import textStyles from "../TextSection/text-section.module.css";
 import footerStyles from "./footer.module.css";
 
 import logo from "../../img/logo.png";
+import img1 from "../../img/social1.jpg";
+import img2 from "../../img/social2.jpg";
+import img3 from "../../img/social3.jpg";
+import img4 from "../../img/social4.jpg";
+
 import facebookbtn from "../../icons/facebook.png";
 import twitterbtn from "../../icons/twitter.png";
 import pinterestbtn from "../../icons/pinterest.png";
 import tumblrbtn from "../../icons/tumblr.png";
 
+const cx = require("classnames");
+
 export default function Footer(props) {
+  const placeholderRef = useRef();
+  const isOnScreen = useElementOnScreen(placeholderRef, null);
+  const placeholderStyle = cx("placeholder", { hidePlaceholder: isOnScreen });
+
   return (
     <>
       <div className={`${footerStyles.container} d-flex container`}>
         <div className={` ${footerStyles.imgWrapper}`}>
-          <div className={footerStyles.imgWrapperInner}>
-            <img
-              alt=""
-              className={`${footerStyles.img1} ${footerStyles.img}`}
-            ></img>
-            <img
-              alt=""
-              className={`${footerStyles.img2} ${footerStyles.img}`}
-            ></img>
-            <img
-              alt=""
-              className={`${footerStyles.img3} ${footerStyles.img}`}
-            ></img>
-            <img
-              alt=""
-              className={`${footerStyles.img4} ${footerStyles.img}`}
-            ></img>
-          </div>
+          {isOnScreen ? (
+            <div className={footerStyles.imgWrapperInner}>
+              <img
+                alt="beige macrame wall hanging"
+                src={img1}
+                className={footerStyles.img}
+              ></img>
+              <img
+                src={img2}
+                alt="person painting using watercolors"
+                className={footerStyles.img}
+              ></img>
+              <img
+                src={img3}
+                alt="dry bouquet detail"
+                className={footerStyles.img}
+              ></img>
+              <img
+                src={img4}
+                alt="artist's studio"
+                className={footerStyles.img}
+              ></img>
+            </div>
+          ) : (
+            <div className={placeholderStyle} ref={placeholderRef}>
+              <Loader />
+            </div>
+          )}
         </div>
-
         <div className={footerStyles.textWrapper}>
           <div className={footerStyles.innerTextWrapper}>
             <p className={`${textStyles.textClass} ${textStyles.caption}`}>
@@ -45,28 +67,28 @@ export default function Footer(props) {
               <a className={footerStyles.link} href="">
                 <img
                   className={footerStyles.socialIcon}
-                  alt="go to facebook page"
+                  alt="facebook"
                   src={facebookbtn}
                 />
               </a>
               <a className={footerStyles.link} href="">
                 <img
                   className={footerStyles.socialIcon}
-                  alt="go to twitter profile"
+                  alt="twitter"
                   src={twitterbtn}
                 />
               </a>
               <a className={footerStyles.link} href="">
                 <img
                   className={footerStyles.socialIcon}
-                  alt="go to pinterest page"
+                  alt="pinterest"
                   src={pinterestbtn}
                 />
               </a>
               <a className={footerStyles.link} href="">
                 <img
                   className={footerStyles.socialIcon}
-                  alt="go to tumblr page"
+                  alt="tumblr"
                   src={tumblrbtn}
                 />
               </a>

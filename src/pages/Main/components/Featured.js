@@ -1,23 +1,36 @@
-import React from "react";
-import textStyles from "../components/TextSection/text-section.module.css";
-import imgStyles from "../css-modules/photo-text-section.module.css";
+import React, { useRef } from "react";
+import textStyles from "../../../components/TextSection/text-section.module.css";
+import imgStyles from "../../../css-modules/photo-text-section.module.css";
 import newsletterStyles from "../components/Newsletter/newsletter.module.css";
-// import TextPhotoSection from "../components/TextPhotoSection";
+import { useElementOnScreen } from "../../../hooks/useOnIntersection";
+import featuredImg from "../../../img/styling2.jpg";
+import Loader from "../../../components/Loader/Loader";
+const cx = require("classnames");
 
 export default function Featured(props) {
+  const placeholderRef = useRef();
+  const isOnScreen = useElementOnScreen(placeholderRef, featuredImg);
+  const placeholderStyle = cx("placeholder", { hidePlaceholder: isOnScreen });
+
   let textClass = props.section;
   return (
     <section className={textClass}>
       <div
         className={`${textStyles[textClass]} ${imgStyles[textClass]} ${textStyles.container} d-flex container`}
       >
-        <div className={imgStyles.imgWrapper}>
-          <div
-            role="img"
-            aria-label="white monochrome textured painting"
-            className={imgStyles.img}
-          ></div>
-        </div>
+        <picture className={imgStyles.imgWrapper}>
+          {isOnScreen ? (
+            <img
+              src={featuredImg}
+              alt="white monochrome textured painting"
+              className={imgStyles.img}
+            ></img>
+          ) : (
+            <div className={placeholderStyle} ref={placeholderRef}>
+              <Loader />
+            </div>
+          )}
+        </picture>
 
         <div className={`${imgStyles.text} `}>
           <div className={`${textStyles[textClass]} ${textStyles.msgWrapper}`}>

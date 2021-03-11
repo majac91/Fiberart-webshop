@@ -38,6 +38,7 @@
 .featured .img {
   background-image: url("../img/styling2.jpg");
   width: 30vw;
+  object-fit: cover;
 }
 
 .featured .imgWrapper {
@@ -53,6 +54,7 @@
 .about .img {
   background-image: url("../img/about.jpg");
   width: 30vw;
+  object-fit: cover;
 }
 
 .about .textOutter {
@@ -65,7 +67,6 @@
 
 /* ABOUT PAGE */
 .aboutPageImg1 {
-  background-image: url("../img/header1.jpg");
   width: 20vw;
   height: 50vh;
   position: relative;
@@ -75,12 +76,10 @@
 }
 
 .aboutPageImg2 {
-  background-image: url("../img/header2.jpg");
   width: 30vw;
 }
 
 .aboutPageImg3 {
-  background-image: url("../img/materials.jpg");
   width: 30vw;
 }
 

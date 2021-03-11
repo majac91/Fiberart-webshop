@@ -1,9 +1,9 @@
-import React from "react";
+import React, { useRef } from "react";
 import formStyles from "./form.module.css";
-import cartStyles from "../Cart/cart.module.css";
-import useFormSubmit from "../../hooks/useFormSubmit";
+import cartStyles from "../../../../components/Cart/cart.module.css";
+import useFormSubmit from "../../../../hooks/useFormSubmit";
 
-const Form = ({ setSubmitted, cartItems }) => {
+const Form = ({ setIsOrdered, cartItems }) => {
   const initialValues = {
     firstName: "",
     lastName: "",
@@ -15,22 +15,26 @@ const Form = ({ setSubmitted, cartItems }) => {
     phone: "",
   };
 
+  const formRef = useRef();
   //items from cart
   const order = cartItems.map((item) => ` ${item.name}`).toString();
 
   const { formValues, handleFormValues, handleSubmit } = useFormSubmit(
+    // formRef,
     initialValues,
     order,
     "orders",
-    setSubmitted
+    setIsOrdered
   );
 
   return (
     <div className={formStyles.wrapperOutter}>
       <p className={cartStyles.title}>Your details</p>
       <form
+        ref={formRef}
         className={formStyles.wrapperInner}
         onSubmit={(e) => handleSubmit(e)}
+        noValidate
       >
         <div className={formStyles.row}>
           <div className={formStyles.column}>
@@ -40,7 +44,7 @@ const Form = ({ setSubmitted, cartItems }) => {
               id="firstName"
               value={formValues.firstName}
               onChange={(e) => handleFormValues("firstName", e)}
-              required
+              noValidate
             />
           </div>
           <div className={formStyles.column}>
@@ -50,7 +54,7 @@ const Form = ({ setSubmitted, cartItems }) => {
               id="lastName"
               value={formValues.lastName}
               onChange={(e) => handleFormValues("lastName", e)}
-              required
+              noValidate
             />
           </div>
         </div>
@@ -63,7 +67,7 @@ const Form = ({ setSubmitted, cartItems }) => {
               id="adress"
               value={formValues.adress}
               onChange={(e) => handleFormValues("adress", e)}
-              required
+              noValidate
             />
           </div>
           <div className={formStyles.column}>
@@ -73,7 +77,7 @@ const Form = ({ setSubmitted, cartItems }) => {
               id="city"
               value={formValues.city}
               onChange={(e) => handleFormValues("city", e)}
-              required
+              noValidate
             />
           </div>
         </div>
@@ -86,7 +90,7 @@ const Form = ({ setSubmitted, cartItems }) => {
               id="country"
               value={formValues.country}
               onChange={(e) => handleFormValues("country", e)}
-              required
+              noValidate
             />
           </div>
           <div className={formStyles.column}>
@@ -97,7 +101,7 @@ const Form = ({ setSubmitted, cartItems }) => {
               type="number"
               value={formValues.zip}
               onChange={(e) => handleFormValues("zip", e)}
-              required
+              noValidate
             />
           </div>
         </div>
@@ -111,7 +115,7 @@ const Form = ({ setSubmitted, cartItems }) => {
               type="email"
               value={formValues.email}
               onChange={(e) => handleFormValues("email", e)}
-              required
+              noValidate
             />
           </div>
 
@@ -123,7 +127,7 @@ const Form = ({ setSubmitted, cartItems }) => {
               type="tel"
               value={formValues.phone}
               onChange={(e) => handleFormValues("phone", e)}
-              required
+              noValidate
             />
           </div>
         </div>

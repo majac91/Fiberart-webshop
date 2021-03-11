@@ -1,12 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import Header from "../../components/Header/Header";
 import TextSection from "../../components/TextSection";
-import Form from "../../components/Form/CheckoutForm";
+import CheckoutForm from "./components/Form/CheckoutForm";
 import cartStyles from "../../components/Cart/cart.module.css";
 import checkoutStyles from "./checkout.module.css";
 import SubmitMsg from "../../components/SubmitMsg/SubmitMsg";
 
-const Checkout = ({ submitted, setSubmitted, total, onDelete, cartItems }) => {
+const Checkout = ({ total, onDelete, cartItems }) => {
+  const [isOrdered, setIsOrdered] = useState(false);
+
   return (
     <>
       <Header page="checkout" />
@@ -19,15 +21,15 @@ const Checkout = ({ submitted, setSubmitted, total, onDelete, cartItems }) => {
       <div className={`${checkoutStyles.container} d-flex container`}>
         {/* F O R M */}
         <div className={checkoutStyles.form}>
-          <Form
-            submitted={submitted}
-            setSubmitted={setSubmitted}
+          <CheckoutForm
+            isOrdered={isOrdered}
+            setIsOrdered={setIsOrdered}
             cartItems={cartItems}
-          ></Form>
+          ></CheckoutForm>
         </div>
         {/* C A R T */}
         <div className={`${cartStyles.wrapperOutter} ${checkoutStyles.cart}`}>
-          {!submitted ? (
+          {!isOrdered ? (
             <>
               <div className={cartStyles.titleWrapper}>
                 <p className={cartStyles.title}>Your order</p>

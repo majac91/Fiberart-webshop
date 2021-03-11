@@ -1,11 +1,32 @@
-import React from "react";
+import React, { useRef } from "react";
+import { useElementOnScreen } from "../../hooks/useOnIntersection";
 import TextSection from "../../components/TextSection";
 import Header from "../../components/Header/Header";
 import textStyles from "../../components/TextSection/text-section.module.css";
 import imgStyles from "../../css-modules/photo-text-section.module.css";
+import workshopImg from "../../img/header1.jpg";
+import detailImg from "../../img/header2.jpg";
+import materialsImg from "../../img/materials.jpg";
+import Loader from "../../components/Loader";
+const cx = require("classnames");
 
 const AboutPage = () => {
+  const imgGroupRef = useRef();
+  const imgGroupIsOnScreen = useElementOnScreen(imgGroupRef, null);
+
+  const materialsImgRef = useRef();
+  const materialsImgIsOnScreen = useElementOnScreen(
+    materialsImgRef,
+    materialsImg
+  );
+
   let textClass = "aboutPage";
+  const groupPlaceholderStyle = cx("placeholder", {
+    hidePlaceholder: imgGroupIsOnScreen,
+  });
+  const materialsPlaceholderStyle = cx("placeholder", {
+    hidePlaceholder: materialsImgIsOnScreen,
+  });
   return (
     <>
       <Header page="about"></Header>
@@ -20,16 +41,24 @@ const AboutPage = () => {
           className={`${textStyles.aboutProduct} ${imgStyles.aboutProduct} ${textStyles.container} d-flex container`}
         >
           <div className={imgStyles.imgWrapper}>
-            <div
-              role="img"
-              aria-label="tapestry being made"
-              className={`${imgStyles.img} ${imgStyles.aboutPageImg1}`}
-            ></div>
-            <div
-              role="img"
-              aria-label="tapestry with wooden frame"
-              className={`${imgStyles.img} ${imgStyles.aboutPageImg2}`}
-            ></div>
+            {imgGroupIsOnScreen ? (
+              <>
+                <img
+                  alt="tapestry being made"
+                  src={workshopImg}
+                  className={`${imgStyles.img} ${imgStyles.aboutPageImg1}`}
+                />
+                <img
+                  alt="tapestry with wooden frame"
+                  src={detailImg}
+                  className={`${imgStyles.img} ${imgStyles.aboutPageImg2}`}
+                />
+              </>
+            ) : (
+              <div className={groupPlaceholderStyle} ref={imgGroupRef}>
+                <Loader />
+              </div>
+            )}
           </div>
 
           <div className={`${imgStyles.text} `}>
@@ -79,11 +108,17 @@ const AboutPage = () => {
           </div>
 
           <div className={imgStyles.imgWrapper}>
-            <div
-              role="img"
-              aria-label="ball of white yarn"
-              className={`${imgStyles.img} ${imgStyles.aboutPageImg3}`}
-            ></div>
+            {materialsImgIsOnScreen ? (
+              <img
+                alt="ball of white yarn"
+                src={materialsImg}
+                className={`${imgStyles.img} ${imgStyles.aboutPageImg3}`}
+              ></img>
+            ) : (
+              <div className={materialsPlaceholderStyle} ref={materialsImgRef}>
+                <Loader />
+              </div>
+            )}
           </div>
         </section>
       </main>

@@ -1,5 +1,6 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import { useFetchProduct } from "../../firebase/api";
+import { useElementOnScreen } from "../../hooks/useOnIntersection";
 import { useParams } from "react-router-dom";
 import productPageStyles from "./product-page.module.css";
 import Slider from "react-slick";
@@ -18,6 +19,9 @@ const ProductPage = ({
   }
   const { id } = useParams();
   const product = useFetchProduct(id);
+
+  const placeholder = useRef();
+  const isOnScreen = useElementOnScreen(placeholder, null);
 
   useEffect(() => {
     localStorage.setItem("id", JSON.stringify(itemIds));
@@ -57,21 +61,25 @@ const ProductPage = ({
       </header>
       <div className={productPageStyles.productWrapper}>
         <div className={productPageStyles.imgWrapper}>
-          <Slider
-            className={`${productPageStyles.productSlider} productSlider`}
-            {...settings}
-          >
-            {slideImgs?.map((img) => (
-              <div className={productPageStyles.slide}>
-                <div
-                  className={productPageStyles.product}
-                  style={{
-                    backgroundImage: `url(${img})`,
-                  }}
-                ></div>
-              </div>
-            ))}
-          </Slider>
+          {isOnScreen ? (
+            <Slider
+              className={`${productPageStyles.productSlider} productSlider`}
+              {...settings}
+            >
+              {slideImgs?.map((img) => (
+                <div className={productPageStyles.slide}>
+                  <div
+                    className={productPageStyles.product}
+                    style={{
+                      backgroundImage: `url(${img})`,
+                    }}
+                  ></div>
+                </div>
+              ))}
+            </Slider>
+          ) : (
+            <div ref={placeholder}>REF</div>
+          )}
         </div>
         <div className={productPageStyles.description}>
           <h2>Description</h2>

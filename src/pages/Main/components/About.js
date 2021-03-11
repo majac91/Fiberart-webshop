@@ -1,13 +1,19 @@
-import React from "react";
+import React, { useRef } from "react";
 import { useHistory } from "react-router-dom";
-
-import textStyles from "./TextSection/text-section.module.css";
-import imgStyles from "../css-modules/photo-text-section.module.css";
+import { useElementOnScreen } from "../../../hooks/useOnIntersection";
+import Loader from "../../../components/Loader/Loader";
+import textStyles from "../../../components/TextSection/text-section.module.css";
+import imgStyles from "../../../css-modules/photo-text-section.module.css";
 import newsletterStyles from "../components/Newsletter/newsletter.module.css";
+import aboutImg from "../../../img/about.jpg";
+const cx = require("classnames");
 
 export default function About(props) {
+  const placeholderRef = useRef();
+  const isOnScreen = useElementOnScreen(placeholderRef, aboutImg);
+  const placeholderStyle = cx("placeholder", { hidePlaceholder: isOnScreen });
+
   let history = useHistory();
-  console.log(history);
 
   function handleBtnRedirect() {
     history.push("/about");
@@ -47,13 +53,19 @@ export default function About(props) {
           </div>
         </div>
 
-        <div className={imgStyles.imgWrapper}>
-          <div
-            role="img"
-            aria-label="blonde woman in black and white outfit"
-            className={imgStyles.img}
-          ></div>
-        </div>
+        <picture className={imgStyles.imgWrapper}>
+          {isOnScreen ? (
+            <img
+              src={aboutImg}
+              alt="blonde woman in black and white outfit"
+              className={imgStyles.img}
+            ></img>
+          ) : (
+            <div className={placeholderStyle} ref={placeholderRef}>
+              <Loader />
+            </div>
+          )}
+        </picture>
       </div>
     </section>
   );
