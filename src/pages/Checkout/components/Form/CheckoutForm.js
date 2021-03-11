@@ -5,14 +5,14 @@ import useFormSubmit from "../../../../hooks/useFormSubmit";
 
 const Form = ({ setIsOrdered, cartItems }) => {
   const initialValues = {
-    firstName: " ",
-    lastName: " ",
-    adress: " ",
-    city: " ",
-    country: " ",
-    zip: " ",
-    email: " ",
-    phone: " ",
+    firstName: "",
+    lastName: "",
+    adress: "",
+    city: "",
+    country: "",
+    zip: "",
+    email: "",
+    phone: "",
   };
 
   const formRef = useRef();
@@ -34,6 +34,7 @@ const Form = ({ setIsOrdered, cartItems }) => {
         ref={formRef}
         className={formStyles.wrapperInner}
         onSubmit={(e) => handleSubmit(e)}
+        noValidate
       >
         <div className={formStyles.row}>
           <div className={formStyles.column}>
@@ -43,7 +44,7 @@ const Form = ({ setIsOrdered, cartItems }) => {
               id="firstName"
               value={formValues.firstName}
               onChange={(e) => handleFormValues("firstName", e)}
-              required
+              noValidate
             />
           </div>
           <div className={formStyles.column}>
@@ -53,7 +54,7 @@ const Form = ({ setIsOrdered, cartItems }) => {
               id="lastName"
               value={formValues.lastName}
               onChange={(e) => handleFormValues("lastName", e)}
-              required
+              noValidate
             />
           </div>
         </div>
@@ -66,7 +67,7 @@ const Form = ({ setIsOrdered, cartItems }) => {
               id="adress"
               value={formValues.adress}
               onChange={(e) => handleFormValues("adress", e)}
-              required
+              noValidate
             />
           </div>
           <div className={formStyles.column}>
@@ -76,7 +77,7 @@ const Form = ({ setIsOrdered, cartItems }) => {
               id="city"
               value={formValues.city}
               onChange={(e) => handleFormValues("city", e)}
-              required
+              noValidate
             />
           </div>
         </div>
@@ -89,7 +90,7 @@ const Form = ({ setIsOrdered, cartItems }) => {
               id="country"
               value={formValues.country}
               onChange={(e) => handleFormValues("country", e)}
-              required
+              noValidate
             />
           </div>
           <div className={formStyles.column}>
@@ -100,7 +101,7 @@ const Form = ({ setIsOrdered, cartItems }) => {
               type="number"
               value={formValues.zip}
               onChange={(e) => handleFormValues("zip", e)}
-              required
+              noValidate
             />
           </div>
         </div>
@@ -114,7 +115,7 @@ const Form = ({ setIsOrdered, cartItems }) => {
               type="email"
               value={formValues.email}
               onChange={(e) => handleFormValues("email", e)}
-              required
+              noValidate
             />
           </div>
 
@@ -126,7 +127,7 @@ const Form = ({ setIsOrdered, cartItems }) => {
               type="tel"
               value={formValues.phone}
               onChange={(e) => handleFormValues("phone", e)}
-              required
+              noValidate
             />
           </div>
         </div>

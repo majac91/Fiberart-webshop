@@ -5,10 +5,10 @@ import contactStyles from "../contact.module.css";
 
 const ContactForm = ({ setIsSent }) => {
   const initialValues = {
-    name: " ",
-    email: " ",
-    subject: " ",
-    message: " ",
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
   };
 
   const { formValues, handleFormValues, handleSubmit } = useFormSubmit(
@@ -19,7 +19,11 @@ const ContactForm = ({ setIsSent }) => {
   );
 
   return (
-    <form onSubmit={(e) => handleSubmit(e)} className={`${contactStyles.form}`}>
+    <form
+      onSubmit={(e) => handleSubmit(e)}
+      className={`${contactStyles.form}`}
+      noValidate
+    >
       <div
         className={`${contactStyles.column} ${contactStyles.formWrapperInner}`}
       >
@@ -29,7 +33,7 @@ const ContactForm = ({ setIsSent }) => {
           id="name"
           value={formValues.name}
           onChange={(e) => handleFormValues("name", e)}
-          required
+          noValidate
         />
         <label htmlFor="email">Email</label>
         <input
@@ -37,7 +41,7 @@ const ContactForm = ({ setIsSent }) => {
           id="email"
           value={formValues.email}
           onChange={(e) => handleFormValues("email", e)}
-          required
+          noValidate
         />
         <label htmlFor="subject">Subject</label>
         <input
@@ -45,7 +49,7 @@ const ContactForm = ({ setIsSent }) => {
           id="subject"
           value={formValues.subject}
           onChange={(e) => handleFormValues("subject", e)}
-          required
+          noValidate
         />
         <label htmlFor="message">Message</label>
         <textarea
@@ -53,7 +57,7 @@ const ContactForm = ({ setIsSent }) => {
           id="message"
           value={formValues.message}
           onChange={(e) => handleFormValues("message", e)}
-          required
+          noValidate
         />
       </div>
       <button className={`${contactStyles.btn} btn-black`} type="submit">
