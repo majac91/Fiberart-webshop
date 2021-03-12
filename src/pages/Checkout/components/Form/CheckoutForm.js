@@ -1,13 +1,13 @@
 import React, { useRef } from "react";
 import formStyles from "./form.module.css";
 import cartStyles from "../../../../components/Cart/cart.module.css";
-import useFormSubmit from "../../../../hooks/useFormSubmit";
+import useFormSubmit from "../../../../hooks/useFormSubmit/useFormSubmit";
 
 const Form = ({ setIsOrdered, cartItems }) => {
   const initialValues = {
     firstName: "",
     lastName: "",
-    adress: "",
+    address: "",
     city: "",
     country: "",
     zip: "",

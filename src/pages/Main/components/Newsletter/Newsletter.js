@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import newsletterStyles from "./newsletter.module.css";
-import useFormSubmit from "../../../../hooks/useFormSubmit";
+import useFormSubmit from "../../../../hooks/useFormSubmit/useFormSubmit";
 import textStyles from "../../../../components/TextSection/text-section.module.css";
 
 export default function Newsletter() {

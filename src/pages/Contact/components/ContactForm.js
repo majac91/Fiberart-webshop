@@ -1,5 +1,5 @@
 import React from "react";
-import useFormSubmit from "../../../hooks/useFormSubmit";
+import useFormSubmit from "../../../hooks/useFormSubmit/useFormSubmit";
 import formStyles from "../../Checkout/components/Form/form.module.css";
 import contactStyles from "../contact.module.css";
 
