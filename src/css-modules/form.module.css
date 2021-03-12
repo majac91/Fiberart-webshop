@@ -12,8 +12,11 @@
   border-width: 0 0 1px 0;
   border-color: black;
   height: 2em;
-  margin-bottom: 2em;
   margin-right: 1em;
+}
+
+label {
+  margin-top: 2em;
 }
 
 .input:focus {
@@ -36,4 +39,9 @@
 
 .btn {
   align-self: flex-start;
+}
+
+.errorMsg {
+  font-weight: 600;
+  font-size: 0.9em;
 }

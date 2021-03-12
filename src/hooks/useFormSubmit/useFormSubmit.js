@@ -1,15 +1,17 @@
-import { useState, useEffect } from "react";
-import validateForm from "./validateForm";
+import { useState } from "react";
+import validate from "./validateForm";
 import { db } from "../../firebase/config";
 
 export default function useFormSubmit(
-  // formRef,
   initialValues,
   orderData,
   storagePath,
   setIsFormSubmitted
 ) {
   const [formValues, setFormValues] = useState(initialValues);
+  const [errors, setErrors] = useState({});
+  const invalidInputs = validate(formValues);
+
   function handleFormValues(name, e) {
     setFormValues((current) => {
       return { ...current, [name]: e.target.value };
@@ -18,40 +20,33 @@ export default function useFormSubmit(
 
   function handleSubmit(e) {
     e.preventDefault();
-    // console.log(formValues);
-    //setError(validate(formvalues))
-    validateForm(formValues);
+    setErrors({});
+
+    if (Object.entries(invalidInputs).length > 0) {
+      setErrors(invalidInputs);
+      return;
+    }
 
     if (orderData) {
+      //CHECKOUT PAGE
       db.ref(`${storagePath}/` + Date.now()).set(
         { ...formValues, order: orderData },
         (error) => {
-          if (error) {
-            console.log(error);
-          } else {
-            setIsFormSubmitted(true);
-            console.log("Data saved successfully!");
-          }
+          error ? console.log(error) : setIsFormSubmitted(true);
         }
       );
     } else {
+      //OTHER PAGES
       db.ref(`${storagePath}/` + Date.now()).set({ ...formValues }, (error) => {
-        if (error) {
-          console.log(error);
-        } else {
-          setIsFormSubmitted(true);
-          console.log("Data saved successfully!");
-        }
+        error ? console.log(error) : setIsFormSubmitted(true);
       });
     }
     setFormValues(initialValues);
-    // console.log(formRef);
-
-    // formRef.current.reset();
   }
 
   return {
     formValues,
+    errors,
     handleFormValues,
     handleSubmit,
   };

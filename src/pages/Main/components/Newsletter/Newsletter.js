@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import newsletterStyles from "./newsletter.module.css";
 import useFormSubmit from "../../../../hooks/useFormSubmit/useFormSubmit";
+import formStyles from "../../../../css-modules/form.module.css";
 import textStyles from "../../../../components/TextSection/text-section.module.css";
 
 export default function Newsletter() {
@@ -8,7 +9,7 @@ export default function Newsletter() {
 
   const initialValue = { email: "" };
 
-  const { formValues, handleSubmit, handleFormValues } = useFormSubmit(
+  const { formValues, errors, handleSubmit, handleFormValues } = useFormSubmit(
     initialValue,
     null,
     "subscribers",
@@ -50,6 +51,9 @@ export default function Newsletter() {
               >
                 send
               </button>
+              {errors.email && (
+                <p className={formStyles.errorMsg}>{errors.email}</p>
+              )}
             </form>
           </div>
         ) : (
