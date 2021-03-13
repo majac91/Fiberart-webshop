@@ -18,11 +18,16 @@ function App() {
     () => JSON.parse(localStorage.getItem("item"))?.length || 0
   );
   const [cartIsOpen, setCartIsOpen] = useState(false);
-  const [burgerIsOpen, setBurgerIsOpen] = useState(false);
 
   const [cartItems, setCartItems] = useState(
     () => JSON.parse(localStorage.getItem("item")) || []
   );
+
+  const clearCart = () => {
+    setCartCount(0);
+    setCartItems([]);
+  };
+  const [burgerIsOpen, setBurgerIsOpen] = useState(false);
 
   const clickOutsideCart = useOnclickOutside(
     () => {
@@ -58,10 +63,9 @@ function App() {
     setBurgerIsOpen((prev) => !prev);
   }
 
-  let total = cartItems.reduce(
-    (acc, curr) => acc + parseInt(curr.price.slice(1)),
-    0
-  );
+  let total = cartItems
+    ? cartItems.reduce((acc, curr) => acc + parseInt(curr.price.slice(1)), 0)
+    : 0;
 
   return (
     <Router>
@@ -107,6 +111,7 @@ function App() {
 
         <Route exact path="/checkout">
           <CheckoutPage
+            onClearCart={clearCart}
             total={total}
             onDelete={deleteCartItem}
             cartItems={cartItems}

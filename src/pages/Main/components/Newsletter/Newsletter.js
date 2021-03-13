@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import newsletterStyles from "./newsletter.module.css";
-import useFormSubmit from "../../../../hooks/useFormSubmit";
+import useFormSubmit from "../../../../hooks/useFormSubmit/useFormSubmit";
+import formStyles from "../../../../css-modules/form.module.css";
 import textStyles from "../../../../components/TextSection/text-section.module.css";
 
 export default function Newsletter() {
@@ -8,7 +9,7 @@ export default function Newsletter() {
 
   const initialValue = { email: "" };
 
-  const { formValues, handleSubmit, handleFormValues } = useFormSubmit(
+  const { formValues, errors, handleSubmit, handleFormValues } = useFormSubmit(
     initialValue,
     null,
     "subscribers",
@@ -37,19 +38,24 @@ export default function Newsletter() {
               className={newsletterStyles.form}
               onSubmit={(e) => handleSubmit(e)}
             >
-              <input
-                value={formValues.email}
-                onChange={(e) => handleFormValues("email", e)}
-                className={newsletterStyles.input}
-                type="text"
-                placeholder={"email address"}
-              ></input>
-              <button
-                type="submit"
-                className={`${newsletterStyles.btn} btn-black`}
-              >
-                send
-              </button>
+              <div className={newsletterStyles.formInner}>
+                <input
+                  value={formValues.email}
+                  onChange={(e) => handleFormValues("email", e)}
+                  className={newsletterStyles.input}
+                  type="text"
+                  placeholder={"email address"}
+                ></input>
+                <button
+                  type="submit"
+                  className={`${newsletterStyles.btn} btn-black`}
+                >
+                  send
+                </button>
+              </div>
+              {errors.email && (
+                <p className={formStyles.errorMsg}>{errors.email}</p>
+              )}
             </form>
           </div>
         ) : (

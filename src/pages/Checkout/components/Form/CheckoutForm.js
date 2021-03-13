@@ -1,13 +1,13 @@
 import React, { useRef } from "react";
-import formStyles from "./form.module.css";
+import formStyles from "../../../../css-modules/form.module.css";
 import cartStyles from "../../../../components/Cart/cart.module.css";
-import useFormSubmit from "../../../../hooks/useFormSubmit";
+import useFormSubmit from "../../../../hooks/useFormSubmit/useFormSubmit";
 
 const Form = ({ setIsOrdered, cartItems }) => {
   const initialValues = {
     firstName: "",
     lastName: "",
-    adress: "",
+    address: "",
     city: "",
     country: "",
     zip: "",
@@ -16,11 +16,11 @@ const Form = ({ setIsOrdered, cartItems }) => {
   };
 
   const formRef = useRef();
+
   //items from cart
   const order = cartItems.map((item) => ` ${item.name}`).toString();
 
-  const { formValues, handleFormValues, handleSubmit } = useFormSubmit(
-    // formRef,
+  const { formValues, errors, handleFormValues, handleSubmit } = useFormSubmit(
     initialValues,
     order,
     "orders",
@@ -46,6 +46,9 @@ const Form = ({ setIsOrdered, cartItems }) => {
               onChange={(e) => handleFormValues("firstName", e)}
               noValidate
             />
+            {errors.firstName && (
+              <p className={formStyles.errorMsg}>{errors.firstName}</p>
+            )}
           </div>
           <div className={formStyles.column}>
             <label htmlFor="lastName">Last name</label>
@@ -56,19 +59,25 @@ const Form = ({ setIsOrdered, cartItems }) => {
               onChange={(e) => handleFormValues("lastName", e)}
               noValidate
             />
+            {errors.lastName && (
+              <p className={formStyles.errorMsg}>{errors.lastName}</p>
+            )}
           </div>
         </div>
 
         <div className={formStyles.row}>
           <div className={formStyles.column}>
-            <label htmlFor="adress">Adress</label>
+            <label htmlFor="adress">Address</label>
             <input
               className={formStyles.input}
               id="adress"
-              value={formValues.adress}
-              onChange={(e) => handleFormValues("adress", e)}
+              value={formValues.address}
+              onChange={(e) => handleFormValues("address", e)}
               noValidate
             />
+            {errors.address && (
+              <p className={formStyles.errorMsg}>{errors.address}</p>
+            )}
           </div>
           <div className={formStyles.column}>
             <label htmlFor="city">City</label>
@@ -79,6 +88,9 @@ const Form = ({ setIsOrdered, cartItems }) => {
               onChange={(e) => handleFormValues("city", e)}
               noValidate
             />
+            {errors.city && (
+              <p className={formStyles.errorMsg}>{errors.city}</p>
+            )}
           </div>
         </div>
 
@@ -92,6 +104,9 @@ const Form = ({ setIsOrdered, cartItems }) => {
               onChange={(e) => handleFormValues("country", e)}
               noValidate
             />
+            {errors.country && (
+              <p className={formStyles.errorMsg}>{errors.country}</p>
+            )}
           </div>
           <div className={formStyles.column}>
             <label htmlFor="zip">Zip</label>
@@ -103,6 +118,7 @@ const Form = ({ setIsOrdered, cartItems }) => {
               onChange={(e) => handleFormValues("zip", e)}
               noValidate
             />
+            {errors.zip && <p className={formStyles.errorMsg}>{errors.zip}</p>}
           </div>
         </div>
 
@@ -117,6 +133,9 @@ const Form = ({ setIsOrdered, cartItems }) => {
               onChange={(e) => handleFormValues("email", e)}
               noValidate
             />
+            {errors.email && (
+              <p className={formStyles.errorMsg}>{errors.email}</p>
+            )}
           </div>
 
           <div className={formStyles.column}>
@@ -129,6 +148,9 @@ const Form = ({ setIsOrdered, cartItems }) => {
               onChange={(e) => handleFormValues("phone", e)}
               noValidate
             />
+            {errors.phone && (
+              <p className={formStyles.errorMsg}>{errors.phone}</p>
+            )}
           </div>
         </div>
 

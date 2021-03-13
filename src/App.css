@@ -79,9 +79,9 @@ button:hover {
 }
 
 .btn-black {
-  width: 8em;
-  height: 2.2em;
-  font-size: 1.3em;
+  width: 10rem;
+  height: 2.5rem;
+  font-size: 1.1rem;
   background: black;
   color: white;
   border: none;

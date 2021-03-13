@@ -1,6 +1,6 @@
 import React from "react";
-import useFormSubmit from "../../../hooks/useFormSubmit";
-import formStyles from "../../Checkout/components/Form/form.module.css";
+import useFormSubmit from "../../../hooks/useFormSubmit/useFormSubmit";
+import formStyles from "../../../css-modules/form.module.css";
 import contactStyles from "../contact.module.css";
 
 const ContactForm = ({ setIsSent }) => {
@@ -11,7 +11,7 @@ const ContactForm = ({ setIsSent }) => {
     message: "",
   };
 
-  const { formValues, handleFormValues, handleSubmit } = useFormSubmit(
+  const { formValues, errors, handleFormValues, handleSubmit } = useFormSubmit(
     initialValues,
     null,
     "message",
@@ -35,6 +35,7 @@ const ContactForm = ({ setIsSent }) => {
           onChange={(e) => handleFormValues("name", e)}
           noValidate
         />
+        {errors.name && <p className={formStyles.errorMsg}>{errors.name}</p>}
         <label htmlFor="email">Email</label>
         <input
           className={formStyles.input}
@@ -43,6 +44,7 @@ const ContactForm = ({ setIsSent }) => {
           onChange={(e) => handleFormValues("email", e)}
           noValidate
         />
+        {errors.email && <p className={formStyles.errorMsg}>{errors.email}</p>}
         <label htmlFor="subject">Subject</label>
         <input
           className={formStyles.input}
@@ -51,6 +53,9 @@ const ContactForm = ({ setIsSent }) => {
           onChange={(e) => handleFormValues("subject", e)}
           noValidate
         />
+        {errors.subject && (
+          <p className={formStyles.errorMsg}>{errors.subject}</p>
+        )}
         <label htmlFor="message">Message</label>
         <textarea
           className={formStyles.input}
@@ -59,6 +64,9 @@ const ContactForm = ({ setIsSent }) => {
           onChange={(e) => handleFormValues("message", e)}
           noValidate
         />
+        {errors.message && (
+          <p className={formStyles.errorMsg}>{errors.message}</p>
+        )}
       </div>
       <button className={`${contactStyles.btn} btn-black`} type="submit">
         Send
