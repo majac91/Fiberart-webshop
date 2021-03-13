@@ -23,7 +23,7 @@ const Cart = ({
     >
       <div className={cartStyles.wrapperOutter}>
         <div className={cartStyles.titleWrapper}>
-          <p className={cartStyles.title}>Cart</p>
+          <h2 className={cartStyles.title}>Cart</h2>
           <button
             onClick={onCartClick}
             className={`${cartStyles.closeBtn} ignoreClickOutside`}
@@ -37,7 +37,7 @@ const Cart = ({
         </div>
 
         {cartItems.length === 0 ? (
-          <p className={cartStyles.emptyCart}>Your cart is empty.</p>
+          <h3 className={cartStyles.emptyCart}>Your cart is empty.</h3>
         ) : null}
 
         {cartItems.map((item, index) => (
@@ -49,10 +49,10 @@ const Cart = ({
             ></img>
             <div className={cartStyles.productInfo}>
               <Link to={`/product/${item.path}`}>
-                <p className={cartStyles.name}>{item.name}</p>
+                <h3 className={cartStyles.name}>{item.name}</h3>
               </Link>
               <div className={cartStyles.priceWrapper}>
-                <p className={cartStyles.price}>{item.price}</p>
+                <h4 className={cartStyles.price}>{item.price}</h4>
                 <button
                   className={`${cartStyles.btn} ignoreClickOutside`}
                   onClick={() => onDelete(item)}

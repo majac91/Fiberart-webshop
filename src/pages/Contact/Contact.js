@@ -25,21 +25,21 @@ const Contact = () => {
           <div className={contactStyles.infoWrapperOutter}>
             <div className={contactStyles.infoWrapperInner}>
               <div>
-                <p className={contactStyles.title}>contact info</p>
+                <h3 className={contactStyles.title}>contact info</h3>
                 <p className={contactStyles.text}>
                   Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
                   Aenean commodo ligula.
                 </p>
               </div>
               <div>
-                <p className={contactStyles.title}>location</p>
+                <h3 className={contactStyles.title}>location</h3>
                 <p className={contactStyles.text}>
                   Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
                   Aenean commodo ligula.
                 </p>
               </div>
               <div>
-                <p className={contactStyles.title}>business hours</p>
+                <h3 className={contactStyles.title}>business hours</h3>
                 <p className={contactStyles.text}>
                   Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
                   Aenean commodo ligula.

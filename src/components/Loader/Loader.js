@@ -4,7 +4,7 @@ import loaderStyles from "./loader.module.css";
 const Loader = () => {
   return (
     <div className={loaderStyles.wrapper}>
-      <div class={loaderStyles.spinner}>
+      <div className={loaderStyles.spinner}>
         <div>
           <div></div>
         </div>

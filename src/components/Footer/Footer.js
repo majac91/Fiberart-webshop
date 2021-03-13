@@ -57,13 +57,13 @@ export default function Footer(props) {
         </div>
         <div className={footerStyles.textWrapper}>
           <div className={footerStyles.innerTextWrapper}>
-            <p className={`${textStyles.textClass} ${textStyles.caption}`}>
+            <div className={`${textStyles.textClass} ${textStyles.caption}`}>
               <img
                 alt="brand logo"
                 src={logo}
                 className={footerStyles.logo}
               ></img>
-            </p>
+            </div>
             <p className="p-small text-column">
               <span>{props.paragraph} </span>
             </p>

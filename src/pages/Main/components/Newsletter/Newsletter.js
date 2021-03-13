@@ -21,10 +21,10 @@ export default function Newsletter() {
       <section className={`${newsletterStyles.container} container`}>
         {!isSubscribed ? (
           <div className={newsletterStyles.text}>
-            <p className={newsletterStyles.caption}>FREE CHECKLIST</p>
-            <p className={newsletterStyles.subcaption}>
+            <h2 className={newsletterStyles.caption}>FREE CHECKLIST</h2>
+            <h3 className={newsletterStyles.subcaption}>
               for a stylish table setting
-            </p>
+            </h3>
             <p className="p-small">
               <span className={newsletterStyles.line}>
                 Download my checklist with loads of tips

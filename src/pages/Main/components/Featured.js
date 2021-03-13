@@ -38,10 +38,12 @@ export default function Featured(props) {
           </div>
           <div className={` ${imgStyles.textOutter}`}>
             <div className={imgStyles.textInner}>
-              <p className={`${textStyles[textClass]} ${textStyles.caption}`}>
+              <h2 className={`${textStyles[textClass]} ${textStyles.caption}`}>
                 <span className={textStyles.captionTxt}>{props.caption}</span>
-              </p>
-              <p className={newsletterStyles.subcaption}>{props.subcaption}</p>
+              </h2>
+              <h3 className={newsletterStyles.subcaption}>
+                {props.subcaption}
+              </h3>
               <p className={textStyles.subcaption}>
                 <span className={textStyles.subcaptionTxt}>
                   {props.paragraph}{" "}
