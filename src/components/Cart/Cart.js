@@ -29,7 +29,7 @@ const Cart = ({
             className={`${cartStyles.closeBtn} ignoreClickOutside`}
           >
             <img
-              alt="close button"
+              alt="close"
               src={cancel}
               className={cartStyles.closeIcon}
             ></img>

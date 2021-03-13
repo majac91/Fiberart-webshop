@@ -44,10 +44,26 @@ export default function Header({ page }) {
       {page === "main" && (
         <header className={headerStyles.container}>
           <div className={`${headerStyles.headerImgs} container`}>
-            <img alt="" className={headerStyles.headerImg} src={main1}></img>
-            <img alt="" className={headerStyles.headerImg} src={main2}></img>
-            <img alt="" className={headerStyles.headerImg} src={main3}></img>
-            <img alt="" className={headerStyles.headerImg} src={main4}></img>
+            <img
+              alt="hand loom"
+              className={headerStyles.headerImg}
+              src={main1}
+            ></img>
+            <img
+              alt="oval tapestry detail"
+              className={headerStyles.headerImg}
+              src={main2}
+            ></img>
+            <img
+              alt="cotton flower"
+              className={headerStyles.headerImg}
+              src={main3}
+            ></img>
+            <img
+              alt="minimalist tapestry"
+              className={headerStyles.headerImg}
+              src={main4}
+            ></img>
           </div>
         </header>
       )}

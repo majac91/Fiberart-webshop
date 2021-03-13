@@ -24,7 +24,7 @@ export default function Footer(props) {
 
   return (
     <>
-      <div className={`${footerStyles.container} d-flex container`}>
+      <footer className={`${footerStyles.container} d-flex container`}>
         <div className={` ${footerStyles.imgWrapper}`}>
           {isOnScreen ? (
             <div className={footerStyles.imgWrapperInner}>
@@ -35,7 +35,7 @@ export default function Footer(props) {
               ></img>
               <img
                 src={img2}
-                alt="person painting using watercolors"
+                alt="artist painting"
                 className={footerStyles.img}
               ></img>
               <img
@@ -58,7 +58,11 @@ export default function Footer(props) {
         <div className={footerStyles.textWrapper}>
           <div className={footerStyles.innerTextWrapper}>
             <p className={`${textStyles.textClass} ${textStyles.caption}`}>
-              <img alt="logo" src={logo} className={footerStyles.logo}></img>
+              <img
+                alt="brand logo"
+                src={logo}
+                className={footerStyles.logo}
+              ></img>
             </p>
             <p className="p-small text-column">
               <span>{props.paragraph} </span>
@@ -95,13 +99,13 @@ export default function Footer(props) {
             </div>
           </div>
         </div>
-      </div>
-      <div className={`${footerStyles.copy} d-flex container`}>
+      </footer>
+      <small className={`${footerStyles.copy} d-flex container`}>
         <p className={footerStyles.copyItem}>copyright © 2021 &Thread</p>
         <p className={footerStyles.copyItem}>
           photos by Maja Cvetkovic <span>(some unsplash)</span>
         </p>
-      </div>
+      </small>
     </>
   );
 }

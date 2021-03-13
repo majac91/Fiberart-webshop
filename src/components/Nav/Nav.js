@@ -26,7 +26,7 @@ export default function Nav({
           onClick={onBurgerClick}
         >
           <img
-            alt="close menu"
+            alt="close"
             className={navStyles.closeIcon}
             src={closeIcon}
           ></img>
