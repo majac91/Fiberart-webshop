@@ -16,6 +16,7 @@ const Form = ({ setIsOrdered, cartItems }) => {
   };
 
   const formRef = useRef();
+
   //items from cart
   const order = cartItems.map((item) => ` ${item.name}`).toString();
 

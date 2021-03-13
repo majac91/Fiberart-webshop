@@ -38,19 +38,21 @@ export default function Newsletter() {
               className={newsletterStyles.form}
               onSubmit={(e) => handleSubmit(e)}
             >
-              <input
-                value={formValues.email}
-                onChange={(e) => handleFormValues("email", e)}
-                className={newsletterStyles.input}
-                type="text"
-                placeholder={"email address"}
-              ></input>
-              <button
-                type="submit"
-                className={`${newsletterStyles.btn} btn-black`}
-              >
-                send
-              </button>
+              <div className={newsletterStyles.formInner}>
+                <input
+                  value={formValues.email}
+                  onChange={(e) => handleFormValues("email", e)}
+                  className={newsletterStyles.input}
+                  type="text"
+                  placeholder={"email address"}
+                ></input>
+                <button
+                  type="submit"
+                  className={`${newsletterStyles.btn} btn-black`}
+                >
+                  send
+                </button>
+              </div>
               {errors.email && (
                 <p className={formStyles.errorMsg}>{errors.email}</p>
               )}
