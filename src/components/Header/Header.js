@@ -5,10 +5,10 @@ import headerStyles from "./header.module.css";
 import main1 from "../../img/header1.jpg";
 import main2 from "../../img/header2.jpg";
 import main3 from "../../img/header3.jpg";
-import main4 from "../../img/asadad.jpg";
+import main4 from "../../img/header4.jpg";
 import checkout from "../../img/header-checkout.jpg";
 import shop from "../../img/shop-header.jpg";
-import about from "../../img/img1.jpg";
+import about from "../../img/about-header.jpg";
 
 export default function Header({ page }) {
   return (

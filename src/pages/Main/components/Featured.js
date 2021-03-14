@@ -3,7 +3,7 @@ import textStyles from "../../../components/TextSection/text-section.module.css"
 import imgStyles from "../../../css-modules/photo-text-section.module.css";
 import newsletterStyles from "../components/Newsletter/newsletter.module.css";
 import { useElementOnScreen } from "../../../hooks/useOnIntersection";
-import featuredImg from "../../../img/styling2.jpg";
+import featuredImg from "../../../img/white-painting.jpg";
 import Loader from "../../../components/Loader/Loader";
 const cx = require("classnames");
 

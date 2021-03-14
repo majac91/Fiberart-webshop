@@ -19,7 +19,7 @@
   text-align: center;
   text-transform: uppercase;
   font-size: 0.9em;
-  font-family: Oswald;
+  font-family: var(--bold);
   font-weight: 500;
   letter-spacing: 0.05em;
 }
@@ -35,15 +35,16 @@
   display: inline-block;
   font-family: var(--captions);
   color: var(--headings);
-  font-size: 3em;
-  font-weight: 600;
+  font-size: 2em;
+  font-weight: 500;
   letter-spacing: 0.02em;
 }
 
 .subcaption {
-  font-family: var(--body);
-  letter-spacing: 0.2em;
   font-size: 1.2em;
+  font-family: var(--body);
+  font-weight: 400;
+  letter-spacing: 0.2em;
   line-height: 1.4;
   padding-top: 0.5em;
   margin: 1em auto;
@@ -60,6 +61,7 @@
   width: 20vw;
   font-size: 2em;
   padding-bottom: 1em;
+  font-weight: 400;
 }
 
 /* MISSION SECTION MAIN PAGE */

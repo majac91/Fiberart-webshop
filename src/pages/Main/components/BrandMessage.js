@@ -1,8 +1,8 @@
 import React from "react";
 import TextSection from "../../../components/TextSection/TextSection";
 import TwoPhotosSection from "./TwoPhotosSection/TwoPhotosSection";
-import img1 from "../../../img/products1.jpg";
-import img2 from "../../../img/products2.jpg";
+import img1 from "../../../img/brand-detail-1.jpg";
+import img2 from "../../../img/brand-detail-2.jpg";
 
 export default function BrandMessage() {
   return (

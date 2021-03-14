@@ -1,18 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400;600&display=swap");
-
-@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap");
-
-@import url("https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700&display=swap");
-
-@font-face {
-  font-family: Voga;
-  src: url("../src/fonts/Voga-Medium.otf");
-}
-@font-face {
-  font-family: VogaRegular;
-  src: url("../src/fonts/Voga-Regular.ttf");
-}
-
 @font-face {
   font-family: Altero;
   src: url("../src/fonts/ZnikomitNo25.ttf.woff");
@@ -33,9 +18,10 @@
   --lightgray: #dbdbdb;
   --beige: rgb(234, 227, 217);
   --section: 5em;
-  --body: "Raleway";
-  --captions: "EB Garamond", serif;
-  --outlined: "Altero";
+  --body: "Raleway", sans-serif;
+  --captions: "EB Garamond", sans-serif;
+  --outlined: "Altero", sans-serif;
+  --bold: "Oswald", sans-serif;
   --caption-size: 4em;
   --transition: 1s ease-in-out;
   --border: 1px solid rgb(234, 227, 217);
