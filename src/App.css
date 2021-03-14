@@ -29,7 +29,7 @@
 :root {
   --container: 95vw;
   --text: rgba(57, 57, 57, 1);
-  --headings: #dbdbdb;
+  --headings: rgb(123 123 123);
   --lightgray: #dbdbdb;
   --beige: rgb(234, 227, 217);
   --section: 5em;
