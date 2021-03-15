@@ -10,7 +10,9 @@ import Featured from "./components/Featured";
 const Main = () => {
   return (
     <>
-      <Header page="main" />
+      {/* <Header page="main" /> */}
+      <Slider />
+
       <main className="mainPage">
         <BrandMessage />
         <MissionStatement />

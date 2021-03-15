@@ -68,28 +68,44 @@ export default function Footer(props) {
               <span>{props.paragraph} </span>
             </p>
             <div>
-              <a className={footerStyles.link} href="">
+              <a
+                className={footerStyles.link}
+                target="blank"
+                href="https://www.facebook.com/"
+              >
                 <img
                   className={footerStyles.socialIcon}
                   alt="facebook"
                   src={facebookbtn}
                 />
               </a>
-              <a className={footerStyles.link} href="">
+              <a
+                className={footerStyles.link}
+                target="blank"
+                href="https://www.twitter.com/"
+              >
                 <img
                   className={footerStyles.socialIcon}
                   alt="twitter"
                   src={twitterbtn}
                 />
               </a>
-              <a className={footerStyles.link} href="">
+              <a
+                className={footerStyles.link}
+                target="blank"
+                href="https://www.pinterest.com/"
+              >
                 <img
                   className={footerStyles.socialIcon}
                   alt="pinterest"
                   src={pinterestbtn}
                 />
               </a>
-              <a className={footerStyles.link} href="">
+              <a
+                className={footerStyles.link}
+                target="blank"
+                href="https://www.tumblr.com/"
+              >
                 <img
                   className={footerStyles.socialIcon}
                   alt="tumblr"

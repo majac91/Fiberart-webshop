@@ -14,9 +14,9 @@
   text-transform: lowercase;
   letter-spacing: 0.2em;
   font-weight: 600;
-  color: black;
   font-size: 0.9em;
   font-family: var(--body);
+  color: black;
 }
 
 .wrapperDesktop {

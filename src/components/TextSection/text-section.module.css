@@ -34,10 +34,10 @@
   margin: 0 auto;
   display: inline-block;
   font-family: var(--captions);
-  color: var(--headings);
-  font-size: 2em;
   font-weight: 500;
+  font-size: 2em;
   letter-spacing: 0.02em;
+  color: var(--headings);
 }
 
 .subcaption {
