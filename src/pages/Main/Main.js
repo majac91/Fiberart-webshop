@@ -10,8 +10,8 @@ import Featured from "./components/Featured";
 const Main = () => {
   return (
     <>
-      {/* <Header page="main" /> */}
-      <Slider />
+      <Header page="main" />
+      {/* <Slider /> */}
 
       <main className="mainPage">
         <BrandMessage />
@@ -25,7 +25,7 @@ const Main = () => {
           paragraph=" All my best-kept secrets to decorate your entire home. From minimal table settings to cozy bathroom decorations. Everything helpful and inspiring to pour love into your home. "
           btn="buy now"
         ></Featured>
-        {/* <Slider /> */}
+        <Slider />
         <Newsletter />
 
         <About

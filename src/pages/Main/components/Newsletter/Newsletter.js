@@ -39,7 +39,11 @@ export default function Newsletter() {
               onSubmit={(e) => handleSubmit(e)}
             >
               <div className={newsletterStyles.formInner}>
+                <label for="newsletter" className="visually-hidden">
+                  Sign up for our newsletter
+                </label>
                 <input
+                  id="newsletter"
                   value={formValues.email}
                   onChange={(e) => handleFormValues("email", e)}
                   className={newsletterStyles.input}
