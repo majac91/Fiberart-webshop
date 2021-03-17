@@ -3,7 +3,6 @@ import headerStyles from "./header.module.css";
 
 //header imgs
 
-import social1 from "../../img/social1.jpg";
 import main from "../../img/header-main-page.jpg";
 import mainMobile from "../../img/header-main-small.jpg";
 
@@ -44,15 +43,13 @@ export default function Header({ page }) {
       )}
       {page === "main" && (
         <header className={`${headerStyles.container} container`}>
-          {/* <div className={`${headerStyles.headerImgs} container`}> */}
           <img
             alt="light blue colored cotton thread"
             className={headerStyles.hero}
             src={main}
-            srcset={`${main} 1600w, ${mainMobile} 300w`}
-            imagesizes="90vw"
+            srcset={`${mainMobile} 1200w, ${main} 1500w`}
+            sizes="(max-width: 768px) 95vw, 90vw"
           />
-          {/* </div> */}
         </header>
       )}
     </>

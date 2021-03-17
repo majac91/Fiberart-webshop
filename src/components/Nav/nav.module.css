@@ -28,8 +28,7 @@
 }
 
 .logoDesktopImg {
-  height: 7em;
-  width: 9em;
+  width: 50%;
   float: right;
 }
 
@@ -103,8 +102,7 @@
 
   .logoMobileImg {
     display: block;
-    height: 6em;
-    width: 8em;
+    height: 5em;
   }
 
   .wrapperDesktop .cart {
