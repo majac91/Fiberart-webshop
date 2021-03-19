@@ -18,7 +18,10 @@ export default function Newsletter() {
 
   return (
     <>
-      <section className={`${newsletterStyles.container} container`}>
+      <section
+        aria-label="Newsletter"
+        className={`${newsletterStyles.container} container`}
+      >
         {!isSubscribed ? (
           <div className={newsletterStyles.text}>
             <h2 className={newsletterStyles.caption}>FREE CHECKLIST</h2>
@@ -35,11 +38,12 @@ export default function Newsletter() {
             </p>
 
             <form
+              aria-label="subscribe"
               className={newsletterStyles.form}
               onSubmit={(e) => handleSubmit(e)}
             >
               <div className={newsletterStyles.formInner}>
-                <label for="newsletter" className="visually-hidden">
+                <label htmlFor="newsletter" className="visually-hidden">
                   Sign up for our newsletter
                 </label>
                 <input

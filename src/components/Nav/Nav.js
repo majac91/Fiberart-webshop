@@ -15,7 +15,11 @@ export default function Nav({
   cartCount,
 }) {
   return (
-    <nav ref={clickOutsideRef} className={`${navStyles.container} container`}>
+    <nav
+      aria-label="Navigation"
+      ref={clickOutsideRef}
+      className={`${navStyles.container} container`}
+    >
       <div
         className={cx(navStyles.navLinks, {
           [navStyles.open]: burgerIsOpen,
@@ -70,7 +74,7 @@ export default function Nav({
             src={burgerIcon}
           ></img>
         </button>
-        <Link to="/" className={navStyles.logoMobileLink}>
+        <Link to="/" className={navStyles.logoMobileLink} tabIndex="0">
           <img
             alt="homepage"
             className={navStyles.logoMobileImg}

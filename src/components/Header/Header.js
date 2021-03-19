@@ -5,7 +5,6 @@ import headerStyles from "./header.module.css";
 
 import main from "../../img/header-main-page.jpg";
 import mainMobile from "../../img/header-main-small.jpg";
-
 import checkout from "../../img/header-checkout-page.jpg";
 import shop from "../../img/header-shop-page.jpg";
 import about from "../../img/header-about-page.jpg";
@@ -17,7 +16,6 @@ export default function Header({ page }) {
         <header className={`${headerStyles.container} container`}>
           <img
             alt="ombre tapestry detail"
-            xs
             className={headerStyles.header}
             src={checkout}
           />
@@ -47,7 +45,8 @@ export default function Header({ page }) {
             alt="light blue colored cotton thread"
             className={headerStyles.hero}
             src={main}
-            srcset={`${mainMobile} 1200w, ${main} 1500w`}
+            as="image"
+            srcSet={`${mainMobile} 1200w, ${main} 1500w`}
             sizes="(max-width: 768px) 95vw, 90vw"
           />
         </header>

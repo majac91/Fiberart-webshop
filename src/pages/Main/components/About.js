@@ -21,7 +21,7 @@ export default function About(props) {
 
   let textClass = props.section;
   return (
-    <section className="aboutSection">
+    <section aria-label="About" className="aboutSection">
       <div
         className={`${textStyles[textClass]} ${imgStyles[textClass]} ${textStyles.container} d-flex container`}
       >
@@ -37,9 +37,7 @@ export default function About(props) {
                 {props.subcaption}
               </p>
               <p className={`${textStyles[textClass]} ${textStyles.caption}`}>
-                <span span className={textStyles.captionTxt}>
-                  {props.caption}
-                </span>
+                <span className={textStyles.captionTxt}>{props.caption}</span>
               </p>
 
               <button

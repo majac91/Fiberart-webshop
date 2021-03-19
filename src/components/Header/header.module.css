@@ -3,9 +3,10 @@
 }
 
 .hero {
-  height: 80vh;
+  height: 60vh;
   width: 100%;
   object-fit: cover;
+  transition: all 1s forwards;
 }
 
 .header {

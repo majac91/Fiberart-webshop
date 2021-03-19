@@ -30,6 +30,7 @@ const Form = ({ setIsOrdered, cartItems }) => {
   return (
     <div className={formStyles.wrapperOutter}>
       <form
+        aria-label="checkout form"
         ref={formRef}
         className={formStyles.wrapperInner}
         onSubmit={(e) => handleSubmit(e)}

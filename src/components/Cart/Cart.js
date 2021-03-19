@@ -18,7 +18,9 @@ const Cart = ({
 
   return (
     <div
+      aria-label="cart"
       ref={clickOutsideRef}
+      tabIndex="-1"
       className={cx(cartStyles.cart, { [cartStyles.open]: cartIsOpen })}
     >
       <div className={cartStyles.wrapperOutter}>
@@ -41,7 +43,11 @@ const Cart = ({
         ) : null}
 
         {cartItems.map((item, index) => (
-          <div key={index} className={cartStyles.wrapperInner}>
+          <div
+            aria-label="cart item"
+            key={index}
+            className={cartStyles.wrapperInner}
+          >
             <img
               className={cartStyles.img}
               alt={item.name}
@@ -52,7 +58,9 @@ const Cart = ({
                 <h3 className={cartStyles.name}>{item.name}</h3>
               </Link>
               <div className={cartStyles.priceWrapper}>
-                <h4 className={cartStyles.price}>{item.price}</h4>
+                <h4 aria-label="price" className={cartStyles.price}>
+                  {item.price}
+                </h4>
                 <button
                   className={`${cartStyles.btn} ignoreClickOutside`}
                   onClick={() => onDelete(item)}

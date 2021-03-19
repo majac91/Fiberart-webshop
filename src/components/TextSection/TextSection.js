@@ -14,11 +14,11 @@ export default function TextSection(props) {
   });
 
   return (
-    <div
+    <section
       className={cx(textStyles[textClass], textStyles.container, "container")}
     >
       <div className={cx(textStyles[textClass], textStyles.msgWrapper)}>
-        <p className={textStyles.sideMsg}>{props.message}</p>
+        <aside className={textStyles.sideMsg}>{props.message}</aside>
       </div>
 
       {(props.section === "brandMsg" ||
@@ -49,17 +49,11 @@ export default function TextSection(props) {
       </h2>
       {props.links && (
         <div className={shopStyles.links}>
-          <a className={shopStyles.link} href="">
-            Wall hangings
-          </a>
-          <a className={shopStyles.link} href="">
-            Wall art
-          </a>
-          <a className={shopStyles.link} href="">
-            Home decor
-          </a>
+          <p className={shopStyles.link}>Wall hangings</p>
+          <p className={shopStyles.link}>Wall art</p>
+          <p className={shopStyles.link}>Home decor</p>
         </div>
       )}
-    </div>
+    </section>
   );
 }
