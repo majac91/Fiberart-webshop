@@ -5,9 +5,9 @@ import submitMsgStyles from "./submit-msg.module.css";
 const SubmitMsg = () => {
   return (
     <div className={submitMsgStyles.container}>
-      <p className={`${textStyles.captionTxt} ${submitMsgStyles.captionTxt}`}>
+      <h3 className={`${textStyles.captionTxt} ${submitMsgStyles.captionTxt}`}>
         Thank you!
-      </p>
+      </h3>
       <p className={`${textStyles.subcaption} ${submitMsgStyles.subcaption}`}>
         A customer service representative will contact you soon.
       </p>

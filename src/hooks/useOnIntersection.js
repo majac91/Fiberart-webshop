@@ -4,7 +4,7 @@ export function useElementOnScreen(ref, imgSrc) {
   const [isIntersecting, setIsIntersecting] = useState(false);
 
   useEffect(() => {
-    const options = { treshold: 1 };
+    const options = { treshold: 0 };
 
     const callback = (entries) => {
       if (imgSrc) {

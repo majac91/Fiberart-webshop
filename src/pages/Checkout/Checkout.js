@@ -27,17 +27,14 @@ const Checkout = ({ onClearCart, total, onDelete, cartItems }) => {
       <div className={`${checkoutStyles.container} d-flex container`}>
         {/* F O R M */}
         <div className={checkoutStyles.form}>
-          <CheckoutForm
-            setIsOrdered={setIsOrdered}
-            cartItems={cartItems}
-          ></CheckoutForm>
+          <CheckoutForm setIsOrdered={setIsOrdered} cartItems={cartItems} />
         </div>
         {/* C A R T */}
         <div className={`${cartStyles.wrapperOutter} ${checkoutStyles.cart}`}>
           {!isOrdered ? (
             <>
               <div className={cartStyles.titleWrapper}>
-                <p className={cartStyles.title}>Your order</p>
+                <h3 className={cartStyles.title}>Your order</h3>
               </div>
 
               {cartItems.length === 0 ? (

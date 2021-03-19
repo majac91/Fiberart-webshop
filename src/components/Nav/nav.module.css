@@ -14,9 +14,9 @@
   text-transform: lowercase;
   letter-spacing: 0.2em;
   font-weight: 600;
-  color: black;
   font-size: 0.9em;
   font-family: var(--body);
+  color: black;
 }
 
 .wrapperDesktop {
@@ -28,8 +28,7 @@
 }
 
 .logoDesktopImg {
-  height: 6em;
-  width: 9em;
+  width: 50%;
   float: right;
 }
 
@@ -104,7 +103,6 @@
   .logoMobileImg {
     display: block;
     height: 5em;
-    width: 8em;
   }
 
   .wrapperDesktop .cart {
@@ -139,6 +137,7 @@
     border-right: var(--border);
     z-index: 100;
     padding: 2em;
+    visibility: hidden;
   }
 
   .wrapperDesktop .navLink::after {
@@ -152,6 +151,7 @@
 
   .open {
     left: 0;
+    visibility: visible;
   }
 }
 

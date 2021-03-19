@@ -20,6 +20,7 @@ const ContactForm = ({ setIsSent }) => {
 
   return (
     <form
+      aria-label="contact form"
       onSubmit={(e) => handleSubmit(e)}
       className={`${contactStyles.form}`}
       noValidate

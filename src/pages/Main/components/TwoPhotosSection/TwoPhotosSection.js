@@ -19,19 +19,23 @@ export default function TwoPhotosSection(props) {
   const txt = ["Collections", "Shop"];
 
   const attr1 =
-    El === Link ? { to: `${props.link1}` } : { src: `${props.img[0]}` };
+    El === Link
+      ? { to: `${props.link1}` }
+      : { src: `${props.img[0]}`, alt: `${props.alt[0]}` };
   const attr2 =
-    El === Link ? { to: `${props.link2}` } : { src: `${props.img[1]}` };
+    El === Link
+      ? { to: `${props.link2}` }
+      : { src: `${props.img[1]}`, alt: `${props.alt[0]}` };
   const attrs = [{ ...attr1 }, { ...attr2 }];
 
   return (
     <>
       {isOnScreen ? (
         <section className={`${photoStyles.images} d-flex container`}>
-          {imgAttr.map((img) => {
+          {imgAttr.map((img, index) => {
             if (props.el !== Link) {
               return (
-                <picture className={photoStyles.img}>
+                <picture key={index} className={photoStyles.img}>
                   {/*PHOTOS ONLY*/}
                   <El
                     {...attrs[imgAttr.indexOf(img)]}
@@ -41,7 +45,10 @@ export default function TwoPhotosSection(props) {
               );
             } else {
               return (
-                <div className={`${photoStyles.img} ${photoStyles[img]}`}>
+                <div
+                  key={index}
+                  className={`${photoStyles.img} ${photoStyles[img]}`}
+                >
                   {/* PHOTOS WITH LINKS*/}
 
                   <El

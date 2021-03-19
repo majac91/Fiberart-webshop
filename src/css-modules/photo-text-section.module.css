@@ -36,7 +36,6 @@
 }
 
 .featured .img {
-  background-image: url("../img/styling2.jpg");
   width: 30vw;
   object-fit: cover;
 }

@@ -19,7 +19,6 @@ const ProductPage = ({
   }
   const { id } = useParams();
   const product = useFetchProduct(id);
-
   const placeholder = useRef();
   const isOnScreen = useElementOnScreen(placeholder, null);
 
@@ -57,17 +56,21 @@ const ProductPage = ({
   return (
     <div className={`${productPageStyles.container} container`}>
       <header className={productPageStyles.header}>
-        <div className={productPageStyles.caption}>{product.name} </div>
+        <h1 className={productPageStyles.caption}>{product.name}</h1>
       </header>
-      <div className={productPageStyles.productWrapper}>
-        <div className={productPageStyles.imgWrapper}>
+
+      <div
+        aria-label="product information"
+        className={productPageStyles.productWrapper}
+      >
+        <div aria-label="images" className={productPageStyles.imgWrapper}>
           {isOnScreen ? (
             <Slider
               className={`${productPageStyles.productSlider} productSlider`}
               {...settings}
             >
-              {slideImgs?.map((img) => (
-                <div className={productPageStyles.slide}>
+              {slideImgs?.map((img, index) => (
+                <div key={index} className={productPageStyles.slide}>
                   <div
                     className={productPageStyles.product}
                     style={{
@@ -78,10 +81,10 @@ const ProductPage = ({
               ))}
             </Slider>
           ) : (
-            <div ref={placeholder}>REF</div>
+            <div ref={placeholder}></div>
           )}
         </div>
-        <div className={productPageStyles.description}>
+        <div aria-label="decription" className={productPageStyles.sdescription}>
           <h2>Description</h2>
           <p className={productPageStyles.p}>
             Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean

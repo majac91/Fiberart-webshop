@@ -19,7 +19,7 @@
   text-align: center;
   text-transform: uppercase;
   font-size: 0.9em;
-  font-family: Oswald;
+  font-family: var(--bold);
   font-weight: 500;
   letter-spacing: 0.05em;
 }
@@ -34,16 +34,17 @@
   margin: 0 auto;
   display: inline-block;
   font-family: var(--captions);
-  color: var(--headings);
-  font-size: 3em;
-  font-weight: 600;
+  font-weight: 500;
+  font-size: 2em;
   letter-spacing: 0.02em;
+  color: var(--headings);
 }
 
 .subcaption {
-  font-family: var(--body);
-  letter-spacing: 0.2em;
   font-size: 1.2em;
+  font-family: var(--body);
+  font-weight: 400;
+  letter-spacing: 0.2em;
   line-height: 1.4;
   padding-top: 0.5em;
   margin: 1em auto;
@@ -60,6 +61,7 @@
   width: 20vw;
   font-size: 2em;
   padding-bottom: 1em;
+  font-weight: 400;
 }
 
 /* MISSION SECTION MAIN PAGE */
@@ -122,22 +124,6 @@
 }
 
 @media all and (min-width: 320px) and (max-width: 360px) {
-  .captionTxt {
-    font-size: 1.7em;
-  }
-
-  .subcaption {
-    font-size: 1.2em;
-  }
-
-  .subcaptionTxt {
-    font-size: 0.7em;
-  }
-
-  .about .captionTxt {
-    font-size: 1.4em;
-  }
-
   .msgWrapper {
     top: 0.15em;
   }
@@ -148,10 +134,6 @@
 }
 
 @media all and (min-width: 360px) and (max-width: 768px) {
-  .captionTxt {
-    font-size: 2em;
-  }
-
   .subcaption {
     width: 80vw;
     font-size: 1.2em;
@@ -185,9 +167,22 @@
 }
 
 @media all and (min-width: 320px) and (max-width: 768px) {
+  .captionTxt {
+    font-size: 1.3em;
+  }
+
   .subcaption {
     width: 80vw;
   }
+
+  .subcaptionTxt {
+    font-size: 0.7em;
+  }
+
+  .about .captionTxt {
+    font-size: 1.4em;
+  }
+
   .about .captionTxt,
   .featured .subcaption,
   .featured .subcaptionTxt {

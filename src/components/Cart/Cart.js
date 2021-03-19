@@ -18,18 +18,20 @@ const Cart = ({
 
   return (
     <div
+      aria-label="cart"
       ref={clickOutsideRef}
+      tabIndex="-1"
       className={cx(cartStyles.cart, { [cartStyles.open]: cartIsOpen })}
     >
       <div className={cartStyles.wrapperOutter}>
         <div className={cartStyles.titleWrapper}>
-          <p className={cartStyles.title}>Cart</p>
+          <h2 className={cartStyles.title}>Cart</h2>
           <button
             onClick={onCartClick}
             className={`${cartStyles.closeBtn} ignoreClickOutside`}
           >
             <img
-              alt="close button"
+              alt="close"
               src={cancel}
               className={cartStyles.closeIcon}
             ></img>
@@ -37,11 +39,15 @@ const Cart = ({
         </div>
 
         {cartItems.length === 0 ? (
-          <p className={cartStyles.emptyCart}>Your cart is empty.</p>
+          <h3 className={cartStyles.emptyCart}>Your cart is empty.</h3>
         ) : null}
 
         {cartItems.map((item, index) => (
-          <div key={index} className={cartStyles.wrapperInner}>
+          <div
+            aria-label="cart item"
+            key={index}
+            className={cartStyles.wrapperInner}
+          >
             <img
               className={cartStyles.img}
               alt={item.name}
@@ -49,10 +55,12 @@ const Cart = ({
             ></img>
             <div className={cartStyles.productInfo}>
               <Link to={`/product/${item.path}`}>
-                <p className={cartStyles.name}>{item.name}</p>
+                <h3 className={cartStyles.name}>{item.name}</h3>
               </Link>
               <div className={cartStyles.priceWrapper}>
-                <p className={cartStyles.price}>{item.price}</p>
+                <h4 aria-label="price" className={cartStyles.price}>
+                  {item.price}
+                </h4>
                 <button
                   className={`${cartStyles.btn} ignoreClickOutside`}
                   onClick={() => onDelete(item)}

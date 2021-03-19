@@ -11,11 +11,12 @@ const Main = () => {
   return (
     <>
       <Header page="main" />
+      {/* <Slider /> */}
+
       <main className="mainPage">
         <BrandMessage />
         <MissionStatement />
         <ProductCategories />
-        <Newsletter />
         <Featured
           section="featured"
           message="Featured promo"
@@ -25,6 +26,8 @@ const Main = () => {
           btn="buy now"
         ></Featured>
         <Slider />
+        <Newsletter />
+
         <About
           section="about"
           message="About me"

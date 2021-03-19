@@ -18,13 +18,16 @@ export default function Newsletter() {
 
   return (
     <>
-      <section className={`${newsletterStyles.container} container`}>
+      <section
+        aria-label="Newsletter"
+        className={`${newsletterStyles.container} container`}
+      >
         {!isSubscribed ? (
           <div className={newsletterStyles.text}>
-            <p className={newsletterStyles.caption}>FREE CHECKLIST</p>
-            <p className={newsletterStyles.subcaption}>
+            <h2 className={newsletterStyles.caption}>FREE CHECKLIST</h2>
+            <h3 className={newsletterStyles.subcaption}>
               for a stylish table setting
-            </p>
+            </h3>
             <p className="p-small">
               <span className={newsletterStyles.line}>
                 Download my checklist with loads of tips
@@ -35,11 +38,16 @@ export default function Newsletter() {
             </p>
 
             <form
+              aria-label="subscribe"
               className={newsletterStyles.form}
               onSubmit={(e) => handleSubmit(e)}
             >
               <div className={newsletterStyles.formInner}>
+                <label htmlFor="newsletter" className="visually-hidden">
+                  Sign up for our newsletter
+                </label>
                 <input
+                  id="newsletter"
                   value={formValues.email}
                   onChange={(e) => handleFormValues("email", e)}
                   className={newsletterStyles.input}

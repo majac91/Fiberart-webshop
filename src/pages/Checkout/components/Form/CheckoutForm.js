@@ -29,13 +29,15 @@ const Form = ({ setIsOrdered, cartItems }) => {
 
   return (
     <div className={formStyles.wrapperOutter}>
-      <p className={cartStyles.title}>Your details</p>
       <form
+        aria-label="checkout form"
         ref={formRef}
         className={formStyles.wrapperInner}
         onSubmit={(e) => handleSubmit(e)}
         noValidate
       >
+        {" "}
+        <h3 className={cartStyles.title}>Your details</h3>
         <div className={formStyles.row}>
           <div className={formStyles.column}>
             <label htmlFor="firstName">First name</label>
@@ -64,7 +66,6 @@ const Form = ({ setIsOrdered, cartItems }) => {
             )}
           </div>
         </div>
-
         <div className={formStyles.row}>
           <div className={formStyles.column}>
             <label htmlFor="adress">Address</label>
@@ -93,7 +94,6 @@ const Form = ({ setIsOrdered, cartItems }) => {
             )}
           </div>
         </div>
-
         <div className={formStyles.row}>
           <div className={formStyles.column}>
             <label htmlFor="country">Country</label>
@@ -121,7 +121,6 @@ const Form = ({ setIsOrdered, cartItems }) => {
             {errors.zip && <p className={formStyles.errorMsg}>{errors.zip}</p>}
           </div>
         </div>
-
         <div className={formStyles.row}>
           <div className={formStyles.column}>
             <label htmlFor="email">Email</label>
@@ -153,7 +152,6 @@ const Form = ({ setIsOrdered, cartItems }) => {
             )}
           </div>
         </div>
-
         <button className={cartStyles.btn} type="submit">
           Submit
         </button>

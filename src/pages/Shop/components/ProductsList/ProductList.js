@@ -31,8 +31,8 @@ const Products = () => {
                   src={product.image}
                 ></img>
                 <div className={productStyles.captionWrapper}>
-                  <div className={productStyles.caption}>{product.name}</div>
-                  <div className={productStyles.price}>{product.price}</div>
+                  <h3 className={productStyles.caption}>{product.name}</h3>
+                  <h4 className={productStyles.price}>{product.price}</h4>
 
                   <Link className={productStyles.button} to={`product/${key}`}>
                     view item

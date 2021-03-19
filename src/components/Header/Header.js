@@ -2,13 +2,12 @@ import React from "react";
 import headerStyles from "./header.module.css";
 
 //header imgs
-import main1 from "../../img/header1.jpg";
-import main2 from "../../img/header2.jpg";
-import main3 from "../../img/header3.jpg";
-import main4 from "../../img/asadad.jpg";
-import checkout from "../../img/header-checkout.jpg";
-import shop from "../../img/shop-header.jpg";
-import about from "../../img/img1.jpg";
+
+import main from "../../img/header-main-page.jpg";
+import mainMobile from "../../img/header-main-small.jpg";
+import checkout from "../../img/header-checkout-page.jpg";
+import shop from "../../img/header-shop-page.jpg";
+import about from "../../img/header-about-page.jpg";
 
 export default function Header({ page }) {
   return (
@@ -17,8 +16,7 @@ export default function Header({ page }) {
         <header className={`${headerStyles.container} container`}>
           <img
             alt="ombre tapestry detail"
-            xs
-            className={headerStyles.heroHeader}
+            className={headerStyles.header}
             src={checkout}
           />
         </header>
@@ -27,7 +25,7 @@ export default function Header({ page }) {
         <header className={`${headerStyles.container} container`}>
           <img
             alt="white wool tapestry detail"
-            className={headerStyles.heroHeader}
+            className={headerStyles.header}
             src={shop}
           />
         </header>
@@ -36,19 +34,21 @@ export default function Header({ page }) {
         <header className={`${headerStyles.container} container`}>
           <img
             alt="dried pampus grass detail"
-            className={headerStyles.heroHeader}
+            className={headerStyles.header}
             src={about}
           />
         </header>
       )}
       {page === "main" && (
-        <header className={headerStyles.container}>
-          <div className={`${headerStyles.headerImgs} container`}>
-            <img alt="" className={headerStyles.headerImg} src={main1}></img>
-            <img alt="" className={headerStyles.headerImg} src={main2}></img>
-            <img alt="" className={headerStyles.headerImg} src={main3}></img>
-            <img alt="" className={headerStyles.headerImg} src={main4}></img>
-          </div>
+        <header className={`${headerStyles.container} container`}>
+          <img
+            alt="light blue colored cotton thread"
+            className={headerStyles.hero}
+            src={main}
+            as="image"
+            srcSet={`${mainMobile} 1200w, ${main} 1500w`}
+            sizes="(max-width: 768px) 95vw, 90vw"
+          />
         </header>
       )}
     </>

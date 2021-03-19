@@ -12,7 +12,7 @@ export const useFetchProduct = (id) => {
         setData(snapshot.val());
       });
     return () => unsub;
-  }, [data, id]);
+  }, [id]);
   return data;
 };
 

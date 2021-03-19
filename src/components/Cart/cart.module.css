@@ -10,10 +10,13 @@
   background: white;
   border-left: var(--border);
   z-index: 100;
+  visibility: hidden;
 }
 
 .open {
   right: 0;
+  visibility: visible;
+
   /* overflow: scroll; */
 }
 

@@ -15,7 +15,11 @@ export default function Nav({
   cartCount,
 }) {
   return (
-    <nav ref={clickOutsideRef} className={`${navStyles.container} container`}>
+    <nav
+      aria-label="Navigation"
+      ref={clickOutsideRef}
+      className={`${navStyles.container} container`}
+    >
       <div
         className={cx(navStyles.navLinks, {
           [navStyles.open]: burgerIsOpen,
@@ -26,31 +30,41 @@ export default function Nav({
           onClick={onBurgerClick}
         >
           <img
-            alt="close menu"
+            alt="close"
             className={navStyles.closeIcon}
             src={closeIcon}
           ></img>
         </button>
-        <div className={navStyles.wrapperDesktop}>
-          <Link to="/" className={cx(navStyles.navLink)}>
-            Home
-          </Link>
-          <Link to="/shop" className={navStyles.navLink}>
-            Shop
-          </Link>
-          <Link to="/about" className={navStyles.navLink}>
-            About
-          </Link>
-          <Link to="/contact" className={navStyles.navLink}>
-            Contact
-          </Link>
-          <button
-            onClick={onCartClick}
-            className={`${navStyles.navLink} ${navStyles.cart} ignoreClickOutside`}
-          >
-            Cart ({cartCount})
-          </button>
-        </div>
+        <ul className={`${navStyles.wrapperDesktop} d-flex`}>
+          <li>
+            <Link to="/" className={cx(navStyles.navLink)}>
+              Home
+            </Link>
+          </li>
+          <li>
+            <Link to="/shop" className={navStyles.navLink}>
+              Shop
+            </Link>
+          </li>
+          <li>
+            <Link to="/about" className={navStyles.navLink}>
+              About
+            </Link>
+          </li>
+          <li>
+            <Link to="/contact" className={navStyles.navLink}>
+              Contact
+            </Link>
+          </li>
+          <li>
+            <button
+              onClick={onCartClick}
+              className={`${navStyles.navLink} ${navStyles.cart} ignoreClickOutside`}
+            >
+              Cart ({cartCount})
+            </button>
+          </li>
+        </ul>
       </div>
       <div className={navStyles.wrapperMobile}>
         <button className={navStyles.burgerBtn} onClick={onBurgerClick}>
@@ -60,7 +74,7 @@ export default function Nav({
             src={burgerIcon}
           ></img>
         </button>
-        <Link to="/" className={navStyles.logoMobileLink}>
+        <Link to="/" className={navStyles.logoMobileLink} tabIndex="0">
           <img
             alt="homepage"
             className={navStyles.logoMobileImg}
