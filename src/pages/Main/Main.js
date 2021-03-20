@@ -15,8 +15,8 @@ const Main = () => {
 
       <main className="mainPage">
         <BrandMessage />
-        <MissionStatement />
         <Slider />
+        <MissionStatement />
 
         {/* <ProductCategories /> */}
         <Featured

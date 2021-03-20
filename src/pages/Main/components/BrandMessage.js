@@ -13,14 +13,14 @@ export default function BrandMessage() {
         caption="Write a short pitch about what you do and why"
         subcaption="I help you create a home you love, so you can relax and refresh in a pure and simple space."
       ></TextSection>
-      <TwoPhotosSection
+      {/* <TwoPhotosSection
         el={"img"}
         img={[img1, img2]}
         alt={[
           "large ombre wall hanging in blue",
           "detail of a wall hanging in ombre pink shades",
         ]}
-      />
+      /> */}
     </section>
   );
 }
