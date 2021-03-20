@@ -10,14 +10,10 @@
   background: white;
   border-left: var(--border);
   z-index: 100;
-  visibility: hidden;
 }
 
 .open {
   right: 0;
-  visibility: visible;
-
-  /* overflow: scroll; */
 }
 
 .wrapperOutter {
@@ -57,7 +53,6 @@
 }
 
 .img {
-  width: 5em;
   height: 6em;
 }
 
@@ -99,6 +94,9 @@
 
 .checkout {
   padding: 1em;
+  background: white;
+  border: 2px solid var(--beige);
+  font-size: 0.8rem;
 }
 
 .totalWrapper {

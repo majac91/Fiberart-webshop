@@ -76,7 +76,6 @@ function App() {
         burgerIsOpen={burgerIsOpen}
         cartCount={cartCount}
         onCartClick={handleToggleCart}
-        setCartIsOpen={setCartIsOpen}
       />
       <Cart
         clickOutsideRef={clickOutsideCart}

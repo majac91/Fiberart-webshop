@@ -1,13 +1,38 @@
 .slideContainer {
   margin-top: 2em;
-}
-
-.wrapper {
+  height: 100%;
+  background: white;
+  width: 88vw;
+  margin: auto;
   height: 70vh;
 }
 
 .img {
-  width: 100%;
-  height: 100%;
+  height: 40vh;
   object-fit: cover;
+  margin: auto;
+}
+
+.captionWrapper {
+  text-align: center;
+}
+
+.heading {
+  text-align: center;
+  padding-bottom: 3rem;
+}
+.caption {
+  margin: 1rem 0;
+}
+
+.button {
+  border: 2px solid var(--beige);
+  padding: 0.5rem 1rem;
+  background: white;
+}
+
+@media all and (min-width: 768px) and (max-width: 1024px) {
+  .slideContainer {
+    height: 40vh;
+  }
 }

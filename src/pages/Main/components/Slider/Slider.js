@@ -1,60 +1,72 @@
+import { useHistory } from "react-router-dom";
+import { useProductList } from "../../../../firebase/api";
 import customSliderStyles from "./custom-slider.module.css";
+import textStyles from "../../../../components/TextSection/text-section.module.css";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import slide1 from "../../../../img/slide1.jpg";
-import slide2 from "../../../../img/slide2.jpg";
-import slide3 from "../../../../img/slide3.jpg";
-import slide4 from "../../../../img/slide4.jpg";
 
 export default function CustomSlider() {
+  const products = useProductList();
+  const history = useHistory();
+
   var settings = {
-    dots: true,
-    autoplay: true,
-    infinite: true,
-    autoplaySpeed: 4000,
-    slidesToShow: 1,
-    slidesToScroll: 1,
     lazyLoad: true,
     accessibility: true,
+    arrows: true,
+    centerMode: true,
+    slidesToShow: 3,
+    swipe: true,
+    useCss: true,
+    centerPadding: "60px",
+    responsive: [
+      {
+        breakpoint: 481,
+        settings: {
+          centerPadding: "0px",
+          slidesToShow: 1,
+        },
+      },
+      {
+        breakpoint: 769,
+        settings: {
+          centerPadding: "0",
+        },
+      },
+    ],
   };
+
   return (
-    <div aria-label="Slideshow">
-      <Slider
-        {...settings}
-        className={`${customSliderStyles.slideContainer} container`}
-      >
-        <picture className={customSliderStyles.wrapper}>
-          <img
-            src={slide1}
-            alt="detail of wall hanging in a wooden frame"
-            className={`${customSliderStyles.img}`}
-          />
-        </picture>
+    <div aria-label="Slideshow" className={"slider-main container"}>
+      <h2 className={`${textStyles.captionTxt} ${customSliderStyles.heading}`}>
+        New from our studio
+      </h2>
+      <Slider {...settings} className={customSliderStyles.slideContainer}>
+        {Object.keys(products).map((key) => {
+          let product = products[key];
 
-        <picture className={customSliderStyles.wrapper}>
-          <img
-            src={slide2}
-            alt="ombre pink and white tapestry"
-            className={customSliderStyles.img}
-          ></img>
-        </picture>
+          return (
+            <figure className={customSliderStyles.slide}>
+              <div key={key} className={customSliderStyles.imgWrapper}>
+                <img
+                  alt={product.name}
+                  className={customSliderStyles.img}
+                  src={product.imageSmall}
+                ></img>
+                <figcaption className={customSliderStyles.captionWrapper}>
+                  <h3 className={customSliderStyles.caption}>{product.name}</h3>
 
-        <picture className={customSliderStyles.wrapper}>
-          <img
-            src={slide3}
-            alt="wool yarn in grey and white"
-            className={customSliderStyles.img}
-          ></img>
-        </picture>
-
-        <picture className={customSliderStyles.wrapper}>
-          <img
-            src={slide4}
-            alt="minimalist gray and white wall hanging"
-            className={customSliderStyles.img}
-          ></img>
-        </picture>
+                  <button
+                    className={customSliderStyles.button}
+                    onClick={() => history.push(`product/${key}`)}
+                  >
+                    view item
+                  </button>
+                </figcaption>
+              </div>
+            </figure>
+          );
+        })}
       </Slider>
     </div>
   );

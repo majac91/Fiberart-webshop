@@ -33,10 +33,12 @@ const Checkout = ({ onClearCart, total, onDelete, cartItems }) => {
         <div className={`${cartStyles.wrapperOutter} ${checkoutStyles.cart}`}>
           {!isOrdered ? (
             <>
+              {/* CART HEADER */}
               <div className={cartStyles.titleWrapper}>
                 <h3 className={cartStyles.title}>Your order</h3>
               </div>
 
+              {/* CART MAIN */}
               {cartItems.length === 0 ? (
                 <p className={cartStyles.emptyCart}>The cart is empty.</p>
               ) : null}
@@ -47,7 +49,8 @@ const Checkout = ({ onClearCart, total, onDelete, cartItems }) => {
                     className={cartStyles.img}
                     alt={item.name}
                     src={item.image}
-                  ></img>
+                    aria-hidden="true"
+                  />
                   <div className={cartStyles.productInfo}>
                     <p className={cartStyles.name}>{item.name}</p>
                     <div className={cartStyles.priceWrapper}>
@@ -63,6 +66,7 @@ const Checkout = ({ onClearCart, total, onDelete, cartItems }) => {
                 </div>
               ))}
 
+              {/* CART FOOTER */}
               {cartItems.map((item, index) =>
                 index === cartItems.length - 1 ? (
                   <div className={cartStyles.totalWrapper}>
