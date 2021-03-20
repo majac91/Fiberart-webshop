@@ -18,7 +18,7 @@ export default function CustomSlider() {
     slidesToShow: 3,
     swipe: true,
     useCss: true,
-    centerPadding: "60px",
+    // centerPadding: "60px",
     responsive: [
       {
         breakpoint: 481,

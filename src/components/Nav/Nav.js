@@ -72,14 +72,10 @@ export default function Nav({
             alt="open menu"
             className={navStyles.burgerIcon}
             src={burgerIcon}
-          ></img>
+          />
         </button>
         <Link to="/" className={navStyles.logoMobileLink} tabIndex="0">
-          <img
-            alt="homepage"
-            className={navStyles.logoMobileImg}
-            src={logo}
-          ></img>
+          <img alt="homepage" className={navStyles.logoMobileImg} src={logo} />
         </Link>
         <button
           onClick={onCartClick}
@@ -89,11 +85,7 @@ export default function Nav({
         </button>
       </div>
       <Link to="/" className={navStyles.logoDesktopLink}>
-        <img
-          alt="homepage"
-          className={navStyles.logoDesktopImg}
-          src={logo}
-        ></img>
+        <img alt="homepage" className={navStyles.logoDesktopImg} src={logo} />
       </Link>
     </nav>
   );

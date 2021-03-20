@@ -16,7 +16,9 @@ const Main = () => {
       <main className="mainPage">
         <BrandMessage />
         <MissionStatement />
-        <ProductCategories />
+        <Slider />
+
+        {/* <ProductCategories /> */}
         <Featured
           section="featured"
           message="Featured promo"
@@ -25,7 +27,7 @@ const Main = () => {
           paragraph=" All my best-kept secrets to decorate your entire home. From minimal table settings to cozy bathroom decorations. Everything helpful and inspiring to pour love into your home. "
           btn="buy now"
         ></Featured>
-        <Slider />
+        {/* <Slider /> */}
         <Newsletter />
 
         <About

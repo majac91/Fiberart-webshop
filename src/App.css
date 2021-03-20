@@ -3,6 +3,12 @@
   src: url("../src/fonts/ZnikomitNo25.ttf.woff");
 }
 
+@font-face {
+  font-family: LibreCaslonDisplay;
+  src: url("../src/fonts/LibreCaslonDisplay-Regular.ttf") format("ttf"),
+    url("../src/fonts/ChamberiDisplay-ExtraLight.otf");
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -11,15 +17,20 @@
   color: var(--text);
 }
 
+body {
+  background: #fdf8f4;
+}
+
 :root {
   --container: 95vw;
-  --text: rgba(57, 57, 57, 1);
+  /* --text: rgba(57, 57, 57, 1); */
+  --text: #rgb(66 65 65);
   --headings: rgb(123 123 123);
   --lightgray: #dbdbdb;
   --beige: rgb(234, 227, 217);
   --section: 5em;
   --body: "Raleway", sans-serif;
-  --captions: "EB Garamond", sans-serif;
+  --captions: LibreCaslonDisplay, sans-serif;
   --outlined: "Altero", sans-serif;
   --bold: "Oswald", sans-serif;
   --caption-size: 4em;
@@ -92,7 +103,6 @@ img {
 }
 
 .placeholder {
-  /* position: relative; */
   width: 100%;
   min-height: 100%;
   display: flex;
@@ -143,6 +153,7 @@ img {
 .slider-main .slick-slide img {
   width: 20vw;
   height: 50vh;
+  transition: height 0.5s ease;
 }
 
 .slider-main .slick-prev:before,
