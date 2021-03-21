@@ -1,22 +1,12 @@
-/* .container {
-  background: var(--beige);
-} */
-
 .header {
   height: 55vh;
   width: 100%;
   object-fit: cover;
 }
 
-@media all and (min-width: 320px) and (max-width: 768px) {
-  .hero {
-    height: 40vh;
-    object-fit: initial;
-  }
-}
-
 .mainContainer {
-  height: 80vh;
+  height: 100%;
+  padding-bottom: var(--section);
 }
 
 .main {
@@ -24,6 +14,7 @@
   width: 100%;
   transition: all 1s forwards;
   display: flex;
+  flex-wrap: wrap;
   width: inherit;
   color: var(--headings);
 }
@@ -50,7 +41,7 @@
 }
 
 .caption {
-  width: 45rem;
+  width: 100%;
   font-size: 3rem;
   font-family: var(--captions);
   font-weight: 800;
@@ -70,4 +61,60 @@
 .subcaption span {
   display: inline-block;
   font-weight: 200;
+}
+
+@media all and (min-width: 320px) and (max-width: 400px) {
+  .caption {
+    font-size: 1.2rem;
+  }
+
+  .subcaption {
+    font-size: 1rem;
+  }
+
+  .mainImg1 {
+    height: 10rem;
+  }
+}
+
+@media all and (min-width: 400px) and (max-width: 768px) {
+  .caption {
+    font-size: 2rem;
+  }
+
+  .mainImg1 {
+    height: 14rem;
+  }
+}
+
+@media all and (min-width: 320px) and (max-width: 768px) {
+  .section {
+    width: 45vw;
+  }
+
+  .section:last-of-type {
+    width: 90vw;
+    margin: auto;
+  }
+
+  .mainImg1 {
+    float: right;
+    margin-right: 1rem;
+    margin-left: 1rem;
+  }
+
+  .captionWrapper {
+    bottom: 0;
+    right: 0;
+  }
+
+  .caption {
+    width: auto;
+    /* font-size: 2rem; */
+  }
+
+  .subcaption {
+    left: 0;
+    margin: 1rem 0;
+  }
 }

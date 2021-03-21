@@ -33,10 +33,6 @@ const Products = () => {
                 <div className={productStyles.captionWrapper}>
                   <h3 className={productStyles.caption}>{product.name}</h3>
                   <h4 className={productStyles.price}>{product.price}</h4>
-
-                  <Link className={productStyles.button} to={`product/${key}`}>
-                    view item
-                  </Link>
                 </div>
               </div>
             );

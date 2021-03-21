@@ -1,15 +1,12 @@
 import React from "react";
 import headerStyles from "./header.module.css";
 import textStyles from "../TextSection/text-section.module.css";
+import Button from "../Button/Button";
 
 //header imgs
 
 import main1 from "../../img/header-main-1.jpg";
-import test1 from "../../img/test1.jpg";
-import test2 from "../../img/test2.jpg";
-import test3 from "../../img/test3.jpg";
-
-import main from "../../img/header-main-page.jpg";
+import main2 from "../../img/header-main-2.jpg";
 import mainMobile from "../../img/header-main-small.jpg";
 import checkout from "../../img/header-checkout-page.jpg";
 import shop from "../../img/header-shop-page.jpg";
@@ -49,16 +46,27 @@ export default function Header({ page }) {
         <header className={`${headerStyles.mainContainer} container`}>
           <div className={headerStyles.main}>
             <div className={headerStyles.section}>
-              <img className={headerStyles.mainImg1} src={test3}></img>
+              <img
+                alt=""
+                role="presentation"
+                className={headerStyles.mainImg1}
+                src={main1}
+              ></img>
             </div>
             <div className={headerStyles.section}>
-              <img className={headerStyles.mainImg2} src={test2}></img>
+              <img
+                alt=""
+                role="presentation"
+                className={headerStyles.mainImg2}
+                src={main2}
+              ></img>
             </div>
             <div
               className={`${headerStyles.section} ${headerStyles.captionWrapper}`}
             >
               <div className={headerStyles.captionWrapper}>
                 <div className={headerStyles.captionInnerWrapper}>
+                  <p>New at &Thread</p>
                   <h1 className={headerStyles.caption}>
                     The wood & thread collection
                   </h1>
@@ -66,6 +74,13 @@ export default function Header({ page }) {
                     <span> Philosophy of beauty in the practical</span>
                     <span>use of everyday objects</span>
                   </h2>
+                  <Button
+                    txt="Explore"
+                    className={"headerBtn"}
+                    onClick={() => {
+                      window.location.href = "#main";
+                    }}
+                  />
                 </div>
               </div>
             </div>

@@ -35,6 +35,9 @@ export default function Nav({
             src={closeIcon}
           ></img>
         </button>
+        <Link to="/" className={navStyles.logoDesktopLink}>
+          <img alt="homepage" className={navStyles.logoDesktopImg} src={logo} />
+        </Link>
         <ul className={`${navStyles.wrapperDesktop} d-flex`}>
           <li>
             <Link to="/" className={cx(navStyles.navLink)}>
@@ -61,7 +64,7 @@ export default function Nav({
               onClick={onCartClick}
               className={`${navStyles.navLink} ${navStyles.cart} ignoreClickOutside`}
             >
-              Cart ({cartCount})
+              Cart <span className={navStyles.cartIcon}>{cartCount}</span>
             </button>
           </li>
         </ul>
@@ -81,12 +84,9 @@ export default function Nav({
           onClick={onCartClick}
           className={`${navStyles.navLink} ${navStyles.cart} ignoreClickOutside`}
         >
-          Cart ({cartCount})
+          Cart <span className={navStyles.cartIcon}>{cartCount}</span>
         </button>
       </div>
-      <Link to="/" className={navStyles.logoDesktopLink}>
-        <img alt="homepage" className={navStyles.logoDesktopImg} src={logo} />
-      </Link>
     </nav>
   );
 }

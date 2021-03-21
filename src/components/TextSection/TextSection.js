@@ -6,8 +6,7 @@ const cx = require("classnames");
 
 export default function TextSection(props) {
   let textClass = cx({
-    message: props.section === "brandMsg",
-    mission: props.section === "mission",
+    message: props.section === "checkout",
     contact: props.section === "contact",
     shop: props.section === "shop",
     aboutPage: props.section === "aboutPageSubHeader",
@@ -21,7 +20,7 @@ export default function TextSection(props) {
         <aside className={textStyles.sideMsg}>{props.message}</aside>
       </div>
 
-      {(props.section === "brandMsg" ||
+      {(props.section === "checkout" ||
         props.section === "shop" ||
         props.section === "contact") && (
         <h1 className={cx(textStyles[textClass], textStyles.caption)}>
@@ -36,12 +35,6 @@ export default function TextSection(props) {
             {props.caption}
           </span>
         </h1>
-      )}
-
-      {props.section === "mission" && (
-        <h2 className={cx(textStyles[textClass], textStyles.caption)}>
-          {props.caption}
-        </h2>
       )}
 
       <h2 className={cx(textStyles.subcaption)}>

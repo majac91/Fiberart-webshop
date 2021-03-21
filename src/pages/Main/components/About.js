@@ -2,6 +2,7 @@ import React, { useRef } from "react";
 import { useHistory } from "react-router-dom";
 import { useElementOnScreen } from "../../../hooks/useOnIntersection";
 import Loader from "../../../components/Loader/Loader";
+import Button from "../../../components/Button/Button";
 import textStyles from "../../../components/TextSection/text-section.module.css";
 import imgStyles from "../../../css-modules/photo-text-section.module.css";
 import newsletterStyles from "../components/Newsletter/newsletter.module.css";
@@ -40,13 +41,11 @@ export default function About(props) {
                 <span className={textStyles.captionTxt}>{props.caption}</span>
               </p>
 
-              <button
-                className={"btn-black"}
+              <Button
+                className={"btnMedium"}
                 onClick={handleBtnRedirect}
-                type="button"
-              >
-                {props.btn}{" "}
-              </button>
+                txt={props.btn}
+              />
             </div>
           </div>
         </div>

@@ -18,7 +18,6 @@ export default function CustomSlider() {
     slidesToShow: 3,
     swipe: true,
     useCss: true,
-    // centerPadding: "60px",
     responsive: [
       {
         breakpoint: 481,
@@ -57,7 +56,7 @@ export default function CustomSlider() {
                   <h3 className={customSliderStyles.caption}>{product.name}</h3>
 
                   <button
-                    className={customSliderStyles.button}
+                    className={customSliderStyles.btn}
                     onClick={() => history.push(`product/${key}`)}
                   >
                     view item

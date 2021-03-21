@@ -6,7 +6,10 @@
 }
 
 .navLinks {
+  width: 100%;
   display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .navLink {
@@ -20,16 +23,14 @@
 }
 
 .wrapperDesktop {
-  width: 100%;
-}
-
-.logoDesktopLink {
-  margin-left: auto;
+  width: auto;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .logoDesktopImg {
-  width: 50%;
-  float: right;
+  width: 11rem;
 }
 
 .logoMobileLink {
@@ -43,10 +44,20 @@
 
 .cart {
   border: none;
-  background: white;
+  background: var(--background);
   margin-top: auto;
   margin-bottom: auto;
   margin-right: 0;
+}
+
+.cartIcon {
+  width: 2rem;
+  height: 2rem;
+  border: var(--btn-border);
+  border-radius: 50%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .closeBurgerBtn,
@@ -72,6 +83,11 @@
   background: white;
 }
 
+@media all and (min-width: 320px) and (max-width: 360px) {
+  .container {
+    padding-bottom: 1em;
+  }
+}
 @media all and (min-width: 320px) and (max-width: 767px) {
   .container {
     padding-top: 2em;
@@ -133,7 +149,7 @@
     top: 0;
     left: -100%;
     transition: left var(--transition);
-    background: white;
+    background: var(--background-color);
     border-right: var(--border);
     z-index: 100;
     padding: 2em;

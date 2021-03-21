@@ -83,13 +83,12 @@
 
 .btn {
   margin-top: 2em;
-
   width: 6em;
   height: 2.2em;
   font-size: 0.8em;
   background: white;
   color: black;
-  border: 1px solid var(--beige);
+  border: 1px solid #e0dbda;
 }
 
 .checkout {

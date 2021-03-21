@@ -18,16 +18,17 @@
 }
 
 body {
-  background: var(--background);
+  background: var(--background-color);
 }
 
 :root {
-  --container: 95vw;
+  --container: 80vw;
   /* --text: rgba(57, 57, 57, 1); */
-  --background: #fdf8f4;
+  --background-color: #fdf8f4;
   --text: rgb(66 65 65);
   --headings: rgb(123 123 123);
   --lightgray: #dbdbdb;
+  --gray: #e0dbda;
   --beige: rgb(234, 227, 217);
   --section: 5em;
   --body: "Raleway", sans-serif;
@@ -36,7 +37,8 @@ body {
   --bold: "Oswald", sans-serif;
   --caption-size: 4em;
   --transition: 1s ease-in-out;
-  --border: 1px solid rgb(234, 227, 217);
+  --border: 2px solid rgb(234, 227, 217);
+  --btn-border: 2px solid #e0dbda;
   --line-height: 1.5;
 }
 
@@ -65,7 +67,7 @@ img {
 }
 
 .container {
-  width: 95vw;
+  width: 85vw;
   margin: auto;
 }
 

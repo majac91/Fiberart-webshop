@@ -3,6 +3,7 @@ import textStyles from "../../../components/TextSection/text-section.module.css"
 import imgStyles from "../../../css-modules/photo-text-section.module.css";
 import newsletterStyles from "../components/Newsletter/newsletter.module.css";
 import { useElementOnScreen } from "../../../hooks/useOnIntersection";
+import Button from "../../../components/Button/Button";
 import featuredImg from "../../../img/white-painting.jpg";
 import Loader from "../../../components/Loader/Loader";
 const cx = require("classnames");
@@ -14,7 +15,7 @@ export default function Featured(props) {
 
   let textClass = props.section;
   return (
-    <section className={textClass}>
+    <section className={textClass} id="main">
       <div
         className={`${textStyles[textClass]} ${imgStyles[textClass]} ${textStyles.container} d-flex container`}
       >
@@ -49,9 +50,7 @@ export default function Featured(props) {
                   {props.paragraph}{" "}
                 </span>
               </p>
-              <button className={"btn-black"} type="button">
-                {props.btn}
-              </button>
+              <Button className={"btnMedium"} txt={props.btn} />
             </div>
           </div>
         </div>

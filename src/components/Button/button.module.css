@@ -1,0 +1,63 @@
+.btnWrapper {
+  font-size: 1rem;
+  width: 9em;
+  height: 9em;
+  position: relative;
+}
+
+.btnBorder {
+  width: 9em;
+  height: 9em;
+  border: var(--btn-border);
+  border-radius: 50%;
+  z-index: -1;
+  position: relative;
+  opacity: 1;
+}
+
+.btnWrapper:hover {
+  opacity: 0.7;
+  transition: opacity 0.5s ease;
+}
+
+.btn {
+  background: transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: none;
+  width: 9em;
+  height: 9em;
+  font-size: 1rem;
+}
+
+.headerBtn {
+  top: -4em;
+  left: 15em;
+}
+
+.btnMedium {
+  margin: auto;
+}
+
+@media all and (min-width: 320px) and (max-width: 360px) {
+  .btnWrapper,
+  .btn {
+    font-size: 0.5rem;
+  }
+}
+
+@media all and (min-width: 360px) and (max-width: 1024px) {
+  .btnWrapper,
+  .btn {
+    font-size: 0.8rem;
+  }
+}
+
+@media all and (min-width: 360px) and (max-width: 1024px) {
+  .headerBtn {
+    top: 0;
+    left: 0;
+    margin: auto;
+  }
+}
