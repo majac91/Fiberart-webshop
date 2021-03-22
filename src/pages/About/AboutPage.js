@@ -29,11 +29,10 @@ const AboutPage = () => {
   });
   return (
     <>
-      <Header page="about"></Header>
+      <Header page="about" />
       <main className="aboutPage">
         <TextSection
           section="aboutPageSubHeader"
-          message="Happiness is homemade"
           caption="1980"
           subcaption="When you recieve a piece from &Thread- you now own something truly unique with an unquestionable quality, which will connect you to the artist "
         />
@@ -46,12 +45,12 @@ const AboutPage = () => {
                 <img
                   alt="tapestry being made"
                   src={workshopImg}
-                  className={`${imgStyles.img} ${imgStyles.aboutPageImg1}`}
+                  className={` ${imgStyles.imgSmall}`}
                 />
                 <img
                   alt="tapestry with wooden frame"
                   src={detailImg}
-                  className={`${imgStyles.img} ${imgStyles.aboutPageImg2}`}
+                  className={imgStyles.imgBig}
                 />
               </>
             ) : (
@@ -61,8 +60,8 @@ const AboutPage = () => {
             )}
           </div>
 
-          <div className={`${imgStyles.text} `}>
-            <div className={` ${imgStyles.textOutter}`}>
+          <div className={imgStyles.text}>
+            <div className={imgStyles.textOutter}>
               <div className={imgStyles.textInner}>
                 <p
                   className={`${textStyles.aboutProduct} ${textStyles.caption}`}
@@ -109,11 +108,18 @@ const AboutPage = () => {
 
           <div className={imgStyles.imgWrapper}>
             {materialsImgIsOnScreen ? (
-              <img
-                alt="ball of white yarn"
-                src={materialsImg}
-                className={`${imgStyles.img} ${imgStyles.aboutPageImg3}`}
-              ></img>
+              <>
+                <img
+                  alt="ball of white yarn"
+                  src={materialsImg}
+                  className={imgStyles.imgBig}
+                ></img>
+                <img
+                  alt="tapestry being made"
+                  src={workshopImg}
+                  className={` ${imgStyles.imgSmall}`}
+                />
+              </>
             ) : (
               <div className={materialsPlaceholderStyle} ref={materialsImgRef}>
                 <Loader />

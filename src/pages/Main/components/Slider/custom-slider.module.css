@@ -16,12 +16,13 @@
   text-align: center;
 }
 
+.caption {
+  margin: 1rem 0;
+}
+
 .heading {
   text-align: center;
   padding-bottom: 3rem;
-}
-.caption {
-  margin: 1rem 0;
 }
 
 .btn {

@@ -38,7 +38,7 @@
 }
 
 .caption {
-  color: var(--headings);
+  color: var(--color-headings);
   font-size: 2em;
   font-weight: 600;
 }

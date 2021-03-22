@@ -20,7 +20,6 @@ const Checkout = ({ onClearCart, total, onDelete, cartItems }) => {
       <Header page="checkout" />
       <TextSection
         section="checkout"
-        message="Order details"
         caption="Complete your order"
         subcaption="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. "
       ></TextSection>

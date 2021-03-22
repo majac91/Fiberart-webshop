@@ -23,14 +23,14 @@ body {
 
 :root {
   --container: 80vw;
-  /* --text: rgba(57, 57, 57, 1); */
+  --letter-spacing: 0.1rem;
   --background-color: #fdf8f4;
-  --text: rgb(66 65 65);
-  --headings: rgb(123 123 123);
+  --color-primary: rgb(66 65 65);
+  --color-headings: rgb(123 123 123);
   --lightgray: #dbdbdb;
   --gray: #e0dbda;
   --beige: rgb(234, 227, 217);
-  --section: 5em;
+  --section: 8rem;
   --body: "Raleway", sans-serif;
   --captions: LibreCaslonDisplay, sans-serif;
   --outlined: "Altero", sans-serif;
@@ -89,7 +89,7 @@ img {
   font-size: 1em;
   max-width: 35em;
   margin: 0 auto 1em auto;
-  letter-spacing: 0.2em;
+  letter-spacing: var(--letter-spacing);
 }
 
 .btn-black {
@@ -121,6 +121,10 @@ img {
 
 /* Slider styles */
 /* Main page slider */
+
+.slider-main {
+  padding-bottom: var(--section);
+}
 .slick-slide img {
   object-fit: cover;
   object-position: top;
@@ -199,6 +203,14 @@ img {
 }
 
 @media all and (min-width: 320px) and (max-width: 768px) {
+  :root {
+    --container: 85vw;
+  }
+
+  .container {
+    width: 95vw;
+  }
+
   .btn-black {
     font-size: 1em;
   }

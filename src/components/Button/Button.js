@@ -5,14 +5,16 @@ const cx = require("classnames");
 const Button = ({ onClick, className, txt }) => {
   return (
     <div
-      className={` ${btnStyles.btnWrapper} ${cx({
+      className={cx({
         [btnStyles[className]]: className,
-      })}`}
+      })}
     >
-      <div className={btnStyles.btnBorder}></div>
-      <button onClick={onClick} className={btnStyles.btn}>
-        {txt}
-      </button>
+      <div className={btnStyles.btnWrapper}>
+        <div className={btnStyles.btnBorder}></div>
+        <button onClick={onClick} className={btnStyles.btn}>
+          {txt}
+        </button>
+      </div>
     </div>
   );
 };

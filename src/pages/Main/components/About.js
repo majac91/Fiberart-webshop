@@ -7,6 +7,7 @@ import textStyles from "../../../components/TextSection/text-section.module.css"
 import imgStyles from "../../../css-modules/photo-text-section.module.css";
 import newsletterStyles from "../components/Newsletter/newsletter.module.css";
 import aboutImg from "../../../img/about.jpg";
+import test from "../../../img/social2.jpg";
 const cx = require("classnames");
 
 export default function About(props) {
@@ -22,14 +23,11 @@ export default function About(props) {
 
   let textClass = props.section;
   return (
-    <section aria-label="About" className="aboutSection">
+    <section aria-label="About" className={imgStyles.aboutSection}>
       <div
         className={`${textStyles[textClass]} ${imgStyles[textClass]} ${textStyles.container} d-flex container`}
       >
         <div className={`${imgStyles.text}`}>
-          <div className={`${textStyles[textClass]} ${textStyles.msgWrapper}`}>
-            <p className={textStyles.sideMsg}>{props.message}</p>
-          </div>
           <div className={imgStyles.textOutter}>
             <div className={imgStyles.textInner}>
               <p
@@ -42,7 +40,7 @@ export default function About(props) {
               </p>
 
               <Button
-                className={"btnMedium"}
+                className={"btnMd"}
                 onClick={handleBtnRedirect}
                 txt={props.btn}
               />
@@ -52,11 +50,14 @@ export default function About(props) {
 
         <picture className={imgStyles.imgWrapper}>
           {isOnScreen ? (
-            <img
-              src={aboutImg}
-              alt="blonde woman in black and white outfit"
-              className={imgStyles.img}
-            ></img>
+            <>
+              <img
+                src={aboutImg}
+                alt="blonde woman in black and white outfit"
+                className={imgStyles.imgBig}
+              ></img>
+              <img src={test} className={imgStyles.imgSmall}></img>
+            </>
           ) : (
             <div className={placeholderStyle} ref={placeholderRef}>
               <Loader />

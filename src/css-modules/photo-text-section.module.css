@@ -1,19 +1,8 @@
 .imgWrapper {
-  height: 80vh;
-  width: 50vw;
+  max-height: 45vw;
+  width: 45vw;
   display: flex;
   justify-content: center;
-}
-
-.img {
-  background-size: cover;
-  background-position: center;
-  object-fit: contain;
-  height: 100%;
-}
-
-.text {
-  width: 50vw;
 }
 
 .textOutter {
@@ -24,9 +13,25 @@
 }
 
 .textInner {
-  width: 70%;
+  width: 100%;
   text-align: center;
   margin: 0 1em;
+}
+
+.text {
+  width: 50vw;
+}
+
+.imgBig {
+  width: 28vw;
+  object-fit: cover;
+}
+
+.imgSmall {
+  width: 14vw;
+  height: 20åvw;
+  margin-top: auto;
+  position: relative;
 }
 
 /* FEATURED SECTION */
@@ -35,25 +40,28 @@
   justify-content: flex-start;
 }
 
-.featured .img {
-  width: 30vw;
-  object-fit: cover;
+.featured .imgSmall {
+  left: 3rem;
+  bottom: 7rem;
 }
 
 .featured .imgWrapper {
   justify-content: flex-end;
 }
 
-/* ABOUT SECTION MAIN PAGE */
+/* ABOUT SECTION */
+.aboutSection,
+.featured {
+  padding-bottom: var(--section);
+}
 
 .about .imgWrapper {
   justify-content: flex-start;
 }
 
-.about .img {
-  background-image: url("../img/about.jpg");
-  width: 30vw;
-  object-fit: cover;
+.about .imgSmall {
+  right: 3rem;
+  bottom: -3rem;
 }
 
 .about .textOutter {
@@ -65,25 +73,15 @@
 }
 
 /* ABOUT PAGE */
-.aboutPageImg1 {
-  width: 20vw;
-  height: 50vh;
-  position: relative;
-  bottom: -3em;
-  left: 5em;
-  margin-top: auto;
+
+.aboutProduct .imgSmall {
+  left: 3rem;
+  bottom: -3rem;
 }
 
-.aboutPageImg2 {
-  width: 30vw;
-}
-
-.aboutPageImg3 {
-  width: 30vw;
-}
-
-.aboutProduct .textOutter {
-  margin-left: 2em;
+.aboutMaterials .imgSmall {
+  right: 3rem;
+  bottom: 7rem;
 }
 
 .aboutMaterials .textOutter {

@@ -32,18 +32,28 @@
 }
 
 .headerBtn {
+  position: relative;
   top: -4em;
   left: 15em;
 }
 
-.btnMedium {
+.btnMd {
   margin: auto;
+  width: 9rem;
+}
+
+.btnSm,
+.btnWrapper,
+.btnSm .btnBorder,
+.btnSm .btn {
+  width: 6em;
+  height: 6em;
 }
 
 @media all and (min-width: 320px) and (max-width: 360px) {
   .btnWrapper,
   .btn {
-    font-size: 0.5rem;
+    font-size: 0.7rem;
   }
 }
 
@@ -54,7 +64,7 @@
   }
 }
 
-@media all and (min-width: 360px) and (max-width: 1024px) {
+@media all and (min-width: 320px) and (max-width: 1024px) {
   .headerBtn {
     top: 0;
     left: 0;

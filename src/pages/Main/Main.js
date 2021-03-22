@@ -1,7 +1,6 @@
 import Header from "../../components/Header/Header";
 import Slider from "./components/Slider/Slider";
 import About from "./components/About";
-import Newsletter from "./components/Newsletter/Newsletter";
 import Featured from "./components/Featured";
 import Categories from "../Categories/Categories";
 
@@ -10,7 +9,8 @@ const Main = () => {
     <>
       <Header page="main" />
       <main className="mainPage">
-        <Categories />
+        <Slider />
+
         <Featured
           section="featured"
           message="Featured promo"
@@ -19,7 +19,7 @@ const Main = () => {
           paragraph=" All my best-kept secrets to decorate your entire home. From minimal table settings to cozy bathroom decorations. Everything helpful and inspiring to pour love into your home. "
           btn="buy now"
         />
-        <Slider />
+        <Categories />
         <About
           section="about"
           message="About me"
@@ -27,7 +27,6 @@ const Main = () => {
           subcaption="hey lovely, I am"
           btn="read more"
         />
-        <Newsletter />
       </main>
     </>
   );

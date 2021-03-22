@@ -36,7 +36,7 @@
 }
 
 .faqText {
-  letter-spacing: 0.02em;
+  letter-spacing: var(--letter-spacing);
   display: flex;
   flex-direction: column;
   justify-content: center;

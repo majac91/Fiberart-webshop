@@ -16,10 +16,6 @@ export default function TextSection(props) {
     <section
       className={cx(textStyles[textClass], textStyles.container, "container")}
     >
-      <div className={cx(textStyles[textClass], textStyles.msgWrapper)}>
-        <aside className={textStyles.sideMsg}>{props.message}</aside>
-      </div>
-
       {(props.section === "checkout" ||
         props.section === "shop" ||
         props.section === "contact") && (

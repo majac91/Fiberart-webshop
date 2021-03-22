@@ -15,7 +15,7 @@
 .navLink {
   margin-right: 2em;
   text-transform: lowercase;
-  letter-spacing: 0.2em;
+  letter-spacing: var(--letter-spacing);
   font-weight: 600;
   font-size: 0.9em;
   font-family: var(--body);

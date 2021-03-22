@@ -14,7 +14,6 @@ const Contact = () => {
       <Header page="checkout"></Header>
       <TextSection
         section="contact"
-        message="Let's connect"
         caption="Come say hi!"
         subcaption="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. "
       />

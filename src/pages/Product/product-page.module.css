@@ -11,7 +11,7 @@
   align-items: center;
   font-family: var(--captions);
   font-size: var(--caption-size);
-  letter-spacing: 0.02em;
+  letter-spacing: var(--letter-spacing);
   font-weight: 500;
   color: white;
   width: 100%;
