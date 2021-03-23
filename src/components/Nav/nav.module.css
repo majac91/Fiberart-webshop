@@ -1,21 +1,19 @@
 .container {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   padding-bottom: 3em;
   padding-top: 1em;
 }
 
 .navLinks {
-  width: 100%;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
 
 .navLink {
   margin-right: 2em;
   text-transform: lowercase;
-  letter-spacing: var(--letter-spacing);
+  letter-spacing: 0.2em;
   font-weight: 600;
   font-size: 0.9em;
   font-family: var(--body);
@@ -23,14 +21,15 @@
 }
 
 .wrapperDesktop {
-  width: auto;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
+  width: 100%;
+}
+
+.wrapperMobile {
+  display: none;
 }
 
 .logoDesktopImg {
-  width: 11rem;
+  width: 50%;
 }
 
 .logoMobileLink {
@@ -44,32 +43,22 @@
 
 .cart {
   border: none;
-  background: var(--background);
+  background: var(--color-background);
   margin-top: auto;
   margin-bottom: auto;
   margin-right: 0;
-}
-
-.cartIcon {
-  width: 2rem;
-  height: 2rem;
-  border: var(--btn-border);
-  border-radius: 50%;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .closeBurgerBtn,
 .burgerBtn {
   outline: none;
   border: none;
-  background: white;
   text-align: right;
 }
 
 .closeBurgerBtn {
   justify-content: flex-start;
+  background: white;
 }
 
 .closeIcon {
@@ -77,17 +66,16 @@
   height: 1.3em;
 }
 
+.burgerBtn,
+.burderIcon {
+  background: var(--color-background);
+}
+
 .burgerIcon {
   width: 2em;
   height: 2em;
-  background: white;
 }
 
-@media all and (min-width: 320px) and (max-width: 360px) {
-  .container {
-    padding-bottom: 1em;
-  }
-}
 @media all and (min-width: 320px) and (max-width: 767px) {
   .container {
     padding-top: 2em;
@@ -149,16 +137,14 @@
     top: 0;
     left: -100%;
     transition: left var(--transition);
-    background: var(--background-color);
-    border-right: var(--border);
+    background: white;
     z-index: 100;
     padding: 2em;
-    visibility: hidden;
   }
 
   .wrapperDesktop .navLink::after {
     content: "";
-    border-bottom: 2px solid var(--beige);
+    border-bottom: var(--border-gray);
     width: 100%;
     display: inline-block;
     position: relative;
@@ -167,7 +153,6 @@
 
   .open {
     left: 0;
-    visibility: visible;
   }
 }
 

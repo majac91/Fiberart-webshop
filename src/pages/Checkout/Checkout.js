@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import Header from "../../components/Header/Header";
-import TextSection from "../../components/TextSection";
 import CheckoutForm from "./components/Form/CheckoutForm";
 import cartStyles from "../../components/Cart/cart.module.css";
 import checkoutStyles from "./checkout.module.css";
@@ -17,13 +16,8 @@ const Checkout = ({ onClearCart, total, onDelete, cartItems }) => {
 
   return (
     <>
-      <Header page="checkout" />
-      <TextSection
-        section="checkout"
-        caption="Complete your order"
-        subcaption="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. "
-      ></TextSection>
-      <div className={`${checkoutStyles.container} d-flex container`}>
+      <Header page="checkout" caption="Complete your order" />
+      <main className={`${checkoutStyles.container} d-flex container`}>
         {/* F O R M */}
         <div className={checkoutStyles.form}>
           <CheckoutForm setIsOrdered={setIsOrdered} cartItems={cartItems} />
@@ -86,7 +80,7 @@ const Checkout = ({ onClearCart, total, onDelete, cartItems }) => {
             <SubmitMsg />
           )}
         </div>
-      </div>
+      </main>
     </>
   );
 };

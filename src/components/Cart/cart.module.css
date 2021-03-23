@@ -7,8 +7,8 @@
   top: 0;
   right: -100%;
   transition: right var(--transition);
-  background: white;
   border-left: var(--border);
+  background: white;
   z-index: 100;
 }
 
@@ -94,7 +94,7 @@
 .checkout {
   padding: 1em;
   background: white;
-  border: 2px solid var(--beige);
+  border: var(--border-gray);
   font-size: 0.8rem;
 }
 
@@ -117,7 +117,7 @@
 
 .shipping {
   padding-bottom: 2em;
-  border-bottom: 2px solid var(--beige);
+  border-bottom: var(--border-gray);
 }
 
 .span {

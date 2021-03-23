@@ -1,5 +1,5 @@
 import React from "react";
-import textStyles from "../../components/TextSection/text-section.module.css";
+import textStyles from "../../css-modules/text-section.module.css";
 import submitMsgStyles from "./submit-msg.module.css";
 
 const SubmitMsg = () => {

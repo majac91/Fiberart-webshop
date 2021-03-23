@@ -27,7 +27,7 @@
 .infoWrapperOutter {
   height: 100%;
   display: flex;
-  border-right: 2px solid var(--beige);
+  border-right: var(--border-gray);
 }
 
 .infoWrapperInner {
@@ -37,7 +37,6 @@
 }
 
 .title {
-  font-weight: 600;
   padding-bottom: 1em;
 }
 
@@ -89,7 +88,7 @@
   }
 
   .title {
-    border-bottom: 2px solid var(--beige);
+    border-bottom: var(--border-gray);
     padding-bottom: 0;
   }
 

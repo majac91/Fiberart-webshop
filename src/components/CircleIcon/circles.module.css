@@ -21,6 +21,6 @@
 .side,
 .center {
   display: inline-block;
-  border: var(--btn-border);
+  border: var(--border-btn);
   border-radius: 50%;
 }

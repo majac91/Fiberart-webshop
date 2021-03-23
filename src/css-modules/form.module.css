@@ -13,7 +13,7 @@
   border-color: black;
   height: 2em;
   margin-right: 1em;
-  background: var(--background);
+  background: var(--color-background);
 }
 
 label {

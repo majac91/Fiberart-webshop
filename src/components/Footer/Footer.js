@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 import { useElementOnScreen } from "../../hooks/useOnIntersection";
 import Loader from "../../components/Loader/Loader";
 import Newsletter from "../Newsletter/Newsletter";
-import textStyles from "../TextSection/text-section.module.css";
+import textStyles from "../../css-modules/text-section.module.css";
 import footerStyles from "./footer.module.css";
 
 import logo from "../../img/logo.png";
@@ -65,7 +65,7 @@ export default function Footer(props) {
                 className={footerStyles.logo}
               ></img>
             </div>
-            <p className="p-small text-column">
+            <p className="text-column">
               <span>{props.paragraph} </span>
             </p>
             <div>

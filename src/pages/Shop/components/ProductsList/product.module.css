@@ -2,9 +2,9 @@
   overflow: hidden;
 
   display: grid;
-  grid-template-columns: 46vw 46vw;
+  grid-template-columns: 40vw 40vw;
   grid-template-rows: 50% 50%;
-  grid-gap: 3vw;
+  grid-gap: 5vw;
   align-items: center;
   margin: auto;
 }
@@ -50,7 +50,7 @@
 
 .caption,
 .button {
-  font-family: var(--body);
+  font-family: var(--font-primary);
 }
 
 .price {
@@ -58,7 +58,7 @@
 }
 
 .button {
-  border: 2px solid var(--beige);
+  border: var(--border-gray);
   max-width: 30em;
   padding: 1em 2em;
   display: inline-block;

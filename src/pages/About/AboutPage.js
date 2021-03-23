@@ -1,8 +1,7 @@
 import React, { useRef } from "react";
 import { useElementOnScreen } from "../../hooks/useOnIntersection";
-import TextSection from "../../components/TextSection";
 import Header from "../../components/Header/Header";
-import textStyles from "../../components/TextSection/text-section.module.css";
+import textStyles from "../../css-modules/text-section.module.css";
 import imgStyles from "../../css-modules/photo-text-section.module.css";
 import workshopImg from "../../img/header1.jpg";
 import detailImg from "../../img/header2.jpg";
@@ -29,13 +28,12 @@ const AboutPage = () => {
   });
   return (
     <>
-      <Header page="about" />
+      <Header
+        page="about"
+        s
+        caption="When you recieve a piece from &Thread- you now own something truly unique with an unquestionable quality, which will connect you to the artist "
+      />
       <main className="aboutPage">
-        <TextSection
-          section="aboutPageSubHeader"
-          caption="1980"
-          subcaption="When you recieve a piece from &Thread- you now own something truly unique with an unquestionable quality, which will connect you to the artist "
-        />
         <section
           className={`${textStyles.aboutProduct} ${imgStyles.aboutProduct} ${textStyles.container} d-flex container`}
         >

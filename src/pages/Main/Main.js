@@ -1,16 +1,17 @@
-import Header from "../../components/Header/Header";
+import Hero from "./components/Hero/Hero";
 import Slider from "./components/Slider/Slider";
 import About from "./components/About";
 import Featured from "./components/Featured";
 import Categories from "../Categories/Categories";
+import Header from "../../components/Header/Header";
 
 const Main = () => {
   return (
     <>
-      <Header page="main" />
+      <Hero page="main" />
       <main className="mainPage">
+        <Categories />
         <Slider />
-
         <Featured
           section="featured"
           message="Featured promo"
@@ -19,7 +20,10 @@ const Main = () => {
           paragraph=" All my best-kept secrets to decorate your entire home. From minimal table settings to cozy bathroom decorations. Everything helpful and inspiring to pour love into your home. "
           btn="buy now"
         />
-        <Categories />
+        <Header
+          page="checkout"
+          caption={"lorem ipsum lorem ipsum lorem ipsum"}
+        />
         <About
           section="about"
           message="About me"

@@ -8,7 +8,7 @@
 .btnBorder {
   width: 9em;
   height: 9em;
-  border: var(--btn-border);
+  border: var(--border-btn);
   border-radius: 50%;
   z-index: -1;
   position: relative;

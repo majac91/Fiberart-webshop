@@ -1,45 +1,77 @@
 @font-face {
-  font-family: Altero;
-  src: url("../src/fonts/ZnikomitNo25.ttf.woff");
+  font-family: Chamberi;
+  src: url("../src/fonts/ChamberiDisplay-ExtraLight.otf") format("otf"),
+    url("../src/fonts/ChamberiDisplay-ExtraLight.otf");
 }
 
 @font-face {
-  font-family: LibreCaslonDisplay;
-  src: url("../src/fonts/LibreCaslonDisplay-Regular.ttf") format("ttf"),
-    url("../src/fonts/ChamberiDisplay-ExtraLight.otf");
+  font-family: Torinout;
+  src: url("../src/fonts/perlaalternate.ttf");
 }
 
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  font-family: var(--body);
-  color: var(--text);
-}
-
-body {
-  background: var(--background-color);
 }
 
 :root {
-  --container: 80vw;
+  /* base values */
+  --text-base-size: 1em;
+  --text-scale-ratio: 1.4;
+
+  /* type scale */
+  --text-xs: calc(
+    (var(--text-base-size)) /
+      (var(--text-scale-ratio) * var(--text-scale-ratio))
+  );
+  --text-sm: calc((var(--text-base-size)) / var(--text-scale-ratio));
+  --text-md: calc((var(--text-base-size)) * var(--text-scale-ratio));
+  --text-lg: calc(
+    (var(--text-base-size)) * var(--text-scale-ratio) * var(--text-scale-ratio) *
+      var(--text-scale-ratio)
+  );
+  --text-xl: calc(
+    (var(--text-base-size)) * var(--text-scale-ratio) * var(--text-scale-ratio) *
+      var(--text-scale-ratio)
+  );
+  --text-xxl: calc(
+    (var(--text-base-size)) * var(--text-scale-ratio) * var(--text-scale-ratio) *
+      var(--text-scale-ratio) * var(--text-scale-ratio)
+  );
+
+  /* fonts */
+  --font-primary: "Raleway", serif;
+  --font-secondary: "Chamberi", serif;
+  --font-accent: "Torinout", serif;
+
+  /* text styling */
   --letter-spacing: 0.1rem;
-  --background-color: #fdf8f4;
-  --color-primary: rgb(66 65 65);
+  --line-height: 1.5;
+  --heading-line-height: 1.2;
+  --body-line-height: 1.4;
+
+  /* colors */
+  --color-text: rgb(66 65 65);
   --color-headings: rgb(123 123 123);
-  --lightgray: #dbdbdb;
-  --gray: #e0dbda;
+  --color-background: #fdf8f4;
+
+  /* borders */
+  --border-beige: 2px solid rgb(234, 227, 217);
+  --border-gray: 2px solid #e0dbda;
+  --border-btn: 2px solid #e0dbda;
+
+  --container: 80vw;
   --beige: rgb(234, 227, 217);
   --section: 8rem;
-  --body: "Raleway", sans-serif;
-  --captions: LibreCaslonDisplay, sans-serif;
-  --outlined: "Altero", sans-serif;
-  --bold: "Oswald", sans-serif;
-  --caption-size: 4em;
   --transition: 1s ease-in-out;
-  --border: 2px solid rgb(234, 227, 217);
-  --btn-border: 2px solid #e0dbda;
-  --line-height: 1.5;
+}
+
+body {
+  background-color: var(--color-background);
+  font-size: var(--text-base-size);
+  font-family: var(--font-primary);
+  color: var(--color-text);
 }
 
 li {
@@ -48,6 +80,7 @@ li {
 
 a {
   text-decoration: none;
+  color: var(--color-text);
 }
 
 a,
@@ -61,11 +94,34 @@ button:hover {
   transition: opacity 0.5s ease;
 }
 
-img {
-  font-weight: 600;
-  font-size: 0.9rem;
+h1 {
+  font-family: var(--font-secondary);
+  font-size: var(--text-xl);
+  font-weight: 800;
+  text-transform: uppercase;
 }
 
+h2 {
+  font-family: var(--font-primary);
+  font-size: var(--text-md);
+  font-weight: 400;
+  line-height: var(--line-height);
+}
+
+h3 {
+  font-family: var(--font-primary);
+  font-size: var(--text-md);
+  font-weight: 600;
+}
+
+h1,
+h2 {
+  letter-spacing: var(--letter-spacing);
+}
+
+p {
+  font-size: var(--text-md);
+}
 .container {
   width: 85vw;
   margin: auto;
@@ -82,14 +138,6 @@ img {
   width: 1px;
   height: 1px;
   overflow: hidden;
-}
-
-.p-small {
-  font-family: "Ralewawy";
-  font-size: 1em;
-  max-width: 35em;
-  margin: 0 auto 1em auto;
-  letter-spacing: var(--letter-spacing);
 }
 
 .btn-black {
@@ -119,7 +167,7 @@ img {
   opacity: 0;
 }
 
-/* Slider styles */
+/* Slider */
 /* Main page slider */
 
 .slider-main {
@@ -179,7 +227,6 @@ img {
 .productSlider button.slick-arrow.slick-next {
   left: -0.4rem;
   top: 102%;
-  background: transparent;
   width: 3rem;
   height: 2rem;
 }
@@ -187,9 +234,8 @@ img {
 .productSlider button.slick-arrow.slick-next::before {
   content: "next";
   color: black;
-  font-family: var(--body);
+  font-family: var(--font-primary);
   font-weight: 600;
-  font-size: 1.2rem;
 }
 
 .productSlider .slick-slide img {
@@ -205,6 +251,7 @@ img {
 @media all and (min-width: 320px) and (max-width: 768px) {
   :root {
     --container: 85vw;
+    --text-scale-ratio: 1.2em;
   }
 
   .container {
@@ -215,21 +262,12 @@ img {
     font-size: 1em;
   }
 
-  .p-small {
-    width: 80vw;
-    font-size: 0.9em;
-  }
-
   .slider-main .slick-slide img {
     width: 70vw;
   }
 }
 
 @media all and (min-width: 768px) and (max-width: 1024px) {
-  .p-small {
-    max-width: 20em;
-  }
-
   .slider-main .slick-slide img {
     width: 23vw;
     height: 30vh;
@@ -237,11 +275,5 @@ img {
 
   .slider-main .slick-center img {
     height: 35vh;
-  }
-}
-
-@media all and (min-width: 1024px) and (max-width: 1280px) {
-  .p-small {
-    max-width: 30em;
   }
 }

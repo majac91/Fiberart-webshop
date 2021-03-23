@@ -1,0 +1,33 @@
+.container {
+  height: auto;
+  padding-bottom: var(--section);
+}
+
+.wrapper {
+  height: 70vh;
+  display: flex;
+  flex-wrap: wrap;
+  width: inherit;
+  color: var(--headings);
+}
+
+.captionWrapper {
+  position: relative;
+  right: 3%;
+  bottom: 10%;
+}
+
+.section {
+  width: 31%;
+  margin: auto;
+}
+
+.img1 {
+  float: right;
+}
+
+.img2 {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}

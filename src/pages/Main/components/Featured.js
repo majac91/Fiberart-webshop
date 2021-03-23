@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
-import textStyles from "../../../components/TextSection/text-section.module.css";
+import textStyles from "../../../css-modules/text-section.module.css";
 import imgStyles from "../../../css-modules/photo-text-section.module.css";
-import newsletterStyles from "../components/Newsletter/newsletter.module.css";
+import newsletterStyles from "../../../components/Newsletter/Newsletter";
 import { useElementOnScreen } from "../../../hooks/useOnIntersection";
 import Button from "../../../components/Button/Button";
 import featuredImg from "../../../img/featured-2.jpg";

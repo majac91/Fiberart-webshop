@@ -1,7 +1,7 @@
 import { useHistory } from "react-router-dom";
 import { useProductList } from "../../../../firebase/api";
 import customSliderStyles from "./custom-slider.module.css";
-import textStyles from "../../../../components/TextSection/text-section.module.css";
+import textStyles from "../../../../css-modules/text-section.module.css";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";

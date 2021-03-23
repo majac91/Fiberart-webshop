@@ -15,11 +15,10 @@ export default function Nav({
   cartCount,
 }) {
   return (
-    <nav
-      aria-label="Navigation"
-      ref={clickOutsideRef}
-      className={`${navStyles.container} container`}
-    >
+    <nav ref={clickOutsideRef} className={`${navStyles.container} container`}>
+      <Link to="/" className={navStyles.logoDesktopLink}>
+        <img alt="homepage" className={navStyles.logoDesktopImg} src={logo} />
+      </Link>
       <div
         className={cx(navStyles.navLinks, {
           [navStyles.open]: burgerIsOpen,
@@ -29,15 +28,8 @@ export default function Nav({
           className={`${navStyles.closeBurgerBtn} ignoreClickOutside`}
           onClick={onBurgerClick}
         >
-          <img
-            alt="close"
-            className={navStyles.closeIcon}
-            src={closeIcon}
-          ></img>
+          <img alt="close" className={navStyles.closeIcon} src={closeIcon} />
         </button>
-        <Link to="/" className={navStyles.logoDesktopLink}>
-          <img alt="homepage" className={navStyles.logoDesktopImg} src={logo} />
-        </Link>
         <ul className={`${navStyles.wrapperDesktop} d-flex`}>
           <li>
             <Link to="/" className={cx(navStyles.navLink)}>
@@ -64,7 +56,7 @@ export default function Nav({
               onClick={onCartClick}
               className={`${navStyles.navLink} ${navStyles.cart} ignoreClickOutside`}
             >
-              Cart <span className={navStyles.cartIcon}>{cartCount}</span>
+              Cart ({cartCount})
             </button>
           </li>
         </ul>
@@ -77,14 +69,14 @@ export default function Nav({
             src={burgerIcon}
           />
         </button>
-        <Link to="/" className={navStyles.logoMobileLink} tabIndex="0">
+        <Link to="/" className={navStyles.logoMobileLink}>
           <img alt="homepage" className={navStyles.logoMobileImg} src={logo} />
         </Link>
         <button
           onClick={onCartClick}
           className={`${navStyles.navLink} ${navStyles.cart} ignoreClickOutside`}
         >
-          Cart <span className={navStyles.cartIcon}>{cartCount}</span>
+          Cart ({cartCount})
         </button>
       </div>
     </nav>

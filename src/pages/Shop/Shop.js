@@ -1,5 +1,4 @@
 import React from "react";
-import TextSection from "../../components/TextSection/TextSection";
 import Header from "../../components/Header/Header";
 import ProductList from "./components/ProductsList/ProductList";
 import Faq from "./components/FAQ/Faq";
@@ -7,15 +6,11 @@ import Faq from "./components/FAQ/Faq";
 const Shop = () => {
   return (
     <>
-      <Header page="shop" />
+      <Header
+        page="shop"
+        caption="Each of these beauties will be perfect for every kind of home"
+      />
       <main>
-        <TextSection
-          section="shop"
-          message="handmade treasures"
-          caption="The shop"
-          subcaption="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa."
-          links={true}
-        ></TextSection>
         <ProductList />
         <Faq />
       </main>

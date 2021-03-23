@@ -3,28 +3,18 @@
   padding-bottom: var(--section);
 }
 
-.caption {
+/* .caption {
   width: 100%;
   margin: auto;
-}
+} */
 
 .captionTxt {
   width: 100%;
   margin: 0 auto;
   display: inline-block;
-  font-family: var(--captions);
-  font-weight: 500;
-  font-size: 2em;
-  letter-spacing: var(--letter-spacing);
-  color: var(--color-headings);
 }
 
 .subcaption {
-  font-size: 1.2em;
-  font-family: var(--body);
-  font-weight: 400;
-  letter-spacing: 0.2em;
-  line-height: 1.4;
   padding-top: 0.5em;
   margin: 1em auto;
   width: 30vw;
@@ -62,23 +52,10 @@
   display: none;
 }
 
-.since {
-  display: inline-block;
-  width: 100%;
-  margin: auto;
-}
-
-.year {
-  width: 70%;
-  font-family: var(--outlined);
-  font-size: 4em;
-}
-
 .aboutProduct .captionTxt {
-  color: var(--body);
   font-weight: 400;
   font-size: 1.8em;
-  font-family: var(--body);
+  font-family: var(--font-primary);
 }
 
 .aboutMaterials .caption {

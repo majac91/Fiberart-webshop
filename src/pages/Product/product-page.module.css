@@ -9,8 +9,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: var(--captions);
-  font-size: var(--caption-size);
+  font-family: var(--font-secondary);
+  font-size: var(--text-xl);
   letter-spacing: var(--letter-spacing);
   font-weight: 500;
   color: white;
@@ -36,7 +36,7 @@
 
 .imgWrapper::after {
   content: "";
-  border-bottom: 2px solid var(--beige);
+  border-bottom: var(--border-gray);
   width: 90%;
   display: inline-block;
   position: relative;

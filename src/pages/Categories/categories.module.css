@@ -31,7 +31,7 @@
 .txt {
   margin: 0;
   width: auto;
-  font-family: var(--captions);
+  font-family: var(--font-secondary);
   font-size: 3rem;
   font-weight: 700;
   position: relative;
