@@ -1,6 +1,5 @@
 .container {
   height: auto;
-  padding-bottom: var(--section);
 }
 
 .wrapper {
@@ -30,4 +29,60 @@
   object-fit: cover;
   width: 100%;
   height: 100%;
+}
+
+.caption {
+  /* color: red; */
+}
+
+.subcaption {
+  left: 0;
+  margin-left: 2rem;
+  margin-top: 1rem;
+}
+
+@media all and (min-width: 320px) and (max-width: 768px) {
+  .wrapper {
+    height: auto;
+  }
+
+  .img1 {
+    height: 14rem;
+    float: right;
+    margin-right: 1rem;
+    margin-left: 1rem;
+  }
+
+  .captionWrapper {
+    bottom: 0;
+    right: 0;
+  }
+
+  .captionOutter {
+    position: relative;
+    right: 3%;
+    bottom: 10%;
+    text-align: left;
+    width: 80%;
+    margin: auto;
+  }
+
+  .caption {
+    width: auto;
+  }
+
+  /* .subcaption {
+    left: 0;
+    margin: 1rem 0;
+  } */
+
+  .section {
+    width: 45vw;
+  }
+
+  .section:last-of-type {
+    width: 90vw;
+    margin: auto;
+    text-align: center;
+  }
 }

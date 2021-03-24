@@ -3,6 +3,11 @@
   src: url("../src/fonts/ChamberiDisplay-ExtraLight.otf") format("otf"),
     url("../src/fonts/ChamberiDisplay-ExtraLight.otf");
 }
+@font-face {
+  font-family: ChamberiHeadline;
+  src: url("../src/fonts/ChamberiDisplay-Regular.otf") format("otf"),
+    url("../src/fonts/ChamberiDisplay-Regular.otf");
+}
 
 @font-face {
   font-family: Torinout;
@@ -17,7 +22,7 @@
 
 :root {
   /* base values */
-  --text-base-size: 1em;
+  --text-base-size: 0.8em;
   --text-scale-ratio: 1.4;
 
   /* type scale */
@@ -28,21 +33,19 @@
   --text-sm: calc((var(--text-base-size)) / var(--text-scale-ratio));
   --text-md: calc((var(--text-base-size)) * var(--text-scale-ratio));
   --text-lg: calc(
-    (var(--text-base-size)) * var(--text-scale-ratio) * var(--text-scale-ratio) *
-      var(--text-scale-ratio)
+    (var(--text-base-size)) * var(--text-scale-ratio) * var(--text-scale-ratio)
   );
   --text-xl: calc(
-    (var(--text-base-size)) * var(--text-scale-ratio) * var(--text-scale-ratio) *
-      var(--text-scale-ratio)
+    (var(--text-base-size)) * var(--text-scale-ratio) * var(--text-scale-ratio)
   );
   --text-xxl: calc(
     (var(--text-base-size)) * var(--text-scale-ratio) * var(--text-scale-ratio) *
-      var(--text-scale-ratio) * var(--text-scale-ratio)
+      var(--text-scale-ratio)
   );
 
   /* fonts */
   --font-primary: "Raleway", serif;
-  --font-secondary: "Chamberi", serif;
+  --font-secondary: "ChamberiHeadline", serif;
   --font-accent: "Torinout", serif;
 
   /* text styling */
@@ -96,22 +99,21 @@ button:hover {
 
 h1 {
   font-family: var(--font-secondary);
-  font-size: var(--text-xl);
-  font-weight: 800;
+  font-size: var(--text-xxl);
   text-transform: uppercase;
 }
 
 h2 {
   font-family: var(--font-primary);
-  font-size: var(--text-md);
+  font-size: var(--text-xl);
   font-weight: 400;
   line-height: var(--line-height);
 }
 
 h3 {
   font-family: var(--font-primary);
-  font-size: var(--text-md);
-  font-weight: 600;
+  font-size: var(--text-lg);
+  font-weight: 800;
 }
 
 h1,
@@ -120,8 +122,14 @@ h2 {
 }
 
 p {
-  font-size: var(--text-md);
+  font-size: var(--text-lg);
 }
+
+section,
+footer {
+  padding-top: var(--section);
+}
+
 .container {
   width: 85vw;
   margin: auto;
@@ -170,9 +178,6 @@ p {
 /* Slider */
 /* Main page slider */
 
-.slider-main {
-  padding-bottom: var(--section);
-}
 .slick-slide img {
   object-fit: cover;
   object-position: top;
@@ -251,7 +256,8 @@ p {
 @media all and (min-width: 320px) and (max-width: 768px) {
   :root {
     --container: 85vw;
-    --text-scale-ratio: 1.2em;
+    --text-base-size: 0.7em;
+    --section: 5rem;
   }
 
   .container {

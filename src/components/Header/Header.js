@@ -45,8 +45,10 @@ export default function Header({ page, caption }) {
             <p className={headerStyles.year}>1980</p>
           </>
         )}
-        <h1 className={cx(headerStyles[textClass], headerStyles.caption)}>
-          <span>{caption}</span>
+        <h1
+          className={cx(headerStyles[textClass], headerStyles.captionWrapper)}
+        >
+          <span className={headerStyles.caption}>{caption}</span>
         </h1>
       </header>
     </>

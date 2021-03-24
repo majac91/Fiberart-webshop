@@ -6,7 +6,6 @@
   height: 55vh;
   margin: auto;
   border-bottom: var(--border-gray);
-  margin-bottom: var(--section);
   margin-top: 4rem;
   position: relative;
 }
@@ -20,9 +19,17 @@
   z-index: -10;
 }
 
-.caption {
+.captionWrapper {
   width: 40%;
+  height: 36vh;
+  display: flex;
   text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.caption {
+  margin: auto 0;
 }
 
 .subcaption {
@@ -42,64 +49,28 @@
 
 .year {
   font-family: var(--font-accent);
-  font-size: var(--text-xxl);
+  font-size: 4rem;
 }
 
 .about .caption {
-  width: 70%;
+  width: auto;
+  margin: 0;
 }
 
 @media all and (min-width: 320px) and (max-width: 400px) {
-  /* .caption {
-    font-size: 1.2rem;
-  }
-
-  .subcaption {
-    font-size: 1rem;
-  } */
-
-  .mainImg1 {
-    height: 10rem;
+  .captionWrapper {
+    width: 80%;
   }
 }
 
 @media all and (min-width: 400px) and (max-width: 768px) {
-  /* .caption {
-    font-size: 2rem;
-  } */
-
-  .mainImg1 {
-    height: 14rem;
+  .captionWrapper {
+    width: 60%;
   }
 }
 
-@media all and (min-width: 320px) and (max-width: 768px) {
-  .section {
-    width: 45vw;
-  }
-
-  .section:last-of-type {
-    width: 90vw;
-    margin: auto;
-  }
-
-  .mainImg1 {
-    float: right;
-    margin-right: 1rem;
-    margin-left: 1rem;
-  }
-
-  /* .captionWrapper {
-    bottom: 0;
-    right: 0;
-  } */
-
-  /* .caption {
-    width: auto;
-  } */
-
-  .subcaption {
-    left: 0;
-    margin: 1rem 0;
+@media all and (min-width: 320px) and (max-width: 500px) {
+  .about .captionWrapper {
+    font-size: var(--text-lg);
   }
 }

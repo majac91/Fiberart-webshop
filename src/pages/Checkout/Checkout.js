@@ -19,11 +19,13 @@ const Checkout = ({ onClearCart, total, onDelete, cartItems }) => {
       <Header page="checkout" caption="Complete your order" />
       <main className={`${checkoutStyles.container} d-flex container`}>
         {/* F O R M */}
-        <div className={checkoutStyles.form}>
+        <section className={checkoutStyles.form}>
           <CheckoutForm setIsOrdered={setIsOrdered} cartItems={cartItems} />
-        </div>
+        </section>
         {/* C A R T */}
-        <div className={`${cartStyles.wrapperOutter} ${checkoutStyles.cart}`}>
+        <section
+          className={`${cartStyles.wrapperOutter} ${checkoutStyles.cart}`}
+        >
           {!isOrdered ? (
             <>
               {/* CART HEADER */}
@@ -79,7 +81,7 @@ const Checkout = ({ onClearCart, total, onDelete, cartItems }) => {
           ) : (
             <SubmitMsg />
           )}
-        </div>
+        </section>
       </main>
     </>
   );

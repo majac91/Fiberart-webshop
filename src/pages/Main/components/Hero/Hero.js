@@ -26,7 +26,7 @@ const Hero = () => {
           ></img>
         </div>
         <div className={`${heroStyles.section} ${heroStyles.captionWrapper}`}>
-          <div className={heroStyles.captionWrapper}>
+          <div className={heroStyles.captionOutter}>
             <div className={heroStyles.captionInnerWrapper}>
               <p>New at &Thread</p>
               <h1 className={heroStyles.caption}>

@@ -16,7 +16,7 @@ const Products = () => {
   return (
     <>
       {isOnScreen ? (
-        <div className={`${productStyles.container} container`}>
+        <section className={`${productStyles.container} container`}>
           {Object.keys(products).map((key) => {
             let product = products[key];
             return (
@@ -37,7 +37,7 @@ const Products = () => {
               </div>
             );
           })}
-        </div>
+        </section>
       ) : (
         <div ref={placeholder} className={placeholderStyle}>
           <Loader />

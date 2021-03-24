@@ -38,7 +38,7 @@ export default function CustomSlider() {
   };
 
   return (
-    <div aria-label="Slideshow" className={"slider-main container"}>
+    <section aria-label="Slideshow" className={"slider-main container"}>
       <h2 className={`${textStyles.captionTxt} ${customSliderStyles.heading}`}>
         New from our studio
       </h2>
@@ -69,6 +69,6 @@ export default function CustomSlider() {
           );
         })}
       </Slider>
-    </div>
+    </section>
   );
 }

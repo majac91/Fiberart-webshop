@@ -50,10 +50,6 @@
 }
 
 /* ABOUT SECTION */
-.aboutSection,
-.featured {
-  padding-bottom: var(--section);
-}
 
 .about .imgWrapper {
   justify-content: flex-start;
@@ -66,10 +62,6 @@
 
 .about .textOutter {
   justify-content: flex-end;
-}
-
-.about {
-  margin-bottom: var(--section);
 }
 
 /* ABOUT PAGE */

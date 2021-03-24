@@ -1,7 +1,7 @@
 .container {
   justify-content: space-between;
-  margin-bottom: var(--section);
 }
+
 .form {
   flex: 1;
 }

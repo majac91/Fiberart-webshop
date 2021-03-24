@@ -1,9 +1,8 @@
 .contactForm {
   width: 60vw;
-  height: 50vh;
+  height: 100%;
   flex-wrap: wrap;
   margin: auto;
-  margin-bottom: var(--section);
 }
 
 .info,
