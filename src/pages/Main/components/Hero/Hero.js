@@ -7,7 +7,7 @@ import img2 from "../../../../img/header-main-2.jpg";
 
 const Hero = () => {
   return (
-    <header className={`${heroStyles.container} container`}>
+    <header className={`${heroStyles.container} ${heroStyles.hero} container`}>
       <div className={heroStyles.wrapper}>
         <div className={heroStyles.section}>
           <img
@@ -38,7 +38,8 @@ const Hero = () => {
               </h2>
               <Button
                 txt="Explore"
-                className={"headerBtn"}
+                className={"btnLg"}
+                className2={"heroBtn"}
                 s
                 onClick={() => {
                   window.location.href = "#main";

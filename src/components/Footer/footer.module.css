@@ -8,13 +8,7 @@
 .textWrapper {
   flex: 1;
   width: 50vw;
-}
-
-.paragraph {
-  font-family: "Ralewawy";
-  font-size: 1em;
-  max-width: 35em;
-  margin: 0 auto 1em auto;
+  font-size: var(--text-xs);
 }
 
 .imgWrapper {
@@ -49,6 +43,10 @@
 .link {
   padding: 1em;
   cursor: pointer;
+}
+
+.social {
+  padding-top: 1em;
 }
 
 .socialIcon {

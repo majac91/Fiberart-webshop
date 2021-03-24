@@ -1,7 +1,6 @@
 import { useHistory } from "react-router-dom";
 import { useProductList } from "../../../../firebase/api";
 import customSliderStyles from "./custom-slider.module.css";
-import textStyles from "../../../../css-modules/text-section.module.css";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -39,9 +38,7 @@ export default function CustomSlider() {
 
   return (
     <section aria-label="Slideshow" className={"slider-main container"}>
-      <h2 className={`${textStyles.captionTxt} ${customSliderStyles.heading}`}>
-        New from our studio
-      </h2>
+      <h2 className={` ${customSliderStyles.heading}`}>New from our studio</h2>
       <Slider {...settings} className={customSliderStyles.slideContainer}>
         {Object.keys(products).map((key) => {
           let product = products[key];

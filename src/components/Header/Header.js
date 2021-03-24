@@ -20,13 +20,13 @@ export default function Header({ page, caption }) {
       <header
         className={`${headerStyles.container} ${headerStyles[textClass]}`}
       >
-        {page === "checkout" && (
+        {/* {page === "checkout" && (
           <img
             alt="ombre tapestry detail"
             className={headerStyles.img}
             src={checkout}
           />
-        )}
+        )} */}
         {page === "shop" && (
           <img
             alt="white wool tapestry detail"

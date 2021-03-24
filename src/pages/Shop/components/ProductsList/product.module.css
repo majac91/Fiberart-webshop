@@ -1,6 +1,4 @@
 .container {
-  overflow: hidden;
-
   display: grid;
   grid-template-columns: 40vw 40vw;
   grid-template-rows: 50% 50%;
@@ -38,30 +36,14 @@
 }
 
 .caption {
-  color: var(--color-headings);
-  font-size: 2em;
-  font-weight: 600;
-}
-
-.price,
-.button {
-  font-weight: 600;
-}
-
-.caption,
-.button {
   font-family: var(--font-primary);
+  font-size: var(--text-sm);
+  font-weight: 600;
 }
 
 .price {
+  font-size: var(--text-xs);
   padding: 1em 0;
-}
-
-.button {
-  border: var(--border-gray);
-  max-width: 30em;
-  padding: 1em 2em;
-  display: inline-block;
 }
 
 @media all and (min-width: 320px) and (max-width: 800px) {
@@ -88,10 +70,5 @@
 
   .caption {
     font-size: 1.5em;
-  }
-
-  .button {
-    padding: 1em 1.3em;
-    font-size: 0.9em;
   }
 }

@@ -1,5 +1,5 @@
 @font-face {
-  font-family: Chamberi;
+  font-family: ChamberiLight;
   src: url("../src/fonts/ChamberiDisplay-ExtraLight.otf") format("otf"),
     url("../src/fonts/ChamberiDisplay-ExtraLight.otf");
 }
@@ -22,19 +22,14 @@
 
 :root {
   /* base values */
-  --text-base-size: 0.8em;
+  --text-base-size: 1.1em;
   --text-scale-ratio: 1.4;
 
   /* type scale */
-  --text-xs: calc(
-    (var(--text-base-size)) /
-      (var(--text-scale-ratio) * var(--text-scale-ratio))
-  );
-  --text-sm: calc((var(--text-base-size)) / var(--text-scale-ratio));
+  --text-xs: calc((var(--text-base-size)) / (var(--text-scale-ratio) * 0.9));
+  --text-sm: var(--text-base-size);
   --text-md: calc((var(--text-base-size)) * var(--text-scale-ratio));
-  --text-lg: calc(
-    (var(--text-base-size)) * var(--text-scale-ratio) * var(--text-scale-ratio)
-  );
+  --text-lg: calc((var(--text-base-size)) * var(--text-scale-ratio));
   --text-xl: calc(
     (var(--text-base-size)) * var(--text-scale-ratio) * var(--text-scale-ratio)
   );
@@ -47,9 +42,10 @@
   --font-primary: "Raleway", serif;
   --font-secondary: "ChamberiHeadline", serif;
   --font-accent: "Torinout", serif;
+  --font-light: "ChamberiLight", serif;
 
   /* text styling */
-  --letter-spacing: 0.1rem;
+  --letter-spacing: 0.05rem;
   --line-height: 1.5;
   --heading-line-height: 1.2;
   --body-line-height: 1.4;
@@ -99,21 +95,23 @@ button:hover {
 
 h1 {
   font-family: var(--font-secondary);
-  font-size: var(--text-xxl);
+  font-size: var(--text-xl);
   text-transform: uppercase;
+  font-weight: 600;
 }
 
 h2 {
-  font-family: var(--font-primary);
+  font-family: var(--font-secondary);
   font-size: var(--text-xl);
-  font-weight: 400;
+  font-weight: 500;
   line-height: var(--line-height);
+  text-transform: uppercase;
 }
 
 h3 {
   font-family: var(--font-primary);
   font-size: var(--text-lg);
-  font-weight: 800;
+  font-weight: 400;
 }
 
 h1,
@@ -122,7 +120,7 @@ h2 {
 }
 
 p {
-  font-size: var(--text-lg);
+  font-size: var(--text-sm);
 }
 
 section,
@@ -255,7 +253,7 @@ footer {
 
 @media all and (min-width: 320px) and (max-width: 768px) {
   :root {
-    --container: 85vw;
+    --container: 95vw;
     --text-base-size: 0.7em;
     --section: 5rem;
   }

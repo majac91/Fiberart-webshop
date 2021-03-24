@@ -1,12 +1,12 @@
 import React, { useRef } from "react";
 import { useElementOnScreen } from "../../hooks/useOnIntersection";
 import Header from "../../components/Header/Header";
-import textStyles from "../../css-modules/text-section.module.css";
+import Text from "../../components/Text/Text";
+import Loader from "../../components/Loader";
 import imgStyles from "../../css-modules/photo-text-section.module.css";
 import workshopImg from "../../img/header1.jpg";
 import detailImg from "../../img/header2.jpg";
 import materialsImg from "../../img/materials.jpg";
-import Loader from "../../components/Loader";
 const cx = require("classnames");
 
 const AboutPage = () => {
@@ -34,9 +34,7 @@ const AboutPage = () => {
         caption="When you recieve a piece from &Thread- you now own something truly unique with an unquestionable quality, which will connect you to the artist "
       />
       <main className="aboutPage">
-        <section
-          className={`${textStyles.aboutProduct} ${imgStyles.aboutProduct} ${textStyles.container} d-flex container`}
-        >
+        <section className={`${imgStyles.left} d-flex container`}>
           <div className={imgStyles.imgWrapper}>
             {imgGroupIsOnScreen ? (
               <>
@@ -57,53 +55,37 @@ const AboutPage = () => {
               </div>
             )}
           </div>
-
           <div className={imgStyles.text}>
             <div className={imgStyles.textOutter}>
               <div className={imgStyles.textInner}>
-                <p
-                  className={`${textStyles.aboutProduct} ${textStyles.caption}`}
-                >
-                  <span className={textStyles.captionTxt}>
-                    MINIMAL. UNIQUE. HANDMADE.
-                  </span>
-                </p>
-                <p className={textStyles.subcaption}>
-                  <span className={textStyles.subcaptionTxt}>
-                    I have a affinity for simple and organic materials. I see
+                <Text
+                  className="textRight"
+                  caption="MINIMAL. UNIQUE. HANDMADE."
+                  subcaption="I have a affinity for simple and organic materials. I see
                     beauty in the purest of things and I am so excited to share
                     my love for design to help you create a cozy and sereen
-                    home.
-                  </span>
-                </p>
+                    home."
+                />
               </div>
             </div>
           </div>
         </section>
 
-        <section
-          className={`${textStyles.aboutMaterials} ${imgStyles.aboutMaterials} ${textStyles.container} d-flex container`}
-        >
+        <section className={` ${imgStyles.right} d-flex container`}>
           <div className={imgStyles.text}>
             <div className={imgStyles.textOutter}>
               <div className={imgStyles.textInner}>
-                <p className={`${textStyles[textClass]} ${textStyles.caption}`}>
-                  <span className={textStyles.subcaptionTxt}>
-                    Only the finest quality materials
-                  </span>
-                </p>
-                <p className={textStyles.subcaption}>
-                  <span className={textStyles.subcaptionTxt}>
-                    I have a affinity for simple and organic materials. I see
+                <Text
+                  className="textLeft"
+                  caption="Only the finest quality materials"
+                  subcaption="I have a affinity for simple and organic materials. I see
                     beauty in the purest of things and I am so excited to share
                     my love for design to help you create a cozy and sereen
-                    home.
-                  </span>
-                </p>
+                    home."
+                />
               </div>
             </div>
           </div>
-
           <div className={imgStyles.imgWrapper}>
             {materialsImgIsOnScreen ? (
               <>
