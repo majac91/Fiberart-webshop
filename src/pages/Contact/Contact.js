@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import Header from "../../components/Header/Header";
-import TextSection from "../../components/TextSection/TextSection";
 import contactStyles from "./contact.module.css";
 import SubmitMsg from "../../components/SubmitMsg/SubmitMsg";
 import submitStyles from "../../components/SubmitMsg/submit-msg.module.css";
@@ -11,13 +10,7 @@ const Contact = () => {
 
   return (
     <>
-      <Header page="checkout"></Header>
-      <TextSection
-        section="contact"
-        message="Let's connect"
-        caption="Come say hi!"
-        subcaption="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. "
-      />
+      <Header page="checkout" caption="Come say hi!" />
       <section
         className={`${contactStyles.contactForm} ${submitStyles.contactForm} d-flex`}
       >

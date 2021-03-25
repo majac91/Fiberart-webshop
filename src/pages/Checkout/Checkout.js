@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import Header from "../../components/Header/Header";
-import TextSection from "../../components/TextSection";
 import CheckoutForm from "./components/Form/CheckoutForm";
 import cartStyles from "../../components/Cart/cart.module.css";
 import checkoutStyles from "./checkout.module.css";
@@ -17,26 +16,24 @@ const Checkout = ({ onClearCart, total, onDelete, cartItems }) => {
 
   return (
     <>
-      <Header page="checkout" />
-      <TextSection
-        section="brandMsg"
-        message="Order details"
-        caption="Complete your order"
-        subcaption="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. "
-      ></TextSection>
-      <div className={`${checkoutStyles.container} d-flex container`}>
+      <Header page="checkout" caption="Complete your order" />
+      <main className={`${checkoutStyles.container} d-flex container`}>
         {/* F O R M */}
-        <div className={checkoutStyles.form}>
+        <section className={checkoutStyles.form}>
           <CheckoutForm setIsOrdered={setIsOrdered} cartItems={cartItems} />
-        </div>
+        </section>
         {/* C A R T */}
-        <div className={`${cartStyles.wrapperOutter} ${checkoutStyles.cart}`}>
+        <section
+          className={`${cartStyles.wrapperOutter} ${checkoutStyles.cart}`}
+        >
           {!isOrdered ? (
             <>
+              {/* CART HEADER */}
               <div className={cartStyles.titleWrapper}>
                 <h3 className={cartStyles.title}>Your order</h3>
               </div>
 
+              {/* CART MAIN */}
               {cartItems.length === 0 ? (
                 <p className={cartStyles.emptyCart}>The cart is empty.</p>
               ) : null}
@@ -47,13 +44,14 @@ const Checkout = ({ onClearCart, total, onDelete, cartItems }) => {
                     className={cartStyles.img}
                     alt={item.name}
                     src={item.image}
-                  ></img>
+                    aria-hidden="true"
+                  />
                   <div className={cartStyles.productInfo}>
                     <p className={cartStyles.name}>{item.name}</p>
                     <div className={cartStyles.priceWrapper}>
                       <p className={cartStyles.price}>{item.price}</p>
                       <button
-                        className={cartStyles.btn}
+                        className={cartStyles.removeBtn}
                         onClick={() => onDelete(item)}
                       >
                         Remove
@@ -63,6 +61,7 @@ const Checkout = ({ onClearCart, total, onDelete, cartItems }) => {
                 </div>
               ))}
 
+              {/* CART FOOTER */}
               {cartItems.map((item, index) =>
                 index === cartItems.length - 1 ? (
                   <div className={cartStyles.totalWrapper}>
@@ -82,8 +81,8 @@ const Checkout = ({ onClearCart, total, onDelete, cartItems }) => {
           ) : (
             <SubmitMsg />
           )}
-        </div>
-      </div>
+        </section>
+      </main>
     </>
   );
 };

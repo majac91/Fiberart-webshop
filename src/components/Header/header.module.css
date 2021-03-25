@@ -1,23 +1,91 @@
 .container {
-  height: 100%;
-}
-
-.hero {
-  height: 60vh;
-  width: 100%;
-  object-fit: cover;
-  transition: all 1s forwards;
-}
-
-.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
   height: 55vh;
-  width: 100%;
-  object-fit: cover;
+  margin: auto;
+  border-bottom: var(--border-gray);
+  margin-top: 4rem;
+  position: relative;
 }
 
-@media all and (min-width: 320px) and (max-width: 768px) {
-  .hero {
-    height: 40vh;
-    object-fit: initial;
+.img {
+  height: 36vh;
+  width: 26vh;
+  object-fit: cover;
+  opacity: 0.4;
+  position: absolute;
+  z-index: -10;
+}
+
+.captionWrapper {
+  width: 40%;
+  height: 36vh;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.caption {
+  margin: auto 0;
+}
+
+.subcaption {
+  margin: 2rem 0;
+  font-family: var(--font-primary);
+  font-size: 1.2rem;
+  color: var(--headings);
+  position: relative;
+  left: 10%;
+  text-align: left;
+}
+
+.subcaption span {
+  display: inline-block;
+  font-weight: 200;
+}
+
+.year {
+  font-family: var(--font-accent);
+  font-size: 4rem;
+}
+
+.about .captionWrapper {
+  width: 60%;
+  height: auto;
+  margin: 0;
+  font-size: var(--text-md);
+  font-weight: 800;
+}
+
+.contact.container,
+.checkout.container,
+.contact .captionWrapper,
+.checkout .captionWrapper {
+  height: 20vh;
+}
+
+.contact .captionWrapper,
+.checkout .captionWrapper {
+  margin-bottom: 5rem;
+}
+@media all and (min-width: 320px) and (max-width: 400px) {
+  .captionWrapper {
+    width: 80%;
+  }
+}
+
+@media all and (min-width: 400px) and (max-width: 768px) {
+  .captionWrapper {
+    width: 60%;
+  }
+}
+
+@media all and (min-width: 320px) and (max-width: 500px) {
+  .about .captionWrapper {
+    font-size: var(--text-lg);
+    width: 80%;
   }
 }

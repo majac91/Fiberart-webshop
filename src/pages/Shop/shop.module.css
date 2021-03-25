@@ -5,16 +5,14 @@
 
 .links {
   margin-top: 2em;
-  border: 2px solid var(--beige);
+  border: var(--border-gray);
   max-width: 30vw;
   margin: auto;
 }
 
 .link {
-  font-family: var(--bold);
   font-weight: 400;
   display: inline-block;
-
   margin: 1em;
   text-transform: lowercase;
 }

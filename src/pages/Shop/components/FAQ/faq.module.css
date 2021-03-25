@@ -15,7 +15,7 @@
   text-align: center;
   font-size: 3em;
   padding-top: 1.5em;
-  font-family: var(--captions);
+  font-family: var(--font-secondary);
   font-weight: 500;
 }
 
@@ -36,7 +36,7 @@
 }
 
 .faqText {
-  letter-spacing: 0.02em;
+  letter-spacing: var(--letter-spacing);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -56,7 +56,7 @@
   }
 
   .faqOuter {
-    width: var(--container);
+    width: 100%;
   }
 
   .faqHeading {

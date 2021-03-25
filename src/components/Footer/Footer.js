@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import { useElementOnScreen } from "../../hooks/useOnIntersection";
 import Loader from "../../components/Loader/Loader";
-import textStyles from "../TextSection/text-section.module.css";
+import Newsletter from "../Newsletter/Newsletter";
 import footerStyles from "./footer.module.css";
 
 import logo from "../../img/logo.png";
@@ -25,7 +25,7 @@ export default function Footer(props) {
   return (
     <>
       <footer className={`${footerStyles.container} d-flex container`}>
-        <div className={` ${footerStyles.imgWrapper}`}>
+        <div className={footerStyles.imgWrapper}>
           {isOnScreen ? (
             <div className={footerStyles.imgWrapperInner}>
               <img
@@ -57,17 +57,17 @@ export default function Footer(props) {
         </div>
         <div className={footerStyles.textWrapper}>
           <div className={footerStyles.innerTextWrapper}>
-            <div className={`${textStyles.textClass} ${textStyles.caption}`}>
+            <div>
               <img
                 alt="brand logo"
                 src={logo}
                 className={footerStyles.logo}
               ></img>
             </div>
-            <p className="p-small text-column">
+            <p className={footerStyles.subcaption}>
               <span>{props.paragraph} </span>
             </p>
-            <div>
+            <div className={footerStyles.social}>
               <a
                 className={footerStyles.link}
                 target="blank"
@@ -112,6 +112,9 @@ export default function Footer(props) {
                   src={tumblrbtn}
                 />
               </a>
+            </div>
+            <div>
+              <Newsletter></Newsletter>
             </div>
           </div>
         </div>

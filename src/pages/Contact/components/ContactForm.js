@@ -2,6 +2,7 @@ import React from "react";
 import useFormSubmit from "../../../hooks/useFormSubmit/useFormSubmit";
 import formStyles from "../../../css-modules/form.module.css";
 import contactStyles from "../contact.module.css";
+import Button from "../../../components/Button/Button";
 
 const ContactForm = ({ setIsSent }) => {
   const initialValues = {
@@ -69,9 +70,11 @@ const ContactForm = ({ setIsSent }) => {
           <p className={formStyles.errorMsg}>{errors.message}</p>
         )}
       </div>
-      <button className={`${contactStyles.btn} btn-black`} type="submit">
-        Send
-      </button>
+      <div className={contactStyles.btn}>
+        <Button className={"btnSm"} txt="Send">
+          Send
+        </Button>
+      </div>
     </form>
   );
 };

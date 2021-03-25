@@ -7,17 +7,13 @@
   top: 0;
   right: -100%;
   transition: right var(--transition);
-  background: white;
   border-left: var(--border);
+  background: white;
   z-index: 100;
-  visibility: hidden;
 }
 
 .open {
   right: 0;
-  visibility: visible;
-
-  /* overflow: scroll; */
 }
 
 .wrapperOutter {
@@ -57,7 +53,6 @@
 }
 
 .img {
-  width: 5em;
   height: 6em;
 }
 
@@ -84,17 +79,17 @@
 .price {
   align-self: center;
   margin-right: 2em;
+  font-weight: 400;
 }
 
-.btn {
+.removeBtn {
   margin-top: 2em;
-
   width: 6em;
   height: 2.2em;
   font-size: 0.8em;
-  background: white;
+  background: transparent;
   color: black;
-  border: 1px solid var(--beige);
+  border: var(--border-gray);
 }
 
 .checkout {
@@ -113,14 +108,10 @@
 .total {
   margin-bottom: 2em;
 }
-.total,
-.span {
-  font-weight: 700;
-}
 
 .shipping {
   padding-bottom: 2em;
-  border-bottom: 2px solid var(--beige);
+  border-bottom: var(--border-gray);
 }
 
 .span {

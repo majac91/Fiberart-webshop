@@ -76,7 +76,6 @@ function App() {
         burgerIsOpen={burgerIsOpen}
         cartCount={cartCount}
         onCartClick={handleToggleCart}
-        setCartIsOpen={setCartIsOpen}
       />
       <Cart
         clickOutsideRef={clickOutsideCart}
@@ -92,7 +91,7 @@ function App() {
         </Route>
 
         <Route exact path="/shop">
-          <Shop></Shop>
+          <Shop />
         </Route>
 
         <Route exact path="/product/:id">
@@ -102,7 +101,7 @@ function App() {
             onAddToCart={handleAddToCart}
             cartItems={cartItems}
             setCartItems={setCartItems}
-          ></ProductPage>
+          />
         </Route>
 
         <Route exact path="/about">

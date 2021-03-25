@@ -1,6 +1,7 @@
 .container {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   padding-bottom: 3em;
   padding-top: 1em;
 }
@@ -13,23 +14,35 @@
   margin-right: 2em;
   text-transform: lowercase;
   letter-spacing: 0.2em;
-  font-weight: 600;
-  font-size: 0.9em;
+  font-weight: 500;
+  font-size: var(--text-xs);
   font-family: var(--body);
   color: black;
 }
 
-.wrapperDesktop {
-  width: 100%;
+.cartIcon {
+  width: 2rem;
+  height: 2rem;
+  border: var(--border-btn);
+  border-radius: 50%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.logoDesktopLink {
-  margin-left: auto;
+.wrapperDesktop {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapperMobile {
+  display: none;
 }
 
 .logoDesktopImg {
-  width: 50%;
-  float: right;
+  width: 60%;
 }
 
 .logoMobileLink {
@@ -43,7 +56,7 @@
 
 .cart {
   border: none;
-  background: white;
+  background: var(--color-background);
   margin-top: auto;
   margin-bottom: auto;
   margin-right: 0;
@@ -53,12 +66,12 @@
 .burgerBtn {
   outline: none;
   border: none;
-  background: white;
   text-align: right;
 }
 
 .closeBurgerBtn {
   justify-content: flex-start;
+  background: white;
 }
 
 .closeIcon {
@@ -66,15 +79,20 @@
   height: 1.3em;
 }
 
+.burgerBtn,
+.burderIcon {
+  background: var(--color-background);
+}
+
 .burgerIcon {
-  width: 2em;
-  height: 2em;
-  background: white;
+  width: 1.5em;
+  height: 1.2em;
 }
 
 @media all and (min-width: 320px) and (max-width: 767px) {
   .container {
-    padding-top: 2em;
+    padding-top: 0;
+    padding-bottom: 0;
     justify-content: space-between;
   }
 
@@ -88,9 +106,12 @@
   .wrapperMobile {
     width: 100%;
     display: flex;
-    justify-content: space-betweens;
   }
 
+  .wrapperMobile .navLink {
+    display: inline-block;
+    width: 100%;
+  }
   .logoDesktopLink {
     display: none;
   }
@@ -102,7 +123,12 @@
 
   .logoMobileImg {
     display: block;
-    height: 5em;
+    height: 7em;
+  }
+
+  .cartIcon {
+    width: 1.5rem;
+    height: 1.5rem;
   }
 
   .wrapperDesktop .cart {
@@ -111,17 +137,23 @@
 
   .wrapperMobile .cart {
     display: block;
-    width: 5em;
     letter-spacing: initial;
     text-align: right;
+    font-size: initial;
   }
 
+  .wrapperMobile .cart,
   .burgerBtn {
-    width: 5em;
+    width: 4em;
   }
 
   .burgerIcon {
     float: left;
+  }
+
+  .listItem {
+    align-self: flex-start;
+    width: 100%;
   }
 
   .navLinks {
@@ -134,15 +166,13 @@
     left: -100%;
     transition: left var(--transition);
     background: white;
-    border-right: var(--border);
     z-index: 100;
     padding: 2em;
-    visibility: hidden;
   }
 
   .wrapperDesktop .navLink::after {
     content: "";
-    border-bottom: 2px solid var(--beige);
+    border-bottom: var(--border-gray);
     width: 100%;
     display: inline-block;
     position: relative;
@@ -151,7 +181,6 @@
 
   .open {
     left: 0;
-    visibility: visible;
   }
 }
 

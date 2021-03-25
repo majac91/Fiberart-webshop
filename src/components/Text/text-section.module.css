@@ -1,0 +1,65 @@
+.caption {
+  margin-bottom: 2rem;
+  font-size: var(--text-lg);
+}
+
+.captionTxt {
+  width: 100%;
+  margin: 0 auto;
+  display: inline-block;
+}
+
+.textRight {
+  text-align: left;
+}
+
+.textLeft {
+  text-align: right;
+}
+
+.textRight .subcaption {
+  margin-left: 4rem;
+}
+
+.textLeft .subcaption {
+  margin-right: 4rem;
+}
+
+/* @media all and (min-width: 360px) and (max-width: 768px) {
+  .textRight .subcaption,
+  .textLeft .subcaption {
+    margin: 0;
+    text-align: left;
+    padding-bottom: 2rem;
+  }
+} */
+
+@media all and (min-width: 320px) and (max-width: 1024px) {
+  .textRight .subcaption,
+  .textLeft .subcaption {
+    margin: 0;
+    text-align: left;
+    padding-bottom: 2rem;
+  }
+
+  .caption {
+    width: auto;
+  }
+
+  .about .msgWrapper {
+    top: 8px;
+  }
+
+  .aboutProduct.container,
+  .aboutMaterials.container {
+    flex-direction: column;
+    padding-top: 0;
+  }
+}
+
+@media all and (min-width: 320px) and (max-width: 769px) {
+  .caption {
+    text-align: center;
+    margin: 2rem auto;
+  }
+}

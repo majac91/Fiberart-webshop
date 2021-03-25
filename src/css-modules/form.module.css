@@ -13,6 +13,7 @@
   border-color: black;
   height: 2em;
   margin-right: 1em;
+  background: var(--color-background);
 }
 
 label {
@@ -45,6 +46,10 @@ label {
   font-weight: 600;
   font-size: 0.9em;
   text-align: left;
+}
+
+.checkoutPageSubmit {
+  margin-top: 2rem;
 }
 
 @media all and (min-width: 320px) and (max-width: 480px) {

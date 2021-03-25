@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
+import Button from "../Button/Button";
 import cartStyles from "./cart.module.css";
 import cancel from "../../icons/001-cancel-3.png";
 const cx = require("classnames");
@@ -16,17 +17,23 @@ const Cart = ({
     localStorage.setItem("item", JSON.stringify(cartItems));
   }, [cartItems]);
 
+  const history = useHistory();
+
+  const redirect = () => history.push("/checkout");
+
   return (
     <div
       aria-label="cart"
       ref={clickOutsideRef}
-      tabIndex="-1"
+      aria-hidden={cartIsOpen ? "false" : "true"}
       className={cx(cartStyles.cart, { [cartStyles.open]: cartIsOpen })}
     >
       <div className={cartStyles.wrapperOutter}>
+        {/* CART HEADER */}
         <div className={cartStyles.titleWrapper}>
           <h2 className={cartStyles.title}>Cart</h2>
           <button
+            tabIndex={cartIsOpen ? "0" : "-1"}
             onClick={onCartClick}
             className={`${cartStyles.closeBtn} ignoreClickOutside`}
           >
@@ -38,6 +45,7 @@ const Cart = ({
           </button>
         </div>
 
+        {/* CART MAIN */}
         {cartItems.length === 0 ? (
           <h3 className={cartStyles.emptyCart}>Your cart is empty.</h3>
         ) : null}
@@ -49,12 +57,16 @@ const Cart = ({
             className={cartStyles.wrapperInner}
           >
             <img
+              aria-hidden="true"
               className={cartStyles.img}
               alt={item.name}
-              src={item.image}
+              src={item.imageSmall}
             ></img>
             <div className={cartStyles.productInfo}>
-              <Link to={`/product/${item.path}`}>
+              <Link
+                tabIndex={cartIsOpen ? "0" : "-1"}
+                to={`/product/${item.path}`}
+              >
                 <h3 className={cartStyles.name}>{item.name}</h3>
               </Link>
               <div className={cartStyles.priceWrapper}>
@@ -62,7 +74,8 @@ const Cart = ({
                   {item.price}
                 </h4>
                 <button
-                  className={`${cartStyles.btn} ignoreClickOutside`}
+                  tabIndex={cartIsOpen ? "0" : "-1"}
+                  className={`${cartStyles.removeBtn} ignoreClickOutside`}
                   onClick={() => onDelete(item)}
                 >
                   Remove
@@ -72,6 +85,7 @@ const Cart = ({
           </div>
         ))}
 
+        {/* CART FOOTER */}
         {cartItems.map((item, index) =>
           index === cartItems.length - 1 ? (
             <div className={cartStyles.totalWrapper} key={index}>
@@ -84,12 +98,14 @@ const Cart = ({
               <p className={cartStyles.total}>
                 Total <span className={cartStyles.span}>${total}</span>
               </p>
-              <Link
-                to="/checkout"
-                className={`${cartStyles.btn} ${cartStyles.checkout} `}
+              <div
+                tabIndex={cartIsOpen ? "0" : "-1"}
+                className={cartStyles.checkout}
               >
-                Checkout
-              </Link>
+                <Button className={"btnSm"} txt="Checkout" onClick={redirect}>
+                  Send
+                </Button>
+              </div>
             </div>
           ) : null
         )}

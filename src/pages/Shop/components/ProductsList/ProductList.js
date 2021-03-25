@@ -16,7 +16,7 @@ const Products = () => {
   return (
     <>
       {isOnScreen ? (
-        <div className={`${productStyles.container} container`}>
+        <section className={`${productStyles.container} container`}>
           {Object.keys(products).map((key) => {
             let product = products[key];
             return (
@@ -31,17 +31,13 @@ const Products = () => {
                   src={product.image}
                 ></img>
                 <div className={productStyles.captionWrapper}>
-                  <h3 className={productStyles.caption}>{product.name}</h3>
-                  <h4 className={productStyles.price}>{product.price}</h4>
-
-                  <Link className={productStyles.button} to={`product/${key}`}>
-                    view item
-                  </Link>
+                  <h2 className={productStyles.caption}>{product.name}</h2>
+                  <h3 className={productStyles.price}>{product.price}</h3>
                 </div>
               </div>
             );
           })}
-        </div>
+        </section>
       ) : (
         <div ref={placeholder} className={placeholderStyle}>
           <Loader />

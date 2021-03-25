@@ -15,11 +15,10 @@ export default function Nav({
   cartCount,
 }) {
   return (
-    <nav
-      aria-label="Navigation"
-      ref={clickOutsideRef}
-      className={`${navStyles.container} container`}
-    >
+    <nav ref={clickOutsideRef} className={`${navStyles.container} container`}>
+      <Link to="/" className={navStyles.logoDesktopLink}>
+        <img alt="homepage" className={navStyles.logoDesktopImg} src={logo} />
+      </Link>
       <div
         className={cx(navStyles.navLinks, {
           [navStyles.open]: burgerIsOpen,
@@ -29,29 +28,25 @@ export default function Nav({
           className={`${navStyles.closeBurgerBtn} ignoreClickOutside`}
           onClick={onBurgerClick}
         >
-          <img
-            alt="close"
-            className={navStyles.closeIcon}
-            src={closeIcon}
-          ></img>
+          <img alt="close" className={navStyles.closeIcon} src={closeIcon} />
         </button>
         <ul className={`${navStyles.wrapperDesktop} d-flex`}>
-          <li>
-            <Link to="/" className={cx(navStyles.navLink)}>
+          <li className={navStyles.listItem}>
+            <Link to="/" className={navStyles.navLink}>
               Home
             </Link>
           </li>
-          <li>
+          <li className={navStyles.listItem}>
             <Link to="/shop" className={navStyles.navLink}>
               Shop
             </Link>
           </li>
-          <li>
+          <li className={navStyles.listItem}>
             <Link to="/about" className={navStyles.navLink}>
               About
             </Link>
           </li>
-          <li>
+          <li className={navStyles.listItem}>
             <Link to="/contact" className={navStyles.navLink}>
               Contact
             </Link>
@@ -61,7 +56,7 @@ export default function Nav({
               onClick={onCartClick}
               className={`${navStyles.navLink} ${navStyles.cart} ignoreClickOutside`}
             >
-              Cart ({cartCount})
+              Cart <span className={navStyles.cartIcon}>{cartCount}</span>
             </button>
           </li>
         </ul>
@@ -72,29 +67,18 @@ export default function Nav({
             alt="open menu"
             className={navStyles.burgerIcon}
             src={burgerIcon}
-          ></img>
+          />
         </button>
-        <Link to="/" className={navStyles.logoMobileLink} tabIndex="0">
-          <img
-            alt="homepage"
-            className={navStyles.logoMobileImg}
-            src={logo}
-          ></img>
+        <Link to="/" className={navStyles.logoMobileLink}>
+          <img alt="homepage" className={navStyles.logoMobileImg} src={logo} />
         </Link>
         <button
           onClick={onCartClick}
           className={`${navStyles.navLink} ${navStyles.cart} ignoreClickOutside`}
         >
-          Cart ({cartCount})
+          Cart <span className={navStyles.cartIcon}>{cartCount}</span>
         </button>
       </div>
-      <Link to="/" className={navStyles.logoDesktopLink}>
-        <img
-          alt="homepage"
-          className={navStyles.logoDesktopImg}
-          src={logo}
-        ></img>
-      </Link>
     </nav>
   );
 }

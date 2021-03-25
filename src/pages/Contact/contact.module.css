@@ -1,9 +1,8 @@
 .contactForm {
   width: 60vw;
-  height: 50vh;
+  height: 100%;
   flex-wrap: wrap;
   margin: auto;
-  margin-bottom: var(--section);
 }
 
 .info,
@@ -27,7 +26,7 @@
 .infoWrapperOutter {
   height: 100%;
   display: flex;
-  border-right: 2px solid var(--beige);
+  border-right: var(--border-gray);
 }
 
 .infoWrapperInner {
@@ -37,8 +36,8 @@
 }
 
 .title {
-  font-weight: 600;
   padding-bottom: 1em;
+  font-weight: 600;
 }
 
 .text {
@@ -89,7 +88,7 @@
   }
 
   .title {
-    border-bottom: 2px solid var(--beige);
+    border-bottom: var(--border-gray);
     padding-bottom: 0;
   }
 

@@ -1,0 +1,139 @@
+.wrapper {
+  margin-top: 1rem;
+  font-size: 1rem;
+  position: relative;
+}
+
+.wrapper:hover {
+  opacity: 0.7;
+  transition: var(--transition);
+}
+
+.border {
+  border: var(--border-btn);
+  border-radius: 50%;
+  z-index: -1;
+  position: relative;
+  opacity: 1;
+}
+
+.btn {
+  background: transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: none;
+  font-size: 1rem;
+}
+
+.btnLg .wrapper {
+  width: 11em;
+  height: 11em;
+}
+
+.btnMd .wrapper {
+  width: 7em;
+  height: 7em;
+}
+
+.btnSm .wrapper {
+  width: 5em;
+  height: 5em;
+}
+
+.btnLg .border,
+.btnLg .btn,
+.btnMd .border,
+.btnMd .btn,
+.btnSm .border,
+.btnSm .btn {
+  width: 100%;
+  height: 100%;
+}
+
+.btnLg .btn {
+  font-size: 1rem;
+}
+
+.btnMd .btn {
+  font-size: 0.9rem;
+}
+
+.btnSm .btn {
+  font-size: 0.8rem;
+}
+
+.heroBtn {
+  position: relative;
+  top: -3em;
+  left: 11em;
+}
+
+.btnLeft .wrapper {
+  margin-left: 4rem;
+}
+
+.btnRight .wrapper {
+  margin-right: 4rem;
+  margin-left: auto;
+}
+
+@media all and (min-width: 320px) and (max-width: 360px) {
+  .btnLg .btn {
+    font-size: 0.9rem;
+  }
+  .btnMd .btn {
+    font-size: 0.8rem;
+  }
+
+  .btnSm .btn {
+    font-size: 0.7rem;
+  }
+}
+
+@media all and (min-width: 360px) and (max-width: 1024px) {
+  .btnMd .btn {
+    font-size: 0.9rem;
+  }
+
+  .btnSm .btn {
+    font-size: 0.8rem;
+  }
+}
+
+@media all and (min-width: 320px) and (max-width: 1024px) {
+  .wrapper {
+    width: 100%;
+    height: 100%;
+  }
+
+  .border {
+    margin: auto;
+  }
+
+  .btn {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+  }
+
+  .btnLg .wrapper {
+    width: 9em;
+    height: 9em;
+  }
+
+  .heroBtn {
+    top: 0;
+    left: 0;
+    margin: auto;
+  }
+
+  .heroBtn .wrapper {
+    margin: auto;
+  }
+
+  .btnLeft .wrapper,
+  .btnRight .wrapper {
+    margin: auto;
+  }
+}

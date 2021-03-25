@@ -1,0 +1,27 @@
+.wrapper {
+  font-size: 0.3rem;
+  width: 5em;
+  height: 2em;
+  display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 0.2rem;
+}
+
+.side {
+  height: 1.3em;
+  width: 1.3em;
+}
+
+.center {
+  height: 2em;
+  width: 2em;
+}
+
+.side,
+.center {
+  display: inline-block;
+  border: var(--border-btn);
+  border-radius: 50%;
+}
