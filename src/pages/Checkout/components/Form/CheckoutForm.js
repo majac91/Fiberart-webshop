@@ -2,6 +2,7 @@ import React, { useRef } from "react";
 import formStyles from "../../../../css-modules/form.module.css";
 import cartStyles from "../../../../components/Cart/cart.module.css";
 import useFormSubmit from "../../../../hooks/useFormSubmit/useFormSubmit";
+import Button from "../../../../components/Button/Button";
 
 const Form = ({ setIsOrdered, cartItems }) => {
   const initialValues = {
@@ -152,9 +153,11 @@ const Form = ({ setIsOrdered, cartItems }) => {
             )}
           </div>
         </div>
-        <button className={cartStyles.btn} type="submit">
-          Submit
-        </button>
+        <div className={formStyles.checkoutPageSubmit}>
+          <Button className={"btnSm"} txt="Submit">
+            Send
+          </Button>
+        </div>
       </form>
     </div>
   );

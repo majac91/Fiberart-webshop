@@ -9,7 +9,7 @@ const cx = require("classnames");
 
 export default function Header({ page, caption }) {
   let textClass = cx({
-    message: page === "checkout",
+    checkout: page === "checkout",
     contact: page === "contact",
     shop: page === "shop",
     about: page === "about",
@@ -20,13 +20,6 @@ export default function Header({ page, caption }) {
       <header
         className={`${headerStyles.container} ${headerStyles[textClass]}`}
       >
-        {/* {page === "checkout" && (
-          <img
-            alt="ombre tapestry detail"
-            className={headerStyles.img}
-            src={checkout}
-          />
-        )} */}
         {page === "shop" && (
           <img
             alt="white wool tapestry detail"

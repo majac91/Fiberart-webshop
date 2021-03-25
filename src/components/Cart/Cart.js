@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { Link, useHistory } from "react-router-dom";
+import Button from "../Button/Button";
 import cartStyles from "./cart.module.css";
 import cancel from "../../icons/001-cancel-3.png";
 const cx = require("classnames");
@@ -74,7 +75,7 @@ const Cart = ({
                 </h4>
                 <button
                   tabIndex={cartIsOpen ? "0" : "-1"}
-                  className={`${cartStyles.btn} ignoreClickOutside`}
+                  className={`${cartStyles.removeBtn} ignoreClickOutside`}
                   onClick={() => onDelete(item)}
                 >
                   Remove
@@ -97,14 +98,14 @@ const Cart = ({
               <p className={cartStyles.total}>
                 Total <span className={cartStyles.span}>${total}</span>
               </p>
-              <button
-                onClick={redirect}
+              <div
                 tabIndex={cartIsOpen ? "0" : "-1"}
-                to="/checkout"
-                className={` ${cartStyles.checkout} `}
+                className={cartStyles.checkout}
               >
-                Checkout
-              </button>
+                <Button className={"btnSm"} txt="Checkout" onClick={redirect}>
+                  Send
+                </Button>
+              </div>
             </div>
           ) : null
         )}

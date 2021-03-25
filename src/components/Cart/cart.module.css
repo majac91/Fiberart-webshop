@@ -79,23 +79,21 @@
 .price {
   align-self: center;
   margin-right: 2em;
+  font-weight: 400;
 }
 
-.btn {
+.removeBtn {
   margin-top: 2em;
   width: 6em;
   height: 2.2em;
   font-size: 0.8em;
-  background: white;
+  background: transparent;
   color: black;
-  border: 1px solid #e0dbda;
+  border: var(--border-gray);
 }
 
 .checkout {
   padding: 1em;
-  background: white;
-  border: var(--border-gray);
-  font-size: 0.8rem;
 }
 
 .totalWrapper {
@@ -109,10 +107,6 @@
 
 .total {
   margin-bottom: 2em;
-}
-.total,
-.span {
-  font-weight: 700;
 }
 
 .shipping {

@@ -85,8 +85,8 @@
 }
 
 .burgerIcon {
-  width: 2em;
-  height: 2em;
+  width: 1.5em;
+  height: 1.2em;
 }
 
 @media all and (min-width: 320px) and (max-width: 767px) {
@@ -106,9 +106,12 @@
   .wrapperMobile {
     width: 100%;
     display: flex;
-    justify-content: space-betweens;
   }
 
+  .wrapperMobile .navLink {
+    display: inline-block;
+    width: 100%;
+  }
   .logoDesktopLink {
     display: none;
   }
@@ -123,23 +126,34 @@
     height: 7em;
   }
 
+  .cartIcon {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
   .wrapperDesktop .cart {
     display: none;
   }
 
   .wrapperMobile .cart {
     display: block;
-    width: 5em;
     letter-spacing: initial;
     text-align: right;
+    font-size: initial;
   }
 
+  .wrapperMobile .cart,
   .burgerBtn {
-    width: 5em;
+    width: 4em;
   }
 
   .burgerIcon {
     float: left;
+  }
+
+  .listItem {
+    align-self: flex-start;
+    width: 100%;
   }
 
   .navLinks {

@@ -52,11 +52,25 @@
   font-size: 4rem;
 }
 
-.about .caption {
-  width: auto;
+.about .captionWrapper {
+  width: 60%;
+  height: auto;
   margin: 0;
+  font-size: var(--text-md);
+  font-weight: 800;
 }
 
+.contact.container,
+.checkout.container,
+.contact .captionWrapper,
+.checkout .captionWrapper {
+  height: 20vh;
+}
+
+.contact .captionWrapper,
+.checkout .captionWrapper {
+  margin-bottom: 5rem;
+}
 @media all and (min-width: 320px) and (max-width: 400px) {
   .captionWrapper {
     width: 80%;
@@ -72,5 +86,6 @@
 @media all and (min-width: 320px) and (max-width: 500px) {
   .about .captionWrapper {
     font-size: var(--text-lg);
+    width: 80%;
   }
 }
