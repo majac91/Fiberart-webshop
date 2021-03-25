@@ -23,7 +23,8 @@ export default function CustomSlider() {
       {
         breakpoint: 481,
         settings: {
-          centerPadding: "0px",
+          centerPadding: "0",
+          // arrows: false,
           slidesToShow: 1,
         },
       },
@@ -37,7 +38,7 @@ export default function CustomSlider() {
   };
 
   return (
-    <section aria-label="Slideshow" className={"slider-main container"}>
+    <section aria-label="Slideshow" className={"slider-main"}>
       <h2 className={` ${customSliderStyles.heading}`}>New from our studio</h2>
       <Slider {...settings} className={customSliderStyles.slideContainer}>
         {Object.keys(products).map((key) => {

@@ -4,7 +4,7 @@
     url("../src/fonts/ChamberiDisplay-ExtraLight.otf");
 }
 @font-face {
-  font-family: ChamberiHeadline;
+  font-family: ChamberiRegular;
   src: url("../src/fonts/ChamberiDisplay-Regular.otf") format("otf"),
     url("../src/fonts/ChamberiDisplay-Regular.otf");
 }
@@ -23,11 +23,11 @@
 :root {
   /* base values */
   --text-base-size: 1.1em;
-  --text-scale-ratio: 1.4;
+  --text-scale-ratio: 1.5;
 
   /* type scale */
   --text-xs: calc((var(--text-base-size)) / (var(--text-scale-ratio) * 0.9));
-  --text-sm: var(--text-base-size);
+  --text-sm: var(--text-base-size) * (var(--text-scale-ratio) / 2);
   --text-md: calc((var(--text-base-size)) * var(--text-scale-ratio));
   --text-lg: calc((var(--text-base-size)) * var(--text-scale-ratio));
   --text-xl: calc(
@@ -40,7 +40,7 @@
 
   /* fonts */
   --font-primary: "Raleway", serif;
-  --font-secondary: "ChamberiHeadline", serif;
+  --font-secondary: "ChamberiRegular", serif;
   --font-accent: "Torinout", serif;
   --font-light: "ChamberiLight", serif;
 
@@ -60,7 +60,6 @@
   --border-gray: 2px solid #e0dbda;
   --border-btn: 2px solid #e0dbda;
 
-  --container: 80vw;
   --beige: rgb(234, 227, 217);
   --section: 8rem;
   --transition: 1s ease-in-out;
@@ -94,10 +93,9 @@ button:hover {
 }
 
 h1 {
-  font-family: var(--font-secondary);
+  font-family: var(--font-light);
   font-size: var(--text-xl);
   text-transform: uppercase;
-  font-weight: 600;
 }
 
 h2 {
@@ -175,6 +173,10 @@ footer {
 
 /* Slider */
 /* Main page slider */
+.slider-main {
+  width: 85vw;
+  margin: auto;
+}
 
 .slick-slide img {
   object-fit: cover;
@@ -251,15 +253,29 @@ footer {
   display: none !important;
 }
 
+@media all and (min-width: 320px) and (max-width: 500px) {
+  :root {
+    --text-base-size: 0.9em;
+  }
+}
+
 @media all and (min-width: 320px) and (max-width: 768px) {
   :root {
-    --container: 95vw;
-    --text-base-size: 0.7em;
     --section: 5rem;
+  }
+  .slider-main .slick-slide img {
+    width: 80%;
+  }
+}
+
+@media all and (min-width: 320px) and (max-width: 768px) {
+  :root {
+    --section: 3rem;
   }
 
   .container {
     width: 95vw;
+    height: 100%;
   }
 
   .btn-black {
@@ -267,13 +283,18 @@ footer {
   }
 
   .slider-main .slick-slide img {
-    width: 70vw;
+    width: 90%;
+    height: 55vh;
+  }
+
+  .slider-main .slick-center img {
+    height: 65vh;
   }
 }
 
-@media all and (min-width: 768px) and (max-width: 1024px) {
+@media all and (min-width: 500px) and (max-width: 1024px) {
   .slider-main .slick-slide img {
-    width: 23vw;
+    width: 90%;
     height: 30vh;
   }
 

@@ -56,7 +56,7 @@ export default function Nav({
               onClick={onCartClick}
               className={`${navStyles.navLink} ${navStyles.cart} ignoreClickOutside`}
             >
-              Cart ({cartCount})
+              Cart <span className={navStyles.cartIcon}>{cartCount}</span>
             </button>
           </li>
         </ul>

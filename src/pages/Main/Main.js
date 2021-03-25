@@ -10,8 +10,8 @@ const Main = () => {
       <Hero page="main" />
       <main className="mainPage">
         <Categories />
-        <Slider />
         <Featured />
+        <Slider />
         <About />
       </main>
     </>

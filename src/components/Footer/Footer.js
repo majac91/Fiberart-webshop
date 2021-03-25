@@ -64,7 +64,7 @@ export default function Footer(props) {
                 className={footerStyles.logo}
               ></img>
             </div>
-            <p className="text-column">
+            <p className={footerStyles.subcaption}>
               <span>{props.paragraph} </span>
             </p>
             <div className={footerStyles.social}>

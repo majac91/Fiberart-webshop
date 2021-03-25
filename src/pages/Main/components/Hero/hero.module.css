@@ -10,12 +10,6 @@
   width: inherit;
 }
 
-.captionWrapper {
-  position: relative;
-  right: 3%;
-  bottom: 10%;
-}
-
 .section {
   width: 31%;
   margin: auto;
@@ -29,6 +23,16 @@
   object-fit: cover;
   width: 100%;
   height: 100%;
+}
+
+.captionWrapper {
+  position: relative;
+  right: 5%;
+  bottom: 10%;
+}
+
+.caption {
+  overflow: hidden;
 }
 
 .subcaption {
@@ -47,13 +51,27 @@
 @media all and (min-width: 320px) and (max-width: 768px) {
   .wrapper {
     height: auto;
+    width: 100%;
+  }
+
+  .section {
+    width: 50%;
+  }
+
+  .section:last-of-type {
+    width: 100%;
+    margin: auto;
+    text-align: center;
   }
 
   .img1 {
-    height: 14rem;
-    float: right;
+    height: 10rem;
     margin-right: 1rem;
     margin-left: 1rem;
+  }
+
+  .img2 {
+    width: 90%;
   }
 
   .captionWrapper {
@@ -63,29 +81,16 @@
 
   .captionOutter {
     position: relative;
-    right: 3%;
-    bottom: 10%;
     text-align: left;
-    width: 80%;
+    width: 90%;
     margin: auto;
   }
 
   .caption {
-    width: auto;
+    font-size: var(--text-lg);
   }
 
-  /* .subcaption {
-    left: 0;
-    margin: 1rem 0;
-  } */
-
-  .section {
-    width: 45vw;
-  }
-
-  .section:last-of-type {
-    width: 90vw;
-    margin: auto;
-    text-align: center;
+  .subcaption {
+    margin-bottom: 2rem;
   }
 }

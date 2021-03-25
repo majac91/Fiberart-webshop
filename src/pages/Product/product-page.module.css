@@ -97,7 +97,7 @@
   }
 
   .productWrapper {
-    width: var(--container);
+    width: 100%;
     top: -3em;
   }
 

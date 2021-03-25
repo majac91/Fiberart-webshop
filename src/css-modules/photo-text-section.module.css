@@ -36,6 +36,10 @@
   top: -1rem;
 }
 
+.right .text {
+  margin-bottom: 2rem;
+}
+
 .left .imgSmall {
   left: 2rem;
   bottom: 5rem;
@@ -46,7 +50,26 @@
   display: flex;
 }
 
+.rightMobile {
+  display: none;
+}
+
 @media all and (min-width: 320px) and (max-width: 1024px) {
+  .imgWrapper,
+  .text {
+    max-height: 100%;
+    flex: 1;
+  }
+
+  .rightMobile {
+    display: block;
+    margin-top: var(--section);
+  }
+
+  .rightDesktop {
+    display: none;
+  }
+
   .left,
   .right {
     flex-direction: column;
@@ -60,5 +83,26 @@
   .textInner {
     width: 80%;
     margin: auto;
+  }
+
+  .imgWrapper {
+    width: 100%;
+  }
+
+  .left .imgBig {
+    margin-right: 3rem;
+  }
+
+  .right .imgBig {
+    margin-left: 3rem;
+  }
+  .imgBig {
+    width: auto;
+    height: 80vw;
+  }
+
+  .imgSmall {
+    width: auto;
+    height: 40vw;
   }
 }

@@ -1,16 +1,12 @@
-.btn {
-  background: transparent;
-  position: absolute;
-  top: 0;
-  left: 0;
-  border: none;
-  font-size: 1rem;
-}
-
 .wrapper {
   margin-top: 1rem;
   font-size: 1rem;
   position: relative;
+}
+
+.wrapper:hover {
+  opacity: 0.7;
+  transition: var(--transition);
 }
 
 .border {
@@ -21,38 +17,52 @@
   opacity: 1;
 }
 
-.wrapper:hover {
-  opacity: 0.7;
-  transition: opacity 0.5s ease;
+.btn {
+  background: transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: none;
+  font-size: 1rem;
 }
 
-.btnMd .wrapper,
-.btnMd .border,
-.btnMd .btn {
-  font-size: 0.9rem;
-  width: 7em;
-  height: 7em;
-}
-
-.btnSm .wrapper,
-.btnSm .border,
-.btnSm .btn {
-  font-size: 0.8rem;
-  width: 5em;
-  height: 5em;
-}
-
-.btnLg .wrapper,
-.btnLg .border,
-.btnLg .btn {
+.btnLg .wrapper {
   width: 11em;
   height: 11em;
 }
 
+.btnMd .wrapper {
+  width: 7em;
+  height: 7em;
+}
+
+.btnSm .wrapper {
+  width: 5em;
+  height: 5em;
+}
+
+.btnLg .border,
+.btnLg .btn,
+.btnMd .border,
+.btnMd .btn,
+.btnSm .border,
+.btnSm .btn {
+  width: 100%;
+  height: 100%;
+}
+
+.btnMd .btn {
+  font-size: 0.9rem;
+}
+
+.btnSm .btn {
+  font-size: 0.8rem;
+}
+
 .heroBtn {
   position: relative;
-  top: -2em;
-  left: 15em;
+  top: -3em;
+  left: 11em;
 }
 
 .btnLeft .wrapper {

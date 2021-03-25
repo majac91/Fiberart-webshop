@@ -21,40 +21,83 @@ export default function About(props) {
   }
 
   return (
-    <section aria-label="About" className={`${imgStyles.right} container`}>
-      <div className={imgStyles.text}>
-        <div className={imgStyles.textOutter}>
-          <div className={imgStyles.textInner}>
-            <Text
-              className="textLeft"
-              caption="About us"
-              subcaption="I have a affinity for simple and organic materials. I see beauty in the purest of things and I am so excited to share my love for design to help you create a cozy and sereen home. "
-            />
-            <Button
-              className={"btnMd"}
-              className2={"btnRight"}
-              onClick={handleBtnRedirect}
-              txt="Read more"
-            />
+    <>
+      <section
+        aria-label="About"
+        className={`${imgStyles.right} ${imgStyles.rightDesktop} container`}
+      >
+        <div className={imgStyles.text}>
+          <div className={imgStyles.textOutter}>
+            <div className={imgStyles.textInner}>
+              <Text
+                className="textLeft"
+                caption="About us"
+                subcaption="I have a affinity for simple and organic materials. I see beauty in the purest of things and I am so excited to share my love for design to help you create a cozy and sereen home. "
+              />
+              <Button
+                className={"btnMd"}
+                className2={"btnRight"}
+                onClick={handleBtnRedirect}
+                txt="Read more"
+              />
+            </div>
           </div>
         </div>
-      </div>
-      <picture className={imgStyles.imgWrapper}>
-        {isOnScreen ? (
-          <>
-            <img
-              src={aboutImg}
-              alt="blonde woman in black and white outfit"
-              className={imgStyles.imgBig}
-            />
-            <img src={test} className={imgStyles.imgSmall} />
-          </>
-        ) : (
-          <div className={placeholderStyle} ref={placeholderRef}>
-            <Loader />
+        <picture className={imgStyles.imgWrapper}>
+          {isOnScreen ? (
+            <>
+              <img
+                src={aboutImg}
+                alt="blonde woman in black and white outfit"
+                className={imgStyles.imgBig}
+              />
+              <img src={test} className={imgStyles.imgSmall} />
+            </>
+          ) : (
+            <div className={placeholderStyle} ref={placeholderRef}>
+              <Loader />
+            </div>
+          )}
+        </picture>
+      </section>
+      <section
+        aria-label="About"
+        className={`${imgStyles.right} ${imgStyles.rightMobile} container`}
+      >
+        <picture className={imgStyles.imgWrapper}>
+          {isOnScreen ? (
+            <>
+              <img
+                src={aboutImg}
+                alt="blonde woman in black and white outfit"
+                className={imgStyles.imgBig}
+              />
+              <img src={test} className={imgStyles.imgSmall} />
+            </>
+          ) : (
+            <div className={placeholderStyle} ref={placeholderRef}>
+              <Loader />
+            </div>
+          )}
+        </picture>
+        <div className={imgStyles.text}>
+          <div className={imgStyles.textOutter}>
+            <div className={imgStyles.textInner}>
+              <Text
+                className="textLeft"
+                caption="About us"
+                subcaption="I have a affinity for simple and organic materials. I see beauty in the purest of things and I am so excited to share my love for design to help you create a cozy and sereen home. "
+              />
+              <Button
+                className={"btnMd"}
+                className2={"btnRight"}
+                onClick={handleBtnRedirect}
+                txt="Read more"
+              />
+            </div>
           </div>
-        )}
-      </picture>
-    </section>
+        </div>
+      </section>
+    </>
   );
 }
