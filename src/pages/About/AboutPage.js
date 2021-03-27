@@ -2,6 +2,7 @@ import React, { useRef } from "react";
 import { useElementOnScreen } from "../../hooks/useOnIntersection";
 import Header from "../../components/Header/Header";
 import Text from "../../components/Text/Text";
+import Quote from "./Quote/Quote";
 import Loader from "../../components/Loader";
 import imgStyles from "../../css-modules/photo-text-section.module.css";
 import workshopImg from "../../img/header1.jpg";
@@ -19,7 +20,6 @@ const AboutPage = () => {
     materialsImg
   );
 
-  let textClass = "aboutPage";
   const groupPlaceholderStyle = cx("placeholder", {
     hidePlaceholder: imgGroupIsOnScreen,
   });
@@ -70,7 +70,7 @@ const AboutPage = () => {
             </div>
           </div>
         </section>
-
+        <Quote></Quote>/
         <section className={` ${imgStyles.right} d-flex container`}>
           <div className={imgStyles.text}>
             <div className={imgStyles.textOutter}>

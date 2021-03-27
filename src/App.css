@@ -26,8 +26,8 @@
   --text-scale-ratio: 1.5;
 
   /* type scale */
-  --text-xs: calc((var(--text-base-size)) / (var(--text-scale-ratio) * 0.9));
-  --text-sm: var(--text-base-size) * (var(--text-scale-ratio) / 2);
+  --text-xs: calc((var(--text-base-size)) / (var(--text-scale-ratio) * 1.1));
+  --text-sm: var(--text-base-size);
   --text-md: calc((var(--text-base-size)) * var(--text-scale-ratio));
   --text-lg: calc((var(--text-base-size)) * var(--text-scale-ratio));
   --text-xl: calc(

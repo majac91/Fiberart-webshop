@@ -4,6 +4,7 @@ import { useElementOnScreen } from "../../hooks/useOnIntersection";
 import { useParams } from "react-router-dom";
 import productPageStyles from "./product-page.module.css";
 import Slider from "react-slick";
+import Heaader from "../../components/Header/Header";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
@@ -55,9 +56,10 @@ const ProductPage = ({
 
   return (
     <div className={`${productPageStyles.container} container`}>
-      <header className={productPageStyles.header}>
+      {/* <header className={productPageStyles.header}>
         <h1 className={productPageStyles.caption}>{product.name}</h1>
-      </header>
+      </header> */}
+      <Heaader caption={product.name}></Heaader>
 
       <div
         aria-label="product information"
@@ -84,7 +86,7 @@ const ProductPage = ({
             <div ref={placeholder}></div>
           )}
         </div>
-        <div aria-label="decription" className={productPageStyles.sdescription}>
+        <div aria-label="decription" className={productPageStyles.description}>
           <h2>Description</h2>
           <p className={productPageStyles.p}>
             Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean

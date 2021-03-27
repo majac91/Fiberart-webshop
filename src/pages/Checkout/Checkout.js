@@ -51,7 +51,7 @@ const Checkout = ({ onClearCart, total, onDelete, cartItems }) => {
                     <div className={cartStyles.priceWrapper}>
                       <p className={cartStyles.price}>{item.price}</p>
                       <button
-                        className={cartStyles.removeBtn}
+                        className={cartStyles.btn}
                         onClick={() => onDelete(item)}
                       >
                         Remove
