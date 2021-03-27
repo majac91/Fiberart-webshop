@@ -6,7 +6,7 @@
   flex: 1;
 }
 
-.cart {
+.order {
   flex: 1;
 }
 
@@ -23,5 +23,10 @@
 @media all and (min-width: 320px) and (max-width: 768px) {
   .container {
     flex-direction: column;
+  }
+
+  .order {
+    width: 100%;
+    margin: auto;
   }
 }

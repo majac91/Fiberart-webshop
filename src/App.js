@@ -12,6 +12,8 @@ import ContactPage from "./pages/Contact/Contact";
 import Cart from "./components/Cart/Cart";
 import useOnclickOutside from "react-cool-onclickoutside";
 import ScrollToTop from "./components/ScrollToTop";
+import cartStyles from "./components/Cart/cart.module.css";
+const cx = require("classnames");
 
 function App() {
   const [cartCount, setCartCount] = useState(
@@ -77,14 +79,21 @@ function App() {
         cartCount={cartCount}
         onCartClick={handleToggleCart}
       />
-      <Cart
-        clickOutsideRef={clickOutsideCart}
-        total={total}
-        onDelete={deleteCartItem}
-        onCartClick={handleToggleCart}
-        cartIsOpen={cartIsOpen}
-        cartItems={cartItems}
-      />
+      <div
+        aria-label="cart"
+        ref={clickOutsideCart}
+        aria-hidden={cartIsOpen ? "false" : "true"}
+        className={cx(cartStyles.cart, { [cartStyles.open]: cartIsOpen })}
+      >
+        <Cart
+          clickOutsideRef={clickOutsideCart}
+          total={total}
+          onDelete={deleteCartItem}
+          onCartClick={handleToggleCart}
+          cartIsOpen={cartIsOpen}
+          cartItems={cartItems}
+        />
+      </div>
       <Switch>
         <Route exact path="/">
           <Main />

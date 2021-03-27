@@ -4,7 +4,7 @@
 
 I've created this single page web app as the final project for a workshop, with the goal to besides technologies learned in the workshop, learn and use additional tools to create a fully functioning webstite.
 
-<a href='https://and-thread-tapestries.netlify.app/'>Go to page</a>
+<a href='https://and-thread-tapestries.netlify.app/'>Live demo</a>
 
 # Personal project goals
 
