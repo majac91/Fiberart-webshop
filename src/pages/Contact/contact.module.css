@@ -58,13 +58,10 @@
   margin-left: 2rem;
 }
 
-.btn {
-  margin-left: 4em;
-}
-
-@media only screen and (min-width: 320px) and (max-width: 360px) {
-  .contactForm {
-    width: 90vw;
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+  .contactForm,
+  .formWrapperInner {
+    width: 80vw;
     height: 100%;
     overflow: hidden;
   }

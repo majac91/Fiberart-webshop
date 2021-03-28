@@ -69,11 +69,11 @@ const ContactForm = ({ setIsSent }) => {
         {errors.message && (
           <p className={formStyles.errorMsg}>{errors.message}</p>
         )}
-      </div>
-      <div className={contactStyles.btn}>
-        <Button className={"btnSm"} txt="Send">
-          Send
-        </Button>
+        <div className={contactStyles.btn}>
+          <Button className={"btnSm"} txt="Send">
+            Send
+          </Button>
+        </div>
       </div>
     </form>
   );

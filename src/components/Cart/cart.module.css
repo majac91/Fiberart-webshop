@@ -53,7 +53,8 @@
 }
 
 .img {
-  height: 6em;
+  height: 6rem;
+  width: 4rem;
 }
 
 .productInfo {
@@ -90,10 +91,6 @@
   background: transparent;
   color: black;
   border: var(--border-gray);
-}
-
-.checkout {
-  padding: 1em;
 }
 
 .totalWrapper {

@@ -63,6 +63,7 @@
   --beige: rgb(234, 227, 217);
   --section: 8rem;
   --transition: 1s ease-in-out;
+  --container: 85vw;
 }
 
 body {
@@ -256,6 +257,7 @@ footer {
 @media all and (min-width: 320px) and (max-width: 500px) {
   :root {
     --text-base-size: 0.9em;
+    --container: 95vw;
   }
 }
 

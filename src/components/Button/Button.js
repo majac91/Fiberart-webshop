@@ -3,6 +3,9 @@ import btnStyles from "./button.module.css";
 const cx = require("classnames");
 
 const Button = ({ onClick, className, className2, txt }) => {
+  console.log(className2);
+  console.log("button rerenders");
+
   return (
     <div
       className={cx({

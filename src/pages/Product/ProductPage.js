@@ -5,6 +5,7 @@ import { useParams } from "react-router-dom";
 import productPageStyles from "./product-page.module.css";
 import Slider from "react-slick";
 import Heaader from "../../components/Header/Header";
+import Button from "../../components/Button/Button";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
@@ -97,13 +98,13 @@ const ProductPage = ({
             commodo ligula eget dolor. Donec quam felis, ultricies nec,
             pellentesque eu,
           </p>
-          <button
-            onClick={handleAddCartItem}
-            className={"btn-black ignoreClickOutside"}
-            type="button"
-          >
-            Add to cart
-          </button>
+          <div className="ignoreClickOutside">
+            <Button
+              className="btnMd"
+              txt=" Add to cart"
+              onClick={handleAddCartItem}
+            />
+          </div>
         </div>
       </div>
     </div>

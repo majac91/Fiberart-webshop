@@ -33,3 +33,12 @@
   bottom: 0;
   height: 5rem;
 }
+
+@media all and (min-width: 320px) and (max-width: 768px) {
+  .img1 {
+    position: absolute;
+    left: -1rem;
+    top: -2rem;
+    height: 10rem;
+  }
+}

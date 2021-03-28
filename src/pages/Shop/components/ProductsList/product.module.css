@@ -60,7 +60,7 @@
   }
 
   .imgLink {
-    width: 100%;
+    width: var(--container);
   }
 
   .productImg {
