@@ -7,23 +7,30 @@ export function useElementOnScreen(ref, imgSrc) {
     const options = { treshold: 0 };
 
     const callback = (entries) => {
-      if (imgSrc) {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            let downloadingImg = new Image();
-            downloadingImg.onload = function () {
-              setIsIntersecting(true);
-            };
-            downloadingImg.src = imgSrc;
-          }
-        });
-      } else {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setIsIntersecting(true);
-          }
-        });
-      }
+      // if (imgSrc) {
+      //   console.log("src", imgSrc);
+      //   entries.forEach((entry) => {
+      //     console.log("entry", entry);
+
+      //     if (entry.isIntersecting) {
+      //       let downloadingImg = new Image();
+      //       downloadingImg.style.opacity = 0;
+      //       downloadingImg.onload = function () {
+      //         setIsIntersecting(true);
+
+      //         downloadingImg.style.opacity = 1;
+      //       };
+      //       downloadingImg.src = imgSrc;
+      //     }
+      //   });
+      // } else {
+      entries.forEach((entry) => {
+        console.log(entry);
+        if (entry.isIntersecting) {
+          setIsIntersecting(true);
+        }
+      });
+      // }
     };
     const observer = new IntersectionObserver(callback, options);
     observer.observe(ref.current);

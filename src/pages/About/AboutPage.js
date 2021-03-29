@@ -8,23 +8,20 @@ import imgStyles from "../../css-modules/photo-text-section.module.css";
 import workshopImg from "../../img/header1.jpg";
 import detailImg from "../../img/header2.jpg";
 import materialsImg from "../../img/materials.jpg";
+import Img from "../../components/Img/Img";
 const cx = require("classnames");
 
 const AboutPage = () => {
-  const imgGroupRef = useRef();
-  const imgGroupIsOnScreen = useElementOnScreen(imgGroupRef, null);
-
-  const materialsImgRef = useRef();
-  const materialsImgIsOnScreen = useElementOnScreen(
-    materialsImgRef,
-    materialsImg
-  );
-
-  const groupPlaceholderStyle = cx("placeholder", {
-    hidePlaceholder: imgGroupIsOnScreen,
+  const imgGroup1Ref = useRef();
+  const imgGroup1OnScreen = useElementOnScreen(imgGroup1Ref, null);
+  const imgGroup1Style = cx("placeholder group", {
+    hidePlaceholder: imgGroup1OnScreen,
   });
-  const materialsPlaceholderStyle = cx("placeholder", {
-    hidePlaceholder: materialsImgIsOnScreen,
+
+  const imgGroup2Ref = useRef();
+  const imgGroup2OnScreen = useElementOnScreen(imgGroup2Ref, null);
+  const imgGroup2Style = cx("placeholder", {
+    hidePlaceholder: imgGroup2OnScreen,
   });
   return (
     <>
@@ -35,26 +32,25 @@ const AboutPage = () => {
       />
       <main className="aboutPage">
         <section className={`${imgStyles.left} d-flex container`}>
-          <div className={imgStyles.imgWrapper}>
-            {imgGroupIsOnScreen ? (
+          <div className={imgStyles.imgWrapper} ref={imgGroup1Ref}>
+            {imgGroup1OnScreen ? (
               <>
-                <img
+                <Img
                   alt="tapestry being made"
                   src={workshopImg}
                   className={` ${imgStyles.imgSmall}`}
                 />
-                <img
+                <Img
                   alt="tapestry with wooden frame"
                   src={detailImg}
                   className={imgStyles.imgBig}
                 />
               </>
             ) : (
-              <div className={groupPlaceholderStyle} ref={imgGroupRef}>
-                <Loader />
-              </div>
+              <Loader className={imgGroup1Style} />
             )}
           </div>
+
           <div className={imgStyles.text}>
             <div className={imgStyles.textOutter}>
               <div className={imgStyles.textInner}>
@@ -70,7 +66,7 @@ const AboutPage = () => {
             </div>
           </div>
         </section>
-        <Quote></Quote>/
+        <Quote />
         <section className={` ${imgStyles.right} d-flex container`}>
           <div className={imgStyles.text}>
             <div className={imgStyles.textOutter}>
@@ -86,24 +82,22 @@ const AboutPage = () => {
               </div>
             </div>
           </div>
-          <div className={imgStyles.imgWrapper}>
-            {materialsImgIsOnScreen ? (
+          <div className={imgStyles.imgWrapper} ref={imgGroup2Ref}>
+            {imgGroup2OnScreen ? (
               <>
-                <img
+                <Img
                   alt="ball of white yarn"
                   src={materialsImg}
                   className={imgStyles.imgBig}
-                ></img>
-                <img
+                />
+                <Img
                   alt="tapestry being made"
                   src={workshopImg}
                   className={` ${imgStyles.imgSmall}`}
                 />
               </>
             ) : (
-              <div className={materialsPlaceholderStyle} ref={materialsImgRef}>
-                <Loader />
-              </div>
+              <Loader className={imgGroup2Style} />
             )}
           </div>
         </section>

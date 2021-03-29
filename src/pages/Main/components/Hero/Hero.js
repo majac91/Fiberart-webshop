@@ -1,29 +1,30 @@
 import React from "react";
 import heroStyles from "./hero.module.css";
 import Button from "../../../../components/Button/Button";
+import Img from "../../../../components/Img/Img";
 
-import img1 from "../../../../img/header-main-1.jpg";
-import img2 from "../../../../img/header-main-2.jpg";
+import img1 from "../../../../img/hero-1.jpg";
+import img2 from "../../../../img/hero-2.jpg";
 
 const Hero = () => {
   return (
     <header className={`${heroStyles.container} ${heroStyles.hero} container`}>
       <div className={heroStyles.wrapper}>
         <div className={heroStyles.section}>
-          <img
+          <Img
             alt=""
             role="presentation"
             className={heroStyles.img1}
             src={img1}
-          ></img>
+          />
         </div>
         <div className={heroStyles.section}>
-          <img
+          <Img
             alt=""
             role="presentation"
             className={heroStyles.img2}
             src={img2}
-          ></img>
+          />
         </div>
         <div className={`${heroStyles.section} ${heroStyles.captionWrapper}`}>
           <div className={heroStyles.captionOutter}>

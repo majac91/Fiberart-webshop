@@ -2,6 +2,7 @@ import React, { useRef } from "react";
 import { useHistory } from "react-router-dom";
 import { useElementOnScreen } from "../../../hooks/useOnIntersection";
 import Loader from "../../../components/Loader/Loader";
+import Img from "../../../components/Img/Img";
 import Button from "../../../components/Button/Button";
 import Text from "../../../components/Text/Text";
 import imgStyles from "../../../css-modules/photo-text-section.module.css";
@@ -10,9 +11,11 @@ import test from "../../../img/social2.jpg";
 const cx = require("classnames");
 
 export default function About(props) {
-  const placeholderRef = useRef();
-  const isOnScreen = useElementOnScreen(placeholderRef, aboutImg);
-  const placeholderStyle = cx("placeholder", { hidePlaceholder: isOnScreen });
+  const imgGroupRef = useRef();
+  const imgGroupIsOnScreen = useElementOnScreen(imgGroupRef, aboutImg);
+  const imgGroupStyle = cx("placeholder group", {
+    hidePlaceholder: imgGroupIsOnScreen,
+  });
 
   let history = useHistory();
 
@@ -43,43 +46,40 @@ export default function About(props) {
             </div>
           </div>
         </div>
-        <picture className={imgStyles.imgWrapper}>
-          {isOnScreen ? (
+
+        <div className={imgStyles.imgWrapper} ref={imgGroupRef}>
+          {imgGroupIsOnScreen ? (
             <>
-              <img
+              <Img
                 src={aboutImg}
                 alt="blonde woman in black and white outfit"
                 className={imgStyles.imgBig}
               />
-              <img src={test} className={imgStyles.imgSmall} />
+              <Img src={test} className={imgStyles.imgSmall} />
             </>
           ) : (
-            <div className={placeholderStyle} ref={placeholderRef}>
-              <Loader />
-            </div>
+            <Loader className={imgGroupStyle} />
           )}
-        </picture>
+        </div>
       </section>
       <section
         aria-label="About"
         className={`${imgStyles.right} ${imgStyles.rightMobile} container`}
       >
-        <picture className={imgStyles.imgWrapper}>
-          {isOnScreen ? (
+        <div className={imgStyles.imgWrapper} ref={imgGroupRef}>
+          {imgGroupIsOnScreen ? (
             <>
-              <img
+              <Img
                 src={aboutImg}
                 alt="blonde woman in black and white outfit"
                 className={imgStyles.imgBig}
               />
-              <img src={test} className={imgStyles.imgSmall} />
+              <Img src={test} className={imgStyles.imgSmall} />
             </>
           ) : (
-            <div className={placeholderStyle} ref={placeholderRef}>
-              <Loader />
-            </div>
+            <Loader className={imgGroupStyle} />
           )}
-        </picture>
+        </div>
         <div className={imgStyles.text}>
           <div className={imgStyles.textOutter}>
             <div className={imgStyles.textInner}>

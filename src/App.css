@@ -26,7 +26,7 @@
   --text-scale-ratio: 1.5;
 
   /* type scale */
-  --text-xs: calc((var(--text-base-size)) / (var(--text-scale-ratio) * 1.1));
+  --text-xs: calc((var(--text-base-size)) / (var(--text-scale-ratio) * 0.9));
   --text-sm: var(--text-base-size);
   --text-md: calc((var(--text-base-size)) * var(--text-scale-ratio));
   --text-lg: calc((var(--text-base-size)) * var(--text-scale-ratio));
@@ -54,13 +54,14 @@
   --color-text: rgb(66 65 65);
   --color-headings: rgb(123 123 123);
   --color-background: #fdf8f4;
+  --color-beige: rgb(234, 227, 217);
+  --color-gray: #e0dbda;
 
   /* borders */
   --border-beige: 2px solid rgb(234, 227, 217);
   --border-gray: 2px solid #e0dbda;
   --border-btn: 2px solid #e0dbda;
 
-  --beige: rgb(234, 227, 217);
   --section: 8rem;
   --transition: 1s ease-in-out;
   --container: 85vw;
@@ -158,7 +159,8 @@ footer {
   overflow: hidden;
 }
 
-.placeholder {
+.placeholder,
+.group {
   width: 100%;
   min-height: 100%;
   display: flex;
@@ -166,6 +168,7 @@ footer {
   align-items: center;
   opacity: 1;
   transition: opacity 2s ease;
+  color: var(--color--gray);
 }
 
 .hidePlaceholder {
