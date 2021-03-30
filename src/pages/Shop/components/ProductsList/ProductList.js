@@ -10,7 +10,7 @@ const Products = () => {
   const products = useProductList();
   const placeholder = useRef();
 
-  const isOnScreen = useElementOnScreen(placeholder, null);
+  const isOnScreen = useElementOnScreen(placeholder);
   const placeholderStyle = cx("placeholder", { hidePlaceholder: isOnScreen });
 
   return (
@@ -21,10 +21,7 @@ const Products = () => {
             let product = products[key];
             return (
               <div key={key} className={productStyles.imgWrapper}>
-                <Link
-                  to={`product/${key}`}
-                  className={productStyles.imgLink}
-                ></Link>
+                <Link to={`product/${key}`} className={productStyles.imgLink} />
                 <img
                   alt={product.name}
                   className={productStyles.productImg}

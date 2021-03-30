@@ -19,7 +19,7 @@ const cx = require("classnames");
 
 export default function Footer(props) {
   const placeholderRef = useRef();
-  const isOnScreen = useElementOnScreen(placeholderRef, null);
+  const isOnScreen = useElementOnScreen(placeholderRef);
   const placeholderStyle = cx("placeholder", { hidePlaceholder: isOnScreen });
 
   return (

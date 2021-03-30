@@ -22,7 +22,7 @@ const ProductPage = ({
   const { id } = useParams();
   const product = useFetchProduct(id);
   const placeholder = useRef();
-  const isOnScreen = useElementOnScreen(placeholder, null);
+  const isOnScreen = useElementOnScreen(placeholder);
 
   useEffect(() => {
     localStorage.setItem("id", JSON.stringify(itemIds));

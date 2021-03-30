@@ -3,26 +3,19 @@ import { useElementOnScreen } from "../../hooks/useOnIntersection";
 import Header from "../../components/Header/Header";
 import Text from "../../components/Text/Text";
 import Quote from "./Quote/Quote";
-import Loader from "../../components/Loader";
+import ImgSet from "../../components/ImgSet/ImgSet";
 import imgStyles from "../../css-modules/photo-text-section.module.css";
 import workshopImg from "../../img/header1.jpg";
 import detailImg from "../../img/header2.jpg";
 import materialsImg from "../../img/materials.jpg";
-import Img from "../../components/Img/Img";
-const cx = require("classnames");
 
 const AboutPage = () => {
-  const imgGroup1Ref = useRef();
-  const imgGroup1OnScreen = useElementOnScreen(imgGroup1Ref, null);
-  const imgGroup1Style = cx("placeholder group", {
-    hidePlaceholder: imgGroup1OnScreen,
-  });
+  const firstSectionRef = useRef();
+  const firstSectionOnScreen = useElementOnScreen(firstSectionRef);
 
-  const imgGroup2Ref = useRef();
-  const imgGroup2OnScreen = useElementOnScreen(imgGroup2Ref, null);
-  const imgGroup2Style = cx("placeholder", {
-    hidePlaceholder: imgGroup2OnScreen,
-  });
+  const secondSectionRef = useRef();
+  const secondSectionOnScreen = useElementOnScreen(secondSectionRef);
+
   return (
     <>
       <Header
@@ -31,25 +24,27 @@ const AboutPage = () => {
         caption="When you recieve a piece from &Thread- you now own something truly unique with an unquestionable quality, which will connect you to the artist "
       />
       <main className="aboutPage">
-        <section className={`${imgStyles.left} d-flex container`}>
-          <div className={imgStyles.imgWrapper} ref={imgGroup1Ref}>
-            {imgGroup1OnScreen ? (
-              <>
-                <Img
-                  alt="tapestry being made"
-                  src={workshopImg}
-                  className={` ${imgStyles.imgSmall}`}
-                />
-                <Img
-                  alt="tapestry with wooden frame"
-                  src={detailImg}
-                  className={imgStyles.imgBig}
-                />
-              </>
-            ) : (
-              <Loader className={imgGroup1Style} />
-            )}
-          </div>
+        {/* FIRST SECTION */}
+        <section
+          className={`${imgStyles.left} d-flex container`}
+          ref={firstSectionRef}
+        >
+          {firstSectionOnScreen && (
+            <ImgSet
+              images={[
+                {
+                  src: workshopImg,
+                  className: imgStyles.imgSmall,
+                  alt: "tapestry being made",
+                },
+                {
+                  src: detailImg,
+                  className: imgStyles.imgBig,
+                  alt: "tapestry with wooden frame",
+                },
+              ]}
+            />
+          )}
 
           <div className={imgStyles.text}>
             <div className={imgStyles.textOutter}>
@@ -66,8 +61,12 @@ const AboutPage = () => {
             </div>
           </div>
         </section>
+        {/* QUOTE */}
         <Quote />
-        <section className={` ${imgStyles.right} d-flex container`}>
+        <section
+          className={` ${imgStyles.right} d-flex container`}
+          ref={secondSectionRef}
+        >
           <div className={imgStyles.text}>
             <div className={imgStyles.textOutter}>
               <div className={imgStyles.textInner}>
@@ -82,24 +81,23 @@ const AboutPage = () => {
               </div>
             </div>
           </div>
-          <div className={imgStyles.imgWrapper} ref={imgGroup2Ref}>
-            {imgGroup2OnScreen ? (
-              <>
-                <Img
-                  alt="ball of white yarn"
-                  src={materialsImg}
-                  className={imgStyles.imgBig}
-                />
-                <Img
-                  alt="tapestry being made"
-                  src={workshopImg}
-                  className={` ${imgStyles.imgSmall}`}
-                />
-              </>
-            ) : (
-              <Loader className={imgGroup2Style} />
-            )}
-          </div>
+          {/* LAST SECTION */}
+          {secondSectionOnScreen && (
+            <ImgSet
+              images={[
+                {
+                  src: materialsImg,
+                  className: imgStyles.imgBig,
+                  alt: "ball of white yarn",
+                },
+                {
+                  src: workshopImg,
+                  className: imgStyles.imgSmall,
+                  alt: "tapestry being made",
+                },
+              ]}
+            />
+          )}
         </section>
       </main>
     </>

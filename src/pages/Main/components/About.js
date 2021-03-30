@@ -1,21 +1,16 @@
 import React, { useRef } from "react";
 import { useHistory } from "react-router-dom";
 import { useElementOnScreen } from "../../../hooks/useOnIntersection";
-import Loader from "../../../components/Loader/Loader";
-import Img from "../../../components/Img/Img";
+import ImgSet from "../../../components/ImgSet/ImgSet";
 import Button from "../../../components/Button/Button";
 import Text from "../../../components/Text/Text";
 import imgStyles from "../../../css-modules/photo-text-section.module.css";
 import aboutImg from "../../../img/about.jpg";
 import test from "../../../img/social2.jpg";
-const cx = require("classnames");
 
 export default function About(props) {
-  const imgGroupRef = useRef();
-  const imgGroupIsOnScreen = useElementOnScreen(imgGroupRef, aboutImg);
-  const imgGroupStyle = cx("placeholder group", {
-    hidePlaceholder: imgGroupIsOnScreen,
-  });
+  const sectionRef = useRef();
+  const sectionOnScreen = useElementOnScreen(sectionRef);
 
   let history = useHistory();
 
@@ -24,11 +19,8 @@ export default function About(props) {
   }
 
   return (
-    <>
-      <section
-        aria-label="About"
-        className={`${imgStyles.right} ${imgStyles.rightDesktop} container`}
-      >
+    <section aria-label="About" ref={sectionRef}>
+      <div className={`${imgStyles.right} ${imgStyles.rightDesktop} container`}>
         <div className={imgStyles.text}>
           <div className={imgStyles.textOutter}>
             <div className={imgStyles.textInner}>
@@ -47,39 +39,46 @@ export default function About(props) {
           </div>
         </div>
 
-        <div className={imgStyles.imgWrapper} ref={imgGroupRef}>
-          {imgGroupIsOnScreen ? (
-            <>
-              <Img
-                src={aboutImg}
-                alt="blonde woman in black and white outfit"
-                className={imgStyles.imgBig}
-              />
-              <Img src={test} className={imgStyles.imgSmall} />
-            </>
-          ) : (
-            <Loader className={imgGroupStyle} />
-          )}
-        </div>
-      </section>
-      <section
+        {sectionOnScreen && (
+          <ImgSet
+            images={[
+              {
+                src: aboutImg,
+                className: imgStyles.imgBig,
+                alt: "blonde woman in black and white outfit",
+              },
+              {
+                src: test,
+                className: imgStyles.imgSmall,
+                alt: "",
+              },
+            ]}
+          />
+        )}
+      </div>
+
+      <div
         aria-label="About"
         className={`${imgStyles.right} ${imgStyles.rightMobile} container`}
+        ref={sectionRef}
       >
-        <div className={imgStyles.imgWrapper} ref={imgGroupRef}>
-          {imgGroupIsOnScreen ? (
-            <>
-              <Img
-                src={aboutImg}
-                alt="blonde woman in black and white outfit"
-                className={imgStyles.imgBig}
-              />
-              <Img src={test} className={imgStyles.imgSmall} />
-            </>
-          ) : (
-            <Loader className={imgGroupStyle} />
-          )}
-        </div>
+        {sectionOnScreen && (
+          <ImgSet
+            images={[
+              {
+                src: aboutImg,
+                className: imgStyles.imgBig,
+                alt: "blonde woman in black and white outfit",
+              },
+              {
+                src: test,
+                className: imgStyles.imgSmall,
+                alt: "",
+              },
+            ]}
+          />
+        )}
+
         <div className={imgStyles.text}>
           <div className={imgStyles.textOutter}>
             <div className={imgStyles.textInner}>
@@ -97,7 +96,7 @@ export default function About(props) {
             </div>
           </div>
         </div>
-      </section>
-    </>
+      </div>
+    </section>
   );
 }

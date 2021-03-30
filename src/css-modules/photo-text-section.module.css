@@ -22,6 +22,7 @@
 .imgBig {
   width: 28vw;
   object-fit: cover;
+  z-index: -100;
 }
 
 .imgSmall {
@@ -29,6 +30,7 @@
   height: 18vw;
   margin-top: auto;
   position: relative;
+  z-index: 100;
 }
 
 .right .imgSmall {
