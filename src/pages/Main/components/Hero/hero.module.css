@@ -33,6 +33,7 @@
 
 .caption {
   overflow: hidden;
+  font-size: var(--text-xxl);
 }
 
 .subcaption {
