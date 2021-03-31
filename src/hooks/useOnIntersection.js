@@ -8,7 +8,6 @@ export function useElementOnScreen(ref) {
 
     const callback = (entries) => {
       entries.forEach((entry) => {
-        console.log(entry);
         if (entry.isIntersecting) {
           setIsIntersecting(true);
         }

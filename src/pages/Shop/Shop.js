@@ -1,7 +1,6 @@
 import React from "react";
 import Header from "../../components/Header/Header";
 import ProductList from "./components/ProductsList/ProductList";
-import Faq from "./components/FAQ/Faq";
 
 const Shop = () => {
   return (
@@ -12,7 +11,6 @@ const Shop = () => {
       />
       <main>
         <ProductList />
-        {/* <Faq /> */}
       </main>
     </>
   );

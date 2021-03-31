@@ -26,7 +26,7 @@
   --text-scale-ratio: 1.5;
 
   /* type scale */
-  --text-xs: calc((var(--text-base-size)) / (var(--text-scale-ratio) * 0.9));
+  --text-xs: calc((var(--text-base-size)) / (var(--text-scale-ratio) * 0.7));
   --text-sm: var(--text-base-size);
   --text-md: calc((var(--text-base-size)) * var(--text-scale-ratio));
   --text-lg: calc((var(--text-base-size)) * var(--text-scale-ratio));
@@ -121,6 +121,7 @@ h2 {
 
 p {
   font-size: var(--text-sm);
+  line-height: var(--line-height);
 }
 
 section,
@@ -168,7 +169,7 @@ footer {
 
 .slick-slide img {
   object-fit: cover;
-  object-position: top;
+  object-position: center;
 }
 
 .slider-main .slick-prev,
@@ -218,6 +219,7 @@ footer {
 
 .loaded ~ .placeholder {
   display: none;
+  transform: translate(1000px);
 }
 /* Product page slider */
 .productSlider button.slick-arrow.slick-next {
@@ -237,6 +239,7 @@ footer {
 .productSlider .slick-slide img {
   height: 50vh;
   object-fit: cover;
+  object-position: center;
   width: 30rem;
 }
 
@@ -276,11 +279,12 @@ footer {
 
   .slider-main .slick-slide img {
     width: 90%;
-    height: 55vh;
+    height: 45vh;
+    object-position: center;
   }
 
   .slider-main .slick-center img {
-    height: 65vh;
+    height: 55vh;
   }
 }
 

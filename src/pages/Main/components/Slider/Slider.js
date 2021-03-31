@@ -45,8 +45,8 @@ export default function CustomSlider() {
           let product = products[key];
 
           return (
-            <figure className={customSliderStyles.slide}>
-              <div key={key} className={customSliderStyles.imgWrapper}>
+            <figure key={key} className={customSliderStyles.slide}>
+              <div className={customSliderStyles.imgWrapper}>
                 <img
                   alt={product.name}
                   className={customSliderStyles.img}

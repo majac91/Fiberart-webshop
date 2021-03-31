@@ -86,7 +86,7 @@
 
 .burgerIcon {
   width: 1.5em;
-  height: 1.2em;
+  height: 1.5em;
 }
 
 @media all and (min-width: 320px) and (max-width: 767px) {
@@ -106,6 +106,9 @@
   .wrapperMobile {
     width: 100%;
     display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: relative;
   }
 
   .wrapperMobile .navLink {
@@ -140,11 +143,20 @@
     letter-spacing: initial;
     text-align: right;
     font-size: initial;
+    right: 0;
+    top: 40%;
+    font-size: var(--text-xs);
   }
 
   .wrapperMobile .cart,
   .burgerBtn {
-    width: 4em;
+    width: 6em;
+    position: absolute;
+    max-width: 4rem;
+  }
+
+  .burgerBtn {
+    left: 0;
   }
 
   .burgerIcon {

@@ -1,7 +1,7 @@
 import React from "react";
 import headerStyles from "./header.module.css";
+import Img from "../Img/Img";
 //header imgs
-import checkout from "../../img/header-checkout-page.jpg";
 import shop from "../../img/header-shop-page.jpg";
 import about from "../../img/header-about-page.jpg";
 
@@ -21,18 +21,20 @@ export default function Header({ page, caption }) {
         className={`${headerStyles.container} ${headerStyles[textClass]}`}
       >
         {page === "shop" && (
-          <img
+          <Img
             alt="white wool tapestry detail"
             className={headerStyles.img}
             src={shop}
+            hasOpacity={true}
           />
         )}
         {page === "about" && (
           <>
-            <img
+            <Img
               alt="dried pampus grass detail"
               className={headerStyles.img}
               src={about}
+              hasOpacity={true}
             />
             <p>since</p>
             <p className={headerStyles.year}>1980</p>

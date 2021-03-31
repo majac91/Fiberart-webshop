@@ -39,6 +39,9 @@
   .heading {
     font-size: var(--text-lg);
   }
+  .slideContainer {
+    height: 60vh;
+  }
 }
 @media all and (min-width: 768px) and (max-width: 1024px) {
   .slideContainer {

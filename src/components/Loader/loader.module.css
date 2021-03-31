@@ -4,6 +4,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: auto;
+  transform: translateX(-50%);
 }
 
 .loader,
@@ -11,7 +13,8 @@
   border-radius: 50%;
   width: 7em;
   height: 7em;
-  z-index: -300;
+  transform: translate(-50%, -50%);
+  z-index: -500;
 }
 
 .loader {

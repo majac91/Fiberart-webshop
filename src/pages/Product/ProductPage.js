@@ -57,9 +57,6 @@ const ProductPage = ({
 
   return (
     <div className={`${productPageStyles.container} container`}>
-      {/* <header className={productPageStyles.header}>
-        <h1 className={productPageStyles.caption}>{product.name}</h1>
-      </header> */}
       <Heaader caption={product.name}></Heaader>
 
       <div

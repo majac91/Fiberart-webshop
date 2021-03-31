@@ -6,8 +6,8 @@ import Img from "../Img/Img";
 const ImgSet = ({ images }) => {
   return (
     <div className={imgStyles.imgWrapper}>
-      {images.map((attrs) => (
-        <Img {...attrs} />
+      {images.map((attrs, index) => (
+        <Img key={index} {...attrs} />
       ))}
       <Loader />
     </div>
