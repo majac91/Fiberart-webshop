@@ -150,9 +150,8 @@
 
   .wrapperMobile .cart,
   .burgerBtn {
-    width: 6em;
     position: absolute;
-    max-width: 4rem;
+    max-width: 5rem;
   }
 
   .burgerBtn {
