@@ -35,6 +35,10 @@
 }
 
 @media all and (min-width: 320px) and (max-width: 768px) {
+  .container {
+    height: 100%;
+  }
+
   .img1 {
     position: absolute;
     left: -1rem;

@@ -106,7 +106,7 @@
   .wrapperMobile {
     width: 100%;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
     position: relative;
   }
@@ -121,7 +121,6 @@
 
   .logoMobileLink {
     display: block;
-    margin: auto;
   }
 
   .logoMobileImg {
@@ -132,6 +131,11 @@
   .cartIcon {
     width: 1.5rem;
     height: 1.5rem;
+    background-position: center;
+    border: none;
+    background-size: cover;
+    color: var(--color-text);
+    background-image: url("../../icons/shop.png");
   }
 
   .wrapperDesktop .cart {
@@ -150,12 +154,7 @@
 
   .wrapperMobile .cart,
   .burgerBtn {
-    position: absolute;
-    max-width: 4rem;
-  }
-
-  .burgerBtn {
-    left: 0;
+    width: 1.5rem;
   }
 
   .burgerIcon {

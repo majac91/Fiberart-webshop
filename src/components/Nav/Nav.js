@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import navStyles from "./nav.module.css";
 import burgerIcon from "../../icons/menu.png";
 import closeIcon from "../../icons/001-cancel-3.png";
+import cartIcon from "../../icons/shop.png";
 
 const cx = require("classnames");
 
@@ -30,6 +31,7 @@ export default function Nav({
         >
           <img alt="close" className={navStyles.closeIcon} src={closeIcon} />
         </button>
+        {/* DESKTOP*/}
         <ul className={`${navStyles.wrapperDesktop} d-flex`}>
           <li className={navStyles.listItem}>
             <Link to="/" className={navStyles.navLink}>
@@ -61,6 +63,7 @@ export default function Nav({
           </li>
         </ul>
       </div>
+      {/* MOBILE */}
       <div className={navStyles.wrapperMobile}>
         <button className={navStyles.burgerBtn} onClick={onBurgerClick}>
           <img
@@ -76,7 +79,7 @@ export default function Nav({
           onClick={onCartClick}
           className={`${navStyles.navLink} ${navStyles.cart} ignoreClickOutside`}
         >
-          Cart <span className={navStyles.cartIcon}>{cartCount}</span>
+          <span className={navStyles.cartIcon}>{cartCount}</span>
         </button>
       </div>
     </nav>
