@@ -57,7 +57,7 @@ const ProductPage = ({
 
   return (
     <div className={`${productPageStyles.container} container`}>
-      <Heaader caption={product.name}></Heaader>
+      <Heaader page="product" caption={product.name} />
 
       <div
         aria-label="product information"

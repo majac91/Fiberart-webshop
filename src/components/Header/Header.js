@@ -13,6 +13,7 @@ export default function Header({ page, caption }) {
     contact: page === "contact",
     shop: page === "shop",
     about: page === "about",
+    product: page === "product",
   });
 
   return (

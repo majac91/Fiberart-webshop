@@ -63,7 +63,8 @@
 .contact.container,
 .checkout.container,
 .contact .captionWrapper,
-.checkout .captionWrapper {
+.checkout .captionWrapper,
+.product {
   height: 20vh;
 }
 
@@ -89,10 +90,3 @@
     width: 80%;
   }
 }
-
-/* @media all and (min-width: 320px) and (max-width: 500px) {
-  .about .captionWrapper {
-    font-size: var(--text-lg);
-    width: 95%;
-  }
-} */

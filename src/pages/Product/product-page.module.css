@@ -68,10 +68,6 @@
     height: fit-content;
   }
 
-  .header {
-    height: 40vh;
-  }
-
   .caption {
     text-align: center;
     font-size: 2em;
@@ -97,7 +93,8 @@
 
   .productWrapper {
     width: 100%;
-    top: -3em;
+    top: 0;
+    margin-top: 2rem;
   }
 
   .imgWrapper {

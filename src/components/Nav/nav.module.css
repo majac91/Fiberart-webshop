@@ -154,7 +154,7 @@
 
   .wrapperMobile .cart,
   .burgerBtn {
-    width: 1.5rem;
+    width: 2.5rem;
   }
 
   .burgerIcon {
@@ -180,6 +180,9 @@
     padding: 2em;
   }
 
+  .navLink {
+    display: block;
+  }
   .wrapperDesktop .navLink::after {
     content: "";
     border-bottom: var(--border-gray);
