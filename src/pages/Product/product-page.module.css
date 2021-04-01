@@ -19,12 +19,12 @@
 
 .productWrapper {
   position: relative;
-  top: -10em;
   display: flex;
   justify-content: center;
   margin: auto;
   width: 75vw;
   flex-wrap: wrap;
+  padding-top: var(--section);
 }
 
 .imgWrapper {
@@ -54,7 +54,7 @@
 
 .product {
   max-width: 30em;
-  height: 90vh;
+  height: 70vh;
   background-position: center;
   background-size: cover;
 }
@@ -71,7 +71,6 @@
   .caption {
     text-align: center;
     font-size: 2em;
-    font-weight: 600;
   }
 
   .navLink {
@@ -93,8 +92,7 @@
 
   .productWrapper {
     width: 100%;
-    top: 0;
-    margin-top: 2rem;
+    /* margin-top: 2rem; */
   }
 
   .imgWrapper {

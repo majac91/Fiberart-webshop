@@ -2,7 +2,7 @@ import React from "react";
 import btnStyles from "./button.module.css";
 const cx = require("classnames");
 
-const Button = ({ onClick, className, className2, txt }) => {
+const Button = ({ onClick, className, className2, txt, isDisabled }) => {
   return (
     <div
       className={cx({
@@ -12,7 +12,11 @@ const Button = ({ onClick, className, className2, txt }) => {
     >
       <div className={btnStyles.wrapper}>
         <div className={btnStyles.border}></div>
-        <button onClick={onClick} className={btnStyles.btn}>
+        <button
+          disabled={isDisabled}
+          onClick={onClick}
+          className={btnStyles.btn}
+        >
           {txt}
         </button>
       </div>

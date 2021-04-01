@@ -37,7 +37,7 @@
 
 .caption {
   font-family: var(--font-primary);
-  font-size: var(--text-sm);
+  font-size: var(--text-md);
   font-weight: 600;
 }
 
@@ -46,28 +46,15 @@
 }
 
 @media all and (min-width: 320px) and (max-width: 800px) {
-  .container {
-    display: grid;
+  .container,
+  .imgLink {
+    width: 85vw;
     grid-template-columns: 100%;
     grid-template-rows: 1fr;
     grid-gap: 1em;
-    align-items: center;
-    margin: auto;
-  }
-
-  .imgWrapper {
-    margin-bottom: 2em;
-  }
-
-  .imgLink {
-    width: var(--container);
   }
 
   .productImg {
     height: 70vh;
-  }
-
-  .caption {
-    font-size: 1.5em;
   }
 }

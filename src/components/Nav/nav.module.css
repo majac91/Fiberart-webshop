@@ -72,6 +72,9 @@
 .closeBurgerBtn {
   justify-content: flex-start;
   background: white;
+  display: inline-block;
+  width: 3rem;
+  margin-left: auto;
 }
 
 .closeIcon {
@@ -174,7 +177,7 @@
     position: fixed;
     top: 0;
     left: -100%;
-    transition: left var(--transition);
+    transition: left var(--transition-short);
     background: white;
     z-index: 100;
     padding: 2em;

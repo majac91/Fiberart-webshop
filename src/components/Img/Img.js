@@ -9,7 +9,7 @@ const Img = ({ className, hasOpacity, ...rest }) => {
         <img
           onLoad={() => setIsLoaded(true)}
           {...rest}
-          className={`${className} ${cx({ loaded: isLoaded })}`}
+          className={`${className} ${cx({ imgLoaded: isLoaded })}`}
           style={
             isLoaded
               ? { opacity: "0.4", transition: "opacity 1s ease" }
@@ -20,7 +20,7 @@ const Img = ({ className, hasOpacity, ...rest }) => {
         <img
           onLoad={() => setIsLoaded(true)}
           {...rest}
-          className={`${className} ${cx({ loaded: isLoaded })}`}
+          className={`${className} ${cx({ imgLoaded: isLoaded })}`}
           style={
             isLoaded
               ? { opacity: "1", transition: "opacity 1s ease" }

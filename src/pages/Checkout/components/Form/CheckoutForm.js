@@ -37,7 +37,6 @@ const Form = ({ setIsOrdered, cartItems }) => {
         onSubmit={(e) => handleSubmit(e)}
         noValidate
       >
-        {" "}
         <h3 className={cartStyles.title}>Your details</h3>
         <div className={formStyles.row}>
           <div className={formStyles.column}>
@@ -154,9 +153,11 @@ const Form = ({ setIsOrdered, cartItems }) => {
           </div>
         </div>
         <div className={formStyles.checkoutPageSubmit}>
-          <Button className={"btnSm"} txt="Submit">
-            Send
-          </Button>
+          <Button
+            isDisabled={order.length === 0 ? true : false}
+            className={"btnSm"}
+            txt="Submit"
+          />
         </div>
       </form>
     </div>

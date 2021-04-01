@@ -6,6 +6,8 @@ import cartStyles from "../../components/Cart/cart.module.css";
 import checkoutStyles from "./checkout.module.css";
 import SubmitMsg from "../../components/SubmitMsg/SubmitMsg";
 
+const cx = require("classnames");
+
 const Checkout = ({ onClearCart, total, onDelete, cartItems }) => {
   const [isOrdered, setIsOrdered] = useState(false);
 
@@ -19,27 +21,33 @@ const Checkout = ({ onClearCart, total, onDelete, cartItems }) => {
     <>
       <Header page="checkout" caption="Complete your order" />
       <main className={`${checkoutStyles.container} d-flex container`}>
-        <section className={checkoutStyles.form}>
+        <section
+          className={`${checkoutStyles.form} ${cx({
+            orderSubmitted: isOrdered,
+          })}`}
+        >
           <CheckoutForm setIsOrdered={setIsOrdered} cartItems={cartItems} />
         </section>
         <section
-          className={`${cartStyles.wrapperOutter} ${checkoutStyles.order}`}
+          className={`${cartStyles.wrapperOutter} ${checkoutStyles.order} `}
         >
-          <div className={cartStyles.titleWrapper}>
-            <h3
-              className={`${cartStyles.title} ${cartStyles.checkoutPageOrder}`}
-            >
-              Your order
-            </h3>
-          </div>
           {!isOrdered ? (
-            <Cart
-              isCheckoutOrder={true}
-              total={total}
-              cartItems={cartItems}
-              onDelete={onDelete}
-              onClearCart={onClearCart}
-            />
+            <>
+              <div className={cartStyles.titleWrapper}>
+                <h3
+                  className={`${cartStyles.title} ${cartStyles.checkoutPageOrder}`}
+                >
+                  Your order
+                </h3>
+              </div>
+              <Cart
+                isCheckoutOrder={true}
+                total={total}
+                cartItems={cartItems}
+                onDelete={onDelete}
+                onClearCart={onClearCart}
+              />
+            </>
           ) : (
             <SubmitMsg />
           )}

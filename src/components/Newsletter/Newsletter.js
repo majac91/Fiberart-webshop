@@ -35,7 +35,7 @@ export default function Newsletter() {
             className={`${formStyles.input} ${newsletterStyles.newsletterInput}`}
             type="text"
             placeholder={"email"}
-          ></input>
+          />
           <Button txt={"Subscribe"} className={"btnSm"}>
             send
           </Button>

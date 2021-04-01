@@ -19,6 +19,18 @@
   width: auto;
 }
 
+.caption {
+  font-family: var(--font-secondary);
+  font-size: var(--text-xl);
+  font-weight: 600;
+  padding-bottom: 1rem;
+}
+
+.subcaption {
+  width: auto;
+  font-size: var(--text-md);
+}
+
 .newsletter {
   font-family: var(--font-secondary);
   font-size: 1.5rem;
@@ -39,6 +51,10 @@
 @media all and (min-width: 320px) and (max-width: 768px) {
   .contactForm .container {
     width: 100%;
+  }
+
+  .submitMsgWrapper {
+    height: 50vh;
   }
 }
 

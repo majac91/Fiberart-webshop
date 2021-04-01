@@ -6,7 +6,7 @@
   position: fixed;
   top: 0;
   right: -100%;
-  transition: right var(--transition);
+  transition: right var(--transition-short);
   border-left: var(--border);
   background: white;
   z-index: 100;
