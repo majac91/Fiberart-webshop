@@ -5,8 +5,8 @@ import ImgSet from "../../../components/ImgSet/ImgSet";
 import Button from "../../../components/Button/Button";
 import Text from "../../../components/Text/Text";
 import imgStyles from "../../../css-modules/photo-text-section.module.css";
-import aboutImg from "../../../img/about.jpg";
-import test from "../../../img/social2.jpg";
+import aboutImg1 from "../../../img/about1.jpg";
+import aboutImg2 from "../../../img/about2.jpg";
 
 export default function About(props) {
   const sectionRef = useRef();
@@ -43,12 +43,12 @@ export default function About(props) {
           <ImgSet
             images={[
               {
-                src: aboutImg,
+                src: aboutImg1,
                 className: imgStyles.imgBig,
                 alt: "blonde woman in black and white outfit",
               },
               {
-                src: test,
+                src: aboutImg2,
                 className: imgStyles.imgSmall,
                 alt: "",
               },
@@ -66,12 +66,12 @@ export default function About(props) {
           <ImgSet
             images={[
               {
-                src: aboutImg,
+                src: aboutImg1,
                 className: imgStyles.imgBig,
                 alt: "blonde woman in black and white outfit",
               },
               {
-                src: test,
+                src: aboutImg2,
                 className: imgStyles.imgSmall,
                 alt: "",
               },

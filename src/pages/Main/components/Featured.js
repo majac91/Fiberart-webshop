@@ -1,4 +1,5 @@
 import React, { useRef } from "react";
+import { useHistory } from "react-router-dom";
 import imgStyles from "../../../css-modules/photo-text-section.module.css";
 import { useElementOnScreen } from "../../../hooks/useOnIntersection";
 import Text from "../../../components/Text/Text";
@@ -10,6 +11,8 @@ import featuredImgSmall from "../../../img/featured-1.jpg";
 export default function Featured(props) {
   const sectionRef = useRef();
   const sectionOnScreen = useElementOnScreen(sectionRef);
+  const history = useHistory();
+  const redirect = () => history.push("/shop");
 
   return (
     <section
@@ -43,7 +46,12 @@ export default function Featured(props) {
                 minimal table settings to cozy bathroom decorations. Everything
                 helpful and inspiring to pour love into your home."
             />
-            <Button className={"btnMd"} className2={"btnLeft"} txt="Discover" />
+            <Button
+              className={"btnMd"}
+              className2={"btnLeft"}
+              txt="Discover"
+              onClick={redirect}
+            />
           </div>
         </div>
       </div>

@@ -13,25 +13,23 @@
   position: relative;
 }
 
-.img1,
-.img2 {
+.imgWrapper {
+  position: absolute;
+  left: 0;
+  top: -5rem;
   z-index: -1;
+  height: 10rem;
+  width: 10rem;
+  transform: rotate(-25deg);
+}
+
+.img {
+  height: 10rem;
   opacity: 0.7;
   width: auto;
-}
-
-.img1 {
-  position: absolute;
-  left: -3rem;
-  top: -5rem;
-  height: 10rem;
-}
-
-.img2 {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  height: 5rem;
+  height: 20rem;
+  transform: scaleX(-1);
+  float: left;
 }
 
 @media all and (min-width: 320px) and (max-width: 768px) {
@@ -39,10 +37,13 @@
     height: 100%;
   }
 
-  .img1 {
+  .imgWrapper {
+    top: initial;
+    bottom: 0;
+  }
+  .img {
     position: absolute;
     left: -1rem;
-    top: -2rem;
     height: 10rem;
   }
 }

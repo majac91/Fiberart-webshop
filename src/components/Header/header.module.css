@@ -49,7 +49,7 @@
 
 .year {
   font-family: var(--font-accent);
-  font-size: 4rem;
+  font-size: calc(var(--text-xxl) * 1.5);
 }
 
 .about .captionWrapper {
@@ -58,6 +58,11 @@
   margin: 0;
   font-size: var(--text-md);
   font-weight: 800;
+}
+
+.about .caption {
+  margin: 2rem auto;
+  width: 70%;
 }
 
 .contact.container,
@@ -88,5 +93,16 @@
   }
   .about .captionWrapper {
     width: 80%;
+  }
+}
+
+@media all and (min-width: 320px) and (max-width: 768px) {
+  .year {
+    font-size: var(--text-xxl);
+  }
+
+  .about .caption {
+    width: 100%;
+    margin: 1rem auto;
   }
 }

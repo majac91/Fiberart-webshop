@@ -5,9 +5,10 @@ import Text from "../../components/Text/Text";
 import Quote from "./Quote/Quote";
 import ImgSet from "../../components/ImgSet/ImgSet";
 import imgStyles from "../../css-modules/photo-text-section.module.css";
-import workshopImg from "../../img/header1.jpg";
-import detailImg from "../../img/header2.jpg";
-import materialsImg from "../../img/materials.jpg";
+import minimalImg1 from "../../img/minimal-1.jpg";
+import minimalImg2 from "../../img/minimal-2.jpg";
+import materialsImg2 from "../../img/minimal-3.jpg";
+import materialsImg1 from "../../img/materials.jpg";
 
 const AboutPage = () => {
   const firstSectionRef = useRef();
@@ -33,12 +34,12 @@ const AboutPage = () => {
             <ImgSet
               images={[
                 {
-                  src: workshopImg,
+                  src: minimalImg1,
                   className: imgStyles.imgSmall,
                   alt: "tapestry being made",
                 },
                 {
-                  src: detailImg,
+                  src: minimalImg2,
                   className: imgStyles.imgBig,
                   alt: "tapestry with wooden frame",
                 },
@@ -86,12 +87,12 @@ const AboutPage = () => {
             <ImgSet
               images={[
                 {
-                  src: materialsImg,
+                  src: materialsImg1,
                   className: imgStyles.imgBig,
                   alt: "ball of white yarn",
                 },
                 {
-                  src: workshopImg,
+                  src: materialsImg2,
                   className: imgStyles.imgSmall,
                   alt: "tapestry being made",
                 },

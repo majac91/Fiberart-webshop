@@ -25,3 +25,8 @@
   border: var(--border-btn);
   border-radius: 50%;
 }
+
+.black .side,
+.black .center {
+  border: 1px solid black;
+}

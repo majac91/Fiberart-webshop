@@ -3,13 +3,17 @@
   display: none;
 }
 
+.containerDesktop {
+  display: block;
+}
+
 .containerDesktop,
 .containerMobile {
   padding-top: calc(var(--section) * 1.5);
   padding-bottom: calc(var(--section) * 0.5);
-  display: block;
   height: 100%;
 }
+
 .row {
   display: flex;
   flex-direction: row;
@@ -41,8 +45,8 @@
   z-index: -500;
   display: inline-block;
   position: absolute;
-  left: 75px;
-  top: -5rem;
+  left: 0;
+  top: -4rem;
 }
 
 @media all and (min-width: 320px) and (max-width: 767px) {
@@ -53,6 +57,7 @@
   .containerMobile {
     padding-top: var(--section);
     padding-bottom: 0;
+    display: block;
   }
 
   .containerMobile .row {

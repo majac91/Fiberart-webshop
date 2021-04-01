@@ -29,17 +29,13 @@ const Categories = () => {
       <div className={` ${categoriesStyles.containerMobile} container`}>
         <span className={categoriesStyles.row}>
           <CircleIcon />
-          <p className={categoriesStyles.txt}>
-            Tapestries
-            {/* <span className={categoriesStyles.img}></span> */}
-          </p>
+          <p className={categoriesStyles.txt}>Tapestries</p>
           <CircleIcon />
           <p className={categoriesStyles.txt}>Macrame</p>
           <CircleIcon />
           <p className={categoriesStyles.txt}>Paintings</p>
           <CircleIcon />
           <p className={categoriesStyles.txt}>Wall hangings</p>
-          <CircleIcon />
           <p className={categoriesStyles.txt}>Eclectic art</p>
           <CircleIcon />
           <p className={categoriesStyles.txt}>Sculptures</p>

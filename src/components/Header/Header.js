@@ -1,6 +1,8 @@
 import React from "react";
 import headerStyles from "./header.module.css";
 import Img from "../Img/Img";
+import CircleIcon from "../CircleIcon/CircleIcon";
+
 //header imgs
 import shop from "../../img/header-shop-page.jpg";
 import about from "../../img/header-about-page.jpg";
@@ -46,6 +48,7 @@ export default function Header({ page, caption }) {
         >
           <span className={headerStyles.caption}>{caption}</span>
         </h1>
+        {page === "about" && <CircleIcon color="black" />}
       </header>
     </>
   );

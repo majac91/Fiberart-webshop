@@ -99,9 +99,7 @@ const Cart = ({
                 tabIndex={cartIsOpen ? "0" : "-1"}
                 className={cartStyles.checkout}
               >
-                <Button className={"btnSm"} txt="Checkout" onClick={redirect}>
-                  Send
-                </Button>
+                <Button className={"btnSm"} txt="Checkout" onClick={redirect} />
               </div>
             )}
           </div>
