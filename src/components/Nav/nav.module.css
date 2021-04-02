@@ -104,6 +104,7 @@
     flex-direction: column;
     height: 40vh;
     justify-content: space-between;
+    padding-top: 2rem;
   }
 
   .wrapperMobile {
@@ -157,7 +158,8 @@
 
   .wrapperMobile .cart,
   .burgerBtn {
-    width: 2.5rem;
+    width: 3.5rem;
+    height: 3.5rem;
   }
 
   .burgerIcon {

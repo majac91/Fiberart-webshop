@@ -1,10 +1,9 @@
 import React from "react";
-import logo from "../../img/logo.png";
 import { Link } from "react-router-dom";
 import navStyles from "./nav.module.css";
 import burgerIcon from "../../icons/menu.png";
 import closeIcon from "../../icons/001-cancel-3.png";
-import cartIcon from "../../icons/shop.png";
+import logo from "../../img/logo.png";
 
 const cx = require("classnames");
 
