@@ -34,8 +34,7 @@ const Hero = () => {
                 The wood & thread collection
               </h1>
               <h2 className={heroStyles.subcaption}>
-                <span> Philosophy of beauty in the practical</span>
-                <span>use of everyday objects</span>
+                Philosophy of beauty in the practical use of everyday objects
               </h2>
               <Button
                 txt="Explore"

@@ -86,9 +86,18 @@ a {
   color: var(--color-text);
 }
 
+a:focus {
+  outline: none;
+  border-bottom: var(--border-btn);
+}
 a,
 button {
   cursor: pointer;
+}
+
+button:focus {
+  outline: none;
+  border: var(--border-btn);
 }
 
 a:hover,
@@ -163,10 +172,6 @@ footer {
   display: none;
   transform: translate(1000px);
 }
-
-/* .mainPage {
-  overflow: hidden;
-} */
 
 /* Slider */
 /* Main page slider */

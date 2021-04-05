@@ -49,7 +49,7 @@
   top: -4rem;
 }
 
-@media all and (min-width: 320px) and (max-width: 767px) {
+@media all and (min-width: 320px) and (max-width: 620px) {
   .containerDesktop {
     display: none;
   }
@@ -69,5 +69,16 @@
 
   .txt {
     font-size: var(--text-xl);
+  }
+}
+
+@media all and (min-width: 620px) and (max-width: 1028px) {
+  .txt {
+    font-size: var(--text-lg);
+  }
+
+  .img {
+    height: 9rem;
+    width: 5rem;
   }
 }

@@ -26,6 +26,12 @@
   font-size: 1rem;
 }
 
+.btn:focus {
+  outline: none;
+  border: 1px solid var(--color-text);
+  border-radius: 50%;
+}
+
 .btnLg .wrapper {
   width: 11em;
   height: 11em;
@@ -65,8 +71,8 @@
 
 .heroBtn {
   position: relative;
-  top: -3em;
-  left: 11em;
+  top: -4rem;
+  left: 11rem;
 }
 
 .btnLeft .wrapper {

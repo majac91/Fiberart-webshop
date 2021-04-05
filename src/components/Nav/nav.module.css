@@ -42,11 +42,19 @@
 }
 
 .logoDesktopImg {
-  width: 60%;
+  width: 12rem;
+  height: 100%;
 }
 
 .logoMobileLink {
   display: none;
+}
+
+.logoDesktopLink:focus,
+.logoMobileLink:focus {
+  opacity: 0.6;
+  transition: opacity 0.5s ease;
+  border: none !important;
 }
 
 .logoMobileImg,
@@ -60,6 +68,11 @@
   margin-top: auto;
   margin-bottom: auto;
   margin-right: 0;
+}
+
+.cart:focus {
+  border: none;
+  border-bottom: var(--border-btn);
 }
 
 .closeBurgerBtn,
@@ -218,5 +231,11 @@
   .burgerBtn,
   .closeBurgerBtn {
     display: none;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1024px) {
+  .navLink {
+    margin-right: 1rem;
   }
 }

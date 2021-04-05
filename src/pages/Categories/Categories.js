@@ -7,7 +7,7 @@ const Categories = () => {
     <>
       {/* DESKTOP */}
       <div className={` ${categoriesStyles.containerDesktop} container`}>
-        <span className={categoriesStyles.row}>
+        <div className={categoriesStyles.row}>
           <p className={categoriesStyles.txt}>
             Tapestries
             <span className={categoriesStyles.img}></span>
@@ -18,16 +18,16 @@ const Categories = () => {
           <p className={categoriesStyles.txt}>Paintings</p>
           <CircleIcon />
           <p className={categoriesStyles.txt}>Sculptures</p>
-        </span>
-        <span className={categoriesStyles.row}>
+        </div>
+        <div className={categoriesStyles.row}>
           <p className={categoriesStyles.txt}>Wall hangings</p>
           <CircleIcon />
           <p className={categoriesStyles.txt}>Eclectic art</p>
-        </span>
+        </div>
       </div>
       {/* MOBILE */}
       <div className={` ${categoriesStyles.containerMobile} container`}>
-        <span className={categoriesStyles.row}>
+        <div className={categoriesStyles.row}>
           <CircleIcon />
           <p className={categoriesStyles.txt}>Tapestries</p>
           <CircleIcon />
@@ -39,7 +39,7 @@ const Categories = () => {
           <p className={categoriesStyles.txt}>Eclectic art</p>
           <CircleIcon />
           <p className={categoriesStyles.txt}>Sculptures</p>
-        </span>
+        </div>
       </div>
     </>
   );

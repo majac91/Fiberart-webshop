@@ -100,11 +100,29 @@
   }
   .imgBig {
     width: auto;
-    height: 80vw;
   }
 
   .imgSmall {
     width: auto;
+  }
+}
+
+@media all and (min-width: 320px) and (max-width: 800px) {
+  .imgBig {
+    height: 80vw;
+  }
+
+  .imgSmall {
     height: 40vw;
+  }
+}
+
+@media all and (min-width: 800px) and (max-width: 1201px) {
+  .imgBig {
+    height: 50vw;
+  }
+
+  .imgSmall {
+    height: 20vw;
   }
 }
