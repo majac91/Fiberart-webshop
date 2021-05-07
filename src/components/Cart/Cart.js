@@ -7,7 +7,6 @@ import cancel from "../../icons/001-cancel-3.png";
 const Cart = ({
   isCheckoutOrder,
   cartIsOpen,
-  clickOutsideRef,
   cartItems,
   onCartClick,
   onDelete,
@@ -19,7 +18,10 @@ const Cart = ({
 
   const history = useHistory();
 
-  const redirect = () => history.push("/checkout");
+  const redirect = () => {
+    history.push("/checkout");
+    onCartClick();
+  };
 
   return (
     <div className={cartStyles.wrapperOutter}>
@@ -58,10 +60,11 @@ const Cart = ({
             alt={item.name}
             src={item.imageSmall}
           ></img>
-          <div className={cartStyles.productInfo}>
+          <div className={`${cartStyles.productInfo} ignoreClickOutside`}>
             <Link
               tabIndex={cartIsOpen ? "0" : "-1"}
               to={`/product/${item.path}`}
+              onClick={onCartClick}
             >
               <h3 className={cartStyles.name}>{item.name}</h3>
             </Link>
@@ -97,7 +100,7 @@ const Cart = ({
             {!isCheckoutOrder && (
               <div
                 tabIndex={cartIsOpen ? "0" : "-1"}
-                className={cartStyles.checkout}
+                className={`${cartStyles.checkout} ignoreClickOutside`}
               >
                 <Button className={"btnSm"} txt="Checkout" onClick={redirect} />
               </div>
