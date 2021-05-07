@@ -57,6 +57,10 @@ label {
   .errorMsg {
     text-align: center;
   }
+
+  .column {
+    flex-basis: 100%;
+  }
 }
 
 @media all and (min-width: 768px) and (max-width: 1024px) {

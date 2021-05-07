@@ -2,6 +2,7 @@ import React, { useRef } from "react";
 import { useElementOnScreen } from "../../hooks/useOnIntersection";
 import Loader from "../../components/Loader/Loader";
 import Newsletter from "../Newsletter/Newsletter";
+import Img from "../../components/Img/Img";
 import footerStyles from "./footer.module.css";
 
 import logo from "../../img/logo.png";
@@ -28,26 +29,26 @@ export default function Footer(props) {
         <div className={footerStyles.imgWrapper}>
           {isOnScreen ? (
             <div className={footerStyles.imgWrapperInner}>
-              <img
+              <Img
                 alt="beige macrame wall hanging"
                 src={img1}
                 className={footerStyles.img}
-              ></img>
-              <img
+              ></Img>
+              <Img
                 src={img2}
                 alt="artist painting"
                 className={footerStyles.img}
-              ></img>
-              <img
+              ></Img>
+              <Img
                 src={img3}
                 alt="dry bouquet detail"
                 className={footerStyles.img}
-              ></img>
-              <img
+              ></Img>
+              <Img
                 src={img4}
                 alt="artist's studio"
                 className={footerStyles.img}
-              ></img>
+              ></Img>
             </div>
           ) : (
             <div className={placeholderStyle} ref={placeholderRef}>
