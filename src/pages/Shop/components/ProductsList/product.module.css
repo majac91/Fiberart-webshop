@@ -19,7 +19,7 @@
   margin: auto;
   width: 100%;
   /* set the default at 1000px, but never surpass 70vh */
-  height: min(70vh, 900px);
+  height: min(70vh, 950px);
   object-fit: cover;
 }
 
