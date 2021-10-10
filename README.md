@@ -6,10 +6,10 @@
 
 # Personal project goals
 
-- learn and use Firebase as backend
-- use CSS modules
+- use Firebase
+- scoped CSS
 - code reusability
-- accessibility
+- a11y best practices  
 - optimization
 
 
