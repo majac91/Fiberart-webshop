@@ -90,6 +90,13 @@ a {
   outline: none;
   border-bottom: var(--border-btn);
 } */
+
+/* fixes the zooming in on iOS devices when the font size on these elements is smaller than 16px */
+input,
+textarea,
+select {
+  font-size: 1rem;
+}
 a,
 button {
   cursor: pointer;
