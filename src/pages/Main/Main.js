@@ -13,6 +13,7 @@ const Main = () => {
         <Featured />
         <Slider />
         <About />
+        <Slider />
       </main>
     </>
   );
