@@ -1,0 +1,66 @@
+{
+    "ogledalo1": {
+        "id": "macramecurlywh",
+        "image": "https://firebasestorage.googleapis.com/v0/b/fiberart-webshop.appspot.com/o/DSC_5511.jpg?alt=media&token=712fb183-c1f8-4bb1-bbf4-6283262df120",
+        "imageSmall": "https://firebasestorage.googleapis.com/v0/b/fiberart-webshop.appspot.com/o/DSC_5511.jpg?alt=media&token=712fb183-c1f8-4bb1-bbf4-6283262df120",
+        "name": "Ogledalo od punog drveta sa nepravilnim ivicama 1",
+        "dimensions": "60x60",
+        "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aeneancommodo ligula eget dolor. Donec quam felis, ultricies nec,pellentesque eu",
+        "path": "ogledalo1",
+        "price": "10 000rsd",
+        "sliderImages": {
+            "image1": "https://firebasestorage.googleapis.com/v0/b/fiberart-webshop.appspot.com/o/DSC_5511.jpg?alt=media&token=712fb183-c1f8-4bb1-bbf4-6283262df120",
+            "image2": "https://firebasestorage.googleapis.com/v0/b/fiberart-webshop.appspot.com/o/DSC_5508.jpg?alt=media&token=46e3792b-b05e-473d-b415-7cfb75573cd9",
+            "image3": "https://firebasestorage.googleapis.com/v0/b/fiberart-webshop.appspot.com/o/DSC_5514.jpg?alt=media&token=dee73021-6ad9-4bb8-975b-8cc3cc7793ca",
+            "image4": "https://firebasestorage.googleapis.com/v0/b/fiberart-webshop.appspot.com/o/DSC_5513.jpg?alt=media&token=c64f4ca9-e935-4dba-ad08-2ef701342f1e"
+        }
+    },
+    "ogledalo2": {
+        "id": "macramecurlywh",
+        "image": "https://firebasestorage.googleapis.com/v0/b/fiberart-webshop.appspot.com/o/DSC_5528.jpg?alt=media&token=3bff2164-c9a1-49da-a68a-236256bb84ef",
+        "imageSmall": "https://firebasestorage.googleapis.com/v0/b/fiberart-webshop.appspot.com/o/DSC_5528.jpg?alt=media&token=3bff2164-c9a1-49da-a68a-236256bb84ef",
+        "name": "Ogledalo od punog drveta sa nepravilnim ivicama 2",
+        "dimensions": "60x60",
+        "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aeneancommodo ligula eget dolor. Donec quam felis, ultricies nec,pellentesque eu",
+        "path": "ogledalo2",
+        "price": "10 000rsd",
+        "sliderImages": {
+            "image1": "https://firebasestorage.googleapis.com/v0/b/fiberart-webshop.appspot.com/o/DSC_5528.jpg?alt=media&token=3bff2164-c9a1-49da-a68a-236256bb84ef",
+            "image2": "https://firebasestorage.googleapis.com/v0/b/fiberart-webshop.appspot.com/o/DSC_5516.jpg?alt=media&token=1018375d-6488-43c3-a38f-0d26343192f2",
+            "image3": "https://firebasestorage.googleapis.com/v0/b/fiberart-webshop.appspot.com/o/DSC_5520.jpg?alt=media&token=f91cc398-59f1-401e-989e-3c1c1d31ae8b",
+            "image4": "https://firebasestorage.googleapis.com/v0/b/fiberart-webshop.appspot.com/o/DSC_5544.jpg?alt=media&token=93b6a57d-8a81-4abf-bd22-a06efbae8b87"
+        }
+    },
+    "ogledalo3": {
+        "id": "macramecurlywh",
+        "image": "https://firebasestorage.googleapis.com/v0/b/fiberart-webshop.appspot.com/o/DSC_5528.jpg?alt=media&token=3bff2164-c9a1-49da-a68a-236256bb84ef",
+        "imageSmall": "https://firebasestorage.googleapis.com/v0/b/fiberart-webshop.appspot.com/o/DSC_5528.jpg?alt=media&token=3bff2164-c9a1-49da-a68a-236256bb84ef",
+        "name": "Ogledalo od punog drveta sa nepravilnim ivicama 2",
+        "dimensions": "60x60",
+        "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aeneancommodo ligula eget dolor. Donec quam felis, ultricies nec,pellentesque eu",
+        "path": "ogledalo3",
+        "price": "10 000rsd",
+        "sliderImages": {
+            "image1": "https://firebasestorage.googleapis.com/v0/b/fiberart-webshop.appspot.com/o/DSC_5528.jpg?alt=media&token=3bff2164-c9a1-49da-a68a-236256bb84ef",
+            "image2": "https://firebasestorage.googleapis.com/v0/b/fiberart-webshop.appspot.com/o/DSC_5516.jpg?alt=media&token=1018375d-6488-43c3-a38f-0d26343192f2",
+            "image3": "https://firebasestorage.googleapis.com/v0/b/fiberart-webshop.appspot.com/o/DSC_5520.jpg?alt=media&token=f91cc398-59f1-401e-989e-3c1c1d31ae8b",
+            "image4": "https://firebasestorage.googleapis.com/v0/b/fiberart-webshop.appspot.com/o/DSC_5544.jpg?alt=media&token=93b6a57d-8a81-4abf-bd22-a06efbae8b87"
+        }
+    },
+    "ogledalo4": {
+        "id": "macramecurlywh",
+        "image": "https://firebasestorage.googleapis.com/v0/b/fiberart-webshop.appspot.com/o/DSC_5528.jpg?alt=media&token=3bff2164-c9a1-49da-a68a-236256bb84ef",
+        "imageSmall": "https://firebasestorage.googleapis.com/v0/b/fiberart-webshop.appspot.com/o/DSC_5528.jpg?alt=media&token=3bff2164-c9a1-49da-a68a-236256bb84ef",
+        "name": "Ogledalo od punog drveta sa nepravilnim ivicama 2",
+        "dimensions": "60x60",
+        "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aeneancommodo ligula eget dolor. Donec quam felis, ultricies nec,pellentesque eu",
+        "path": "ogledalo4",
+        "price": "10 000rsd",
+        "sliderImages": {
+            "image1": "https://firebasestorage.googleapis.com/v0/b/fiberart-webshop.appspot.com/o/DSC_5528.jpg?alt=media&token=3bff2164-c9a1-49da-a68a-236256bb84ef",
+            "image2": "https://firebasestorage.googleapis.com/v0/b/fiberart-webshop.appspot.com/o/DSC_5516.jpg?alt=media&token=1018375d-6488-43c3-a38f-0d26343192f2",
+            "image3": "https://firebasestorage.googleapis.com/v0/b/fiberart-webshop.appspot.com/o/DSC_5520.jpg?alt=media&token=f91cc398-59f1-401e-989e-3c1c1d31ae8b",
+            "image4": "https://firebasestorage.googleapis.com/v0/b/fiberart-webshop.appspot.com/o/DSC_5544.jpg?alt=media&token=93b6a57d-8a81-4abf-bd22-a06efbae8b87"
+        }
+    }
+}

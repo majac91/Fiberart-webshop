@@ -103,7 +103,7 @@ function App() {
           <Shop />
         </Route>
 
-        <Route exact path="/product/:id">
+        <Route exact path="/product/:category/:id">
           <ProductPage
             setCartIsOpen={setCartIsOpen}
             onCartClick={handleToggleCart}

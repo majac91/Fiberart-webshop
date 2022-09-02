@@ -19,8 +19,8 @@ const ProductPage = ({
   function onCartClick() {
     setCartIsOpen((prev) => !prev);
   }
-  const { id } = useParams();
-  const product = useFetchProduct(id);
+  const { category, id } = useParams();
+  const product = useFetchProduct(`${category}/${id}`);
   const placeholder = useRef();
   const isOnScreen = useElementOnScreen(placeholder);
 
@@ -30,8 +30,8 @@ const ProductPage = ({
 
   const slideImgs = product.sliderImages
     ? Object.keys(product.sliderImages).map((key) => [
-        product.sliderImages[key],
-      ])
+      product.sliderImages[key],
+    ])
     : null;
 
   var settings = {
@@ -81,8 +81,8 @@ const ProductPage = ({
               ))}
             </Slider>
           ) : (
-            <div ref={placeholder}></div>
-          )}
+              <div ref={placeholder}></div>
+            )}
         </div>
         <div aria-label="decription" className={productPageStyles.description}>
           <h2>Description</h2>

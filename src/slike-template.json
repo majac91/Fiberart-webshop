@@ -1,0 +1,61 @@
+{
+    "slika1": {
+        "cena": "10 000rsd",
+        "id": "",
+        "image": "https://firebasestorage.googleapis.com/v0/b/fiberart-webshop.appspot.com/o/DSC_4781.jpg?alt=media&token=8ba76661-d713-41f3-9320-7168964ba861",
+        "imageSmall": "https://firebasestorage.googleapis.com/v0/b/fiberart-webshop.appspot.com/o/DSC_4781.jpg?alt=media&token=8ba76661-d713-41f3-9320-7168964ba861",
+        "name": "Slika sa drvenim elementima",
+        "path": "slika-sa-drvenim-elementima",
+        "dimensions": "60x60",
+        "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aeneancommodo ligula eget dolor. Donec quam felis, ultricies nec,pellentesque eu",
+        "sliderImages": {
+            "image1": "https://firebasestorage.googleapis.com/v0/b/fiberart-webshop.appspot.com/o/DSC_4781.jpg?alt=media&token=8ba76661-d713-41f3-9320-7168964ba861",
+            "image2": "https://firebasestorage.googleapis.com/v0/b/fiberart-webshop.appspot.com/o/DSC_4783.jpg?alt=media&token=2edea6e1-56d2-4cdc-8899-438123bf770f",
+            "image3": "https://firebasestorage.googleapis.com/v0/b/fiberart-webshop.appspot.com/o/DSC_4788.jpg?alt=media&token=a6f837ee-31a6-41f6-b0ab-0828ace435f1"
+        }
+    },
+    "slika2": {
+        "cena": "10 000rsd",
+        "id": "",
+        "image": "https://firebasestorage.googleapis.com/v0/b/fiberart-webshop.appspot.com/o/DSC_4799.jpg?alt=media&token=990fd479-1fbd-4d6d-ae42-330840a027d3",
+        "imageSmall": "https://firebasestorage.googleapis.com/v0/b/fiberart-webshop.appspot.com/o/DSC_4799.jpg?alt=media&token=990fd479-1fbd-4d6d-ae42-330840a027d3",
+        "name": "Apstraktna umetnička slika na organdinu",
+        "path": "apstraktna-slika-na-organdinu-1",
+        "dimensions": "60x60",
+        "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aeneancommodo ligula eget dolor. Donec quam felis, ultricies nec,pellentesque eu",
+        "sliderImages": {
+            "image1": "https://firebasestorage.googleapis.com/v0/b/fiberart-webshop.appspot.com/o/DSC_4799.jpg?alt=media&token=990fd479-1fbd-4d6d-ae42-330840a027d3",
+            "image2": "https://firebasestorage.googleapis.com/v0/b/fiberart-webshop.appspot.com/o/DSC_4804.jpeg?alt=media&token=46368917-c616-42ff-9c8e-c8b5b1e42323"
+        }
+    },
+    "slika3": {
+        "cena": "10 000rsd",
+        "id": "",
+        "image": "https://firebasestorage.googleapis.com/v0/b/fiberart-webshop.appspot.com/o/DSC_4792.jpg?alt=media&token=df705f22-a1a3-4067-a96c-26836ffcac03",
+        "imageSmall": "https://firebasestorage.googleapis.com/v0/b/fiberart-webshop.appspot.com/o/DSC_4792.jpg?alt=media&token=df705f22-a1a3-4067-a96c-26836ffcac03",
+        "name": "Apstraktna umetnička slika na organdinu",
+        "path": "apstraktna-slika-na-organdinu-2",
+        "dimensions": "60x60",
+        "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aeneancommodo ligula eget dolor. Donec quam felis, ultricies nec,pellentesque eu",
+        "sliderImages": {
+            "image1": "https://firebasestorage.googleapis.com/v0/b/fiberart-webshop.appspot.com/o/DSC_4792.jpg?alt=media&token=df705f22-a1a3-4067-a96c-26836ffcac03",
+            "image2": "https://firebasestorage.googleapis.com/v0/b/fiberart-webshop.appspot.com/o/DSC_4795.jpg?alt=media&token=e08c553f-273c-4556-b18f-fd406a324129",
+            "image3": "https://firebasestorage.googleapis.com/v0/b/fiberart-webshop.appspot.com/o/DSC_4796.jpg?alt=media&token=3ee0b9ea-9a2f-4c66-affb-45ad903d0547"
+        }
+    },
+    "slika4": {
+        "cena": "10 000rsd",
+        "id": "",
+        "image": "https://firebasestorage.googleapis.com/v0/b/fiberart-webshop.appspot.com/o/DSC_4314.jpg?alt=media&token=2cb44bde-4c0e-46ca-b87b-b1b0de7b2470",
+        "imageSmall": "https://firebasestorage.googleapis.com/v0/b/fiberart-webshop.appspot.com/o/DSC_4314.jpg?alt=media&token=2cb44bde-4c0e-46ca-b87b-b1b0de7b2470",
+        "name": "Teksturalno platno",
+        "path": "teksturalno-platno",
+        "dimensions": "60x60",
+        "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aeneancommodo ligula eget dolor. Donec quam felis, ultricies nec,pellentesque eu",
+        "sliderImages": {
+            "image1": "https://firebasestorage.googleapis.com/v0/b/fiberart-webshop.appspot.com/o/DSC_4314.jpg?alt=media&token=2cb44bde-4c0e-46ca-b87b-b1b0de7b2470",
+            "image2": "https://firebasestorage.googleapis.com/v0/b/fiberart-webshop.appspot.com/o/DSC_4317.jpg?alt=media&token=7b6a6e2d-bd10-449a-821a-07f2141e6e79",
+            "image3": "https://firebasestorage.googleapis.com/v0/b/fiberart-webshop.appspot.com/o/DSC_4320.jpg?alt=media&token=51ef25c6-d81d-4fd8-b01a-cfd8810f361e"
+        }
+    }
+}

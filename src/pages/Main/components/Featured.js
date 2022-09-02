@@ -5,35 +5,22 @@ import { useElementOnScreen } from "../../../hooks/useOnIntersection";
 import Text from "../../../components/Text/Text";
 import Button from "../../../components/Button/Button";
 import ImgSet from "../../../components/ImgSet/ImgSet";
-import featuredImg from "../../../img/featured-2.jpg";
-import featuredImgSmall from "../../../img/featured-1.jpg";
 
-export default function Featured(props) {
+export default function Featured({ images, redirectTo, caption, subcaption, isReversed }) {
   const sectionRef = useRef();
   const sectionOnScreen = useElementOnScreen(sectionRef);
   const history = useHistory();
-  const redirect = () => history.push("/shop");
+  const redirect = () => history.push(redirectTo);
 
   return (
     <section
-      className={`${imgStyles.left} container`}
+      className={`${imgStyles.left} container ${isReversed ? imgStyles.reversed : ''}`}
       id="main"
       ref={sectionRef}
     >
       {sectionOnScreen && (
         <ImgSet
-          images={[
-            {
-              src: featuredImgSmall,
-              className: imgStyles.imgSmall,
-              alt: "",
-            },
-            {
-              src: featuredImg,
-              className: imgStyles.imgBig,
-              alt: "white monochrome textured painting",
-            },
-          ]}
+          images={images}
         />
       )}
       <div className={imgStyles.text}>
@@ -41,10 +28,8 @@ export default function Featured(props) {
           <div className={imgStyles.textInner}>
             <Text
               className="textRight"
-              caption="The monochrome collection"
-              subcaption="All my best-kept secrets to decorate your entire home. From
-                minimal table settings to cozy bathroom decorations. Everything
-                helpful and inspiring to pour love into your home."
+              caption={caption}
+              subcaption={subcaption}
             />
             <Button
               className={"btnMd"}

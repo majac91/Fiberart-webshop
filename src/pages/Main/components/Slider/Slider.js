@@ -5,8 +5,8 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-export default function CustomSlider() {
-  const products = useProductList();
+export default function CustomSlider({ sectionTitle, category }) {
+  const products = useProductList(category);
   const history = useHistory();
 
   var settings = {
@@ -39,7 +39,7 @@ export default function CustomSlider() {
 
   return (
     <section aria-label="Slideshow" className={"slider-main"}>
-      <h2 className={` ${customSliderStyles.heading}`}>New from our studio</h2>
+      <h2 className={` ${customSliderStyles.heading}`}>{sectionTitle}</h2>
       <Slider {...settings} className={customSliderStyles.slideContainer}>
         {Object.keys(products).map((key) => {
           let product = products[key];
@@ -57,7 +57,7 @@ export default function CustomSlider() {
 
                   <button
                     className={customSliderStyles.btn}
-                    onClick={() => history.push(`product/${key}`)}
+                    onClick={() => history.push(`product/${category}/${key}`)}
                   >
                     view item
                   </button>

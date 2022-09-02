@@ -16,17 +16,15 @@ export const useFetchProduct = (id) => {
   return data;
 };
 
-export const useProductList = () => {
+export const useProductList = (category) => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
     const unsub = db
       .ref()
-      .child("products")
-      .on("value", (snapshot) => {
+      .child('products').child(category).on("value", (snapshot) => {
         setData(snapshot.val());
       });
-
     return () => unsub;
   }, []);
 

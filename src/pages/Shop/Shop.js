@@ -10,7 +10,9 @@ const Shop = () => {
         caption="Each of these beauties will be perfect for every kind of home"
       />
       <main>
-        <ProductList />
+        <ProductList category='slike' />
+        <ProductList category='tapiserije' />
+        <ProductList category='ogledala' />
       </main>
     </>
   );

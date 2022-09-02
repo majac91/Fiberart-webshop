@@ -52,6 +52,14 @@
   display: flex;
 }
 
+.reversed {
+  flex-direction: row-reverse;
+}
+
+.reversed h2 {
+  text-align: right;
+}
+
 .rightMobile {
   display: none;
 }

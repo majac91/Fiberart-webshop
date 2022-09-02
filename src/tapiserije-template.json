@@ -1,0 +1,64 @@
+{
+    "tapiserija1": {
+        "id": "blueombrewh",
+        "image": "https://firebasestorage.googleapis.com/v0/b/fiberart-webshop.appspot.com/o/ombreblue2.jpg?alt=media&token=65ddf111-66ca-4d6c-a690-13d3d3abf6f1",
+        "imageSmall": "https://firebasestorage.googleapis.com/v0/b/fiberart-webshop.appspot.com/o/ombreblue-s.jpg?alt=media&token=1da083a1-9f73-44b5-8185-dc3eb970ad1c",
+        "name": "Ombre wall hanging in blue",
+        "path": "tapiserija1",
+        "dimensions": "60x60",
+        "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aeneancommodo ligula eget dolor. Donec quam felis, ultricies nec,pellentesque eu",
+        "price": "$200",
+        "sliderImages": {
+            "image1": "https://firebasestorage.googleapis.com/v0/b/fiberart-webshop.appspot.com/o/ombreblue2.jpg?alt=media&token=65ddf111-66ca-4d6c-a690-13d3d3abf6f1",
+            "image2": "https://firebasestorage.googleapis.com/v0/b/fiberart-webshop.appspot.com/o/ombreblue4.jpg?alt=media&token=0de8f463-f2bb-42aa-9a28-9e406dbeecde",
+            "image3": "https://firebasestorage.googleapis.com/v0/b/fiberart-webshop.appspot.com/o/ombreblue5.jpg?alt=media&token=5ae8f7f5-b4d8-4bf3-813e-6936d409f454"
+        }
+    },
+    "tapiserija2": {
+        "id": "pinkobrewh",
+        "image": "https://firebasestorage.googleapis.com/v0/b/fiberart-webshop.appspot.com/o/ombrepink2.jpg?alt=media&token=f124d031-7645-477c-977b-998d2a534cf0",
+        "imageSmall": "https://firebasestorage.googleapis.com/v0/b/fiberart-webshop.appspot.com/o/ombrepink-s.jpg?alt=media&token=30291cb4-bdf9-4d7e-9b4a-ffef11435cc7",
+        "name": "Ombre wall hanging in pink",
+        "path": "tapiserija2",
+        "dimensions": "60x60",
+        "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aeneancommodo ligula eget dolor. Donec quam felis, ultricies nec,pellentesque eu",
+        "price": "$200",
+        "sliderImages": {
+            "image1": "https://firebasestorage.googleapis.com/v0/b/fiberart-webshop.appspot.com/o/ombrepink2.jpg?alt=media&token=f124d031-7645-477c-977b-998d2a534cf0",
+            "image2": "https://firebasestorage.googleapis.com/v0/b/fiberart-webshop.appspot.com/o/ombrepink3.jpg?alt=media&token=25eb6d58-fbaf-494e-84a4-a82a392fef46",
+            "image3": "https://firebasestorage.googleapis.com/v0/b/fiberart-webshop.appspot.com/o/ombrepink1.jpg?alt=media&token=a90b77b4-c27f-4090-ac63-5fbcf3cf880f"
+        }
+    },
+    "tapiserija3": {
+        "id": "macramestraightwh",
+        "image": "https://firebasestorage.googleapis.com/v0/b/fiberart-webshop.appspot.com/o/bluebeige1.jpg?alt=media&token=4e3c4891-5f52-40f0-b331-3c6c2ec6bc25",
+        "imageSmall": "https://firebasestorage.googleapis.com/v0/b/fiberart-webshop.appspot.com/o/beigeblue-s.jpg?alt=media&token=4649fe35-7bc1-418e-b6fd-08f2c43f976b",
+        "name": "Minimalist wall hanging",
+        "path": "tapiserija3",
+        "price": "$150",
+        "dimensions": "60x60",
+        "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aeneancommodo ligula eget dolor. Donec quam felis, ultricies nec,pellentesque eu",
+        "sliderImages": {
+            "image1": "https://firebasestorage.googleapis.com/v0/b/fiberart-webshop.appspot.com/o/bluebeige1.jpg?alt=media&token=4e3c4891-5f52-40f0-b331-3c6c2ec6bc25",
+            "image2": "https://firebasestorage.googleapis.com/v0/b/fiberart-webshop.appspot.com/o/bluebeige3.jpg?alt=media&token=43afe6c0-5e45-4cfc-bbff-0cf0a6cfadb9",
+            "image3": "https://firebasestorage.googleapis.com/v0/b/fiberart-webshop.appspot.com/o/bluebeige4.jpg?alt=media&token=5d79ceeb-ec7b-48e8-a574-ac2e76e6adaf",
+            "image4": "https://firebasestorage.googleapis.com/v0/b/fiberart-webshop.appspot.com/o/bluebeige6.jpg?alt=media&token=1f3d63f6-7633-4cb4-84cd-bd5dd6c7fccb"
+        }
+    },
+    "tapiserija4": {
+        "id": "macramecurlywh",
+        "image": "https://firebasestorage.googleapis.com/v0/b/fiberart-webshop.appspot.com/o/curyly1.jpg?alt=media&token=a65ebea9-2d5c-40b0-838a-8a392d2fe627",
+        "imageSmall": "https://firebasestorage.googleapis.com/v0/b/fiberart-webshop.appspot.com/o/curly-s.jpg?alt=media&token=80288180-7ad0-4d5f-953d-80a858297cbc",
+        "name": "Macrame wall hanging",
+        "path": "tapiserija4",
+        "dimensions": "60x60",
+        "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aeneancommodo ligula eget dolor. Donec quam felis, ultricies nec,pellentesque eu",
+        "price": "$150",
+        "sliderImages": {
+            "image1": "https://firebasestorage.googleapis.com/v0/b/fiberart-webshop.appspot.com/o/curyly1.jpg?alt=media&token=a65ebea9-2d5c-40b0-838a-8a392d2fe627",
+            "image2": "https://firebasestorage.googleapis.com/v0/b/fiberart-webshop.appspot.com/o/curyly2.jpg?alt=media&token=e14d2e52-5f24-4e23-9af8-ba2081c868b5",
+            "image3": "https://firebasestorage.googleapis.com/v0/b/fiberart-webshop.appspot.com/o/curyly4.jpg?alt=media&token=744a56ac-c5ad-4125-a5a8-63009966fd65",
+            "image4": "https://firebasestorage.googleapis.com/v0/b/fiberart-webshop.appspot.com/o/curyly5.jpg?alt=media&token=177c5d3b-13ca-457b-b93a-21084261c76f"
+        }
+    }
+}
